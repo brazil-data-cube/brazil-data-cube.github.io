@@ -10,6 +10,9 @@ Services and Applications
 =========================
 
 
+The Brazil Data Cube provides a set of core applications to allow researchers and users to have a great experience in accessing the satellite data imagery available in its computational infrastructure.
+
+
 .. toctree::
     :maxdepth: 1
     :titlesonly:

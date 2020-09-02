@@ -23,7 +23,6 @@ This project aims to ...
 
 
 .. toctree::
-    :numbered:
     :maxdepth: 1
     :caption: Topics:
 
@@ -34,6 +33,7 @@ This project aims to ...
     :maxdepth: 1
     :caption: General Information:
 
+    contact
     license
 
 

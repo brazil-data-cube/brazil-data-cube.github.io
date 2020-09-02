@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1.1. Retrieving a Time Series &mdash; Brazil Data Cube</title>
+  <title>1. Retrieving a Time Series &mdash; Brazil Data Cube</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.1.2. Service Overview" href="service_overview.html" />
-    <link rel="prev" title="1.1. Web Time Series Services (WTSS)" href="../wtss.html" /> 
+    <link rel="next" title="2. Service Overview" href="service_overview.html" />
+    <link rel="prev" title="Web Time Series Services (WTSS)" href="../wtss.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,10 +97,16 @@
 </ul>
 <p class="caption"><span class="caption-text">Topics:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">1. Services and Applications</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../wtss.html">1.1. Web Time Series Services (WTSS)</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.1. Retrieving a Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="service_overview.html">1.1.2. Service Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">Services and Applications</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../wtss.html">Web Time Series Services (WTSS)</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. Retrieving a Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="service_overview.html">2. Service Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">3. Jupyter Notebooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html">4. Python Client Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html#r-client-library">5. R Client Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html#wtss-openapi-v3-specification">6. WTSS OpenAPI v3 Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html#wtss-server">7. WTSS Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general.html#references">8. References</a></li>
 </ul>
 </li>
 </ul>
@@ -108,6 +114,7 @@
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
@@ -155,11 +162,11 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../applications.html"><span class="section-number">1. </span>Services and Applications</a> &raquo;</li>
+          <li><a href="../../applications.html">Services and Applications</a> &raquo;</li>
         
-          <li><a href="../wtss.html"><span class="section-number">1.1. </span>Web Time Series Services (WTSS)</a> &raquo;</li>
+          <li><a href="../wtss.html">Web Time Series Services (WTSS)</a> &raquo;</li>
         
-      <li><span class="section-number">1.1.1. </span>Retrieving a Time Series</li>
+      <li><span class="section-number">1. </span>Retrieving a Time Series</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,10 +180,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="service_overview.html" class="btn btn-neutral float-right" title="1.1.2. Service Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="service_overview.html" class="btn btn-neutral float-right" title="2. Service Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../wtss.html" class="btn btn-neutral float-left" title="1.1. Web Time Series Services (WTSS)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../wtss.html" class="btn btn-neutral float-left" title="Web Time Series Services (WTSS)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -186,8 +193,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="retrieving-a-time-series">
-<h1><span class="section-number">1.1.1. </span>Retrieving a Time Series<a class="headerlink" href="#retrieving-a-time-series" title="Permalink to this headline">¶</a></h1>
-<p>The Python <a class="reference internal" href="#wtss-ts-retrieve"><span class="std std-numref">Code snippet 1.1</span></a>: shows how to retrieve a <a class="reference external" href="https://modis.gsfc.nasa.gov/">MODIS</a> time series for the location with <code class="docutils literal notranslate"><span class="pre">longitude</span> <span class="pre">=</span> <span class="pre">-54</span></code> and <code class="docutils literal notranslate"><span class="pre">latitude</span> <span class="pre">=</span> <span class="pre">-12</span></code> during the period of <code class="docutils literal notranslate"><span class="pre">01-01-2001`</span> <span class="pre">to</span> <span class="pre">``12-31-2001</span></code> for the product <a class="reference external" href="https://lpdaac.usgs.gov/products/mod13q1v006/">MOD13Q1</a>:</p>
+<h1><span class="section-number">1. </span>Retrieving a Time Series<a class="headerlink" href="#retrieving-a-time-series" title="Permalink to this headline">¶</a></h1>
+<p>The Python <a class="reference internal" href="#wtss-ts-retrieve"><span class="std std-numref">Code snippet 1.1</span></a> shows how to retrieve a <a class="reference external" href="https://modis.gsfc.nasa.gov/">MODIS</a> time series for the location with <code class="docutils literal notranslate"><span class="pre">longitude</span> <span class="pre">=</span> <span class="pre">-54</span></code> and <code class="docutils literal notranslate"><span class="pre">latitude</span> <span class="pre">=</span> <span class="pre">-12</span></code> during the period of <code class="docutils literal notranslate"><span class="pre">01-01-2001`</span> <span class="pre">to</span> <span class="pre">``12-31-2001</span></code> for the product <a class="reference external" href="https://lpdaac.usgs.gov/products/mod13q1v006/">MOD13Q1</a>:</p>
 <div class="literal-block-wrapper docutils container" id="wtss-ts-retrieve">
 <div class="code-block-caption"><span class="caption-number">Code snippet 1.1 - </span><span class="caption-text">Retrieving a time series.</span><a class="headerlink" href="#wtss-ts-retrieve" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -244,10 +251,10 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>The output of the above code snippet is a time series chart as shown in <a class="reference internal" href="#wtss-ts-plot"><span class="std std-numref">Figure 1.2</span></a>:</p>
+<p>The output of the above code snippet is a time series chart as shown in <a class="reference internal" href="#wtss-ts-plot"><span class="std std-numref">Figure 1.1</span></a>:</p>
 <div class="align-center figure align-default" id="wtss-ts-plot">
 <a class="reference internal image-reference" href="../../_images/mod13q1-ts.png"><img alt="MOD13Q1 Time Series Plot" src="../../_images/mod13q1-ts.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 1.2 - </span><span class="caption-text">MOD13Q1 Time Series Plot.</span><a class="headerlink" href="#wtss-ts-plot" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1.1 - </span><span class="caption-text">MOD13Q1 Time Series Plot.</span><a class="headerlink" href="#wtss-ts-plot" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 
@@ -259,10 +266,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="service_overview.html" class="btn btn-neutral float-right" title="1.1.2. Service Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="service_overview.html" class="btn btn-neutral float-right" title="2. Service Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../wtss.html" class="btn btn-neutral float-left" title="1.1. Web Time Series Services (WTSS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../wtss.html" class="btn btn-neutral float-left" title="Web Time Series Services (WTSS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Service Overview &mdash; Brazil Data Cube</title>
+  <title>3. Jupyter Notebooks &mdash; Brazil Data Cube</title>
   
 
   
@@ -21,7 +21,7 @@
   
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/wtss/service_overview.html"/>
+    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/wtss/jupyter.html"/>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Jupyter Notebooks" href="jupyter.html" />
-    <link rel="prev" title="1. Retrieving a Time Series" href="retrieving_ts.html" /> 
+    <link rel="next" title="4. Python Client Library" href="general.html" />
+    <link rel="prev" title="2. Service Overview" href="service_overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,8 +100,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">Services and Applications</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../wtss.html">Web Time Series Services (WTSS)</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="retrieving_ts.html">1. Retrieving a Time Series</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2. Service Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="jupyter.html">3. Jupyter Notebooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="service_overview.html">2. Service Overview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Jupyter Notebooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general.html">4. Python Client Library</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general.html#r-client-library">5. R Client Library</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general.html#wtss-openapi-v3-specification">6. WTSS OpenAPI v3 Specification</a></li>
@@ -166,7 +166,7 @@
         
           <li><a href="../wtss.html">Web Time Series Services (WTSS)</a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>Service Overview</li>
+      <li><span class="section-number">3. </span>Jupyter Notebooks</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,10 +180,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="jupyter.html" class="btn btn-neutral float-right" title="3. Jupyter Notebooks" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="general.html" class="btn btn-neutral float-right" title="4. Python Client Library" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="retrieving_ts.html" class="btn btn-neutral float-left" title="1. Retrieving a Time Series" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="service_overview.html" class="btn btn-neutral float-left" title="2. Service Overview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -192,29 +192,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="service-overview">
-<h1><span class="section-number">2. </span>Service Overview<a class="headerlink" href="#service-overview" title="Permalink to this headline">¶</a></h1>
-<p>WTSS is based on three operations:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">list_coverages</span></code>: returns the list of all available coverages in the service.</p></li>
-</ul>
-<div class="align-center figure align-default" id="wtss-op-list-coverages">
-<a class="reference internal image-reference" href="../../_images/list-coverages.png"><img alt="WTSS list_coverages operation" src="../../_images/list-coverages.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.1 - </span><span class="caption-text">WTSS <code class="docutils literal notranslate"><span class="pre">list_coverages</span></code> operation.</span><a class="headerlink" href="#wtss-op-list-coverages" title="Permalink to this image">¶</a></p>
-</div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">describe_coverage</span></code>: returns the metadata of a given coverage.</p></li>
-</ul>
-<div class="align-center figure align-default" id="wtss-op-describe-coverage">
-<a class="reference internal image-reference" href="../../_images/describe-coverage.png"><img alt="WTSS describe_coverage operation" src="../../_images/describe-coverage.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.2 - </span><span class="caption-text">WTSS <code class="docutils literal notranslate"><span class="pre">describe_coverage</span></code> operation.</span><a class="headerlink" href="#wtss-op-describe-coverage" title="Permalink to this image">¶</a></p>
-</div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">time_series</span></code>: query the coverage (or data collection) for the list of values for a given location and time interval.</p></li>
-</ul>
-<div class="align-center figure align-default" id="wtss-op-time-series">
-<a class="reference internal image-reference" href="../../_images/time-series.png"><img alt="WTSS time_series operation" src="../../_images/time-series.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.3 - </span><span class="caption-text">WTSS <code class="docutils literal notranslate"><span class="pre">time_series</span></code> operation.</span><a class="headerlink" href="#wtss-op-time-series" title="Permalink to this image">¶</a></p>
+  <div class="section" id="jupyter-notebooks">
+<h1><span class="section-number">3. </span>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>If you want to learn from a practical example, please, take a look at the following Jupyter Notebook:</p>
+<p><a class="reference external" href="https://github.com/brazil-data-cube/wtss.py/blob/master/examples/wtss.ipynb">Jupyter Notebook - Access and Visualization of Remote Sensing Image Time Series</a></p>
+<p>This jupyter notebook will explain step by step how to use the WTSS client library to retrieve metadata and the time series data and how to create nice plots like the one shown below:</p>
+<div class="align-center figure align-default" id="wtss-coverage-mod13q1-nir">
+<a class="reference internal image-reference" href="../../_images/coverage_mod13q1_nir.png"><img alt="Jupyter Notebook Plots" src="../../_images/coverage_mod13q1_nir.png" style="width: 480px;" /></a>
+<p class="caption"><span class="caption-number">Figure 3.1 - </span><span class="caption-text">Jupyter Notebook Plots.</span><a class="headerlink" href="#wtss-coverage-mod13q1-nir" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 
@@ -226,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="jupyter.html" class="btn btn-neutral float-right" title="3. Jupyter Notebooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="general.html" class="btn btn-neutral float-right" title="4. Python Client Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="retrieving_ts.html" class="btn btn-neutral float-left" title="1. Retrieving a Time Series" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="service_overview.html" class="btn btn-neutral float-left" title="2. Service Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

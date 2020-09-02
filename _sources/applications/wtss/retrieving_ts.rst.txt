@@ -7,10 +7,10 @@
 
 
 Retrieving a Time Series
-------------------------
+========================
 
 
-The Python :numref:`Code snippet %s <wtss:ts-retrieve>`: shows how to retrieve a `MODIS <https://modis.gsfc.nasa.gov/>`_ time series for the location with ``longitude = -54`` and ``latitude = -12`` during the period of ``01-01-2001` to ``12-31-2001`` for the product `MOD13Q1 <https://lpdaac.usgs.gov/products/mod13q1v006/>`_:
+The Python :numref:`Code snippet %s <wtss:ts-retrieve>` shows how to retrieve a `MODIS <https://modis.gsfc.nasa.gov/>`_ time series for the location with ``longitude = -54`` and ``latitude = -12`` during the period of ``01-01-2001` to ``12-31-2001`` for the product `MOD13Q1 <https://lpdaac.usgs.gov/products/mod13q1v006/>`_:
 
 
 .. code-block:: python

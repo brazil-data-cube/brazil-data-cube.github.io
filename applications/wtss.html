@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1. Web Time Series Services (WTSS) &mdash; Brazil Data Cube</title>
+  <title>Web Time Series Services (WTSS) &mdash; Brazil Data Cube</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.1.1. Retrieving a Time Series" href="wtss/retrieving_ts.html" />
-    <link rel="prev" title="1. Services and Applications" href="../applications.html" /> 
+    <link rel="next" title="1. Retrieving a Time Series" href="wtss/retrieving_ts.html" />
+    <link rel="prev" title="Services and Applications" href="../applications.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,10 +97,16 @@
 </ul>
 <p class="caption"><span class="caption-text">Topics:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../applications.html">1. Services and Applications</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Web Time Series Services (WTSS)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wtss/retrieving_ts.html">1.1.1. Retrieving a Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/service_overview.html">1.1.2. Service Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../applications.html">Services and Applications</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Time Series Services (WTSS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wtss/retrieving_ts.html">1. Retrieving a Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/service_overview.html">2. Service Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/jupyter.html">3. Jupyter Notebooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/general.html">4. Python Client Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#r-client-library">5. R Client Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#wtss-openapi-v3-specification">6. WTSS OpenAPI v3 Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#wtss-server">7. WTSS Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#references">8. References</a></li>
 </ul>
 </li>
 </ul>
@@ -108,6 +114,7 @@
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
 
@@ -155,9 +162,9 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../applications.html"><span class="section-number">1. </span>Services and Applications</a> &raquo;</li>
+          <li><a href="../applications.html">Services and Applications</a> &raquo;</li>
         
-      <li><span class="section-number">1.1. </span>Web Time Series Services (WTSS)</li>
+      <li>Web Time Series Services (WTSS)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -171,10 +178,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="1.1.1. Retrieving a Time Series" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="1. Retrieving a Time Series" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../applications.html" class="btn btn-neutral float-left" title="1. Services and Applications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../applications.html" class="btn btn-neutral float-left" title="Services and Applications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -184,17 +191,23 @@
            <div itemprop="articleBody">
             
   <div class="section" id="web-time-series-services-wtss">
-<h1><span class="section-number">1.1. </span>Web Time Series Services (WTSS)<a class="headerlink" href="#web-time-series-services-wtss" title="Permalink to this headline">¶</a></h1>
+<h1>Web Time Series Services (WTSS)<a class="headerlink" href="#web-time-series-services-wtss" title="Permalink to this headline">¶</a></h1>
 <p><strong>W</strong>eb <strong>T</strong>ime <strong>S</strong>eries <strong>S</strong>ervice (WTSS) is a lightweight web service for handling time series data from remote sensing imagery. Given a location and a time interval you can retrieve the according time series as a JSON array of numbers.</p>
-<p>In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (<a class="reference internal" href="#wtss-coverage"><span class="std std-numref">Figure 1.1</span></a>).</p>
+<p>In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (<a class="reference internal" href="#wtss-coverage"><span class="std std-numref">Figure 1</span></a>).</p>
 <div class="align-center figure align-default" id="wtss-coverage">
 <a class="reference internal image-reference" href="../_images/image-time-series.png"><img alt="Coverage as a three dimensional array" src="../_images/image-time-series.png" style="width: 240px;" /></a>
-<p class="caption"><span class="caption-number">Figure 1.1 - </span><span class="caption-text">A coverage as a three dimensional array.</span><a class="headerlink" href="#wtss-coverage" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 1 - </span><span class="caption-text">A coverage as a three dimensional array.</span><a class="headerlink" href="#wtss-coverage" title="Permalink to this image">¶</a></p>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="wtss/retrieving_ts.html">1.1.1. Retrieving a Time Series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/service_overview.html">1.1.2. Service Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/retrieving_ts.html">1. Retrieving a Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/service_overview.html">2. Service Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/jupyter.html">3. Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/general.html">4. Python Client Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#r-client-library">5. R Client Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#wtss-openapi-v3-specification">6. WTSS OpenAPI v3 Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#wtss-server">7. WTSS Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#references">8. References</a></li>
 </ul>
 </div>
 </div>
@@ -207,10 +220,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="1.1.1. Retrieving a Time Series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="1. Retrieving a Time Series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../applications.html" class="btn btn-neutral float-left" title="1. Services and Applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../applications.html" class="btn btn-neutral float-left" title="Services and Applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

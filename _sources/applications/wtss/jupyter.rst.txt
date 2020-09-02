@@ -1,0 +1,27 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Jupyter Notebooks
+=================
+
+
+If you want to learn from a practical example, please, take a look at the following Jupyter Notebook:
+
+`Jupyter Notebook - Access and Visualization of Remote Sensing Image Time Series <https://github.com/brazil-data-cube/wtss.py/blob/master/examples/wtss.ipynb>`_
+
+
+This jupyter notebook will explain step by step how to use the WTSS client library to retrieve metadata and the time series data and how to create nice plots like the one shown below:
+
+
+.. figure:: ../../img/wtss/coverage_mod13q1_nir.png
+    :alt: Jupyter Notebook Plots
+    :width: 480
+    :figclass: align-center
+    :name: wtss:coverage_mod13q1_nir
+
+    Jupyter Notebook Plots.
