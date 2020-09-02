@@ -18,7 +18,7 @@ In WTSS a coverage is a three dimensional array associated to spatial and tempor
 
 .. figure:: ../img/wtss/image-time-series.png
     :alt: Coverage as a three dimensional array
-    :width: 480
+    :width: 240
     :figclass: align-center
     :name: wtss:coverage
 
