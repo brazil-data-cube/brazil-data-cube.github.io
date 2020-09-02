@@ -1,0 +1,48 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+SpatioTemporal Asset Catalog (STAC)
+===================================
+
+
+The Image Collections and Data Cube Collections produced in the Brazil Data Cube (BDC) project can be discovered and accessed through a standardized API known as **S**\ patio\ **T**\ emporal **A**\ sset **C**\ atalog (STAC).
+
+
+The diagram depicted in the :numref:`Figure %s <stac:data-model>` contains the most important concepts behind the STAC data model:
+
+
+.. figure:: ../img/stac/stac-model.png
+    :alt: SpatioTemporal Asset Catalog Model
+    :width: 480
+    :figclass: align-center
+    :name: stac:data-model
+
+    SpatioTemporal Asset Catalog Model.
+
+
+The description of the concepts below are adapted from the `STAC Specification <https://github.com/radiantearth/stac-spec>`_:
+
+- **Item**: a ``STAC Item`` is the atomic unit of metadata in STAC, providing links to the actual ``assets`` (including thumbnails) that they represent. It is a ``GeoJSON Feature`` with additional fields for things like time, links to related entities and mainly to the assets. According to the specification, this is the atomic unit that describes the data to be discovered in a ``STAC Catalog`` or ``Collection``.
+
+
+- **Asset**: a ``spatiotemporal asset`` is any file that represents information about the earth captured in a certain space and time.
+
+- **Catalog**: provides a structure to link various ``STAC Items`` together or even to other ``STAC Catalogs`` or ``Collections``.
+
+- **Collection:** is a specialization of the ``Catalog`` that allows additional information about a spatiotemporal collection of data.
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./stac/jupyter
+    ./stac/general
+
+
+

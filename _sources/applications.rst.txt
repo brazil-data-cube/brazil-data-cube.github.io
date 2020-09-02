@@ -17,4 +17,5 @@ The Brazil Data Cube provides a set of core applications to allow researchers an
     :maxdepth: 1
     :titlesonly:
 
+    ./applications/stac
     ./applications/wtss

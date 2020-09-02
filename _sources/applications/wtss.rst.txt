@@ -26,7 +26,6 @@ In WTSS a coverage is a three dimensional array associated to spatial and tempor
 
 
 .. toctree::
-    :numbered:
     :maxdepth: 1
     :titlesonly:
 
