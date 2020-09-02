@@ -23,8 +23,16 @@ This project aims to ...
 
 
 .. toctree::
+    :numbered:
     :maxdepth: 1
     :caption: Topics:
+
+    applications
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: General Information:
 
     license
 
