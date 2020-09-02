@@ -24,9 +24,17 @@ This project aims to ...
 
 .. toctree::
     :maxdepth: 1
-    :caption: Topics:
+    :caption: Documentation:
 
     applications
+    products
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Tutorials:
+
+    worcap-2020
 
 
 .. toctree::
@@ -35,11 +43,3 @@ This project aims to ...
 
     contact
     license
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

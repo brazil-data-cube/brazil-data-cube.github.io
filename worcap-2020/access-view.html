@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Web Time Series Services (WTSS) &mdash; Brazil Data Cube</title>
+  <title>Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python &mdash; Brazil Data Cube</title>
   
 
   
@@ -21,7 +21,7 @@
   
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/wtss.html"/>
+    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/access-view.html"/>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Retrieving a Time Series" href="wtss/retrieving_ts.html" />
-    <link rel="prev" title="Python Client Library" href="stac/general.html" /> 
+    <link rel="next" title="TEST access view" href="access-view/general.html" />
+    <link rel="prev" title="TEST intro geoinformática" href="intro-geo/general.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,27 +96,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../applications.html">Services and Applications</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Time Series Services (WTSS)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wtss/retrieving_ts.html">Retrieving a Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/service_overview.html">Service Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html">Python Client Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#r-client-library">R Client Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#wtss-openapi-v3-specification">WTSS OpenAPI v3 Specification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#wtss-server">WTSS Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#references">References</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../products.html">Data Products</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro-geo.html">Introdução à Geoinformática</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="access-view/general.html">TEST access view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="access-view/general.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time-series-machine-learning-pt2.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE II)</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
@@ -168,9 +164,9 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../applications.html">Services and Applications</a> &raquo;</li>
+          <li><a href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
         
-      <li>Web Time Series Services (WTSS)</li>
+      <li>Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,10 +180,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="access-view/general.html" class="btn btn-neutral float-right" title="TEST access view" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="intro-geo/general.html" class="btn btn-neutral float-left" title="TEST intro geoinformática" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -196,24 +192,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="web-time-series-services-wtss">
-<h1>Web Time Series Services (WTSS)<a class="headerlink" href="#web-time-series-services-wtss" title="Permalink to this headline">¶</a></h1>
-<p><strong>W</strong>eb <strong>T</strong>ime <strong>S</strong>eries <strong>S</strong>ervice (WTSS) is a lightweight web service for handling time series data from remote sensing imagery. Given a location and a time interval you can retrieve the according time series as a JSON array of numbers.</p>
-<p>In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (<a class="reference internal" href="#wtss-coverage"><span class="std std-numref">Figure 2</span></a>).</p>
-<div class="align-center figure align-default" id="wtss-coverage">
-<a class="reference internal image-reference" href="../_images/image-time-series.png"><img alt="Coverage as a three dimensional array" src="../_images/image-time-series.png" style="width: 240px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2 - </span><span class="caption-text">A coverage as a three dimensional array.</span><a class="headerlink" href="#wtss-coverage" title="Permalink to this image">¶</a></p>
-</div>
+  <div class="section" id="acesso-e-visualizacao-de-dados-de-observacao-da-terra-do-projeto-brasil-data-cube-em-linguagem-python">
+<h1>Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python<a class="headerlink" href="#acesso-e-visualizacao-de-dados-de-observacao-da-terra-do-projeto-brasil-data-cube-em-linguagem-python" title="Permalink to this headline">¶</a></h1>
+<p>texto sobre Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="wtss/retrieving_ts.html">Retrieving a Time Series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/service_overview.html">Service Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html">Python Client Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#r-client-library">R Client Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#wtss-openapi-v3-specification">WTSS OpenAPI v3 Specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#wtss-server">WTSS Server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#references">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access-view/general.html">TEST access view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access-view/general.html#references">References</a></li>
 </ul>
 </div>
 </div>
@@ -226,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="access-view/general.html" class="btn btn-neutral float-right" title="TEST access view" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="intro-geo/general.html" class="btn btn-neutral float-left" title="TEST intro geoinformática" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

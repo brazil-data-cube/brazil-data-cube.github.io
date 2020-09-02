@@ -1,0 +1,29 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+WorCAP 2020 - Geoinformática com Aplicações de Machine Learning
+===============================================================
+
+
+.. figure:: ./img/worcap-2020/worcap2020.png
+    :alt: Banner Workshop de Computação Aplicada 2020 (WorCAP)
+    :width: 480
+    :figclass: align-center
+
+
+O Workshop de Computação Aplicada (WorCAP) é um evento do programa de Pós-Graduação em Computação Aplicada (CAP) do Instituto Nacional de Pesquisas Espaciais (INPE).
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./worcap-2020/intro-geo
+    ./worcap-2020/access-view
+    ./worcap-2020/time-series-machine-learning-pt1
+    ./worcap-2020/time-series-machine-learning-pt2
