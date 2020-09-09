@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Jupyter Notebooks &mdash; Brazil Data Cube</title>
+  <title>Consulting CBERS-4 Data Using STAC &mdash; Brazil Data Cube</title>
   
 
   
@@ -21,7 +21,7 @@
   
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/stac/jupyter.html"/>
+    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/access-view/consulting-cbers.html"/>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Python Client Library" href="general.html" />
-    <link rel="prev" title="SpatioTemporal Asset Catalog (STAC)" href="../stac.html" /> 
+    <link rel="next" title="Calculating Normalized Difference Vegetation Index (NDVI)" href="vegetation-index.html" />
+    <link rel="prev" title="CB4_64_16D_STK_v1" href="../../products/products/CB4_64_16D_STK_v1.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,18 +103,18 @@
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../worcap-2020/course-info.html">Informações sobre o curso</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../worcap-2020/getting-started.html">Preparação para o Curso</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../worcap-2020/intro-geo.html">Introdução à Geoinformática</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../worcap-2020/access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../worcap-2020/access-view/intro.html">Introdução Brazil Data Cube</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../worcap-2020/access-view/cbers-input.html">Input Data</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../../worcap-2020/access-view/consulting-cbers.html">Consulting CBERS-4 Data Using STAC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../worcap-2020/access-view/vegetation-index.html">Calculating Normalized Difference Vegetation Index (NDVI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started.html">Preparação para o Curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-geo.html">Introdução à Geoinformática</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">Introdução Brazil Data Cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cbers-input.html">Input Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Consulting CBERS-4 Data Using STAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vegetation-index.html">Calculating Normalized Difference Vegetation Index (NDVI)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../worcap-2020/time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../worcap-2020/time-series-machine-learning-pt2.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt2.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
 </ul>
 </li>
 </ul>
@@ -168,11 +168,11 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../applications.html">Services and Applications</a> &raquo;</li>
+          <li><a href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
         
-          <li><a href="../stac.html">SpatioTemporal Asset Catalog (STAC)</a> &raquo;</li>
+          <li><a href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a> &raquo;</li>
         
-      <li>Jupyter Notebooks</li>
+      <li>Consulting CBERS-4 Data Using STAC</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,10 +186,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="general.html" class="btn btn-neutral float-right" title="Python Client Library" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="vegetation-index.html" class="btn btn-neutral float-right" title="Calculating Normalized Difference Vegetation Index (NDVI)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../stac.html" class="btn btn-neutral float-left" title="SpatioTemporal Asset Catalog (STAC)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../products/products/CB4_64_16D_STK_v1.html" class="btn btn-neutral float-left" title="CB4_64_16D_STK_v1" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -198,11 +198,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="jupyter-notebooks">
-<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>If you want to learn from a practical example, please, take a look at the following Jupyter Notebook: <a class="reference external" href="https://github.com/brazil-data-cube/stac.py/blob/master/examples/stac.ipynb">Jupyter Notebook - Discover and Access to Data Products in Brazil Data Cube</a>.</p>
-<p>This jupyter notebook will explain step by step how to use the STAC client library to retrieve metadata and access the image collections or data cube collections.</p>
-<p><strong>TODO:</strong> show an image plot from the jupyter notebook</p>
+  <div class="section" id="consulting-cbers-4-data-using-stac">
+<h1>Consulting CBERS-4 Data Using STAC<a class="headerlink" href="#consulting-cbers-4-data-using-stac" title="Permalink to this headline">¶</a></h1>
+<p>Como mencionado previamente, as imagens processadas pelo BDC são disponibilizadas gratuitamente no <a class="reference external" href="http://brazildatacube.dpi.inpe.br/portal/explore">portal do projeto</a>, por meio de uma API padronizada chamada <em>SpatioTemporal Asset Catalog</em> (STAC).</p>
+<div class="section" id="brazil-data-cube-stac">
+<h2>Brazil Data Cube Stac<a class="headerlink" href="#brazil-data-cube-stac" title="Permalink to this headline">¶</a></h2>
+<p>A especificação STAC fornece uma linguagem comum para descrever informação geoespacial, de modo que ela possa ser facilmente indexada e descoberta. Um <em>asset</em> espaço-temporal é qualquer arquivo que represente informação sobre a Terra obtida em um determinado espaço e tempo. Idealmente a idéia consiste em todos os provedores de assets espaço-temporais (Imagens óticas, imagens de radar, nuvens de pontos, data cubes, dentre outros) exporem seus dados como STAC, de modo que códigos não precisem ser reescritos toda vez que um novo conjunto de dados for liberado.</p>
+<p>A documentação oficial do <strong>BDC STAC</strong> pode ser conferida em:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../applications/stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
+</ul>
+</div>
+<p>O projeto BDC disponibiliza seus dados via STAC por meio da URL: <a class="reference external" href="http://brazildatacube.dpi.inpe.br/bdc-stac/0.8.1/">http://brazildatacube.dpi.inpe.br/bdc-stac/0.8.1/</a> . Vamos fazer um exercício usando o client <a class="reference external" href="https://github.com/brazil-data-cube/stac.py">BDC STAC Python</a> para consultar os dados disponíveis. Para isso faremos uso de um notebook no Kaggle:</p>
+<p><a class="reference external" href="https://www.kaggle.comaccess-bdc-stac-cbers-4-products">https://www.kaggle.comaccess-bdc-stac-cbers-4-products</a></p>
+</div>
 </div>
 
 
@@ -213,10 +223,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="general.html" class="btn btn-neutral float-right" title="Python Client Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="vegetation-index.html" class="btn btn-neutral float-right" title="Calculating Normalized Difference Vegetation Index (NDVI)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../stac.html" class="btn btn-neutral float-left" title="SpatioTemporal Asset Catalog (STAC)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../products/products/CB4_64_16D_STK_v1.html" class="btn btn-neutral float-left" title="CB4_64_16D_STK_v1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

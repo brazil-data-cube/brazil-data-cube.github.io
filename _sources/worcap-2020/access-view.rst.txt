@@ -17,4 +17,7 @@ Acesso e visualização de dados de observação da Terra do projeto Brasil Data
     :maxdepth: 1
     :titlesonly:
 
-    ./access-view/general
+    ./access-view/intro
+    ./access-view/cbers-input
+    ./access-view/consulting-cbers
+    ./access-view/vegetation-index

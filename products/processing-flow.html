@@ -96,28 +96,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../products.html">BDC Data Products</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../products.html#image-collections">Image Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products.html#data-cubes-collections">Data Cubes Collections</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../products.html#data-cube-specifications">Data Cube Specifications</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bdc-grid.html">BDC Grid</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Processing Flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html">BDC Naming</a></li>
-<li class="toctree-l3"><a class="reference internal" href="products.html">BDC Products</a></li>
-<li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
-<li class="toctree-l3"><a class="reference internal" href="experiments.html">BDC Experiments</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../worcap-2020/course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../worcap-2020/getting-started.html">Preparação para o Curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../worcap-2020/intro-geo.html">Introdução à Geoinformática</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../worcap-2020/access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../worcap-2020/access-view/intro.html">Introdução Brazil Data Cube</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../worcap-2020/access-view/cbers-input.html">Input Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../worcap-2020/access-view/consulting-cbers.html">Consulting CBERS-4 Data Using STAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../worcap-2020/access-view/vegetation-index.html">Calculating Normalized Difference Vegetation Index (NDVI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../worcap-2020/time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../worcap-2020/time-series-machine-learning-pt2.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
@@ -198,7 +197,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="bdc-processing-flow">
-<h1>BDC Processing Flow<a class="headerlink" href="#bdc-processing-flow" title="Permalink to this headline">¶</a></h1>
+<span id="processing-flow"></span><h1>BDC Processing Flow<a class="headerlink" href="#bdc-processing-flow" title="Permalink to this headline">¶</a></h1>
 <p>Several procedures are performed to generate BDC Data cube collections. Based on that, <a class="reference internal" href="#products-processing-flow"><span class="std std-numref">Figure 1</span></a> illustrates a diagram containing the main procedures used to generate BDC data products.</p>
 <div class="align-center figure align-default" id="products-processing-flow">
 <a class="reference internal image-reference" href="../_images/bdc.png"><img alt="BDC Image collection injestion and Data Cube generation" src="../_images/bdc.png" style="width: 720px;" /></a>
@@ -211,11 +210,19 @@
 <div class="section" id="warp-merge-reprojecting-resampling-and-griding">
 <h2>Warp (Merge, Reprojecting, Resampling and Griding)<a class="headerlink" href="#warp-merge-reprojecting-resampling-and-griding" title="Permalink to this headline">¶</a></h2>
 <p>In order to build the data cube collections, all input images must be at the on the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.</p>
+<div class="align-center figure align-default" id="products-cube-builder">
+<a class="reference internal image-reference" href="../_images/cube-builder.png"><img alt="BDC Cube generation" src="../_images/cube-builder.png" style="width: 720px;" /></a>
+<p class="caption"><span class="caption-number">Figure 2 - </span><span class="caption-text">BDC Image collection injestion and Data Cube generation.</span><a class="headerlink" href="#products-cube-builder" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="temporal-compositing">
 <h2>Temporal Compositing<a class="headerlink" href="#temporal-compositing" title="Permalink to this headline">¶</a></h2>
 <p>BDC Data Cube Collections can be categorized in two types, identity and regular. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called regular data cubes.</p>
 <p>Three temporal compositing functions are being used in BDC: ( <em>i</em> ) average, ( <em>ii</em> ) median, and ( <em>iii</em> ) stack. These functions are operations applied on valid observations, which are not detected as cloud or cloud shadow by the quality assessment band, considering the time dimension and a time step, e. g. monthly or 16 days. The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image.</p>
+<div class="align-center figure align-default" id="products-compositing-functions">
+<a class="reference internal image-reference" href="../_images/compositing-function.png"><img alt="BDC Time Compositing Functions" src="../_images/compositing-function.png" style="width: 720px;" /></a>
+<p class="caption"><span class="caption-number">Figure 3 - </span><span class="caption-text">BDC Time Compositing Functions.</span><a class="headerlink" href="#products-compositing-functions" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>

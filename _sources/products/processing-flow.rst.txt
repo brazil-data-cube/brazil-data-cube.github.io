@@ -6,6 +6,9 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
+.. _processing-flow:
+
+
 BDC Processing Flow
 -------------------
 
@@ -36,6 +39,15 @@ Warp (Merge, Reprojecting, Resampling and Griding)
 In order to build the data cube collections, all input images must be at the on the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.
 
 
+.. figure:: ../img/products/cube-builder.png
+    :alt: BDC Cube generation
+    :width: 720
+    :figclass: align-center
+    :name: products:cube-builder
+
+    BDC Image collection injestion and Data Cube generation.
+
+
 Temporal Compositing
 ++++++++++++++++++++
 
@@ -44,6 +56,14 @@ BDC Data Cube Collections can be categorized in two types, identity and regular.
 
 Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *ii* ) median, and ( *iii* ) stack. These functions are operations applied on valid observations, which are not detected as cloud or cloud shadow by the quality assessment band, considering the time dimension and a time step, e. g. monthly or 16 days. The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image.
 
+
+.. figure:: ../img/products/compositing-function.png
+    :alt: BDC Time Compositing Functions
+    :width: 720
+    :figclass: align-center
+    :name: products:compositing-functions
+
+    BDC Time Compositing Functions.
 
 
 References

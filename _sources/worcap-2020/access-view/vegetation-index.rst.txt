@@ -6,8 +6,7 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
-BDC Product Access
-------------------
+Calculating Normalized Difference Vegetation Index (NDVI)
+---------------------------------------------------------
 
-
-All Collections can be obtained through Brazil Data Cube website (http://brazildatacube.dpi.inpe.br/portal/explore) or consulting the BDC STAC (http://brazildatacube.dpi.inpe.br/bdc-stac/0.8.1/).
+**UNDER DEVELOPMENT**

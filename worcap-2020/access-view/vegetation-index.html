@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Jupyter Notebooks &mdash; Brazil Data Cube</title>
+  <title>Calculating Normalized Difference Vegetation Index (NDVI) &mdash; Brazil Data Cube</title>
   
 
   
@@ -21,7 +21,7 @@
   
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/wtss/jupyter.html"/>
+    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/access-view/vegetation-index.html"/>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Python Client Library" href="general.html" />
-    <link rel="prev" title="Service Overview" href="service_overview.html" /> 
+    <link rel="next" title="Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)" href="../time-series-machine-learning-pt1.html" />
+    <link rel="prev" title="Consulting CBERS-4 Data Using STAC" href="consulting-cbers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,27 +96,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">Services and Applications</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../wtss.html">Web Time Series Services (WTSS)</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="retrieving_ts.html">Retrieving a Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="service_overview.html">Service Overview</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general.html">Python Client Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general.html#r-client-library">R Client Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general.html#wtss-openapi-v3-specification">WTSS OpenAPI v3 Specification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general.html#wtss-server">WTSS Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general.html#references">References</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started.html">Preparação para o Curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-geo.html">Introdução à Geoinformática</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="intro.html">Introdução Brazil Data Cube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cbers-input.html">Input Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="consulting-cbers.html">Consulting CBERS-4 Data Using STAC</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Calculating Normalized Difference Vegetation Index (NDVI)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt2.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
@@ -168,11 +168,11 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../applications.html">Services and Applications</a> &raquo;</li>
+          <li><a href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
         
-          <li><a href="../wtss.html">Web Time Series Services (WTSS)</a> &raquo;</li>
+          <li><a href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a> &raquo;</li>
         
-      <li>Jupyter Notebooks</li>
+      <li>Calculating Normalized Difference Vegetation Index (NDVI)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,10 +186,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="general.html" class="btn btn-neutral float-right" title="Python Client Library" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../time-series-machine-learning-pt1.html" class="btn btn-neutral float-right" title="Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="service_overview.html" class="btn btn-neutral float-left" title="Service Overview" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="consulting-cbers.html" class="btn btn-neutral float-left" title="Consulting CBERS-4 Data Using STAC" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -198,15 +198,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="jupyter-notebooks">
-<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>If you want to learn from a practical example, please, take a look at the following Jupyter Notebook:</p>
-<p><a class="reference external" href="https://github.com/brazil-data-cube/wtss.py/blob/master/examples/wtss.ipynb">Jupyter Notebook - Access and Visualization of Remote Sensing Image Time Series</a></p>
-<p>This jupyter notebook will explain step by step how to use the WTSS client library to retrieve metadata and the time series data and how to create nice plots like the one shown below:</p>
-<div class="align-center figure align-default" id="wtss-coverage-mod13q1-nir">
-<a class="reference internal image-reference" href="../../_images/coverage_mod13q1_nir.png"><img alt="Jupyter Notebook Plots" src="../../_images/coverage_mod13q1_nir.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 10 - </span><span class="caption-text">Jupyter Notebook Plots.</span><a class="headerlink" href="#wtss-coverage-mod13q1-nir" title="Permalink to this image">¶</a></p>
-</div>
+  <div class="section" id="calculating-normalized-difference-vegetation-index-ndvi">
+<h1>Calculating Normalized Difference Vegetation Index (NDVI)<a class="headerlink" href="#calculating-normalized-difference-vegetation-index-ndvi" title="Permalink to this headline">¶</a></h1>
+<p><strong>UNDER DEVELOPMENT</strong></p>
 </div>
 
 
@@ -217,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="general.html" class="btn btn-neutral float-right" title="Python Client Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../time-series-machine-learning-pt1.html" class="btn btn-neutral float-right" title="Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="service_overview.html" class="btn btn-neutral float-left" title="Service Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="consulting-cbers.html" class="btn btn-neutral float-left" title="Consulting CBERS-4 Data Using STAC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

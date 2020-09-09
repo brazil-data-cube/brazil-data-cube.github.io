@@ -1,0 +1,74 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Input Data
+----------
+
+
+O INPE foi pioneiro na provisão de imagens de média resolução espacial, liberando imagens sem cusbo do segundo Satélite Sino-Brasileiro de Recursos Terrestres (CBERS-2) :ref:`Banskota el al. (2014) <banskota_2014>`. A adoção dessas politicas encorajou que a *United States Geological Survey* (USGS) tornasse dados Landsat disponíveis em 2008 :ref:`Woodcock et al. (2008) <woodcock_2008>`, o que resultou em uma maior quantidade de acesso e uso de imagens orbitais :ref:`Wulder et al. (2012) <wulder_2012>`. A abordagem de disponibilização gratuita de dados de imagens orbitais permanece até os dias atuais com dados provenientes dos satélites Landsat-8, Sentinel-2, CBERS-4, CBERS-4A, TERRA, AQUA, dentre outros.
+
+
+Programa CBERS e dados CBERS-4/AWFI
++++++++++++++++++++++++++++++++++++
+
+
+.. figure:: ../../img/worcap-2020/access-view/cbers-satellite.png
+    :alt: CBERS Satellite
+    :width: 200
+    :figclass: align-right
+
+
+O programa de Satélite Sino-Brasileiro de Recursos Terrestres (CBERS) é uma cooperação entre Brasil e China, estabelecido em 1988, para suprir ambos os países com imagens de sensoriamento remoto multiespectral :ref:`Ponzoni et al. (2008) <ponzoni_2008>`. Atualmente, o CBERS-4 esta em operação, desde dezembro de 2014. CBERS-4 carrega quatro cameras: (*i*) Camera Panchromatica and Multiespectral, (*ii*) a Camera Multispectral Camera (MUX), (*iii*) Sistema Infravermelho (IRS), and (*iv*) a Câmera Avançada de Amplo Campo de Visada (AWFI). O satélite CBERS-4 tem órbita sol-sincrona com uma altitude de  778 km. o sensor AWFI tem 4 bandas espectrais, azul, verde, vermelho e infravermelho próximo. Todas as bandas do sensor AWFI apresentam resolução espacial de 64 m (nadir). Cenas AWFI têm aproximadamente 866 km de visada (swath), o que permite uma resolução temporal de aproximadamente 5 dias. Imagens CBERS-4/AWFI (bem como outros produtos) são gratuitamente distribuidas pelo INPE por meio do seu catálogo de imagens (http://www.dgi.inpe.br/catalogo/).
+
+
+BDC Processing Flow
++++++++++++++++++++
+
+
+Neste minicurso faremos uso de imagens provenientes do sensor AWFI acoplada ao satélite CBERS-4. Caso as imagens fossem obtidas diretamente pelo portal do INPE, seriam necessários processamentos, por exemplo a aplicação dos coeficientes de calibração, que podem ser encontrados em :ref:`Pinto et al. (2016) <pinto_2016>` e processamentos de correção atmosférica para que estes dados estivessem prontos para análise. Neste contexto, diversos provedores de dados, como a *USGS* e o *SciHub* coopernicus estão fornecendo dados já processador. Com relação à imagens CBERS-4, o projeto *Brazil Data Cube* fornece esses dados já processados de modo que não precisaremos nos preocupar com estes procedimentos. Além disso, o *BDC* também fornece esses dados agrupados como cubos de dados.
+
+
+Dito isso, vale a pena verificar os seguintes tópicos:
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ../../products/processing-flow
+    ../../products/products/CB4_64
+    ../../products/products/CB4_64_16D_STK_v1
+
+
+Referências
++++++++++++
+
+
+.. _banskota_2014:
+
+- Banskota, A., Kayastha, N., Falkowski, M. J., Wulder, M. A., Froese,R. E., and White, J. C.Forest monitoring using Landsat time series data: a review. Canadian Journal of Remote Sensing 40, 5 (2014), 362–384.
+
+
+.. _pinto_2016:
+
+- Pinto, C., Ponzoni, F., Castro, R., Leigh, L., Mishra, N., Aaron, D., and Helder, D. First in-flight radiometric calibration of MUX and WFI on-board CBERS-4. Remote Sensing 8, 5 (2016), 405.
+
+
+.. _ponzoni_2008:
+
+- Ponzoni, F. J., Junior, J. Z., and Lamparelli, R. A.In-flight absolute calibration of the CBERS-2 CCD sensor data. In Academia Brasileira de Ciências(2008), vol. 80, pp. 373–380.
+
+
+.. _woodcock_2008:
+
+- Woodcock, C. E., Allen, R., Anderson, M., Belward, A., Bindschadler,R., Cohen, W., Gao, F., Goward, S. N., Helder, D., Helmer, E. H., Ne-mani, R., Oreopoulos, L., Schott, J., Thenkabail, P. S., Vermote, E. F.,Vogelmann, J. E., Wulder, M. A., and Wynne, R. H. Free access to Landsat imagery. Science 320, 5 (2008), 1011–1012.
+
+
+.. _wulder_2012:
+
+- Wulder, M. A., Masek, J. G., Cohen, W. B., Loveland, T. R., and Wood-cock, C. E.Opening the archive: how free data has enabled the science and moni-toring promise of Landsat.Remote Sensing of Environment 122(2012), 2–10.

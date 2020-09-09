@@ -1,0 +1,36 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Consulting CBERS-4 Data Using STAC
+----------------------------------
+
+
+Como mencionado previamente, as imagens processadas pelo BDC são disponibilizadas gratuitamente no `portal do projeto <http://brazildatacube.dpi.inpe.br/portal/explore>`_, por meio de uma API padronizada chamada *SpatioTemporal Asset Catalog* (STAC).
+
+
+Brazil Data Cube Stac
++++++++++++++++++++++
+
+
+A especificação STAC fornece uma linguagem comum para descrever informação geoespacial, de modo que ela possa ser facilmente indexada e descoberta. Um *asset* espaço-temporal é qualquer arquivo que represente informação sobre a Terra obtida em um determinado espaço e tempo. Idealmente a idéia consiste em todos os provedores de assets espaço-temporais (Imagens óticas, imagens de radar, nuvens de pontos, data cubes, dentre outros) exporem seus dados como STAC, de modo que códigos não precisem ser reescritos toda vez que um novo conjunto de dados for liberado.
+
+
+A documentação oficial do **BDC STAC** pode ser conferida em:
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ../../applications/stac
+
+
+O projeto BDC disponibiliza seus dados via STAC por meio da URL: http://brazildatacube.dpi.inpe.br/bdc-stac/0.8.1/ . Vamos fazer um exercício usando o client `BDC STAC Python <https://github.com/brazil-data-cube/stac.py>`_ para consultar os dados disponíveis. Para isso faremos uso de um notebook no Kaggle:
+
+
+https://www.kaggle.comaccess-bdc-stac-cbers-4-products
