@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE II) &mdash; Brazil Data Cube</title>
+  <title>Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação &mdash; Brazil Data Cube</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="TEST intro ts-ml-pt1" href="time-series-machine-learning-pt2/general.html" />
-    <link rel="prev" title="TEST intro ts-ml-pt1" href="time-series-machine-learning-pt1/general.html" /> 
+    <link rel="next" title="Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação" href="time-series-machine-learning-pt2/general.html" />
+    <link rel="prev" title="Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte I - Conceitos básicos, amostras e clustering" href="time-series-machine-learning-pt1/general.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,18 +97,19 @@
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../products.html">Data Products</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Preparação para o Curso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro-geo.html">Introdução à Geoinformática</a></li>
 <li class="toctree-l2"><a class="reference internal" href="access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE II)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="time-series-machine-learning-pt2/general.html">TEST intro ts-ml-pt1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="time-series-machine-learning-pt2/general.html#references">References</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="time-series-machine-learning-pt2/general.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
 </ul>
 </li>
 </ul>
@@ -166,7 +167,7 @@
         
           <li><a href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
         
-      <li>Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE II)</li>
+      <li>Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,10 +181,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="time-series-machine-learning-pt2/general.html" class="btn btn-neutral float-right" title="TEST intro ts-ml-pt1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="time-series-machine-learning-pt2/general.html" class="btn btn-neutral float-right" title="Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="time-series-machine-learning-pt1/general.html" class="btn btn-neutral float-left" title="TEST intro ts-ml-pt1" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="time-series-machine-learning-pt1/general.html" class="btn btn-neutral float-left" title="Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte I - Conceitos básicos, amostras e clustering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -192,13 +193,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introducao-a-series-temporais-de-imagens-de-sensoriamento-remoto-e-aplicacoes-de-machine-learning-parte-ii">
-<h1>Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE II)<a class="headerlink" href="#introducao-a-series-temporais-de-imagens-de-sensoriamento-remoto-e-aplicacoes-de-machine-learning-parte-ii" title="Permalink to this headline">¶</a></h1>
-<p>texto sobre Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning</p>
+  <div class="section" id="introducao-a-series-temporais-de-imagens-de-sensoriamento-remoto-e-aplicacoes-de-machine-learning-parte-ii-classificacao">
+<h1>Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação<a class="headerlink" href="#introducao-a-series-temporais-de-imagens-de-sensoriamento-remoto-e-aplicacoes-de-machine-learning-parte-ii-classificacao" title="Permalink to this headline">¶</a></h1>
+<p><strong>Under Development</strong></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="time-series-machine-learning-pt2/general.html">TEST intro ts-ml-pt1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="time-series-machine-learning-pt2/general.html#references">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time-series-machine-learning-pt2/general.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
 </ul>
 </div>
 </div>
@@ -211,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="time-series-machine-learning-pt2/general.html" class="btn btn-neutral float-right" title="TEST intro ts-ml-pt1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="time-series-machine-learning-pt2/general.html" class="btn btn-neutral float-right" title="Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="time-series-machine-learning-pt1/general.html" class="btn btn-neutral float-left" title="TEST intro ts-ml-pt1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="time-series-machine-learning-pt1/general.html" class="btn btn-neutral float-left" title="Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte I - Conceitos básicos, amostras e clustering" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

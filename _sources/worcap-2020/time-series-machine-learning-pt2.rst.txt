@@ -6,12 +6,11 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
-Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE II)
-============================================================================================================
+Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação
+----------------------------------------------------------------------------------------------------------------------------
 
 
-texto sobre Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning
-
+**Under Development**
 
 .. toctree::
     :maxdepth: 1

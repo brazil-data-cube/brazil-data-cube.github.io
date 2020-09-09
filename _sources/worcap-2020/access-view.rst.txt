@@ -7,10 +7,10 @@
 
 
 Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python
-=====================================================================================================
+-----------------------------------------------------------------------------------------------------
 
 
-texto sobre Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python
+**Under Development**
 
 
 .. toctree::

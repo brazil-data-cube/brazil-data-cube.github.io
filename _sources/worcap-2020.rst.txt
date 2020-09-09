@@ -23,6 +23,8 @@ O Workshop de Computação Aplicada (WorCAP) é um evento do programa de Pós-Gr
     :maxdepth: 1
     :titlesonly:
 
+    ./worcap-2020/course-info
+    ./worcap-2020/getting-started
     ./worcap-2020/intro-geo
     ./worcap-2020/access-view
     ./worcap-2020/time-series-machine-learning-pt1

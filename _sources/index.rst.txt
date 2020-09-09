@@ -13,9 +13,6 @@ Brazil Data Cube Documentation
 Welcome to the **Brazil Data Cube** project!
 
 
-This project aims to ...
-
-
 .. toctree::
     :hidden:
 
@@ -26,8 +23,9 @@ This project aims to ...
     :maxdepth: 1
     :caption: Documentation:
 
-    applications
     products
+    applications
+
 
 
 .. toctree::

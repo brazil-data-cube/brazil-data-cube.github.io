@@ -6,12 +6,15 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
-TEST intro geoinformática
-=========================
+.. _intro-geo:
 
 
-text text
+Conceitos básicos sobre dados geográficos e sistemas de informação geográfica
+-----------------------------------------------------------------------------
+
+
+**UNDER DEVELOPMENT**
 
 
 References
-==========
+++++++++++

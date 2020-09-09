@@ -1,0 +1,257 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+BDC Input Data
+--------------
+
+
+INPE pioneered the free provision of medium resolution satellite data, releasing images at no cost from the second *China-Brazil Earth Resources Satellite* (CBERS-2) :ref:`Banskota et al. (2014) <banskota_2014>`. The adoption of this policy encouraged the *United States Geological Survey* (USGS) to make Landsat data available in 2008 :ref:`Woodcock et al. (2008) <woodcock_2008>`, which resulted in a greater amount of access and use of orbital images :ref:`Wulder et al. (2012) <wulder_2012>`. Nowadays, Landsat program provides the most faraway orbital image series, providing observations since 1972 and is freely available. Also the European Copernicus program made available the access to all users for Sentinel data, such as Sentinel-2A and Sentinel-2B :ref:`Berger et al. (2012) <berger_2012>`. The free data approach persists to recent days with free data availability from Landsat-8, Sentinel-2, CBERS-4, MODIS and more. Images from the Landsat-8/OLI, Sentinel-2A/MSI, Sentinel-2B/MSI, CBERS-4/AWFI, CBERS-4/MUX, Terra/MODIS and Aqua/MODIS are used as input data in the BDC products.
+
+
+CBERS-4
++++++++
+
+
+The CBERS (China-Brazil Earth Resources Satellites) program is a cooperation between Brazil and China, established in 1988, to supply both countries with multispectral remotely sensed imagery :ref:`Ponzoni et al. (2008) <ponzoni_2008>`. Currently, CBERS-4 is in operation, since December 2014. CBERS-4 carries four cameras: ( *i* ) Panchromatic and Multispectral Camera, ( *ii* ) the Multispectral Camera (MUX), ( *iii* ) Infrared System (IRS), and ( *iv* ) the Wide-Field Imager (AWFI). The CBERS-4 satellite has a sun-synchronous orbit with an altitude of 778 km. AWFI has four spectral bands, blue, green, red and NIR. All AWFI bands present spatial resolution of 64 m (nadir). AWFI scenes have approximately 866 km of swath width, which enables a temporal resolution of 5 days.
+
+
+CBERS-4/AWFI (and other products) are freely distributed by INPE. Calibration coefficients for CBERS-4 can be found in :ref:`Pinto et al. (2016) <pinto_2016>`. The scenes are provided in INPE's catalog (http://www.dgi.inpe.br/catalogo/) following CBERS WRS. CBERS-4 main characteristics are:
+
+
++----------------------------+-------------+--------------+-------------+
+|                                          | CBERS-4                    |
++----------------------------+-------------+--------------+-------------+
+|                                          | AWFI         | MUX         |
++============================+=============+==============+=============+
+| Launch Date                              | Dez. 7, 2014               |
++----------------------------+-------------+--------------+-------------+
+| Equatorial crossing time                 | 10:30                      |
++----------------------------+-------------+--------------+-------------+
+| Swath (km)                               | 866          | 120         |
++----------------------------+-------------+--------------+-------------+
+| Field of view (o)                        | 28.63        | 4           |
++----------------------------+-------------+--------------+-------------+
+| Spatial Resolution (m)                   | 64           | 20          |
++----------------------------+-------------+--------------+-------------+
+| Orbit Height (km)                        | 778                        |
++----------------------------+-------------+--------------+-------------+
+| Temporal Resolution (days)               | 5            | 26          |
++----------------------------+-------------+--------------+-------------+
+|                            | blue (B13)  | 0.450-0.520  | 0.450-0.520 |
++                            +-------------+--------------+-------------+
+| Spectral Bands (um)        | green (B14) | 0.520-0.590  | 0.520-0.590 |
++                            +-------------+--------------+-------------+
+|                            | red (B15)   | 0.630-0.690  | 0.630-0.690 |
++                            +-------------+--------------+-------------+
+|                            | nir (B16)   | 0.770-0.890  | 0.770-0.890 |
++----------------------------+-------------+--------------+-------------+
+
+Landsat-8
++++++++++
+
+In the late 60s, NASA (National Aeronautics and Space Administration) started the Landsat program to collect data on renewable and non-renewable natural resources on Earth's surface :ref:`USGS (2015) <usgs_2015>`. Currently, the Landsat program has two operating platforms, the Landsat-7 (in precarious conditions) and Landsat-8, while Landsat-9 has been authorized and is proceeding towards a December 2020 launch :ref:`Wulder et al. (2019) <wulder_2019>`. Landsat-8 was launched in February of 2013. The satellite orbits the Earth in near-polar, sun-synchronous orbit, following the World Reference System (WRS-2) at an altitude of approximately 705 km. The satellite carries two sensors: the OLI (Operational Land Imager) sensor and the TIRS (Thermal Infrared Sensor) sensor, which are co-registered :ref:`USGS (2015) <usgs_2015>`. Landsat-8/OLI presents spatial resolution of 30m, regarding bands of the visible, 15m for panchromatic band and 100m for the thermal bands (TIRS). The imaged scenes have 185 km east-west and present temporal resolution of 16 days.
+
+
+Top of Atmosphere (ToA) products are freely distributed by USGS in a tiered structure called *Collections*. *Collection-1* includes Level-1 Precision and Terrain (L1TP) corrected data, which is radiometrically calibrated and orthorectified. The products are provided in the UTM projection and can also be ordered as surface reflectance through USGS ESPA interface, which uses the Landsat Surface Reflectance Code (LaSRC) to process the images :ref:`USGS (2018) <usgs_2018>`. Landsat-8 main characteristics are:
+
+
++----------------------------+---------------+---------------+
+|                                            | Landsat-8/OLI |
++============================+===============+===============+
+| Launch Date                                | Feb. 11, 2013 |
++----------------------------+---------------+---------------+
+| Equatorial crossing time                   | 10:00         |
++----------------------------+---------------+---------------+
+| Swath (km)                                 | 180           |
++----------------------------+---------------+---------------+
+| Field of view (o)                          | 15            |
++----------------------------+---------------+---------------+
+| Spatial Resolution (m)                     | 30            |
++----------------------------+---------------+---------------+
+| Orbit Height (km)                          | 705           |
++----------------------------+---------------+---------------+
+| Temporal Resolution (days)                 | 16            |
++----------------------------+---------------+---------------+
+|                            | coastal (B01) | 0.433–0.453   |
++                            +---------------+---------------+
+|                            | blue (B02)    | 0.450–0.515   |
++                            +---------------+---------------+
+| Spectral Bands (um)        | green (B03)   | 0.525–0.600   |
++                            +---------------+---------------+
+|                            | red (B04)     | 0.630–0.680   |
++                            +---------------+---------------+
+|                            | nir (B05)     | 0.845–0.885   |
++                            +---------------+---------------+
+|                            | swir16 (B06)  | 1.560–1.660   |
++                            +---------------+---------------+
+|                            | swir22 (B07)  | 2.100–2.300   |
++                            +---------------+---------------+
+|                            | cirrus (B09)  | 1.360–1.390   |
++----------------------------+---------------+---------------+
+
+
+MODIS
++++++
+
+
+In 1999 and in 2002 NASA launched Terra and Aqua satellites, respectively. Both platforms present the Moderate Resolution Imaging Spectroradiometer (MODIS) aboard. Terra MODIS and Aqua MODIS are at an altitude of approximately 705 km, with a swath width of approximately 2330 km, which implies in viewing the entire Earth's surface every 1 to 2 days using its 36 spectral bands :ref:`NASA (2019) <nasa_2019>`. MODIS products are freely distributed by USGS and NASA. MODIS main characteristics are:
+
++----------------------------+----------------------+---------------+-------------+
+|                                                   | MODIS                       |
++----------------------------+----------------------+---------------+-------------+
+|                                                   | TERRA         | AQUA        |
++============================+======================+===============+=============+
+| Launch Date                                       | Nov. 18, 1999 | May 4, 2002 |
++----------------------------+----------------------+---------------+-------------+
+| Equatorial crossing time                          | 10:30         | 13:30       |
++----------------------------+----------------------+---------------+-------------+
+| Swath (km)                                        | 2330                        |
++----------------------------+----------------------+---------------+-------------+
+| Field of view (o)                                 | 49.5                        |
++----------------------------+----------------------+---------------+-------------+
+| Spatial Resolution (m)                            | 250*, 500**, 1000***        |
++----------------------------+----------------------+---------------+-------------+
+| Orbit Height (km)                                 | 705                         |
++----------------------------+----------------------+---------------+-------------+
+| Temporal Resolution (days)                        | 2                           |
++----------------------------+----------------------+---------------+-------------+
+|                            | blue (B03)**         | 0.459-0.479                 |
++                            +----------------------+---------------+-------------+
+| Spectral Bands (um)        | green (B04)**        | 0.545-0.565                 |
++                            +----------------------+---------------+-------------+
+|                            | red (B01)*           | 0.620-0.670                 |
++                            +----------------------+---------------+-------------+
+|                            | nir (B02)*           | 0.841-0.876                 |
++                            +----------------------+---------------+-------------+
+|                            | swir16 (B06)**       | 1.628-1.652                 |
++                            +----------------------+---------------+-------------+
+|                            | swir22 (B07)**       | 2.105-2.155                 |
++                            +----------------------+---------------+-------------+
+|                            | cirrus (B26)***      | 1.360-1.390                 |
++                            +----------------------+---------------+-------------+
+|                            | water vapor (B18)*** | 0.931-0.941                 |
++----------------------------+----------------------+---------------+-------------+
+
+
+Sentinel-2
+++++++++++
+
+The Copernicus Sentinel-2 mission is composed by two polar-orbiting satellites. Sentinel-2A was launched in June of 2015, while Sentinel-2B was launched in March of 2017. The satellites are placed in the same sun-synchronous orbit, orbiting the Earth at an altitude of approximately 786 km. Both satellites have a Multi-Spectral Instrument (MSI) onboard. MSI spatial resolution ranges from 10m for the visible and the broad NIR bands, 20m for the red edge, narrow NIR and SWIR bands, to 60m for the atmospheric bands. The imaged scenes have approximately 290 km east-west and, considering both satellites, images of a a same place on the Earth's surface can be acquired with a difference of 5 days :ref:`Drusch et al. (2012) <drusch_2012>`.
+
+
+Sentinel-2/A and Sentinel-2/B products are freely distributed by ESA into tiled areas of approximately 110 km by 110 km, following the UTM-based Military Grid Reference System (MGRS). The ToA products can be used as input to Sen2Cor to perform atmospheric, terrain and cirrus correction :ref:`Louis (2016) <louis_2016>`. Sentinel-2 main characteristics are:
+
+
++----------------------------+------------------+---------------+---------------+
+|                                               | Sentinel-2/MSI                |
++----------------------------+------------------+---------------+---------------+
+|                                               | A             | B             |
++============================+==================+===============+===============+
+| Launch Date                                   | Jun. 23, 2015 | Mar. 7, 2017  |
++----------------------------+------------------+---------------+---------------+
+| Equatorial crossing time                      | 10:30                         |
++----------------------------+------------------+---------------+---------------+
+| Swath (km)                                    | 290                           |
++----------------------------+------------------+---------------+---------------+
+| Field of view (o)                             | 20.6                          |
++----------------------------+------------------+---------------+---------------+
+| Spatial Resolution (m)                        | 10*, 20**, 60***              |
++----------------------------+------------------+---------------+---------------+
+| Orbit Height (km)                             | 786                           |
++----------------------------+------------------+---------------+---------------+
+| Temporal Resolution (days)                    | 5 (together)                  |
++----------------------------+------------------+---------------+---------------+
+|                            | coastal (B01***) | 0.4292-0.4562 | 0.4197-0.4647 |
++                            +------------------+---------------+---------------+
+| Spectral Bands (um)        | blue (B02**)     | 0.4434-0.5414 | 0.4431-0.5411 |
++                            +------------------+---------------+---------------+
+|                            | green (B03*)     | 0.5373-0.5823 | 0.5360-0.5820 |
++                            +------------------+---------------+---------------+
+|                            | red (B04*)       | 0.6456-0.6836 | 0.6454-0.6844 |
++                            +------------------+---------------+---------------+
+|                            | rededge (B05**)  | 0.6946-0.7136 | 0.6938-0.7138 |
++                            +------------------+---------------+---------------+
+|                            | rededge (B06**)  | 0.7315-0.7495 | 0.7301-0.7481 |
++                            +------------------+---------------+---------------+
+|                            | rededge (B07**)  | 0.7688-0.7968 | 0.7657-0.7937 |
++                            +------------------+---------------+---------------+
+|                            | nir (B08**)      | 0.7603-0.9053 | 0.7664-0.8994 |
++                            +------------------+---------------+---------------+
+|                            | nir08 (B8A*)     | 0.8482-0.8812 | 0.8480-0.8800 |
++                            +------------------+---------------+---------------+
+|                            | nir09 (B09**)    | 0.9321-0.9581 | 0.9297-0.9567 |
++                            +------------------+---------------+---------------+
+|                            | cirrus (B10**)   | 1.3360-1.4110 | 1.3389-1.4149 |
++                            +------------------+---------------+---------------+
+|                            | swir16 (B11*)    | 1.5422-1.6852 | 1.5399-1.6809 |
++                            +------------------+---------------+---------------+
+|                            | swir22 (B12**)   | 2.0814-2.3234 | 2.0667-2.3047 |
++----------------------------+------------------+---------------+---------------+
+
+
+References
+++++++++++
+
+.. _banskota_2014:
+
+- Banskota, A., Kayastha, N., Falkowski, M. J., Wulder, M. A., Froese,R. E., and White, J. C.Forest monitoring using Landsat time series data: a review. Canadian Journal of Remote Sensing 40, 5 (2014), 362–384
+
+
+.. _berger_2012:
+
+- Berger, M., Moreno, J., Johannessen, J. A., Levelt, P. F., and Hanssen,R. F.Esa’s sentinel missions in support of earth system science.Remote Sensing of Environment 120(2012), 84 – 90.
+
+
+.. _drusch_2012:
+
+- Drusch, M., Bello, U. D., Carlier, S., Colin, O., Fernandez, V., Gascon,F., Hoersch, B., Isola, C., Laberinti, P., Martimort, P., Meygret, A.,Spoto, F., Sy, O., Marchese, F., and Bargellini, P. Sentinel-2:  Esa’s optical high-resolution mission for GMES Operational Services. Remote Sensing of Environment 120 (2012), 25 - 36. The Sentinel Missions - New Opportunities for Science.
+
+
+.. _louis_2016:
+
+- Louis, J., Debaecker, V., Pflug, B., Main-Knorn, M., Bieniarz, J.,Mueller-Wilm, U., Cadau, E., and Gascon, F. Sentinel-2 sen2cor: L2a processor for users. European Space Agency, (Special Publication) ESA SP SP-740, August(2016), 9-13.
+
+
+.. _pinto_2016:
+
+- Pinto, C., Ponzoni, F., Castro, R., Leigh, L., Mishra, N., Aaron, D., and Helder, D. First in-flight radiometric calibration of MUX and WFI on-board CBERS-4.Remote Sensing 8, 5 (2016), 405.
+
+
+.. _ponzoni_2008:
+
+- Ponzoni, F. J., Junior, J. Z., and Lamparelli, R. A. In-flight absolute calibration of the CBERS-2 CCD sensor data. In Academia  Brasileira de Ciências (2008), vol. 80, pp. 373–380.
+
+
+.. _nasa_2019:
+
+- NASA. Modis Specifications. http://modis.gsfc.nasa.gov/about/specifications.php, 2016. Access in 24 Jun. 2019.
+
+
+.. _usgs_2015:
+
+- UNITED STATES GEOLOGICAL SURVEY - USGS. Landsat 8 Surface Reflectance (Provisional) Product Guide: Earth Explorer Version. Tech. Rep. May, USGS, 2015.
+
+
+.. _usgs_2018:
+
+- UNITED STATES GEOLOGICAL SURVEY - USGS. User guide: Earth resources observation and science (EROS) Center Science Processing Architecture(ESPA) on demand interface. Tech. rep., USGS, Sioux Falls, 2018. Access in: 24 Jun. 2019.
+
+
+.. _woodcock_2008:
+
+- Woodcock, C. E., Allen, R., Anderson, M., Belward, A., Bindschadler,R., Cohen, W., Gao, F., Goward, S. N., Helder, D., Helmer, E. H., Ne-mani, R., Oreopoulos, L., Schott, J., Thenkabail, P. S., Vermote, E. F.,Vogelmann, J. E., Wulder, M. A., and Wynne, R. H.Free access to Landsatimagery. Science 320, 5 (2008), 1011–1012.
+
+
+.. _wulder_2012:
+
+- Wulder, M. A., Masek, J. G., Cohen, W. B., Loveland, T. R., and Wood-cock, C. E.Opening the archive:  how free data has enabled the science and moni-toring promise of Landsat. Remote Sensing of Environment 122(2012), 2–10.
+
+
+.. _wulder_2019:
+
+- Wulder, M. A., Loveland, T. R., Roy, D. P., Crawford, C. J., Masek,J. G., Woodcock, C. E., Allen, R. G., Anderson, M. C., Belward, A. S.,Cohen, W. B., Dwyer, J., Erb, A., Gao, F., Griffiths, P., Helder, D.,Hermosilla, T., Hipple, J. D., Hostert, P., Hughes, M. J., Huntington, J.,Johnson, D. M., Kennedy, R., Kilic, A., Li, Z., Lymburner, L., McCorkel,J., Pahlevan, N., Scambos, T. A., Schaaf, C., Schott, J. R., Sheng, Y.,Storey, J., Vermote, E., Vogelmann, J., White, J. C., Wynne, R. H., and Zhu, Z. Current status of landsat program, science, and applications. Remote Sensing of Environment 225, March (2019), 127-147.

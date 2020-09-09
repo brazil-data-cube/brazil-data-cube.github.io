@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Web Time Series Services (WTSS) &mdash; Brazil Data Cube</title>
+  <title>BDC Naming &mdash; Brazil Data Cube</title>
   
 
   
@@ -21,7 +21,7 @@
   
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/wtss.html"/>
+    <link rel="canonical" href="https://brazil-data-cube.github.io/products/naming.html"/>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Retrieving a Time Series" href="wtss/retrieving_ts.html" />
-    <link rel="prev" title="Python Client Library" href="stac/general.html" /> 
+    <link rel="next" title="BDC Products" href="products.html" />
+    <link rel="prev" title="BDC Processing Flow" href="processing-flow.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,22 +97,23 @@
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Data Products</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../applications.html">Services and Applications</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Time Series Services (WTSS)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wtss/retrieving_ts.html">Retrieving a Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/service_overview.html">Service Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html">Python Client Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#r-client-library">R Client Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#wtss-openapi-v3-specification">WTSS OpenAPI v3 Specification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#wtss-server">WTSS Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wtss/general.html#references">References</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../products.html">BDC Data Products</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../products.html#image-collections">Image Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../products.html#data-cubes-collections">Data Cubes Collections</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../products.html#data-cube-specifications">Data Cube Specifications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bdc-grid.html">BDC Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products.html">BDC Products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiments.html">BDC Experiments</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul>
@@ -168,9 +169,9 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../applications.html">Services and Applications</a> &raquo;</li>
+          <li><a href="../products.html">BDC Data Products</a> &raquo;</li>
         
-      <li>Web Time Series Services (WTSS)</li>
+      <li>BDC Naming</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,10 +185,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="products.html" class="btn btn-neutral float-right" title="BDC Products" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="processing-flow.html" class="btn btn-neutral float-left" title="BDC Processing Flow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -196,25 +197,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="web-time-series-services-wtss">
-<h1>Web Time Series Services (WTSS)<a class="headerlink" href="#web-time-series-services-wtss" title="Permalink to this headline">¶</a></h1>
-<p><strong>W</strong>eb <strong>T</strong>ime <strong>S</strong>eries <strong>S</strong>ervice (WTSS) is a lightweight web service for handling time series data from remote sensing imagery. Given a location and a time interval you can retrieve the according time series.</p>
-<p>In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (<a class="reference internal" href="#wtss-coverage"><span class="std std-numref">Figure 3</span></a>).</p>
-<div class="align-center figure align-default" id="wtss-coverage">
-<a class="reference internal image-reference" href="../_images/image-time-series.png"><img alt="Coverage as a three dimensional array" src="../_images/image-time-series.png" style="width: 240px;" /></a>
-<p class="caption"><span class="caption-number">Figure 3 - </span><span class="caption-text">A coverage as a three dimensional array.</span><a class="headerlink" href="#wtss-coverage" title="Permalink to this image">¶</a></p>
+  <div class="section" id="bdc-naming">
+<h1>BDC Naming<a class="headerlink" href="#bdc-naming" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-cube-collection-naming">
+<h2>Data Cube Collection Naming<a class="headerlink" href="#data-cube-collection-naming" title="Permalink to this headline">¶</a></h2>
+<p>Each BDC Data Cube Collection is named following the convention:</p>
+<p>&lt;Satellite Sensor Alias&gt;_&lt;Spatial Resolution&gt;_&lt;Time Step&gt;*_&lt;Temporal Compositing Function&gt;*</p>
+<p><strong>Satellite Sensor Alias</strong> is an alias to an image collection satellite e. g. S2, LC8, C4, representing Sentinel-2, Landsat-8 and CBERS-4, respectively. In cases where multiple image collections are used to build a Data Cube Collection, hifen is used to separate then in alphabetical order e. g. LC8-S2;</p>
+<p><strong>Spatial Resolution</strong> is the spatial resolution;</p>
+<p><strong>Time Step</strong> only is required when the data cube is time-composed. The Time Step is represented in naming by an integer followed by a capital letter, which can be <em>D</em>, <em>M</em> or <em>Y</em>, representing day, month and year, respectively;</p>
+<p><strong>Temporal Compositing Function</strong> only is required when the data cube is time-composed. The Temporal Temporal Compositing Function in naming is described as three capital letters e. g. AVG, MED, STK, which represents average, median and stack, respectively.</p>
+<p>Examples of Data Cube names are: C4_64, C4_64_16D_STK, LC8_30, LC8_30_16D_STK, S2_10 and S2_10_16D_STK.</p>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wtss/retrieving_ts.html">Retrieving a Time Series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/service_overview.html">Service Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html">Python Client Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#r-client-library">R Client Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#wtss-openapi-v3-specification">WTSS OpenAPI v3 Specification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#wtss-server">WTSS Server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wtss/general.html#references">References</a></li>
-</ul>
+<div class="section" id="data-cube-collection-file-naming">
+<h2>Data Cube Collection File Naming<a class="headerlink" href="#data-cube-collection-file-naming" title="Permalink to this headline">¶</a></h2>
+<p>&lt;Data Cube Collection&gt;_&lt;Tile&gt;_&lt;Start Period&gt;_&lt;End Period&gt;_&lt;Band&gt;.tif</p>
+<p><strong>Data Cube Collection</strong> is the BDC data cube collection described in Data Cube Collection Naming;</p>
+<p><strong>Start Period</strong> is written as year-month-day and refers the first date of the compositing period;</p>
+<p><strong>End Period</strong> is also written as year-month-day and refers the end date of the compositing period;</p>
+<p><strong>Band</strong> indicates the file band</p>
+<p>.tif indicate the file format, Geotiff in this case.</p>
+<p>The file name “C4_64_16D_STK_083101_2019-01-01_2019-01-16_B14.tif”, for instance, represents the green band image (B14) from the C4_64_16D_STK data cube collection (CBERS-4 AWFI at a spatial resolution of 64m, using the stack time compositing function each 16 days on images ranging from January 01, 2019 to January 16, 2019.</p>
 </div>
 </div>
 
@@ -226,10 +229,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="products.html" class="btn btn-neutral float-right" title="BDC Products" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="processing-flow.html" class="btn btn-neutral float-left" title="BDC Processing Flow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

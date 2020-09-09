@@ -1,0 +1,49 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Preparação para o Curso
+-----------------------
+
+
+.. figure:: ../img/worcap-2020/getting-started/kaggle_logo.png
+    :alt: Logo Kaggle
+    :width: 240
+    :figclass: align-right
+
+
+O *Minicurso de Geoinformática com Aplicações de Machine Learning* será feito utilizando o *Kaggle*. O *Kaggle*, é uma comunidade online de praticantes de data science e machine learning que inclui competições e desafios destes temas. *Kaggle* permite a seus usuários encontrar data sets e construir modelos em um ambiente web nas linguagens Python e R. Deste modo, para realização deste curso é necessário ter uma conta criada em https://www.kaggle.com/ .
+
+
+Uma vez feito login, no menu esquerdo acesse o campo *Notebooks* e crie um novo utilizando o botão *New Notebook*.
+
+
+.. figure:: ../img/worcap-2020/getting-started/new_notebook.png
+    :alt: New Notebook printscreen
+    :width: 720
+    :figclass: align-center
+
+
+Mantenha os opções default de linguagem *Python*, tipo *Notebook* e clique em *Create*.
+
+
+.. figure:: ../img/worcap-2020/getting-started/create_notebook.png
+    :alt: Create Notebook printscreen
+    :width: 720
+    :figclass: align-center
+
+
+Um *Notebook* exemplo será criado. No menu direito expanda a caixa *Settings* e verifique o campo *Internet*. Caso o mesmo indique *Requires phone verification*, clique sobre ele e verifique com um telefone válido.
+
+
+.. figure:: ../img/worcap-2020/getting-started/require_internet.png
+    :alt: Require Internet printscreen
+    :width: 240
+    :figclass: align-center
+
+
+Este procedimento é necessário para que o *Notebook* possa instalar pacotes externos e realizar consultas na internet. Com isso seu ambiente está apto para inicio do curso.

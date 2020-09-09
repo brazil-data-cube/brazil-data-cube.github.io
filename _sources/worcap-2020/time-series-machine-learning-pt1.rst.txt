@@ -7,10 +7,10 @@
 
 
 Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)
-===========================================================================================================
+-----------------------------------------------------------------------------------------------------------
 
 
-texto sobre Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning
+**Under Development**
 
 
 .. toctree::

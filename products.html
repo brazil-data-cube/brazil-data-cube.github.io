@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Data Products &mdash; Brazil Data Cube</title>
+  <title>BDC Data Products &mdash; Brazil Data Cube</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TEST BDC Products" href="products/products.html" />
-    <link rel="prev" title="Python Client Library" href="applications/wtss/general.html" /> 
+    <link rel="next" title="BDC Input Data" href="products/input-data.html" />
+    <link rel="prev" title="Brazil Data Cube Documentation" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,12 +97,23 @@
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="applications.html">Services and Applications</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Products</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="products/products.html">TEST BDC Products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="products/products.html#references">References</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">BDC Data Products</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#image-collections">Image Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-cubes-collections">Data Cubes Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-cube-specifications">Data Cube Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="products/input-data.html">BDC Input Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/concepts.html">BDC Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/bdc-grid.html">BDC Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/naming.html">BDC Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/products.html">BDC Products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/product-access.html">BDC Product Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products/experiments.html">BDC Experiments</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Services and Applications</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul>
@@ -158,7 +169,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Data Products</li>
+      <li>BDC Data Products</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,10 +183,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="products/products.html" class="btn btn-neutral float-right" title="TEST BDC Products" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="products/input-data.html" class="btn btn-neutral float-right" title="BDC Input Data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="applications/wtss/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Brazil Data Cube Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -184,14 +195,178 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-products">
-<h1>Data Products<a class="headerlink" href="#data-products" title="Permalink to this headline">¶</a></h1>
-<p>TEST: Here the products are defined</p>
+  <div class="section" id="bdc-data-products">
+<h1>BDC Data Products<a class="headerlink" href="#bdc-data-products" title="Permalink to this headline">¶</a></h1>
+<p>Brazil Data Cube (BDC) project is a Brazililian National Institute for Space Research (INPE) initiative to produce a Virtual Constellation, which uses data from the Sentinel-2 MultiSpectral Instrument (MSI), Landsat-8 Operational Land Imager (OLI), CBERS-4 Advanced Wide-Field Imager (AWFI), CBERS-4 Multispectral Camera (MUX) and AQUA/TERRA Moderate Resolution Imaging Spectroradiometer (MODIS) remote sensing satellite sensors.</p>
+<p>In summary, BDC catalogs and distributes data from the mentioned satellite sensors, as well as the preprocessed to surface reflectance images and processed products. The processed products are data cube collections, which standardize images through merge, reprojection, grid data to a common tiling system, mask clouds and cloud shadows and may apply temporal compositing functions. The available image collections and data cube collections are:</p>
+<div class="section" id="image-collections">
+<h2>Image Collections<a class="headerlink" href="#image-collections" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 22%" />
+<col style="width: 14%" />
+<col style="width: 22%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Image Collection</p></th>
+<th class="head"><p>Satellite</p></th>
+<th class="head"><p>Sensors</p></th>
+<th class="head"><p>Spatial
+Resolution (m)</p></th>
+<th class="head"><p>Radiometry</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CBERS4_AWFI_L4_DN</p></td>
+<td><p>CBERS-4</p></td>
+<td><p>AWFI</p></td>
+<td><p>64</p></td>
+<td><p>DN</p></td>
+</tr>
+<tr class="row-odd"><td><p>CBERS4_AWFI_L4_SR</p></td>
+<td><p>CBERS-4</p></td>
+<td><p>AWFI</p></td>
+<td><p>64</p></td>
+<td><p>SR</p></td>
+</tr>
+<tr class="row-even"><td><p>CBERS4_MUX_L4_DN</p></td>
+<td><p>CBERS-4</p></td>
+<td><p>MUX</p></td>
+<td><p>20</p></td>
+<td><p>DN</p></td>
+</tr>
+<tr class="row-odd"><td><p>CBERS4_MUX_L4_SR</p></td>
+<td><p>CBERS-4</p></td>
+<td><p>MUX</p></td>
+<td><p>20</p></td>
+<td><p>SR</p></td>
+</tr>
+<tr class="row-even"><td><p>HLS_L30</p></td>
+<td><p>Landsat-8</p></td>
+<td><p>OLI</p></td>
+<td><p>30</p></td>
+<td><p>NBAR</p></td>
+</tr>
+<tr class="row-odd"><td><p>HLS_S30</p></td>
+<td><p>Sentinel 2A/2B</p></td>
+<td><p>MSI</p></td>
+<td><p>30</p></td>
+<td><p>NBAR</p></td>
+</tr>
+<tr class="row-even"><td><p>LC8_DN</p></td>
+<td><p>Landsat-8</p></td>
+<td><p>OLI/TIRS</p></td>
+<td><p>30</p></td>
+<td><p>DN</p></td>
+</tr>
+<tr class="row-odd"><td><p>LC8_SR</p></td>
+<td><p>Landsat-8</p></td>
+<td><p>OLI</p></td>
+<td><p>30</p></td>
+<td><p>SR</p></td>
+</tr>
+<tr class="row-even"><td><p>S2_L1C</p></td>
+<td><p>Sentinel 2A/2B</p></td>
+<td><p>MSI</p></td>
+<td><p>10</p></td>
+<td><p>ToA</p></td>
+</tr>
+<tr class="row-odd"><td><p>S2_L2A_LASRC</p></td>
+<td><p>Sentinel 2A/2B</p></td>
+<td><p>MSI</p></td>
+<td><p>10</p></td>
+<td><p>SR</p></td>
+</tr>
+<tr class="row-even"><td><p>MOD13Q1</p></td>
+<td><p>TERRA</p></td>
+<td><p>MODIS</p></td>
+<td><p>250</p></td>
+<td><p>SR</p></td>
+</tr>
+<tr class="row-odd"><td><p>MYD13Q1</p></td>
+<td><p>AQUA</p></td>
+<td><p>MODIS</p></td>
+<td><p>250</p></td>
+<td><p>SR</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="data-cubes-collections">
+<h2>Data Cubes Collections<a class="headerlink" href="#data-cubes-collections" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 18%" />
+<col style="width: 11%" />
+<col style="width: 27%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cube Collection</p></th>
+<th class="head"><p>Satellite</p></th>
+<th class="head"><p>Sensors</p></th>
+<th class="head"><p>Spatial Resolution (m)</p></th>
+<th class="head"><p>Temporal Compositing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>C4_64</p></td>
+<td><p>CBERS-4</p></td>
+<td><p>AWFI</p></td>
+<td><p>64</p></td>
+<td><p>identity</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4_64_16D_STK</p></td>
+<td><p>CBERS-4</p></td>
+<td><p>AWFI</p></td>
+<td><p>64</p></td>
+<td><p>16 days</p></td>
+</tr>
+<tr class="row-even"><td><p>LC8_30</p></td>
+<td><p>Landsat-8</p></td>
+<td><p>OLI</p></td>
+<td><p>30</p></td>
+<td><p>identity</p></td>
+</tr>
+<tr class="row-odd"><td><p>LC8_30_16D_STK</p></td>
+<td><p>Landsat-8</p></td>
+<td><p>OLI</p></td>
+<td><p>30</p></td>
+<td><p>16 days</p></td>
+</tr>
+<tr class="row-even"><td><p>S2_10</p></td>
+<td><p>Sentinel 2A/2B</p></td>
+<td><p>MSI</p></td>
+<td><p>10</p></td>
+<td><p>identity</p></td>
+</tr>
+<tr class="row-odd"><td><p>S2_10_16D_STK</p></td>
+<td><p>Sentinel 2A/2B</p></td>
+<td><p>MSI</p></td>
+<td><p>10</p></td>
+<td><p>16 days</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="data-cube-specifications">
+<h2>Data Cube Specifications<a class="headerlink" href="#data-cube-specifications" title="Permalink to this headline">¶</a></h2>
+<p>More info regarding Brazil Data Cube Products can be seen in:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="products/products.html">TEST BDC Products</a></li>
-<li class="toctree-l1"><a class="reference internal" href="products/products.html#references">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/input-data.html">BDC Input Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/concepts.html">BDC Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/bdc-grid.html">BDC Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/naming.html">BDC Naming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/products.html">BDC Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/product-access.html">BDC Product Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/experiments.html">BDC Experiments</a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -203,10 +378,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="products/products.html" class="btn btn-neutral float-right" title="TEST BDC Products" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="products/input-data.html" class="btn btn-neutral float-right" title="BDC Input Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="applications/wtss/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Brazil Data Cube Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

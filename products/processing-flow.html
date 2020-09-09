@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BDC Products &mdash; Brazil Data Cube</title>
+  <title>BDC Processing Flow &mdash; Brazil Data Cube</title>
   
 
   
@@ -21,7 +21,7 @@
   
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/products/products.html"/>
+    <link rel="canonical" href="https://brazil-data-cube.github.io/products/processing-flow.html"/>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BDC Product Access" href="product-access.html" />
-    <link rel="prev" title="BDC Naming" href="naming.html" /> 
+    <link rel="next" title="BDC Naming" href="naming.html" />
+    <link rel="prev" title="BDC Grid" href="bdc-grid.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,9 +104,9 @@
 <li class="toctree-l3"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bdc-grid.html">BDC Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Processing Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html">BDC Naming</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="products.html">BDC Products</a></li>
 <li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
 <li class="toctree-l3"><a class="reference internal" href="experiments.html">BDC Experiments</a></li>
 </ul>
@@ -171,7 +171,7 @@
         
           <li><a href="../products.html">BDC Data Products</a> &raquo;</li>
         
-      <li>BDC Products</li>
+      <li>BDC Processing Flow</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,10 +185,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="product-access.html" class="btn btn-neutral float-right" title="BDC Product Access" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="naming.html" class="btn btn-neutral float-right" title="BDC Naming" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="naming.html" class="btn btn-neutral float-left" title="BDC Naming" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="BDC Grid" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -197,9 +197,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="bdc-products">
-<h1>BDC Products<a class="headerlink" href="#bdc-products" title="Permalink to this headline">¶</a></h1>
-<p><strong>UNDER DEVELOPMENT</strong></p>
+  <div class="section" id="bdc-processing-flow">
+<h1>BDC Processing Flow<a class="headerlink" href="#bdc-processing-flow" title="Permalink to this headline">¶</a></h1>
+<p>Several procedures are performed to generate BDC Data cube collections. Based on that, <a class="reference internal" href="#products-processing-flow"><span class="std std-numref">Figure 1</span></a> illustrates a diagram containing the main procedures used to generate BDC data products.</p>
+<div class="align-center figure align-default" id="products-processing-flow">
+<a class="reference internal image-reference" href="../_images/bdc.png"><img alt="BDC Image collection injestion and Data Cube generation" src="../_images/bdc.png" style="width: 720px;" /></a>
+<p class="caption"><span class="caption-number">Figure 1 - </span><span class="caption-text">BDC Image collection injestion and Data Cube generation.</span><a class="headerlink" href="#products-processing-flow" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="atmospheric-correction">
+<h2>Atmospheric Correction<a class="headerlink" href="#atmospheric-correction" title="Permalink to this headline">¶</a></h2>
+<p>The atmospheric correction procedure relies on each sensor characteristics. Due to that, for each sensor different processes may be applied, for instance, atmospheric correction is performed for Sentinel-2/MSI images using the Sen2cor <a class="reference internal" href="#louis-2016"><span class="std std-ref">Louis et al. (2016)</span></a>, while for Landsat-8/OLI this procedure is performed through LaSRC <a class="reference internal" href="#vermote-2016"><span class="std std-ref">Vermote et al. (2016)</span></a> and for CBERS-4/AWFI is executed by MS3 <a class="reference internal" href="#silva-2013"><span class="std std-ref">Silva et al. (2016)</span></a>. Once this process is performed and the resulting data is cataloged, Surface Reflectance collection are available to be used to produce Data Cube Collections.</p>
+</div>
+<div class="section" id="warp-merge-reprojecting-resampling-and-griding">
+<h2>Warp (Merge, Reprojecting, Resampling and Griding)<a class="headerlink" href="#warp-merge-reprojecting-resampling-and-griding" title="Permalink to this headline">¶</a></h2>
+<p>In order to build the data cube collections, all input images must be at the on the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.</p>
+</div>
+<div class="section" id="temporal-compositing">
+<h2>Temporal Compositing<a class="headerlink" href="#temporal-compositing" title="Permalink to this headline">¶</a></h2>
+<p>BDC Data Cube Collections can be categorized in two types, identity and regular. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called regular data cubes.</p>
+<p>Three temporal compositing functions are being used in BDC: ( <em>i</em> ) average, ( <em>ii</em> ) median, and ( <em>iii</em> ) stack. These functions are operations applied on valid observations, which are not detected as cloud or cloud shadow by the quality assessment band, considering the time dimension and a time step, e. g. monthly or 16 days. The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple" id="louis-2016">
+<li><p>Louis, J., Debaecker, V., Pflug, B., Main-Knorn, M., Bieniarz, J.,Mueller-Wilm, U., Cadau, E., and Gascon, F. Sentinel-2 sen2cor: L2a processor for users. European Space Agency, (Special Publication) ESA SP SP-740, August(2016), 9-13.</p></li>
+</ul>
+<ul class="simple" id="silva-2013">
+<li><p>Silva, M. A. O., and de Andrade, A. C. Geração de imagens de reflectância de um ponto de vista geométrico. Revista Brasileira de Geomática 1, 1 (2013), 23.</p></li>
+</ul>
+<ul class="simple" id="vermote-2016">
+<li><p>Vermote, E., Justice, C., Claverie, M., and Franch, B. Preliminary analysis of the performance of the Landsat 8/OLI land surface reflectance product. Remote Sensing of Environment 185 (2016), 46–56.</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -210,10 +239,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="product-access.html" class="btn btn-neutral float-right" title="BDC Product Access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="naming.html" class="btn btn-neutral float-right" title="BDC Naming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="naming.html" class="btn btn-neutral float-left" title="BDC Naming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="BDC Grid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

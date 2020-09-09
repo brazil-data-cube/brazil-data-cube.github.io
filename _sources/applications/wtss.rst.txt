@@ -10,7 +10,7 @@ Web Time Series Services (WTSS)
 ===============================
 
 
-**W**\ eb **T**\ ime **S**\ eries **S**\ ervice (WTSS) is a lightweight web service for handling time series data from remote sensing imagery. Given a location and a time interval you can retrieve the according time series as a JSON array of numbers.
+**W**\ eb **T**\ ime **S**\ eries **S**\ ervice (WTSS) is a lightweight web service for handling time series data from remote sensing imagery. Given a location and a time interval you can retrieve the according time series.
 
 
 In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (:numref:`Figure %s <wtss:coverage>`).

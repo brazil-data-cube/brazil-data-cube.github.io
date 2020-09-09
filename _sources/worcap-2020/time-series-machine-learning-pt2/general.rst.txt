@@ -6,12 +6,15 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
-TEST intro ts-ml-pt1
-====================
+.. _time-series-pt2:
 
 
-text text
+Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação
+----------------------------------------------------------------------------------------------------------------------------
+
+
+**Under Development**
 
 
 References
-==========
+++++++++++

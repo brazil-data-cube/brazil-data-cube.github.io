@@ -1,0 +1,68 @@
+Informações sobre o curso
+-------------------------
+
+
+O minicurso da trilha de Geoinformática com Aplicações de Machine Learning tem como objetivo apresentar conceitos básicos de Geoinformática e aplicações com séries temporais de imagens de satélite. Os participantes farão uso de tecnologias e dados produzidos pelo time do projeto Cubo de Dados Brasil do INPE.
+
+
+Os principais tópicos discutidos incluem: (a) dados geográficos; (b) sistemas de informação geográfica; (c) acesso e visualização de dados de observação da Terra do projeto Brazil Data Cube através da linguagem Python; (d) introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning.
+
+
+O conteúdo será ministrado em dois dias subdivididos em quatro partes:
+
+
+**Dia 16 - Quarta**
+
+
+09:30 - 11:30 - :ref:`intro-geo`.
+
+
+13:30 - 15:30 - :ref:`access-view`.
+
+
+**Dia 17 - Quinta**
+
+
+09:30 - 11:30 - :ref:`time-series-pt1`.
+
+
+13:30 - 15:30 - :ref:`time-series-pt2`
+
+
+**Responsáveis:**
+
+
+- Gilberto Ribeiro de Queiroz
+
+
+- Karine Reis Ferreira
+
+
+- Rennan Marujo
+
+
+**Equipe de Colaboradores do Minicurso:**
+
+
+- Rolf Simões
+
+
+- Lorena Santos
+
+
+- Leonardo Vieira
+
+
+- José Guilherme Fronza
+
+
+- Fabiana Zioti
+
+
+- Matheus Cavassan Zaglia
+
+
+- Felipe Menino Carlos
+
+
+- Felipe Souza

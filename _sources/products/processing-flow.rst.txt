@@ -1,0 +1,64 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+BDC Processing Flow
+-------------------
+
+
+Several procedures are performed to generate BDC Data cube collections. Based on that, :numref:`Figure %s <products:processing-flow>` illustrates a diagram containing the main procedures used to generate BDC data products.
+
+
+.. figure:: ../img/products/bdc.png
+    :alt: BDC Image collection injestion and Data Cube generation
+    :width: 720
+    :figclass: align-center
+    :name: products:processing-flow
+
+    BDC Image collection injestion and Data Cube generation.
+
+
+Atmospheric Correction
+++++++++++++++++++++++
+
+
+The atmospheric correction procedure relies on each sensor characteristics. Due to that, for each sensor different processes may be applied, for instance, atmospheric correction is performed for Sentinel-2/MSI images using the Sen2cor :ref:`Louis et al. (2016) <louis_2016>`, while for Landsat-8/OLI this procedure is performed through LaSRC :ref:`Vermote et al. (2016) <vermote_2016>` and for CBERS-4/AWFI is executed by MS3 :ref:`Silva et al. (2016) <silva_2013>`. Once this process is performed and the resulting data is cataloged, Surface Reflectance collection are available to be used to produce Data Cube Collections.
+
+
+Warp (Merge, Reprojecting, Resampling and Griding)
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+In order to build the data cube collections, all input images must be at the on the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.
+
+
+Temporal Compositing
+++++++++++++++++++++
+
+
+BDC Data Cube Collections can be categorized in two types, identity and regular. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called regular data cubes.
+
+Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *ii* ) median, and ( *iii* ) stack. These functions are operations applied on valid observations, which are not detected as cloud or cloud shadow by the quality assessment band, considering the time dimension and a time step, e. g. monthly or 16 days. The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image.
+
+
+
+References
+++++++++++
+
+.. _louis_2016:
+
+- Louis, J., Debaecker, V., Pflug, B., Main-Knorn, M., Bieniarz, J.,Mueller-Wilm, U., Cadau, E., and Gascon, F. Sentinel-2 sen2cor: L2a processor for users. European Space Agency, (Special Publication) ESA SP SP-740, August(2016), 9-13.
+
+
+.. _silva_2013:
+
+- Silva, M. A. O., and de Andrade, A. C. Geração de imagens de reflectância de um ponto de vista geométrico. Revista Brasileira de Geomática 1, 1 (2013), 23.
+
+
+.. _vermote_2016:
+
+- Vermote, E., Justice, C., Claverie, M., and Franch, B. Preliminary analysis of the performance of the Landsat 8/OLI land surface reflectance product. Remote Sensing of Environment 185 (2016), 46–56.
