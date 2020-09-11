@@ -15,79 +15,10 @@ Brazil Data Cube (BDC) project is a Brazililian National Institute for Space Res
 
 In summary, BDC catalogs and distributes data from the mentioned satellite sensors, as well as the preprocessed to surface reflectance images and processed products. The processed products are data cube collections, which standardize images through merge, reprojection, grid data to a common tiling system, mask clouds and cloud shadows and may apply temporal compositing functions. The available image collections and data cube collections are:
 
-
-Image Collections
------------------
-
-
-+-------------------+----------------+----------+----------------+------------+
-| Image Collection  | Satellite      | Sensors  | Spatial        | Radiometry |
-|                   |                |          | Resolution (m) |            |
-+===================+================+==========+================+============+
-| CBERS4_AWFI_L4_DN | CBERS-4        | AWFI     | 64             | DN         |
-+-------------------+----------------+----------+----------------+------------+
-| CBERS4_AWFI_L4_SR | CBERS-4        | AWFI     | 64             | SR         |
-+-------------------+----------------+----------+----------------+------------+
-| CBERS4_MUX_L4_DN  | CBERS-4        | MUX      | 20             | DN         |
-+-------------------+----------------+----------+----------------+------------+
-| CBERS4_MUX_L4_SR  | CBERS-4        | MUX      | 20             | SR         |
-+-------------------+----------------+----------+----------------+------------+
-| HLS_L30           | Landsat-8      | OLI      | 30             | NBAR       |
-+-------------------+----------------+----------+----------------+------------+
-| HLS_S30           | Sentinel 2A/2B | MSI      | 30             | NBAR       |
-+-------------------+----------------+----------+----------------+------------+
-| LC8_DN            | Landsat-8      | OLI/TIRS | 30             | DN         |
-+-------------------+----------------+----------+----------------+------------+
-| LC8_SR            | Landsat-8      | OLI      | 30             | SR         |
-+-------------------+----------------+----------+----------------+------------+
-| S2_L1C            | Sentinel 2A/2B | MSI      | 10             | ToA        |
-+-------------------+----------------+----------+----------------+------------+
-| S2_L2A_LASRC      | Sentinel 2A/2B | MSI      | 10             | SR         |
-+-------------------+----------------+----------+----------------+------------+
-| MOD13Q1           | TERRA          | MODIS    | 250            | SR         |
-+-------------------+----------------+----------+----------------+------------+
-| MYD13Q1           | AQUA           | MODIS    | 250            | SR         |
-+-------------------+----------------+----------+----------------+------------+
-
-
-Data Cubes Collections
-----------------------
-
-
-
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-|                                  Cube Collection               | Satellite      | Sensors  | Spatial Resolution (m) | Temporal Compositing |
-+================================================================+================+==========+========================+======================+
-| `CB4_64 <./products/products/CB4_64.html>`_                    | CBERS-4        | AWFI     | 64                     | identity             |
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-| `CB4_64_16D_STK <./products/products/CB4_64_16D_STK_v1.html>`_ | CBERS-4        | AWFI     | 64                     | 16 days              |
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-| LC8_30                                                         | Landsat-8      | OLI      | 30                     | identity             |
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-| LC8_30_16D_STK                                                 | Landsat-8      | OLI      | 30                     | 16 days              |
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-| S2_10                                                          | Sentinel 2A/2B | MSI      | 10                     | identity             |
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-| S2_10_16D_STK                                                  | Sentinel 2A/2B | MSI      | 10                     | 16 days              |
-+----------------------------------------------------------------+----------------+----------+------------------------+----------------------+
-
-
-Data Cube Specifications
-------------------------
-
-
-More info regarding Brazil Data Cube Products can be seen in:
-
-
 .. toctree::
     :maxdepth: 1
     :titlesonly:
 
-    ./products/input-data.rst
-    ./products/concepts.rst
-    ./products/bdc-grid.rst
-    ./products/processing-flow.rst
-    ./products/naming.rst
-    ./products/products.rst
-    ./products/product-access.rst
-    ./products/experiments.rst
+    ./products/image-collections.rst
+    ./products/cube-collections.rst
+    ./products/specifications.rst

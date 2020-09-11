@@ -37,6 +37,7 @@
         <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -44,7 +45,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="BDC Concepts" href="concepts.html" />
-    <link rel="prev" title="BDC Data Products" href="../products.html" /> 
+    <link rel="prev" title="Specifications" href="specifications.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,15 +99,14 @@
 <p class="caption"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../products.html">BDC Data Products</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../products.html#image-collections">Image Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../products.html#data-cubes-collections">Data Cubes Collections</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../products.html#data-cube-specifications">Data Cube Specifications</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="image-collections.html">Image Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cube-collections.html">Data Cube Collections</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="specifications.html">Specifications</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Input Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bdc-grid.html">BDC Grid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html">BDC Naming</a></li>
-<li class="toctree-l3"><a class="reference internal" href="products.html">BDC Products</a></li>
 <li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
 <li class="toctree-l3"><a class="reference internal" href="experiments.html">BDC Experiments</a></li>
 </ul>
@@ -171,6 +171,8 @@
         
           <li><a href="../products.html">BDC Data Products</a> &raquo;</li>
         
+          <li><a href="specifications.html">Specifications</a> &raquo;</li>
+        
       <li>BDC Input Data</li>
     
     
@@ -188,7 +190,7 @@
         <a href="concepts.html" class="btn btn-neutral float-right" title="BDC Concepts" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../products.html" class="btn btn-neutral float-left" title="BDC Data Products" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="specifications.html" class="btn btn-neutral float-left" title="Specifications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -206,10 +208,10 @@
 <p>CBERS-4/AWFI (and other products) are freely distributed by INPE. Calibration coefficients for CBERS-4 can be found in <a class="reference internal" href="../worcap-2020/access-view/cbers-input.html#pinto-2016"><span class="std std-ref">Pinto et al. (2016)</span></a>. The scenes are provided in INPE’s catalog (<a class="reference external" href="http://www.dgi.inpe.br/catalogo/">http://www.dgi.inpe.br/catalogo/</a>) following CBERS WRS. CBERS-4 main characteristics are:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 41%" />
+<col style="width: 44%" />
+<col style="width: 18%" />
 <col style="width: 19%" />
-<col style="width: 21%" />
-<col style="width: 19%" />
+<col style="width: 18%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="2"></th>
@@ -231,7 +233,7 @@
 <td><p>866</p></td>
 <td><p>120</p></td>
 </tr>
-<tr class="row-even"><td colspan="2"><p>Field of view (o)</p></td>
+<tr class="row-even"><td colspan="2"><p>Field of view (<span class="math notranslate nohighlight">\(^{\circ}\)</span>)</p></td>
 <td><p>28.63</p></td>
 <td><p>4</p></td>
 </tr>
@@ -246,7 +248,7 @@
 <td><p>5</p></td>
 <td><p>26</p></td>
 </tr>
-<tr class="row-even"><td rowspan="4"><p>Spectral Bands (um)</p></td>
+<tr class="row-even"><td rowspan="4"><p>Spectral Bands (<span class="math notranslate nohighlight">\(\mu m\)</span>)</p></td>
 <td><p>blue (B13)</p></td>
 <td><p>0.450-0.520</p></td>
 <td><p>0.450-0.520</p></td>
@@ -272,9 +274,9 @@
 <p>Top of Atmosphere (ToA) products are freely distributed by USGS in a tiered structure called <em>Collections</em>. <em>Collection-1</em> includes Level-1 Precision and Terrain (L1TP) corrected data, which is radiometrically calibrated and orthorectified. The products are provided in the UTM projection and can also be ordered as surface reflectance through USGS ESPA interface, which uses the Landsat Surface Reflectance Code (LaSRC) to process the images <a class="reference internal" href="#usgs-2018"><span class="std std-ref">USGS (2018)</span></a>. Landsat-8 main characteristics are:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 48%" />
-<col style="width: 26%" />
-<col style="width: 26%" />
+<col style="width: 52%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="2"></th>
@@ -291,7 +293,7 @@
 <tr class="row-even"><td colspan="2"><p>Swath (km)</p></td>
 <td><p>180</p></td>
 </tr>
-<tr class="row-odd"><td colspan="2"><p>Field of view (o)</p></td>
+<tr class="row-odd"><td colspan="2"><p>Field of view (<span class="math notranslate nohighlight">\(^{\circ}\)</span>)</p></td>
 <td><p>15</p></td>
 </tr>
 <tr class="row-even"><td colspan="2"><p>Spatial Resolution (m)</p></td>
@@ -303,7 +305,7 @@
 <tr class="row-even"><td colspan="2"><p>Temporal Resolution (days)</p></td>
 <td><p>16</p></td>
 </tr>
-<tr class="row-odd"><td rowspan="8"><p>Spectral Bands (um)</p></td>
+<tr class="row-odd"><td rowspan="8"><p>Spectral Bands (<span class="math notranslate nohighlight">\(\mu m\)</span>)</p></td>
 <td><p>coastal (B01)</p></td>
 <td><p>0.433–0.453</p></td>
 </tr>
@@ -336,10 +338,10 @@
 <p>In 1999 and in 2002 NASA launched Terra and Aqua satellites, respectively. Both platforms present the Moderate Resolution Imaging Spectroradiometer (MODIS) aboard. Terra MODIS and Aqua MODIS are at an altitude of approximately 705 km, with a swath width of approximately 2330 km, which implies in viewing the entire Earth’s surface every 1 to 2 days using its 36 spectral bands <a class="reference internal" href="#nasa-2019"><span class="std std-ref">NASA (2019)</span></a>. MODIS products are freely distributed by USGS and NASA. MODIS main characteristics are:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 36%" />
-<col style="width: 28%" />
-<col style="width: 19%" />
-<col style="width: 17%" />
+<col style="width: 40%" />
+<col style="width: 27%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="2"></th>
@@ -362,7 +364,7 @@
 <tr class="row-odd"><td colspan="2"><p>Swath (km)</p></td>
 <td colspan="2"><p>2330</p></td>
 </tr>
-<tr class="row-even"><td colspan="2"><p>Field of view (o)</p></td>
+<tr class="row-even"><td colspan="2"><p>Field of view  (<span class="math notranslate nohighlight">\(^{\circ}\)</span>)</p></td>
 <td colspan="2"><p>49.5</p></td>
 </tr>
 <tr class="row-odd"><td colspan="2"><p>Spatial Resolution (m)</p></td>
@@ -374,7 +376,7 @@
 <tr class="row-odd"><td colspan="2"><p>Temporal Resolution (days)</p></td>
 <td colspan="2"><p>2</p></td>
 </tr>
-<tr class="row-even"><td rowspan="8"><p>Spectral Bands (um)</p></td>
+<tr class="row-even"><td rowspan="8"><p>Spectral Bands (<span class="math notranslate nohighlight">\(\mu  m\)</span>)</p></td>
 <td><p>blue (B03)**</p></td>
 <td colspan="2"><p>0.459-0.479</p></td>
 </tr>
@@ -408,10 +410,10 @@
 <p>Sentinel-2/A and Sentinel-2/B products are freely distributed by ESA into tiled areas of approximately 110 km by 110 km, following the UTM-based Military Grid Reference System (MGRS). The ToA products can be used as input to Sen2Cor to perform atmospheric, terrain and cirrus correction <a class="reference internal" href="processing-flow.html#louis-2016"><span class="std std-ref">Louis (2016)</span></a>. Sentinel-2 main characteristics are:</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 37%" />
-<col style="width: 24%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
+<col style="width: 40%" />
+<col style="width: 23%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="2"></th>
@@ -433,7 +435,7 @@
 <tr class="row-odd"><td colspan="2"><p>Swath (km)</p></td>
 <td colspan="2"><p>290</p></td>
 </tr>
-<tr class="row-even"><td colspan="2"><p>Field of view (o)</p></td>
+<tr class="row-even"><td colspan="2"><p>Field of view  (<span class="math notranslate nohighlight">\(^{\circ}\)</span>)</p></td>
 <td colspan="2"><p>20.6</p></td>
 </tr>
 <tr class="row-odd"><td colspan="2"><p>Spatial Resolution (m)</p></td>
@@ -445,7 +447,7 @@
 <tr class="row-odd"><td colspan="2"><p>Temporal Resolution (days)</p></td>
 <td colspan="2"><p>5 (together)</p></td>
 </tr>
-<tr class="row-even"><td rowspan="13"><p>Spectral Bands (um)</p></td>
+<tr class="row-even"><td rowspan="13"><p>Spectral Bands (<span class="math notranslate nohighlight">\(\mu m\)</span>)</p></td>
 <td><p>coastal (B01***)</p></td>
 <td><p>0.4292-0.4562</p></td>
 <td><p>0.4197-0.4647</p></td>
@@ -553,7 +555,7 @@
         <a href="concepts.html" class="btn btn-neutral float-right" title="BDC Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../products.html" class="btn btn-neutral float-left" title="BDC Data Products" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="specifications.html" class="btn btn-neutral float-left" title="Specifications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

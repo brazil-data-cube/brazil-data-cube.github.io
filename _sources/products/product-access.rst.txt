@@ -10,4 +10,4 @@ BDC Product Access
 ------------------
 
 
-All Collections can be obtained through Brazil Data Cube website (http://brazildatacube.dpi.inpe.br/portal/explore) or consulting the BDC STAC (http://brazildatacube.dpi.inpe.br/bdc-stac/0.8.1/).
+All Collections can be obtained through Brazil Data Cube website (http://brazildatacube.dpi.inpe.br/portal/explore) or consulting the BDC STAC (http://brazildatacube.dpi.inpe.br/stac/).

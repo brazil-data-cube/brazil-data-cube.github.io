@@ -41,8 +41,8 @@ Dito isso, vale a pena verificar os seguintes tópicos:
     :titlesonly:
 
     ../../products/processing-flow
-    ../../products/products/CB4_64
-    ../../products/products/CB4_64_16D_STK_v1
+    ../../products/bdc_products/cube_col/CB4_64
+    ../../products/bdc_products/cube_col/CB4_64_16D_STK_v1
 
 
 Referências
