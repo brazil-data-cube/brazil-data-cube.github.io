@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Instalação do QGIS para macOS &mdash; Brazil Data Cube</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/software/qgis/install-macos.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Instalação do QGIS para Microsoft Windows 10" href="install-windows-10.html" />
+    <link rel="prev" title="Instalação do QGIS para Linux Ubuntu" href="install-linux-ubuntu.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+          
+
+          
+            
+            <img src="../../../_static/logo-bdc.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Brazil Data Cube Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../products.html">BDC Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../applications.html">Services and Applications</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../getting-started.html">Preparação para o Curso</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../kaggle.html">Configurações no Kaggle</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../qgis.html">Instalando o QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../postgresql.html">Instalando o PostgreSQL e PostGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro-geo.html">Introdução à Geoinformática</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time-series-machine-learning-pt2.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">General Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Brazil Data Cube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
+        
+          <li><a href="../../getting-started.html">Preparação para o Curso</a> &raquo;</li>
+        
+          <li><a href="../../qgis.html">Instalando o QGIS</a> &raquo;</li>
+        
+      <li>Instalação do QGIS para macOS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="install-windows-10.html" class="btn btn-neutral float-right" title="Instalação do QGIS para Microsoft Windows 10" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-linux-ubuntu.html" class="btn btn-neutral float-left" title="Instalação do QGIS para Linux Ubuntu" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="instalacao-do-qgis-para-macos">
+<h1>Instalação do QGIS para macOS<a class="headerlink" href="#instalacao-do-qgis-para-macos" title="Permalink to this headline">¶</a></h1>
+<p>Na página principal do aplicativo <a class="reference external" href="https://qgis.org/en/site/">QGIS</a>, selecione a opção <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Now</span></code>, como mostrado na figura abaixo.</p>
+<a class="reference internal image-reference" href="../../../_images/homepage-qgis.png"><img alt="Homepage QGIS" class="align-center" src="../../../_images/homepage-qgis.png" style="width: 800px;" /></a>
+<p>Na página de <a class="reference external" href="https://qgis.org/en/site/forusers/download.html">Downloads</a>, selecione a opção <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">for</span> <span class="pre">macOS</span></code> e baixe a versão <code class="docutils literal notranslate"><span class="pre">QGIS</span> <span class="pre">macOS</span> <span class="pre">Installer</span> <span class="pre">Version</span> <span class="pre">3.4</span></code>, conforme mostrado na figura abaixo.</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-download-macos-installer.png"><img alt="QGIS macOS Installer Version 3.4" class="align-center" src="../../../_images/qgis-download-macos-installer.png" style="width: 800px;" /></a>
+<p>Após concluir o download do instalador, siga os passos mostrados a seguir:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>**1.** Abra o instalador. Uma janela como a mostrada abaixo será aberta. O QGIS é baseado em diversos softwares livres. Nessa janela você deverá aceitar os termos da licença do QGIS e de outros sistemas ou bibliotecas. Pressione ``Agree`` para continuar:
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-installer-01.png"><img alt="QGIS Standalone Installer" class="align-center" src="../../../_images/qgis-macos-installer-01.png" style="width: 800px;" /></a>
+<p><strong>2.</strong> Em seguida, será realizada uma verificação do pacote de instalação:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-installer-02.png"><img alt="QGIS Standalone Installer" class="align-center" src="../../../_images/qgis-macos-installer-02.png" style="width: 800px;" /></a>
+<p><strong>3.</strong> Após a verificação, será aberta uma nova janela que possibilitará que você arraste o símbolo do QGIS para a pasta de aplicações (<code class="docutils literal notranslate"><span class="pre">Applications</span></code>).</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-installer-03.png"><img alt="QGIS Standalone Installer" class="align-center" src="../../../_images/qgis-macos-installer-03.png" style="width: 800px;" /></a>
+<p><strong>4.</strong> O conteúdo do pacote será copiado para a pasta de aplicações:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-installer-05.png"><img alt="QGIS Standalone Installer" class="align-center" src="../../../_images/qgis-macos-installer-05.png" style="width: 800px;" /></a>
+<p><strong>5.</strong> Durante alguns minutos, o ícone do <code class="docutils literal notranslate"><span class="pre">QGIS</span></code> na janela de aplicativos é apresentado desabilitado, como mostrado na figura abaixo:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-installer-04.png"><img alt="QGIS Standalone Installer" class="align-center" src="../../../_images/qgis-macos-installer-04.png" style="width: 800px;" /></a>
+<p><strong>6.</strong> Ao final da instalação o ícone do QGIS estará habilitado na pasta de aplicativos, como mostrado abaixo:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-installer-06.png"><img alt="QGIS Standalone Installer" class="align-center" src="../../../_images/qgis-macos-installer-06.png" style="width: 800px;" /></a>
+<p><strong>7.</strong> Através do ícone do QGIS na janela acima ou do <em>Launchpad</em> (janela abaixo), execute o aplicativo QGIS Desktop:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-launchpad.png"><img alt="Lançando o QGIS Desktop" class="align-center" src="../../../_images/qgis-macos-launchpad.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-launchpad-icon.png"><img alt="Lançando o QGIS Desktop" class="align-center" src="../../../_images/qgis-macos-launchpad-icon.png" style="width: 800px;" /></a>
+<p><strong>8.</strong> Em alguns casos, o <code class="docutils literal notranslate"><span class="pre">macOS</span></code> pode apresentar uma janela de aviso indicando que o QGIS não pode ser aberto. Neste caso, abra a janela de preferências do <code class="docutils literal notranslate"><span class="pre">macOS</span></code> e selecione a opção segurança. Pressione a opção ‘Abrir mesmo assim’ para permitir a inicialização do QGIS:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-not-open.png"><img alt="Tela Principal QGIS Desktop" class="align-center" src="../../../_images/qgis-macos-not-open.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/macos-preferences.png"><img alt="Tela Principal QGIS Desktop" class="align-center" src="../../../_images/macos-preferences.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/macos-preferences-security.png"><img alt="Tela Principal QGIS Desktop" class="align-center" src="../../../_images/macos-preferences-security.png" style="width: 800px;" /></a>
+<p><strong>9.</strong> Se a instalação foi concluída com sucesso, ao iniciar o aplicativo <code class="docutils literal notranslate"><span class="pre">QGIS</span></code>, uma janela como a mostrada abaixo será exibida:</p>
+<a class="reference internal image-reference" href="../../../_images/qgis-macos-welcome-2.png"><img alt="Tela Principal QGIS Desktop" class="align-center" src="../../../_images/qgis-macos-welcome-2.png" style="width: 800px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mais informações sobre a instalação no <code class="docutils literal notranslate"><span class="pre">macOS</span></code> podem ser encontradas em: <a class="reference external" href="https://www.qgis.org/en/site/forusers/alldownloads.html#mac-os-x-macos">QGIS Installers</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install-windows-10.html" class="btn btn-neutral float-right" title="Instalação do QGIS para Microsoft Windows 10" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install-linux-ubuntu.html" class="btn btn-neutral float-left" title="Instalação do QGIS para Linux Ubuntu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, INPE.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'XXXXXXXXXX', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

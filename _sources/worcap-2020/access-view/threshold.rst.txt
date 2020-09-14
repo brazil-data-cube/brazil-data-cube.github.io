@@ -1,0 +1,99 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Atribuição de classes por threshold (limiarização)
+--------------------------------------------------
+
+
+Classificação de imagens digitais é um tópico bastante amplo e consiste em basicamente atribuir rótulos, também chamados classes para alvos em um conjunto de dados. Embora muitas das abordagens de classificação sejam complexas, há algumas abordagens simples para resolução de determinados problemas, como é o caso da limiarização, do inglês thresholding. Entretanto, para isso precisamos rever alguns fundamentos referentes a processamento digital de imagens como histogramas e diagramas de espalhamentos.
+
+
+Histograma
+++++++++++
+
+
+O histograma de uma imagem digital, também conhecido como distribuição de frequências, é a representação gráfica em colunas de um conjunto de dados que mostra a intensidade de valores e a quantidade de pixels com tal intensidade e são base para diversos tipos de processamento digital de imagens :ref:`Gonzales & Woods (2007) <gonzales_2007>`. Alguns tipos de histograma podem ser observados na :numref:`Figura %s <fig:histogram>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/histogram.png
+    :alt: Histogram
+    :width: 600
+    :figclass: align-center
+    :name: fig:histogram
+
+    Quatro tipos básicos de imagens: escura, clara, baixo contraste e alto contraste, e seus respectivos histogramas. Fonte: :ref:`Gonzales & Woods (2007) <gonzales_2007>`.
+
+
+Diagrama de dispersão (Scatterplot)
++++++++++++++++++++++++++++++++++++
+
+
+Diagramas de dispersão ou *scatterplot* é a representação gráfica no plano cartesiano do comportomanto de duas ou mais variáveis. *Scatterplots* são úteis para analisar a correlação entre dados. Em um *scatterplot*, os dados são exibidos como um conjunto de pontos, cada um com o valor associado a cada varíavel do gráfico. A :numref:`Figura %s <fig:scatterplot3d>` ilustra um *scatterplot* em 3 dimensões.
+
+
+.. figure:: ../../img/worcap-2020/access-view/scatterplot3d.png
+    :alt: Scatter Plot 3D
+    :width: 600
+    :figclass: align-center
+    :name: fig:scatterplot3d
+
+    Exemplo de Diagrama de dispersão (scatterplot) 3D utilizando bandas verde, vermelho e infravermelho próximo (NIR). Fonte: modificado de modificado de :ref:`Cheng (2016) <cheng_2016>`.
+
+
+Devido a dificuldade de visualização de um plano 3d em um plano 2d, é mais comum que scatterplots de 2 dimensões sejam utilizados para análises (2 varíaveis). Exemplos de *scatterplots* podem ser observados na :numref:`Figura %s <fig:scatterplot1>` e :numref:`Figura %s <fig:scatterplot2>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/scatterplot1.png
+    :alt: Scatter Plot
+    :width: 600
+    :figclass: align-center
+    :name: fig:scatterplot1
+
+    Exemplo de Diagrama de dispersão (scatterplot) utilizando bandas 6 e 7 do sensor MODIS, com linha separando classe de nuvem das demais classes. Fonte: modificado de modificado de :ref:`PAN et al. (2015) <pan_2015>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/scatterplot2.png
+    :alt: Scatter Plot
+    :width: 600
+    :figclass: align-center
+    :name: fig:scatterplot2
+
+    Exemplo de Diagrama de dispersão (scatterplot) utilizando bandas 11 e 3 do sensor MODIS, com linha separando classes de nuvem e neve das demais classes. Fonte: modificado de modificado de :ref:`PAN et al. (2015) <pan_2015>`.
+
+
+Nas figuras de exemplo, um mesmo conjunto de dados de entrada é utilizado, entretanto as váriaveis (eixos) do gráfico são de bandas espectrais diferentes. Nessas figuras é possível observar que há separação de algumas classes, como por exemplo pixels referentes a alvos de água e vegetação. Com isso, é possível estabelecer um valor ou reta limiar (threshold) para separar essas classes.
+
+
+Notebook Aplicando Threshold
+++++++++++++++++++++++++++++
+
+
+Façamos agora um exercício utilizando imagens do projeto Brazil Data Cube e aplicando um limiar sobre as imagens para separar diferentes alvos presentes na mesmapor meio de Python Notebook:
+
+
+- https://www.kaggle.com/marujore/cbers-ndvi-threshold/
+
+
+
+Referências
++++++++++++
+
+
+.. _gonzales_2007:
+
+- GONZALEZ, R. C.; WOODS, R. E. Digital image processing (3.ed.). Upper Saddle River, NJ, USA: Pearson, 2007. 976p. ISSN 1098-6596. ISBN 013168728X.
+
+
+.. _cheng_2016:
+
+- CHENG. KE-SHENG. Assessing Uncertainty in LULC Classification Accuracy by Using Bootstrap Resampling. Remote Sensing 8(9), 2016. https://doi.org/10.3390/rs8090705
+
+
+.. _pan_2015:
+
+- PAN, PAIPAI; CHEN, GUOYUE; SARUTA, KAZUKI; TERATA, YUKI. Snow cover detection based on two-dimensional scatter plots from MODIS imagery data. Journal of Applied Remote Sensing 9(1), 2015. https://doi.org/10.1117/1.JRS.9.096083

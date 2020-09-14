@@ -6,6 +6,8 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
+.. _processing_flow:
+
 BDC Processing Flow
 -------------------
 
@@ -68,7 +70,7 @@ References
 
 .. _louis_2016:
 
-- Louis, J., Debaecker, V., Pflug, B., Main-Knorn, M., Bieniarz, J.,Mueller-Wilm, U., Cadau, E., and Gascon, F. Sentinel-2 sen2cor: L2a processor for users. European Space Agency, (Special Publication) ESA SP SP-740, August(2016), 9-13.
+- Louis, J., Debaecker, V., Pflug, B., Main-Knorn, M., Bieniarz, J.,Mueller-Wilm, U., Cadau, E., and Gascon, F. Sentinel-2 sen2cor: L2A processor for users. European Space Agency, (Special Publication) ESA SP SP-740, August (2016), 9-13.
 
 
 .. _silva_2013:

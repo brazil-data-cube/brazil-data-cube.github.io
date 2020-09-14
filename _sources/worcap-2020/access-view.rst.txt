@@ -10,8 +10,7 @@ Acesso e visualização de dados de observação da Terra do projeto Brasil Data
 -----------------------------------------------------------------------------------------------------
 
 
-**Under Development**
-
+Para inicio do curso, é recomendado que primeiro seja feito uma leitura sobre o projeto *Brazil Data Cube* e sobre os dados de entrada:
 
 .. toctree::
     :maxdepth: 1
@@ -19,4 +18,16 @@ Acesso e visualização de dados de observação da Terra do projeto Brasil Data
 
     ./access-view/intro
     ./access-view/cbers-input
-    ./access-view/notebooks
+
+
+Veremos agora alguns conceitos introdutórios sobre processamento digital de imagens e iremos praticar algumas operações utilizando as imagens do projeto Brazil Data Cube fornecidas pelo serviço STAC por meio de notebooks Python na plataforma Kaggle.
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./access-view/plot
+    ./access-view/index
+    ./access-view/threshold
+    ./access-view/date-diff

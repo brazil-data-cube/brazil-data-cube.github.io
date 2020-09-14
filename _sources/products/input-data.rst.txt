@@ -199,7 +199,7 @@ References
 
 .. _banskota_2014:
 
-- Banskota, A., Kayastha, N., Falkowski, M. J., Wulder, M. A., Froese,R. E., and White, J. C.Forest monitoring using Landsat time series data: a review. Canadian Journal of Remote Sensing 40, 5 (2014), 362–384
+- Banskota, A., Kayastha, N., Falkowski, M. J., Wulder, M. A., Froese,R. E., and White, J. C.Forest monitoring using Landsat time series data: a review. Canadian Journal of Remote Sensing 40, 5 (2014), 362–384.
 
 
 .. _berger_2012:

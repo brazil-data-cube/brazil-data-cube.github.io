@@ -14,31 +14,31 @@ Image Collections
 | Image Collection                                                             | Satellite      | Sensors  | Spatial        | Radiometry |
 |                                                                              |                |          | Resolution (m) |            |
 +==============================================================================+================+==========+================+============+
-| :doc:`LC8_DN <./bdc_products/img_col/LC8_DN>`                                | Landsat-8      | OLI/TIRS | 30             | DN         |
+| :doc:`LC8_DN <./img_col/LC8_DN>`                                             | Landsat-8      | OLI/TIRS | 30             | DN         |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`LC8_SR <./bdc_products/img_col/LC8_SR>`                                | Landsat-8      | OLI      | 30             | SR         |
+| :doc:`LC8_SR <./img_col/LC8_SR>`                                             | Landsat-8      | OLI      | 30             | SR         |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`S2_L1C <./bdc_products/img_col/S2_L1C>`                                | Sentinel 2A/2B | MSI      | 10             | ToA        |
+| :doc:`S2_L1C <./img_col/S2_L1C>`                                             | Sentinel 2A/2B | MSI      | 10             | ToA        |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`S2_L2A <./bdc_products/img_col/S2_L2A>`                                | Sentinel 2A/2B | MSI      | 10             | SR         |
+| :doc:`S2_L2A <./img_col/S2_L2A>`                                             | Sentinel 2A/2B | MSI      | 10             | SR         |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`S2_L2A_LASRC <./bdc_products/img_col/S2_L2A_LASRC>`                    | Sentinel 2A/2B | MSI      | 10             | SR         |
+| :doc:`S2_L2A_LASRC <./img_col/S2_L2A_LASRC>`                                 | Sentinel 2A/2B | MSI      | 10             | SR         |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`HLS_L30 <./bdc_products/img_col/HLS_L30>`                              | Landsat-8      | OLI      | 30             | NBAR       |
+| :doc:`HLS_L30 <./img_col/HLS_L30>`                                           | Landsat-8      | OLI      | 30             | NBAR       |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`HLS_S30 <./bdc_products/img_col/HLS_S30>`                              | Sentinel 2A/2B | MSI      | 30             | NBAR       |
+| :doc:`HLS_S30 <./img_col/HLS_S30>`                                           | Sentinel 2A/2B | MSI      | 30             | NBAR       |
 +------------------------------------------------------------------------------+----------------+----------+----------------+------------+
 
 
 .. toctree::
     :maxdepth: 1
-    :titlesonly:
+    :hidden:
 
-    ./bdc_products/img_col/LC8_DN
-    ./bdc_products/img_col/LC8_SR
-    ./bdc_products/img_col/S2_L1C
-    ./bdc_products/img_col/S2_L2A
-    ./bdc_products/img_col/S2_L2A_LASRC
-    ./bdc_products/img_col/HLS_L30
-    ./bdc_products/img_col/HLS_S30
-    ./bdc_products/img_col/RF_ANL
+    ./img_col/LC8_DN
+    ./img_col/LC8_SR
+    ./img_col/S2_L1C
+    ./img_col/S2_L2A
+    ./img_col/S2_L2A_LASRC
+    ./img_col/HLS_L30
+    ./img_col/HLS_S30
+    ./img_col/RF_ANL

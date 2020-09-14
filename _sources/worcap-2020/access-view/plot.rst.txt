@@ -1,0 +1,110 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Plot de imagens
+---------------
+
+
+Antes de iniciar a parte prática, vamos relembrar brevemente alguns fundamentos e conceitos comuns quando trabalha-se com imagens digitais.
+
+
+Fundamentos de cor
+++++++++++++++++++
+
+
+Basicamente, as cores que humanos e outros animais notam são determinadas pela natureza da luz refletida por um objeto. Como pode ser observado na :numref:`Figura %s <fig:prisma>` a luz visivel é composta por bandas estreitas de frequências no espectro eletromagnético :ref:`(Gonzales & Woods, 2007) <gonzales_2007>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/prisma.png
+    :alt: Prisma
+    :width: 600
+    :figclass: align-center
+    :name: fig:prisma
+
+    Espectro de cores observado quando luz passa por um prisma. Fonte: :ref:`Gonzales & Woods (2007) <gonzales_2007>`
+
+
+Os cones, sensores no olho responsáveis pela visão colorida, são capazes capaz de diferencias 3 categorias principais de cores: azul, verde e vermelho, de modo que a :numref:`Figura %s <fig:rgb-absortion>` ilustra uma média experimental da luz absorvida, nos comprimentos de onda citados, pelo olho humano :ref:`(Gonzales & Woods, 2007) <gonzales_2007>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/rgb-absortion.png
+    :alt: RGB absortion
+    :width: 600
+    :figclass: align-center
+    :name: fig:rgb-absortion
+
+    Absorção da luz vermelha, verde e azul por cones no olho humano em função do comprimento de onda. Fonte: :ref:`Gonzales & Woods (2007) <gonzales_2007>`.
+
+
+Aquisição de imagens e quantização
+++++++++++++++++++++++++++++++++++
+
+
+Sensores podem ser utilizados para medir a resposta de alvos e gerar imagens digitais. A :numref:`Figura %s <fig:image-sensing>` ilustra esse processo, no qual uma fonte de iluminação interaje com um elemento de uma cena, é observado por um sistema imageador, projetado em um plano e digitalizado :ref:`Gonzales & Woods (2007) <gonzales_2007>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/image-sensing.png
+    :alt: Image Sensing
+    :width: 600
+    :figclass: align-center
+    :name: fig:image-sensing
+
+    Exemplo do processo de aquisição de uma imagem digital. (a) Fonte de Energia ("iluminação"). (b) Elemento de uma cena. (c) Sistema Imageador. (d) Projeção da cena em um plano de imagem. (e) Digitalização da imagem. Fonte: :ref:`Gonzales & Woods (2007) <gonzales_2007>`.
+
+
+A saída da maioria dos sensores é uma tensão continua em forma de onda nos quais a amplitude e o comportamento espacial estão relacionados a um fenômeno físico sendo medido. Para criar uma imagem digital é necessário converter esse sinal contínuo em forma digital (discreto). Isso involve dois processos: *amostragem* e *quantização*. Digitalizar os valores de coordenada é chamado de *amostragem* enquanto que digitalizar a amplitude do sinal é chamado de *quantização* :ref:`Gonzales & Woods (2007) <gonzales_2007>`. Este processo é ilustrado na :numref:`Figura %s <fig:quantization>`
+
+
+.. figure:: ../../img/worcap-2020/access-view/quantization.png
+    :alt: Quantization
+    :width: 600
+    :figclass: align-center
+    :name: fig:quantization
+
+
+    Geração de uma imagem digital. (a) Imagem continua. (b) Linha de imageamento de A até B em uma imagem continua, utilizado para ilustrar o conceito de amostragem e quantização. (c) Amostragem e quantização. (d) Linha de imageamento digital (scan line). Fonte: :ref:`Gonzales & Woods (2007) <gonzales_2007>`.
+
+
+Imagens Coloridas
++++++++++++++++++
+
+
+Sistemas imageadores geram imagens digitais para um determinado intervalos de comprimentos de onda, também chamado bandas espectrais. A amplitude de valores dessas imagens pode ser atribuída a cores que nossos olhos percebem (azul, verde e vermelho) para assim gerarmos imagens coloridas, como ilustrado na :numref:`Figura %s <fig:color>`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/color.png
+    :alt: Color
+    :width: 600
+    :figclass: align-center
+    :name: fig:color
+
+    Exemplo de composição de imagem colorida utilizando bandas vermelho, verde e azul. Fonte: modificado de :ref:`Nevit Dilmen <nevit>`
+
+
+Notebook Plot de imagem
++++++++++++++++++++++++
+
+
+Façamos agora um exercício consultando imagens do projeto Brazil Data Cube e plota-las utilizando um Python Notebook:
+
+
+- https://www.kaggle.com/marujore/cbers-plot/
+
+
+Referências
++++++++++++
+
+
+.. _gonzales_2007:
+
+- GONZALEZ, R. C.; WOODS, R. E. Digital image processing (3.ed.). Upper Saddle River, NJ, USA: Pearson, 2007. 976p. ISSN 1098-6596. ISBN 013168728X.
+
+
+.. _nevit:
+
+- Nevit Dilmen, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=18673639

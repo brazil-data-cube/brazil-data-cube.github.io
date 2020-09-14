@@ -13,33 +13,33 @@ Data Cube Collections
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 |                                  Cube Collection                            | Satellite      | Sensors | Spatial Resolution (m) | Temporal Compositing |
 +=============================================================================+================+=========+========================+======================+
-| :doc:`CB4_64 <./bdc_products/cube_col/CB4_64>`                              | CBERS-4        | AWFI    | 64                     | identity             |
+| :doc:`CB4_64 <./cube_col/CB4_64>`                                           | CBERS-4        | AWFI    | 64                     | identity             |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`CB4_64_16D_STK <./bdc_products/cube_col/CB4_64_16D_STK_v1>`           | CBERS-4        | AWFI    | 64                     | 16 days              |
+| :doc:`CB4_64_16D_STK <./cube_col/CB4_64_16D_STK_v1>`                        | CBERS-4        | AWFI    | 64                     | 16 days              |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`LC8_30 <./bdc_products/cube_col/LC8_30>`                              | Landsat-8      | OLI     | 30                     | identity             |
+| :doc:`LC8_30 <./cube_col/LC8_30>`                                           | Landsat-8      | OLI     | 30                     | identity             |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`LC8_30_16D_STK <./bdc_products/cube_col/LC8_30_16D_STK>`              | Landsat-8      | OLI     | 30                     | 16 days              |
+| :doc:`LC8_30_16D_STK <./cube_col/LC8_30_16D_STK>`                           | Landsat-8      | OLI     | 30                     | 16 days              |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`MOD13Q1 <./bdc_products/cube_col/MOD13Q1>`                            | TERRA          | MODIS   | 250                    | 16 days              |
+| :doc:`MOD13Q1 <./cube_col/MOD13Q1>`                                         | TERRA          | MODIS   | 250                    | 16 days              |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`MYD13Q1 <./bdc_products/cube_col/MYD13Q1>`                            | AQUA           | MODIS   | 250                    | 16 days              |
+| :doc:`MYD13Q1 <./cube_col/MYD13Q1>`                                         | AQUA           | MODIS   | 250                    | 16 days              |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`S2_10 <./bdc_products/cube_col/S2_10>`                                | Sentinel 2A/2B | MSI     | 10                     | identity             |
+| :doc:`S2_10 <./cube_col/S2_10>`                                             | Sentinel 2A/2B | MSI     | 10                     | identity             |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`S2_10_16D_STK <./bdc_products/cube_col/S2_10_16D_STK>`                | Sentinel 2A/2B | MSI     | 10                     | 16 days              |
+| :doc:`S2_10_16D_STK <./cube_col/S2_10_16D_STK>`                             | Sentinel 2A/2B | MSI     | 10                     | 16 days              |
 +-----------------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 
 
 .. toctree::
     :maxdepth: 1
-    :titlesonly:
+    :hidden:
 
-    ./bdc_products/cube_col/CB4_64
-    ./bdc_products/cube_col/CB4_64_16D_STK_v1
-    ./bdc_products/cube_col/LC8_30
-    ./bdc_products/cube_col/LC8_30_16D_STK
-    ./bdc_products/cube_col/MOD13Q1
-    ./bdc_products/cube_col/MYD13Q1
-    ./bdc_products/cube_col/S2_10
-    ./bdc_products/cube_col/S2_10_16D_STK
+    ./cube_col/CB4_64
+    ./cube_col/CB4_64_16D_STK_v1
+    ./cube_col/LC8_30
+    ./cube_col/LC8_30_16D_STK
+    ./cube_col/MOD13Q1
+    ./cube_col/MYD13Q1
+    ./cube_col/S2_10
+    ./cube_col/S2_10_16D_STK

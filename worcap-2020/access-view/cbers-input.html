@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Input Data &mdash; Brazil Data Cube</title>
+  <title>Dados de Entrada &mdash; Brazil Data Cube</title>
   
 
   
@@ -44,7 +44,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Prática com Python Notebooks" href="notebooks.html" />
+    <link rel="next" title="Plot de imagens" href="plot.html" />
     <link rel="prev" title="Introdução Brazil Data Cube" href="intro.html" /> 
 </head>
 
@@ -109,8 +109,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../intro-geo.html">Introdução à Geoinformática</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="intro.html">Introdução Brazil Data Cube</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Input Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks.html">Prática com Python Notebooks</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Dados de Entrada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">Plot de imagens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">Índices Espectrais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="threshold.html">Atribuição de classes por threshold (limiarização)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="date-diff.html">Diferença entre Imagens</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
@@ -172,7 +175,7 @@
         
           <li><a href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a> &raquo;</li>
         
-      <li>Input Data</li>
+      <li>Dados de Entrada</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,7 +189,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="notebooks.html" class="btn btn-neutral float-right" title="Prática com Python Notebooks" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plot.html" class="btn btn-neutral float-right" title="Plot de imagens" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="intro.html" class="btn btn-neutral float-left" title="Introdução Brazil Data Cube" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -198,8 +201,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="input-data">
-<h1>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dados-de-entrada">
+<h1>Dados de Entrada<a class="headerlink" href="#dados-de-entrada" title="Permalink to this headline">¶</a></h1>
 <p>O INPE foi pioneiro na provisão de imagens de média resolução espacial, liberando imagens sem cusbo do segundo Satélite Sino-Brasileiro de Recursos Terrestres (CBERS-2) <a class="reference internal" href="#banskota-2014"><span class="std std-ref">Banskota el al. (2014)</span></a>. A adoção dessas politicas encorajou que a <em>United States Geological Survey</em> (USGS) tornasse dados Landsat disponíveis em 2008 <a class="reference internal" href="#woodcock-2008"><span class="std std-ref">Woodcock et al. (2008)</span></a>, o que resultou em uma maior quantidade de acesso e uso de imagens orbitais <a class="reference internal" href="#wulder-2012"><span class="std std-ref">Wulder et al. (2012)</span></a>. A abordagem de disponibilização gratuita de dados de imagens orbitais permanece até os dias atuais com dados provenientes dos satélites Landsat-8, Sentinel-2, CBERS-4, CBERS-4A, TERRA, AQUA, dentre outros.</p>
 <div class="section" id="programa-cbers-e-dados-cbers-4-awfi">
 <h2>Programa CBERS e dados CBERS-4/AWFI<a class="headerlink" href="#programa-cbers-e-dados-cbers-4-awfi" title="Permalink to this headline">¶</a></h2>
@@ -212,13 +215,13 @@
 <h2>BDC Processing Flow<a class="headerlink" href="#bdc-processing-flow" title="Permalink to this headline">¶</a></h2>
 <p>Neste minicurso faremos uso de imagens provenientes do sensor AWFI acoplada ao satélite CBERS-4. Caso as imagens fossem obtidas diretamente pelo portal do INPE, seriam necessários processamentos, por exemplo a aplicação dos coeficientes de calibração, que podem ser encontrados em <a class="reference internal" href="#pinto-2016"><span class="std std-ref">Pinto et al. (2016)</span></a> e processamentos de correção atmosférica para que estes dados estivessem prontos para análise. Neste contexto, diversos provedores de dados, como a <em>USGS</em> e o <em>SciHub</em> coopernicus estão fornecendo dados já processador. Com relação à imagens CBERS-4, o projeto <em>Brazil Data Cube</em> fornece esses dados já processados de modo que não precisaremos nos preocupar com estes procedimentos. Além disso, o <em>BDC</em> também fornece esses dados agrupados como cubos de dados.</p>
 <p>Dito isso, vale a pena verificar os seguintes tópicos:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../products/processing-flow.html">BDC Processing Flow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../products/bdc_products/cube_col/CB4_64.html">CB4_64</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../products/bdc_products/cube_col/CB4_64_16D_STK_v1.html">CB4_64_16D_STK_v1</a></li>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../../products/processing-flow.html#processing-flow"><span class="std std-ref">BDC Processing Flow</span></a></p></li>
+<li><p><a class="reference internal" href="../../products/cube_col/CB4_64.html#cb4-64"><span class="std std-ref">CB4_64</span></a></p></li>
+<li><p><a class="reference internal" href="../../products/cube_col/CB4_64_16D_STK_v1.html#cb4-64-16d-stk-v1"><span class="std std-ref">CB4_64_16D_STK_v1</span></a></p></li>
 </ul>
-</div>
+</div></blockquote>
 </div>
 <div class="section" id="referencias">
 <h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
@@ -248,7 +251,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="notebooks.html" class="btn btn-neutral float-right" title="Prática com Python Notebooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plot.html" class="btn btn-neutral float-right" title="Plot de imagens" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="intro.html" class="btn btn-neutral float-left" title="Introdução Brazil Data Cube" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -1,0 +1,19 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Diferença entre Imagens
+-----------------------
+
+
+Uma aplicação recorrente em imagens imagens obitidas por satélites consiste na detecção de mudanças na superfície terrestre. Esse é um tema bastante complexo e que depende bastante dos tipos de alvos analisados, entretanto, a idéia base consiste em comparar dois ou mais instantes de tempo e verificar quais alvos sofreram mudanças.
+
+
+Uma abordagem bastante simplista para essa aplicação consiste em obter imagens de datas distintas e verificar a diferença no valor de reflectância das mesmas, de modo que preferencialmente as diferenças esperadas nessas imagens sejam potencializadas no intervalo de tempo escolhido. Para isso, vamos fazer um simples exercício de obter imagens de uma área agrícola no período do inicio do plantio e outra quando as culturas já estiverem mais desenvolvidas.
+
+
+- https://www.kaggle.com/marujore/cbers-date-difference/
