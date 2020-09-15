@@ -46,4 +46,13 @@ Um *Notebook* exemplo será criado. No menu direito expanda a caixa *Settings* e
     :figclass: align-center
 
 
+Agora no mesmo menu *Settings* ative o campo *Internet* para *on*.
+
+
+.. figure:: ../img/worcap-2020/getting-started/activate_internet.png
+    :alt: Activate Internet printscreen
+    :width: 240
+    :figclass: align-center
+
+
 Este procedimento é necessário para que o *Notebook* possa instalar pacotes externos e realizar consultas na internet. Com isso seu ambiente está apto para inicio do curso.
