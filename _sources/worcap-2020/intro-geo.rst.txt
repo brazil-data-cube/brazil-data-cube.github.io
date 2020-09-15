@@ -6,15 +6,14 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
-Introdução à Geoinformática
----------------------------
+.. _intro-geo:
 
-
-**Under Development**
+Introdução a Geoinformática e Sistemas de Informação Geográfica
+---------------------------------------------------------------
 
 
 .. toctree::
     :maxdepth: 1
     :titlesonly:
 
-    ./intro-geo/general
+    ./intro-geo/introducao

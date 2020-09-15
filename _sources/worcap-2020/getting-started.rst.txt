@@ -17,5 +17,6 @@ Preparação para o Curso
     ./kaggle
     ./qgis
     ./postgresql
+    ./dados
 
 

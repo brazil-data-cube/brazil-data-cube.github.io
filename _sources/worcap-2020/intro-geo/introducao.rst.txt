@@ -1,0 +1,82 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Introdução
+----------
+
+
+.. image:: ../../img/worcap-2020/intro-geo/geometries.svg
+    :alt: Tipos Geométricos
+    :height: 75
+    :align: right
+
+
+A forma de modelar e representar os fenômenos geográficos no computador depende de sua percepção na forma de **entidades discretas** (objetos) ou **campos contínuos**.
+
+
+Quando lidamos com fenômenos onde temos um valor definido para uma ou mais variáveis de observação em toda localização possível do espaço, estamos compreendendo tal fenômeno como um *campo contínuo*. Elevação, temperatura de superfície, risco de incêndio na vegetação, e radiância da superfície são exemplos de campos contínuos.
+
+
+Quando percebemos o fenômeno em questão por objetos com fronteiras bem definidas e pertencentes a uma certa categoria, estamos compreendendo esse fenômeno como *entidades discretas*. Unidades de conservação estadual e federal, organização territorial, arruamento, trechos rodoviários, escolas, hospitais, linhas de transmissão de energia elétrica, são alguns exemplos de entidades discretas.
+
+
+Para representar os dados dessas duas formas de conceitualização do espaço geográfico, em geral, utilizamos a **representação matricial** para fenômenos modelados como campos contínuos, e a **representação vetorial** para entidades discretas.
+
+
+As entidades codificadas usando dados vetoriais são usualmente chamadas de **feições** (ou *features*). Nesse contexto, uma feição pode ser representada computacionalmente por diversas características, as quais chamamos de **atributos da feição**. Um **atributo** possui um nome, sendo associado a um determinado **tipo de dado**, como um número, uma sequência de caracteres (texto), ou uma data.
+
+
+Além dos atributos alfanuméricos, uma feição é descrita por um ou mais **atributos geométricos**, associados a um tipo de dado geométrico. Um **tipo de dado geométrico** é capaz de representar elementos geométricos primitivos tais como pontos, linhas e polígonos ou coleções desses elementos.
+
+
+A :numref:`Tabela %s <tipos-geometricos:exemplos>` apresenta alguns tipos de objetos geográficos representados por feições com representações geométricas de pontos (hidrelétricas e termoelétricas), linhas (logradouros) e polígonos (municípios brasileiros).
+
+
+.. |geom-pts| image:: ../../img/worcap-2020/intro-geo/geom-pts.png
+
+
+.. |geom-lins| image:: ../../img/worcap-2020/intro-geo/geom-lns.png
+
+
+.. |geom-pol| image:: ../../img/worcap-2020/intro-geo/geom-pols.png
+
+
+.. table:: Representação de feições geográficas através de objetos geométricos.
+    :widths: 33 33 33
+    :width: 640
+    :align: center
+    :name: tipos-geometricos:exemplos
+
+    +--------------------------------+---------------+--------------+
+    |  Hidrelétricas/Termoelétricas  |  Logradouros  |  Municípios  |
+    +================================+===============+==============+
+    |          |geom-pts|            |  |geom-lins|  |  |geom-pol|  |
+    +--------------------------------+---------------+--------------+
+
+
+A :numref:`Figura %s <tipos-geometricos:feature-collection>` ilustra o esquema de uma coleção de feições, onde podemos observar os atributos alfanuméricos e geométricos.
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/feature-collection-uf.png
+    :alt: Coleção de Feições (Feature Collection)
+    :width: 480
+    :figclass: align-center
+    :name: tipos-geometricos:feature-collection
+
+    Coleção de Feições (*Feature Collection*).
+
+
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/imagem-cbers4.png
+    :alt: Imagem do satélite CBERS-4 sensor WFI
+    :width: 480
+    :figclass: align-center
+    :name: tipo-raster:img-cbers4
+
+    Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial.
