@@ -17,3 +17,5 @@ Introdução a Geoinformática e Sistemas de Informação Geográfica
     :titlesonly:
 
     ./intro-geo/introducao
+    ./intro-geo/gis
+    ./intro-geo/bdgeo

@@ -13,14 +13,16 @@ Dados Curso
 Este documento descreve os dados que serão utilizados na aula de :ref:`Introdução a Geoinformática e SIGs <intro-geo>`.
 
 
-.. note::
+.. warning::
 
     As demais aulas utilizarão dados através de serviços web disponibilizados pelo projeto Brazil Data Cube e, portanto, não necessitarão de *download*.
 
 
 Faça o *download* dos seguintes conjuntos de dados:
 
-- `municipios_2018.zip <https://1drv.ms/u/s!AtoTP-MfEUEDhP1xaLJEKhiBefhVDA?e=QEgfXX>`_: Divisão político admnistrativa contendo a malha municipal do ano de referência de 2018. Possui 5.572 feições, com geometrias do tipo ``MultiPolygon``. Esses dados encontram-se na escala ``1:250.000``, projeção geográfica ``LAT/LONG`` e sistema geodésico de referência ``SIRGAS 2000``. Formato: `ESRI Shapefile <https://en.wikipedia.org/wiki/Shapefile>`_, com codificação de caracteres ``UTF-8``.
+.. _shp_municipios_dados:
+
+- `municipios_2018.zip <https://1drv.ms/u/s!AtoTP-MfEUEDhP1xaLJEKhiBefhVDA?e=QEgfXX>`_: Divisão político administrativa contendo a malha municipal do ano de referência de 2018. Possui 5.572 feições, com geometrias do tipo ``MultiPolygon``. Esses dados encontram-se na escala ``1:250.000``, projeção geográfica ``LAT/LONG`` e sistema geodésico de referência ``SIRGAS 2000``. Formato: `ESRI Shapefile <https://en.wikipedia.org/wiki/Shapefile>`_, com codificação de caracteres ``UTF-8``.
 
 
 .. note::
@@ -29,13 +31,17 @@ Faça o *download* dos seguintes conjuntos de dados:
 
 
 
-- `focos_2020.zip <https://1drv.ms/u/s!AtoTP-MfEUEDhP1wkPi8JvInJROZ7A?e=l8fubw>`_: Ocorrências de fogo na vegetação entre os dia 01 de janeiro e 25 de janeiro de 2020. Esse conjunto de dados possui 38.793 feições, com geometrias do tipo ``Point``. Esses dados encontram-se na projeção geográfica ``LAT/LONG`` e sistema geodésico de referência ``WGS-84``. Formato: `ESRI Shapefile <https://en.wikipedia.org/wiki/Shapefile>`_, com codificação de caracteres ``UTF-8``.
+.. _shp_focos_dados:
+
+- `focos_2020.zip <https://1drv.ms/u/s!AtoTP-MfEUEDhP1wkPi8JvInJROZ7A?e=l8fubw>`_: Ocorrências de fogo na vegetação entre os dias 01 de janeiro e 25 de janeiro de 2020. Esse conjunto de dados possui 38.793 feições, com geometrias do tipo ``Point``. Esses dados encontram-se na projeção geográfica ``LAT/LONG`` e sistema geodésico de referência ``WGS-84``. Formato: `ESRI Shapefile <https://en.wikipedia.org/wiki/Shapefile>`_, com codificação de caracteres ``UTF-8``.
 
 
 .. note::
 
     O `Programa Queimadas do Instituto Nacional de Pesquisas Espaciais (INPE) <http://queimadas.dgi.inpe.br/queimadas/portal>`_ realiza o monitoramento da ocorrência do fogo na vegetação. O acervo de dados de ocorrência encontra-se disponível através do aplicativo `BDQueimadas <http://queimadas.dgi.inpe.br/queimadas/bdqueimadas#>`_.
 
+
+.. _geotiff_cbers4_dados:
 
 - `imagem_cbers.zip <https://1drv.ms/u/s!AtoTP-MfEUEDhP1zSV63-OUuGjajkQ?e=dbuRIj>`_: Recorte de imagem do satélite CBERS 4, sensor WFI, resolução espacial de 64 metros.
 

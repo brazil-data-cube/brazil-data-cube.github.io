@@ -44,7 +44,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" href="../access-view.html" />
+    <link rel="next" title="Sistemas de Informação Geográfica (SIG)" href="gis.html" />
     <link rel="prev" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" href="../intro-geo.html" /> 
 </head>
 
@@ -108,6 +108,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../getting-started.html">Preparação para o Curso</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../intro-geo.html">Introdução a Geoinformática e Sistemas de Informação Geográfica</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Introdução</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gis.html">Sistemas de Informação Geográfica (SIG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bdgeo.html">Bancos de Dados Geográficos com o PostGIS</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a></li>
@@ -184,7 +186,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="../access-view.html" class="btn btn-neutral float-right" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gis.html" class="btn btn-neutral float-right" title="Sistemas de Informação Geográfica (SIG)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../intro-geo.html" class="btn btn-neutral float-left" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -231,10 +233,13 @@
 <a class="reference internal image-reference" href="../../_images/feature-collection-uf.png"><img alt="Coleção de Feições (Feature Collection)" src="../../_images/feature-collection-uf.png" style="width: 480px;" /></a>
 <p class="caption"><span class="caption-number">Figure 11 - </span><span class="caption-text">Coleção de Feições (<em>Feature Collection</em>).</span><a class="headerlink" href="#tipos-geometricos-feature-collection" title="Permalink to this image">¶</a></p>
 </div>
+<p>As entidades codificados como dados matriciais, também chamadas de <strong>raster</strong> ou <strong>imagens</strong>, formam um plano subdividido em células de tamanho fixo, frequentemente chamadas de <strong>pixels</strong>. Para cada par de coordenada (x, y) nesse plano há um valor de intensidade, por vezes chamado nível de cinza, que indica o valor de alguma medida para aquele ponto.</p>
+<p>A <a class="reference internal" href="#tipo-raster-img-cbers4"><span class="std std-numref">Figura 12</span></a> apresenta uma imagem do satélite CBERS-4 sensor WFI, um dado matricial em que cada célula, representa uma área de 64 metros da superfície terrestre e o valor de intensidade cada célula indica uma aproximação da cor refletida por essa superfície.</p>
 <div class="align-center figure align-default" id="tipo-raster-img-cbers4">
 <a class="reference internal image-reference" href="../../_images/imagem-cbers4.png"><img alt="Imagem do satélite CBERS-4 sensor WFI" src="../../_images/imagem-cbers4.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 12 - </span><span class="caption-text">Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial.</span><a class="headerlink" href="#tipo-raster-img-cbers4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 12 - </span><span class="caption-text">Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial, em composição colorida.</span><a class="headerlink" href="#tipo-raster-img-cbers4" title="Permalink to this image">¶</a></p>
 </div>
+<p>Ambos os formatos, vetorial e matricial, apresentam vantagens e desvantagens quando comparados entre sí. Dados matriciais por exemplo, apresentam uma estrutura bastante simples, uma grade regular com valores para cada célula. Entretanto, essa codificação assume que perdas de informação no espaço são aceitáveis, uma vez que cada célula é uma representação generalizada de uma área com variações no espaço real. Já os dados em formato vetorial apresentam a vantagem de utilizarem menor espaço de armazenamento, além de dependerem da resolução em que o dado foi gerado, o que possibilita utilizar o dado em diferentes escalas com menor distorção. Entretanto, dados vetoriais são mais complexos para manipular.</p>
 </div>
 
 
@@ -245,7 +250,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../access-view.html" class="btn btn-neutral float-right" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gis.html" class="btn btn-neutral float-right" title="Sistemas de Informação Geográfica (SIG)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../intro-geo.html" class="btn btn-neutral float-left" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -289,7 +294,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'XXXXXXXXXX', 'auto');
+    ga('create', 'UA-178140681-1', 'auto');
     ga('send', 'pageview');
     </script>
 

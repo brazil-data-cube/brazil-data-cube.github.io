@@ -71,6 +71,10 @@ A :numref:`Figura %s <tipos-geometricos:feature-collection>` ilustra o esquema d
     Coleção de Feições (*Feature Collection*).
 
 
+As entidades codificados como dados matriciais, também chamadas de **raster** ou **imagens**, formam um plano subdividido em células de tamanho fixo, frequentemente chamadas de **pixels**. Para cada par de coordenada (x, y) nesse plano há um valor de intensidade, por vezes chamado nível de cinza, que indica o valor de alguma medida para aquele ponto.
+
+
+A :numref:`Figura %s <tipo-raster:img-cbers4>` apresenta uma imagem do satélite CBERS-4 sensor WFI, um dado matricial em que cada célula, representa uma área de 64 metros da superfície terrestre e o valor de intensidade cada célula indica uma aproximação da cor refletida por essa superfície.
 
 
 .. figure:: ../../img/worcap-2020/intro-geo/imagem-cbers4.png
@@ -79,4 +83,7 @@ A :numref:`Figura %s <tipos-geometricos:feature-collection>` ilustra o esquema d
     :figclass: align-center
     :name: tipo-raster:img-cbers4
 
-    Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial.
+    Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial, em composição colorida.
+
+
+Ambos os formatos, vetorial e matricial, apresentam vantagens e desvantagens quando comparados entre sí. Dados matriciais por exemplo, apresentam uma estrutura bastante simples, uma grade regular com valores para cada célula. Entretanto, essa codificação assume que perdas de informação no espaço são aceitáveis, uma vez que cada célula é uma representação generalizada de uma área com variações no espaço real. Já os dados em formato vetorial apresentam a vantagem de utilizarem menor espaço de armazenamento, além de dependerem da resolução em que o dado foi gerado, o que possibilita utilizar o dado em diferentes escalas com menor distorção. Entretanto, dados vetoriais são mais complexos para manipular.

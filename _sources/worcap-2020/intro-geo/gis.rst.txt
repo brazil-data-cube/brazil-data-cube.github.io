@@ -1,0 +1,180 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Sistemas de Informação Geográfica (SIG)
+---------------------------------------
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/foss4g.jpg
+    :alt: Free and Open Source Software fo GIS
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:foss4g
+
+    Free and Open Source Software fo GIS (FOSS4G).
+
+
+Aplicativos Desktop
++++++++++++++++++++
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/qgis.png
+    :alt: QGIS
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:qgis
+
+    QGIS.
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/gvsig.png
+    :alt: gvSIG
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:gvsig
+
+    gvSIG.
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/tview.png
+    :alt: TerraView
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:tview
+
+    TerraView.
+
+
+Atividades com o QGIS
++++++++++++++++++++++
+
+
+**1.** Carregar o arquivo com a divisão político administrativa da :ref:`malha municipal do ano de referência de 2018 <shp_municipios_dados>`.
+
+
+.. note::
+
+    Estrutura de um arquivo ESRI Shapefile:
+
+
+    .. figure:: ../../img/worcap-2020/intro-geo/esri-shapefile.png
+        :alt: ESRI Shapefile
+        :width: 800
+        :figclass: align-center
+        :name: worcap-2020:intro-geo:shapefile
+
+        Estrutura de um arquivo ``ESRI Shapefile``.
+
+
+Ao carregar o arquivo ``municipios_2018.shp``, você deverá ver um mapa como o apresentado na :numref:`Figura %s <worcap-2020:intro-geo:qgis-camada-municipios>`.
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/qgis-camada-municipios.png
+    :alt: Carregando a camada de municípios.
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:qgis-camada-municipios
+
+    Carregando a camada de municípios.
+
+
+.. warning::
+
+    Vamos explorar as seguintes funcionalidades de um aplicativo SIG:
+
+    - Simbologia.
+
+    - Operações básicas: ``Zoom In, Out e Full``, ``Identificação de Feições``, ``Seleção de Feições``.
+
+    - Tabela de atributos.
+
+    - Filtros (exemplo: ``"UF" = 'MINAS GERAIS'``)
+
+
+
+**2.** Carregar o arquivo com :ref:`ocorrências de fogo na vegetação <shp_focos_dados>`.
+
+
+Ao carregar o arquivo ``focos_2020.shp``, você deverá ver um mapa como o apresentado na :numref:`Figura %s <worcap-2020:intro-geo:qgis-vector-layers>`.
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/qgis-vector-layers.png
+    :alt: Camadas vetoriais no QGIS
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:qgis-vector-layers
+
+    Camadas vetoriais no QGIS: focos (pontos) e municípios (polígonos).
+
+
+.. warning::
+
+    Vamos explorar as seguintes funcionalidades:
+
+    - Simbologia.
+
+    - Tabela de atributos.
+
+    - Filtro (exemplo: ``"satelite" = 'TERRA_M-M' AND "datahora" >= '2020/01/01' AND "datahora" < '2020/01/02'``)
+
+
+
+**3.** Carregar os arquivos GeoTIFF com :ref:`imagens do CBERS 4 sensor WFI <geotiff_cbers4_dados>`.
+
+
+.. note::
+
+    Um arquivo GeoTIFF contém informações de georreferenciamento (sistema de referencia espacial).
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/raster-layers.png
+    :alt: Camadas matriciais no QGIS
+    :width: 800
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:raster-layers
+
+    Camadas matriciais no QGIS.
+
+
+.. warning::
+
+    Como obter a composição colorida mostrada acima?
+
+
+    .. figure:: ../../img/worcap-2020/intro-geo/rgb_raster.png
+        :alt: Composição colorida das imagens GeoTIFF
+        :width: 800
+        :figclass: align-center
+        :name: worcap-2020:intro-geo:geotiff
+
+        Composição colorida das imagens ``GeoTIFF``.
+
+
+
+**4.** Defina transparência para a camada vetorial dos municípios.
+
+
+
+Projeções Cartográficas
++++++++++++++++++++++++
+
+
+.. warning::
+
+    Verificar o sistema de referência espacial de cada camada carregada.
+
+
+
+.. tip::
+
+    `Atlas Escolar: o que é cartografia? as projeções cartográficas <https://atlasescolar.ibge.gov.br/conceitos-gerais/o-que-e-cartografia/as-projec-o-es-cartogra-ficas.html>`_. IBGE.
+
+
+.. tip::
+
+    `Map projection <https://en.wikipedia.org/wiki/Map_projection>`_.

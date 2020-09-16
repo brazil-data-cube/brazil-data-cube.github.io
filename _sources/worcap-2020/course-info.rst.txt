@@ -2,7 +2,7 @@ Informações sobre o curso
 -------------------------
 
 
-O minicurso da trilha de Geoinformática com Aplicações de Machine Learning tem como objetivo apresentar conceitos básicos de Geoinformática e aplicações com séries temporais de imagens de satélite. Os participantes farão uso de tecnologias e dados produzidos pelo time do projeto Cubo de Dados Brasil do INPE.
+O minicurso da trilha de Geoinformática com Aplicações de Machine Learning tem como objetivo apresentar conceitos básicos de Geoinformática e aplicações com séries temporais de imagens de satélite. Os participantes farão uso de tecnologias e dados produzidos pelo time do projeto `Cubo de Dados Brasil do INPE <http://brazildatacube.dpi.inpe.br/>`_.
 
 
 Os principais tópicos discutidos incluem: (a) dados geográficos; (b) sistemas de informação geográfica; (c) acesso e visualização de dados de observação da Terra do projeto Brazil Data Cube através da linguagem Python; (d) introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning.

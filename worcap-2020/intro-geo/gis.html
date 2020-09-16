@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sistemas de Informação Geográfica (SIG) &mdash; Brazil Data Cube</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/intro-geo/gis.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bancos de Dados Geográficos com o PostGIS" href="bdgeo.html" />
+    <link rel="prev" title="Introdução" href="introducao.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+          
+
+          
+            
+            <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started.html">Preparação para o Curso</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../intro-geo.html">Introdução a Geoinformática e Sistemas de Informação Geográfica</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introducao.html">Introdução</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sistemas de Informação Geográfica (SIG)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bdgeo.html">Bancos de Dados Geográficos com o PostGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt1.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning (PARTE I)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time-series-machine-learning-pt2.html">Introdução a Séries Temporais de Imagens de Sensoriamento Remoto e Aplicações de Machine Learning - Parte II - Classificação</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">General Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Brazil Data Cube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
+        
+          <li><a href="../intro-geo.html">Introdução a Geoinformática e Sistemas de Informação Geográfica</a> &raquo;</li>
+        
+      <li>Sistemas de Informação Geográfica (SIG)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="bdgeo.html" class="btn btn-neutral float-right" title="Bancos de Dados Geográficos com o PostGIS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introducao.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sistemas-de-informacao-geografica-sig">
+<h1>Sistemas de Informação Geográfica (SIG)<a class="headerlink" href="#sistemas-de-informacao-geografica-sig" title="Permalink to this headline">¶</a></h1>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-foss4g">
+<a class="reference internal image-reference" href="../../_images/foss4g.jpg"><img alt="Free and Open Source Software fo GIS" src="../../_images/foss4g.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 13 - </span><span class="caption-text">Free and Open Source Software fo GIS (FOSS4G).</span><a class="headerlink" href="#worcap-2020-intro-geo-foss4g" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="aplicativos-desktop">
+<h2>Aplicativos Desktop<a class="headerlink" href="#aplicativos-desktop" title="Permalink to this headline">¶</a></h2>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-qgis">
+<a class="reference internal image-reference" href="../../_images/qgis.png"><img alt="QGIS" src="../../_images/qgis.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 14 - </span><span class="caption-text">QGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-gvsig">
+<a class="reference internal image-reference" href="../../_images/gvsig.png"><img alt="gvSIG" src="../../_images/gvsig.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 15 - </span><span class="caption-text">gvSIG.</span><a class="headerlink" href="#worcap-2020-intro-geo-gvsig" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-tview">
+<a class="reference internal image-reference" href="../../_images/tview.png"><img alt="TerraView" src="../../_images/tview.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 16 - </span><span class="caption-text">TerraView.</span><a class="headerlink" href="#worcap-2020-intro-geo-tview" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="atividades-com-o-qgis">
+<h2>Atividades com o QGIS<a class="headerlink" href="#atividades-com-o-qgis" title="Permalink to this headline">¶</a></h2>
+<p><strong>1.</strong> Carregar o arquivo com a divisão político administrativa da <a class="reference internal" href="../dados.html#shp-municipios-dados"><span class="std std-ref">malha municipal do ano de referência de 2018</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Estrutura de um arquivo ESRI Shapefile:</p>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-shapefile">
+<a class="reference internal image-reference" href="../../_images/esri-shapefile.png"><img alt="ESRI Shapefile" src="../../_images/esri-shapefile.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 17 - </span><span class="caption-text">Estrutura de um arquivo <code class="docutils literal notranslate"><span class="pre">ESRI</span> <span class="pre">Shapefile</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-shapefile" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Ao carregar o arquivo <code class="docutils literal notranslate"><span class="pre">municipios_2018.shp</span></code>, você deverá ver um mapa como o apresentado na <a class="reference internal" href="#worcap-2020-intro-geo-qgis-camada-municipios"><span class="std std-numref">Figura 18</span></a>.</p>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-qgis-camada-municipios">
+<a class="reference internal image-reference" href="../../_images/qgis-camada-municipios.png"><img alt="Carregando a camada de municípios." src="../../_images/qgis-camada-municipios.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">Carregando a camada de municípios.</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis-camada-municipios" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Vamos explorar as seguintes funcionalidades de um aplicativo SIG:</p>
+<ul class="simple">
+<li><p>Simbologia.</p></li>
+<li><p>Operações básicas: <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">In,</span> <span class="pre">Out</span> <span class="pre">e</span> <span class="pre">Full</span></code>, <code class="docutils literal notranslate"><span class="pre">Identificação</span> <span class="pre">de</span> <span class="pre">Feições</span></code>, <code class="docutils literal notranslate"><span class="pre">Seleção</span> <span class="pre">de</span> <span class="pre">Feições</span></code>.</p></li>
+<li><p>Tabela de atributos.</p></li>
+<li><p>Filtros (exemplo: <code class="docutils literal notranslate"><span class="pre">&quot;UF&quot;</span> <span class="pre">=</span> <span class="pre">'MINAS</span> <span class="pre">GERAIS'</span></code>)</p></li>
+</ul>
+</div>
+<p><strong>2.</strong> Carregar o arquivo com <a class="reference internal" href="../dados.html#shp-focos-dados"><span class="std std-ref">ocorrências de fogo na vegetação</span></a>.</p>
+<p>Ao carregar o arquivo <code class="docutils literal notranslate"><span class="pre">focos_2020.shp</span></code>, você deverá ver um mapa como o apresentado na <a class="reference internal" href="#worcap-2020-intro-geo-qgis-vector-layers"><span class="std std-numref">Figura 19</span></a>.</p>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-qgis-vector-layers">
+<a class="reference internal image-reference" href="../../_images/qgis-vector-layers.png"><img alt="Camadas vetoriais no QGIS" src="../../_images/qgis-vector-layers.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 19 - </span><span class="caption-text">Camadas vetoriais no QGIS: focos (pontos) e municípios (polígonos).</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis-vector-layers" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Vamos explorar as seguintes funcionalidades:</p>
+<ul class="simple">
+<li><p>Simbologia.</p></li>
+<li><p>Tabela de atributos.</p></li>
+<li><p>Filtro (exemplo: <code class="docutils literal notranslate"><span class="pre">&quot;satelite&quot;</span> <span class="pre">=</span> <span class="pre">'TERRA_M-M'</span> <span class="pre">AND</span> <span class="pre">&quot;datahora&quot;</span> <span class="pre">&gt;=</span> <span class="pre">'2020/01/01'</span> <span class="pre">AND</span> <span class="pre">&quot;datahora&quot;</span> <span class="pre">&lt;</span> <span class="pre">'2020/01/02'</span></code>)</p></li>
+</ul>
+</div>
+<p><strong>3.</strong> Carregar os arquivos GeoTIFF com <a class="reference internal" href="../dados.html#geotiff-cbers4-dados"><span class="std std-ref">imagens do CBERS 4 sensor WFI</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Um arquivo GeoTIFF contém informações de georreferenciamento (sistema de referencia espacial).</p>
+</div>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-raster-layers">
+<a class="reference internal image-reference" href="../../_images/raster-layers.png"><img alt="Camadas matriciais no QGIS" src="../../_images/raster-layers.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 20 - </span><span class="caption-text">Camadas matriciais no QGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-raster-layers" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Como obter a composição colorida mostrada acima?</p>
+<div class="align-center figure align-default" id="worcap-2020-intro-geo-geotiff">
+<a class="reference internal image-reference" href="../../_images/rgb_raster.png"><img alt="Composição colorida das imagens GeoTIFF" src="../../_images/rgb_raster.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Figure 21 - </span><span class="caption-text">Composição colorida das imagens <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-geotiff" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p><strong>4.</strong> Defina transparência para a camada vetorial dos municípios.</p>
+</div>
+<div class="section" id="projecoes-cartograficas">
+<h2>Projeções Cartográficas<a class="headerlink" href="#projecoes-cartograficas" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Verificar o sistema de referência espacial de cada camada carregada.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://atlasescolar.ibge.gov.br/conceitos-gerais/o-que-e-cartografia/as-projec-o-es-cartogra-ficas.html">Atlas Escolar: o que é cartografia? as projeções cartográficas</a>. IBGE.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Map_projection">Map projection</a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bdgeo.html" class="btn btn-neutral float-right" title="Bancos de Dados Geográficos com o PostGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introducao.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, INPE.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-178140681-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

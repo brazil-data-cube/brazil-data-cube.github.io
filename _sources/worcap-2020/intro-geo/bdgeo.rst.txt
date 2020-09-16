@@ -1,0 +1,248 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Bancos de Dados Geográficos com o PostGIS
+-----------------------------------------
+
+
+.. image:: ../../img/worcap-2020/intro-geo/postgresql.png
+    :alt: PostgreSQL
+    :width: 125
+    :align: right
+
+
+O `PostgreSQL <http://www.postgresql.org>`_ é um sistema gerenciador de banco de dados objeto-relacional, gratuito e de código fonte aberto, desenvolvido a partir do projeto ``Postgres``, iniciado em 1986, na Universidade da Califórnia em Berkeley, sob a liderança do professor `Michael Stonebraker <https://en.wikipedia.org/wiki/Michael_Stonebraker>`_.
+
+
+O código fonte do núcleo do PostgreSQL encontra-se escrito na Linguagem de Programação C.​ Isso garante a ele grande portabilidade, estando disponível para as principais plataformas de hardware e sistemas operacionais, entre eles, Linux, macOS e Microsoft Windows\ [#f1]_.​ Esse SGBD fornece inúmeras facilidades, entre elas:
+
+- Possibilidade de criação de funções ou ``User-Defined Functions`` (UDFs) através de diversas linguagens, tais como ``PL/pgSQL``, ``PL/Perl``, ``PL/Python``, ``PL/Tcl``, ``C``, ``C++``, entre outras.
+
+- Criação de gatilhos (``triggers``).
+
+- Vários métodos de indexação, entre eles, B\ :sup:`+`\ -tree, Hash, R-Tree, GiST​.
+
+- Suporte a transação e concorrência​.
+
+- Criação de chaves estrangeiras (*foreign keys*)​ ou relacionamentos de integridade referencial.
+
+- Extensibilidade dos tipos de dados.
+
+- Busca textual (*Full-Text Search* ou FTS)​.
+
+- Replicação.
+
+
+.. image:: ../../img/worcap-2020/intro-geo/stock_elephant.png
+    :alt: PostGIS
+    :width: 125
+    :align: right
+
+
+O `PostGIS <https://postgis.net/>`_ é uma biblioteca de software livre, sob a licença `GNU GPL versão 2 <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>`_ (GPLv2), que fornece ao SGBD PostgreSQL uma extensão geoespacial. Inicialmente, esta extensão foi desenvolvida pela empresa Canadense `Refractions Research <http://postgis.refractions.net>`_, para suportar os tipos geométricos e operadores espaciais da OGC Simple Feature (:ref:`Herring, 2011a <herring_2011_a>` e :ref:`Herring, 2011b <herring_2011_b>`), bem como fornecer um mecanismo de indexação baseado nas Árvores-R. No entanto, com a evolução dessa extensão, a implementação passou a adotar o padrão ``ISO/SQL``, relativo a *SQL multimedia and application packages - Part 3: Spatial* (:ref:`ISO, 2016 <iso_2016>`). Assim, além dos tipos existentes na OGC-SFS, encontramos os tipos circulares e compostos da ISO/SQL.
+
+
+Nos últimos anos, a extensão PostGIS passou a integrar diversas outras funcionalidades, como suporte a dados matriciais através do módulo ``PostGIS Raster``, do módulo ``SFSCGAL`` para trabalhar com dados em 3D, entre vários outros módulos. A Figura :numref:`Figura %s <worcap-2020:intro-geo:arqpgis>` mostra o PostGIS como uma extensão do SGBD PostgreSQL, integrando as bibliotecas `GEOS <https://trac.osgeo.org/geos/>`_, `Proj <https://proj.org/>`_, `GDAL <https://gdal.org>`_ e `CGAL <https://www.cgal.org/>`_. Repare que o servidor PostgreSQL possui todos os elementos para análise sintática das consultas, para definir os planos ou estratégias de execução das consultas, bem como cuidar do gerenciamento dos dados em disco e memória.
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/arquitetura-postgis.png
+    :alt: Arquitetura PostGIS
+    :width: 480
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:arqpgis
+
+    Arquitetura PostGIS.
+
+
+Neste curso, utilizaremos o PostgreSQL versão 11 e sua extensão geográfica PostGIS 2.5 para exemplificar as funcionalidades presentes em um servidor típico de bancos de dados capaz de suportar o domínio geoespacial.
+
+
+Esta seção introduz o tipo ``PostGIS Geometry``, isto é, geometrias no ``Plano Cartesiano​`` (:numref:`Figura %s <worcap-2020:intro-geo:plano-cartesiano>`). Logo, as operações são realizadas em 2D, mesmo quando a geometria possui valores de coordenada :math:`z` ou :math:`m`. Além disso, as operações como área e perímetro são realizadas na unidade do sistema de referência espacial associada à geometria.​
+
+
+.. figure:: ../../img/worcap-2020/intro-geo/plano-cartesiano.png
+    :alt: Tipo Geometry
+    :width: 480
+    :figclass: align-center
+    :name: worcap-2020:intro-geo:plano-cartesiano
+
+    Tipo ``Geometry``.
+
+
+Carregando a Extensão PostGIS
++++++++++++++++++++++++++++++
+
+
+**1.** Para criar um novo banco de dados no PostgreSQL:
+
+
+.. code-block:: sql
+
+    CREATE DATABASE worcap TEMPLATE template1;
+
+
+**2.** Para carregar a extensão PostGIS no banco de dados criado:
+
+
+.. code-block:: sql
+
+    CREATE EXTENSION postgis;
+
+
+**3.** Para saber as configurações da sua extensão PostGIS, utilize a função ``postgis_full_version``:
+
+
+.. code-block:: sql
+
+    SELECT postgis_full_version();
+
+
+Importando Camadas para o PostgreSQL/PostGIS
+++++++++++++++++++++++++++++++++++++++++++++
+
+
+.. warning::
+
+    Neste curso utilizaremos a interface gráfica do QGIS para esta atividade.
+
+
+.. tip::
+
+    Para transformar um arquivo ``ESRI Shapefile`` numa sequência de comandos SQL com instruções para criação de uma tabela com coluna geométrica, inserção de linhas (*features*) e criação do índice espacial, podemos utilizar o comando ``shp2pgsql`` no terminal de comandos do sistema operacional.
+
+    .. code-block:: shell
+
+        shp2pgsql -c -g "geom" -s 4326 -i -I -t "2D" -W UTF-8 focos_2020.shp public.focos_2020 > focos_2020.sql
+
+        psql -U postgres -h localhost -p 5432 -d worcap -f focos_2020.sql
+
+
+**1.** Importar a camada de :ref:`ocorrências de fogo na vegetação <shp_focos_dados>`:
+
+- No ``Data Source Manager`` do QGIS, criar uma conexão com o SGBD PostgreSQL.
+
+- Após criar a conexão, você deverá conectar ao servidor PostgreSQL.
+
+- Menu ``Database`` - ``DB Manager...``.
+
+- Selecionar o seu servidor de bancos de dados.
+
+- Selecionar opção ``Import Layer/File...``:
+
+    - Input: ``focos_2020``
+    - Schema: ``public``
+    - Table: ``focos_2020``
+    - Primary Key: ``id``
+    - geometry column: ``geom``
+    - Source SRID: ``EPSG:4326``
+    - Target SRID: ``EPSG:4674``
+    - Convert field names to lowercase.
+    - Create spatial index.
+
+- Apos finalizar a importação, a tabela ``focos_2020`` estará disponível para ser adicionada como nova camada.
+
+
+.. note::
+
+    Veja se o atributo com a data de observação (``datahora``) foi importado com o tipo correto: ``TIMESTAMP WITHOUT TIME ZONE``. Caso não tenha sido, use o seguinte comando para acertar o tipo da coluna:
+
+
+    .. code-block:: sql
+
+        ALTER TABLE focos_2020
+            ALTER COLUMN datahora
+                TYPE TIMESTAMP WITHOUT TIME ZONE
+                USING datahora::timestamp without time zone;
+
+
+    Aproveite e crie um índice sobre a coluna com a data de observação:
+
+
+    .. code-block:: sql
+
+        CREATE INDEX idx_focos_2020_datahora ON focos_2020(datahora);
+
+
+**2.** Importar a camada com a :ref:`malha municipal do ano de referência de 2018 <shp_municipios_dados>`:
+
+- Menu ``Database`` - ``DB Manager...``.
+
+- Selecionar o seu servidor de bancos de dados.
+
+- Selecionar opção ``Import Layer/File...``:
+
+    - Input: ``municipios_2018``
+    - Schema: ``public``
+    - Table: ``municipios_2018``
+    - Primary Key: ``id``
+    - geometry column: ``geom``
+    - Convert field names to lowercase.
+    - Create spatial index.
+
+
+- Apos finalizar a importação, a tabela ``municipios_2018`` estará disponível para ser adicionada como nova camada.
+
+
+Consultas Espaciais
++++++++++++++++++++
+
+
+Quantos focos de incêndio na vegetação foram detectados em cada municipios entre os dias 01 de janeiro e 25 de janeiro de 2020?
+
+
+.. code-block:: sql
+
+      SELECT m.id,
+             m.nome,
+             m.uf_sigla,
+             COUNT(*) AS total_focos
+        FROM municipios_2018 AS m,
+             focos_2020 AS f
+       WHERE ST_Intersects(m.geom, f.geom)
+    GROUP BY m.id,
+             m.nome,
+             m.uf_sigla
+    ORDER BY total_focos DESC;
+
+
+Bancos de Dados Geográficos
++++++++++++++++++++++++++++
+
+
+.. warning::
+
+    Para saber mais sobre consultas geográficas e operadores espaciais, consulte a página do curso de `Bancos de Dados Geográficos <https://cap-349.github.io/>`_.
+
+
+Referências Bibliográficas
+++++++++++++++++++++++++++
+
+
+.. _herring_2011_a:
+
+- Herring, J. R. (Org.). `OpenGIS Implementation Standard for Geographic Information - Simple Feature Access - Part 1: Common Architecture <http://www.opengeospatial.org/standards/sfa>`_. OGC, 2011. Acesso em: 14 de maio de 2018.
+
+
+.. _herring_2011_b:
+
+- Herring, J. R. (Org.). `OpenGIS Implementation Standard for Geographic Information - Simple Feature Access - Part 2: SQL option <http://www.opengeospatial.org/standards/sfs>`_. OGC, 2011. Acesso em: 14 de maio de 2018.
+
+
+.. _iso_2016:
+
+- ISO. `ISO/IEC 13249-3:2016 Information technology - Database languages - SQL multimedia and application packages - Part 3: Spatial <https://www.iso.org/standard/60343.html>`_. 5th edition. 2016. 1328 pp. Acesso em: 19 de maio de 2018.
+
+
+
+
+.. rubric:: Footnotes
+
+
+.. [#f1]
+
+    Para este curso, preparamos algumas notas explicativas de como instalar o PostgreSQL e sua extensão PostGIS nas plataformas Linux Ubuntu, macOS e Microsoft Windows. Para maiores informações, consulte: :ref:`postgresql_software`.

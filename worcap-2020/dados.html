@@ -202,26 +202,26 @@
   <div class="section" id="dados-curso">
 <h1>Dados Curso<a class="headerlink" href="#dados-curso" title="Permalink to this headline">¶</a></h1>
 <p>Este documento descreve os dados que serão utilizados na aula de <a class="reference internal" href="intro-geo.html#intro-geo"><span class="std std-ref">Introdução a Geoinformática e SIGs</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>As demais aulas utilizarão dados através de serviços web disponibilizados pelo projeto Brazil Data Cube e, portanto, não necessitarão de <em>download</em>.</p>
 </div>
 <p>Faça o <em>download</em> dos seguintes conjuntos de dados:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://1drv.ms/u/s!AtoTP-MfEUEDhP1xaLJEKhiBefhVDA?e=QEgfXX">municipios_2018.zip</a>: Divisão político admnistrativa contendo a malha municipal do ano de referência de 2018. Possui 5.572 feições, com geometrias do tipo <code class="docutils literal notranslate"><span class="pre">MultiPolygon</span></code>. Esses dados encontram-se na escala <code class="docutils literal notranslate"><span class="pre">1:250.000</span></code>, projeção geográfica <code class="docutils literal notranslate"><span class="pre">LAT/LONG</span></code> e sistema geodésico de referência <code class="docutils literal notranslate"><span class="pre">SIRGAS</span> <span class="pre">2000</span></code>. Formato: <a class="reference external" href="https://en.wikipedia.org/wiki/Shapefile">ESRI Shapefile</a>, com codificação de caracteres <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.</p></li>
+<ul class="simple" id="shp-municipios-dados">
+<li><p><a class="reference external" href="https://1drv.ms/u/s!AtoTP-MfEUEDhP1xaLJEKhiBefhVDA?e=QEgfXX">municipios_2018.zip</a>: Divisão político administrativa contendo a malha municipal do ano de referência de 2018. Possui 5.572 feições, com geometrias do tipo <code class="docutils literal notranslate"><span class="pre">MultiPolygon</span></code>. Esses dados encontram-se na escala <code class="docutils literal notranslate"><span class="pre">1:250.000</span></code>, projeção geográfica <code class="docutils literal notranslate"><span class="pre">LAT/LONG</span></code> e sistema geodésico de referência <code class="docutils literal notranslate"><span class="pre">SIRGAS</span> <span class="pre">2000</span></code>. Formato: <a class="reference external" href="https://en.wikipedia.org/wiki/Shapefile">ESRI Shapefile</a>, com codificação de caracteres <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Maiores informações sobre os dados originais com a malha municipal podem ser encontradas no site de <a class="reference external" href="https://www.ibge.gov.br/geociencias/downloads-geociencias.html">Geociências</a> do IBGE.</p>
 </div>
-<ul class="simple">
-<li><p><a class="reference external" href="https://1drv.ms/u/s!AtoTP-MfEUEDhP1wkPi8JvInJROZ7A?e=l8fubw">focos_2020.zip</a>: Ocorrências de fogo na vegetação entre os dia 01 de janeiro e 25 de janeiro de 2020. Esse conjunto de dados possui 38.793 feições, com geometrias do tipo <code class="docutils literal notranslate"><span class="pre">Point</span></code>. Esses dados encontram-se na projeção geográfica <code class="docutils literal notranslate"><span class="pre">LAT/LONG</span></code> e sistema geodésico de referência <code class="docutils literal notranslate"><span class="pre">WGS-84</span></code>. Formato: <a class="reference external" href="https://en.wikipedia.org/wiki/Shapefile">ESRI Shapefile</a>, com codificação de caracteres <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.</p></li>
+<ul class="simple" id="shp-focos-dados">
+<li><p><a class="reference external" href="https://1drv.ms/u/s!AtoTP-MfEUEDhP1wkPi8JvInJROZ7A?e=l8fubw">focos_2020.zip</a>: Ocorrências de fogo na vegetação entre os dias 01 de janeiro e 25 de janeiro de 2020. Esse conjunto de dados possui 38.793 feições, com geometrias do tipo <code class="docutils literal notranslate"><span class="pre">Point</span></code>. Esses dados encontram-se na projeção geográfica <code class="docutils literal notranslate"><span class="pre">LAT/LONG</span></code> e sistema geodésico de referência <code class="docutils literal notranslate"><span class="pre">WGS-84</span></code>. Formato: <a class="reference external" href="https://en.wikipedia.org/wiki/Shapefile">ESRI Shapefile</a>, com codificação de caracteres <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>O <a class="reference external" href="http://queimadas.dgi.inpe.br/queimadas/portal">Programa Queimadas do Instituto Nacional de Pesquisas Espaciais (INPE)</a> realiza o monitoramento da ocorrência do fogo na vegetação. O acervo de dados de ocorrência encontra-se disponível através do aplicativo <a class="reference external" href="http://queimadas.dgi.inpe.br/queimadas/bdqueimadas#">BDQueimadas</a>.</p>
 </div>
-<ul class="simple">
+<ul class="simple" id="geotiff-cbers4-dados">
 <li><p><a class="reference external" href="https://1drv.ms/u/s!AtoTP-MfEUEDhP1zSV63-OUuGjajkQ?e=dbuRIj">imagem_cbers.zip</a>: Recorte de imagem do satélite CBERS 4, sensor WFI, resolução espacial de 64 metros.</p></li>
 </ul>
 <div class="admonition note">
@@ -282,7 +282,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'XXXXXXXXXX', 'auto');
+    ga('create', 'UA-178140681-1', 'auto');
     ga('send', 'pageview');
     </script>
 
