@@ -29,3 +29,10 @@ O Workshop de Computação Aplicada (WorCAP) é um evento do programa de Pós-Gr
     ./worcap-2020/access-view
     ./worcap-2020/time-series-machine-learning-pt1
     ./worcap-2020/time-series-machine-learning-pt2
+
+
+Links:
+
+- Vídeo: `Projeto Brazil Data Cube e pesquisas em Computação Aplicada - Dra. Karine Reis Ferreira (CAP/INPE) <https://www.youtube.com/watch?v=x1H22k5wR6A>`_.
+
+- `Página do Projeto Brazil Data Cube <http://brazildatacube.org/>`_.
