@@ -23,10 +23,10 @@ O conteúdo será ministrado em dois dias subdivididos em quatro partes:
 **Dia 17 - Quinta**
 
 
-09:30 - 11:30 - :ref:`time-series-pt1`.
+09:30 - 11:30 - :ref:`time-series-ml` (PARTE I)
 
 
-13:30 - 15:30 - :ref:`time-series-pt2`
+13:30 - 15:30 - :ref:`time-series-ml` (PARTE II)
 
 
 **Responsáveis:**

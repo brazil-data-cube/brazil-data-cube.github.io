@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Classificação de Séries Temporais &mdash; Brazil Data Cube</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/time-series-ml/class-ts.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Avaliação da qualidade das amostras usando SOM clustering" href="som.html" />
+    <link rel="prev" title="Acesso a Séries Temporais com o sits" href="access-ts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+          
+
+          
+            
+            <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started.html">Preparação para o Curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro-geo.html">Introdução a Geoinformática e Sistemas de Informação Geográfica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../access-view.html">Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../time-series-ml.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="sits-intro.html">Introdução a séries temporais de imagens de satélites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install-sits.html">Instalando o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="access-ts.html">Acesso a Séries Temporais com o sits</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Classificação de Séries Temporais</a></li>
+<li class="toctree-l3"><a class="reference internal" href="som.html">Avaliação da qualidade das amostras usando SOM clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class-brick.html">Classificação de bricks e geração de mapas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accuracy.html">Estimação de acurácia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">General Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Brazil Data Cube</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
+        
+          <li><a href="../time-series-ml.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning</a> &raquo;</li>
+        
+          <li><a href="sits-intro.html">Introdução a séries temporais de imagens de satélites</a> &raquo;</li>
+        
+      <li>Classificação de Séries Temporais</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="som.html" class="btn btn-neutral float-right" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="access-ts.html" class="btn btn-neutral float-left" title="Acesso a Séries Temporais com o sits" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="classificacao-de-series-temporais">
+<span id="time-series-ml-class-ts"></span><h1>Classificação de Séries Temporais<a class="headerlink" href="#classificacao-de-series-temporais" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pratica-com-r-notebook">
+<h2>Prática com R Notebook<a class="headerlink" href="#pratica-com-r-notebook" title="Permalink to this headline">¶</a></h2>
+<div class="align-right figure align-default" id="time-series-ml-class-ts-sits-classify">
+<a class="reference internal image-reference" href="../../_images/sits-classify.png"><img alt="sits time series classification" src="../../_images/sits-classify.png" style="width: 280px;" /></a>
+</div>
+<p>Neste <em>hands-on</em>, organizamos uma atividade prática no <code class="docutils literal notranslate"><span class="pre">sits</span></code> de acordo com o fluxograma apresentado ao lado. Nele, mostramos como é realizada a classificação de uma série temporal. Aqui você aprenderá a:</p>
+<ul class="simple">
+<li><p>Interface comum e funções de <em>machine learning</em> do <cite>sits</cite></p></li>
+<li><p>treinar um modelo de <em>machine learning</em></p></li>
+<li><p>consultar a documentação do <em>sits</em></p></li>
+</ul>
+<p>Notebook Kaggle: <a class="reference external" href="https://www.kaggle.com/rolfsimoes/sits-kaggle">https://www.kaggle.com/rolfsimoes/sits-kaggle</a></p>
+</div>
+<div class="section" id="machine-learning">
+<h2><em>Machine Learning</em><a class="headerlink" href="#machine-learning" title="Permalink to this headline">¶</a></h2>
+<p>O termo <em>machine learning</em>, ou em português aprendizado de máquina, se refere a técnicas que procuram estabelecer regras de relação entre elementos de dois conjuntos a partir de exemplares conhecidos. Essa regra pode ser representada por uma função <span class="math notranslate nohighlight">\(f\)</span> que liga o elementos do domínio <span class="math notranslate nohighlight">\(X\)</span> a elementos do conjunto imagem <span class="math notranslate nohighlight">\(Y\)</span>. Quando <span class="math notranslate nohighlight">\(Y\)</span> é contínuo, dizemos que <span class="math notranslate nohighlight">\(f\)</span> realiza uma <em>regressão</em>. Quando <span class="math notranslate nohighlight">\(Y\)</span> é discreto, dizemos que <span class="math notranslate nohighlight">\(f\)</span> realiza uma <em>classificação</em> <a class="reference internal" href="#gareth-2013"><span class="std std-ref">(Gareth et al., 2013)</span></a>.</p>
+<p>Em nosso caso concreto, temos como conjunto <span class="math notranslate nohighlight">\(X\)</span> séries temporais de um determinado intervalo de tempo e atributos espectrais (i.e. bandas e/ou índices espectrais). Por exemplo, séries temporais de NDVI e EVI com 23 observações no tempo, indo de setembro de um ano até agosto do ano seguinte. Quando dizemos que queremos treinar um modelo de machine learning, o que queremos é obter uma regra útil <span class="math notranslate nohighlight">\(f\)</span> que associe as séries temporais de <span class="math notranslate nohighlight">\(X\)</span> às classes de uso e cobertura da terra, elementos do conjunto <span class="math notranslate nohighlight">\(Y\)</span>, como ilustrado na Figura abaixo. Existem vários métodos para isso.</p>
+<div class="align-center figure align-default" id="time-series-ml-class-ts-ml-function">
+<a class="reference internal image-reference" href="../../_images/ml-function.png"><img alt="machine learning function" src="../../_images/ml-function.png" style="width: 280px;" /></a>
+<p class="caption"><span class="caption-number">Figure 40 - </span><span class="caption-text">Classificação de séries temporais usando <em>Machine Learning</em>.</span><a class="headerlink" href="#time-series-ml-class-ts-ml-function" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="interface-comum-e-funcoes-de-machine-learning-do-sits">
+<h2>Interface comum e funções de <em>machine learning</em> do <cite>sits</cite><a class="headerlink" href="#interface-comum-e-funcoes-de-machine-learning-do-sits" title="Permalink to this headline">¶</a></h2>
+<p>Atualmente, o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code> oferece suporte para 11 algoritmos de <em>machine learning</em> listados na tabela abaixo.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 31%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Algoritmo</p></th>
+<th class="head"><p>Função <code class="docutils literal notranslate"><span class="pre">sits</span></code></p></th>
+<th class="head"><p>Pacote</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Análise discriminante linear</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_lda()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MASS</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Análise discriminante quadrática</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_qda()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MASS</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Regressão logística multinomial</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_mlr()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">nnet</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Support vector machine</em> (SVM)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_svm()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">e1071</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><em>Random forests</em> (RF)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_rfor()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ranger</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Extreme gradient boosting</em></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_xgboost()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">xgboost</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><em>Multi-layer perceptrons</em> (MLP)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_deeplearning()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">keras</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Redes neurais convolucionais (CNN) em 1D</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_FCN()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">keras</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>CNN em 1D e MLP</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_TempCNN()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">keras</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>ResNet em 1D</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_ResNet()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">keras</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><em>Long-short term memory</em> com uma CNN em 1D</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sits_LSTM_FCN()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">keras</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Esses algoritmos são implementados por outros pacotes dos quais o <code class="docutils literal notranslate"><span class="pre">sits</span></code> depende para realizar as classificações. Essas funções oferecem uma documentação de seus parâmetros que pode ser acessado usando o comando <code class="docutils literal notranslate"><span class="pre">?</span></code> seguido do nome da função.</p>
+<p>O pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code> fornece uma interface comum para treinar classificadores utilizando a função <code class="docutils literal notranslate"><span class="pre">sits_train()</span></code>. Esta função toma dois parâmetros, as amostras de dados de entrada e o método <em>machine learning</em> utilizando uma das funções acima. Após o modelo ser treinado, ele pode ser utilizado para classificar séries temporais individuais ou <em>bricks</em> utilizando a função <code class="docutils literal notranslate"><span class="pre">sits_classify()</span></code>. Nos exemplos abaixo, mostramos como aplicar o classificador para uma série temporal armazenada numa tabela de amostras.</p>
+<p>Para os nossos exemplos, utilizaremos as 1.892 amostras do Mato Grosso. Esse conjunto contém 9 classes de uso e cobertura da terra. O primeiro exemplo usa o algoritmo RF para estimar dois classificadores: o primeiro usando as bandas e índices espectrais NDVI, EVI, NIR e MIR, disponíveis na tabela de amostra <code class="docutils literal notranslate"><span class="pre">samples</span></code>; e o segundo usando apenas o NDVI, disponível em <code class="docutils literal notranslate"><span class="pre">samples_ndvi</span></code>. Já o segundo exemplo usa o algorito MLP para treinar um modelo usando apenas o NDVI.</p>
+<div class="section" id="exemplo-com-random-forests">
+<h3>Exemplo com Random Forests<a class="headerlink" href="#exemplo-com-random-forests" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Code snippet 14 - </span><span class="caption-text">Treinando um classificador RF.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Treina um modelo RF com 200 árvores usando as bandas</span>
+<span class="c1"># &#39;ndvi&#39;, &#39;evi&#39;, &#39;nir&#39; e &#39;mir&#39;</span>
+<span class="n">rf1</span> <span class="o">&lt;-</span> <span class="nf">sits_train</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span>
+                  <span class="n">ml_method</span> <span class="o">=</span> <span class="nf">sits_rfor</span><span class="p">(</span><span class="n">num_trees</span> <span class="o">=</span> <span class="m">200</span><span class="p">))</span>
+
+<span class="c1"># Treina um modelo RF com 200 árvores usando a banda &#39;ndvi&#39;</span>
+<span class="n">rf2</span> <span class="o">&lt;-</span> <span class="nf">sits_train</span><span class="p">(</span><span class="n">samples_ndvi</span><span class="p">,</span>
+                  <span class="n">ml_method</span> <span class="o">=</span> <span class="nf">sits_rfor</span><span class="p">(</span><span class="n">num_trees</span> <span class="o">=</span> <span class="m">200</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>Podemos agora utilizar os modelos treinados para classificar uma série temporal utilizando a função <code class="docutils literal notranslate"><span class="pre">sits_classify()</span></code>. Os resultados podem ser mostrados em formato texto utilizando a função <cite>sits_show_prediction()</cite> ou graficamente utilizando a função <cite>plot()</cite>. Vamos usar a série temporal armazenada na variável <code class="docutils literal notranslate"><span class="pre">ts1</span></code> para realizar esta classificação.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Code snippet 15 - </span><span class="caption-text">Classificação de uma série temporal usando RF.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># rf1: modelo RF bandas &#39;ndvi&#39;, &#39;evi&#39;, &#39;nir&#39; e &#39;mir&#39;</span>
+<span class="n">ts_4bands</span> <span class="o">&lt;-</span> <span class="nf">sits_select</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span>
+                         <span class="n">bands</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s">&#39;evi&#39;</span><span class="p">,</span> <span class="s">&#39;nir&#39;</span><span class="p">,</span> <span class="s">&#39;mir&#39;</span><span class="p">))</span>
+
+<span class="c1"># Classifica série temporal</span>
+<span class="n">rf_class1</span> <span class="o">&lt;-</span> <span class="nf">sits_classify</span><span class="p">(</span><span class="n">ts_4bands</span><span class="p">,</span> <span class="n">ml_model</span> <span class="o">=</span> <span class="n">rf1</span><span class="p">)</span>
+
+<span class="c1"># rf2: modelo RF banda &#39;ndvi&#39;</span>
+<span class="n">ts_ndvi</span> <span class="o">&lt;-</span> <span class="nf">sits_select</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span>
+                       <span class="n">bands</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;ndvi&#39;</span><span class="p">))</span>
+
+<span class="c1"># Classifica série temporal</span>
+<span class="n">rf_class2</span> <span class="o">&lt;-</span> <span class="nf">sits_classify</span><span class="p">(</span><span class="n">ts_ndvi</span><span class="p">,</span> <span class="n">ml_model</span> <span class="o">=</span> <span class="n">rf2</span><span class="p">)</span>
+
+<span class="c1"># Mostra os gráficos das classificações</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">rf_class1</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">rf_class2</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="exemplo-com-deep-learning-mlp">
+<h3>Exemplo com Deep Learning MLP<a class="headerlink" href="#exemplo-com-deep-learning-mlp" title="Permalink to this headline">¶</a></h3>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Code snippet 16 - </span><span class="caption-text">Treinando e classificando com o algoritmo MLP.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Treina um modelo MLP com 5 camadas escondidas, 512 unidades,</span>
+<span class="c1">#  função de ativação &#39;elu&#39;, banda &#39;ndvi&#39;</span>
+<span class="n">dl1</span> <span class="o">&lt;-</span> <span class="nf">sits_train</span><span class="p">(</span><span class="n">samples_ndvi</span><span class="p">,</span>
+                  <span class="n">ml_method</span> <span class="o">=</span> <span class="nf">sits_deeplearning</span><span class="p">(</span><span class="n">epochs</span> <span class="o">=</span> <span class="m">200</span><span class="p">))</span>
+
+<span class="c1"># dl1: modelo MLP banda &#39;ndvi&#39;</span>
+<span class="c1"># Classifica série temporal</span>
+<span class="n">dl_class1</span> <span class="o">&lt;-</span> <span class="nf">sits_classify</span><span class="p">(</span><span class="n">ts_ndvi</span><span class="p">,</span> <span class="n">ml_model</span> <span class="o">=</span> <span class="n">dl1</span><span class="p">)</span>
+
+<span class="c1"># Mostra os gráficos das classificações</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">dl_class1</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="consultando-a-documentacao-do-sits">
+<h2>Consultando a documentação do <code class="docutils literal notranslate"><span class="pre">sits</span></code><a class="headerlink" href="#consultando-a-documentacao-do-sits" title="Permalink to this headline">¶</a></h2>
+<p>O pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code> tem uma ampla documentação de suas funções. Além da documentação, que pode ser acessada com o comando <code class="docutils literal notranslate"><span class="pre">?</span></code>, existem tutoriais também conhecido como <em>vignettes</em>, que podem ser acessados a partir do repositório <cite>e-sensing/sits-docs &lt;https://github.com/e-sensing/sits-docs&gt;</cite> no GitHub. Além desse material, existem demonstrações de uso do pacote que pode ser acessado pelo comando do R <code class="docutils literal notranslate"><span class="pre">demo()</span></code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>A documentação de uma função pode ser acessada usando o comando <code class="docutils literal notranslate"><span class="pre">?</span></code> antes do nome da função. Exemplos: <code class="docutils literal notranslate"><span class="pre">?sits_svm</span></code> <code class="docutils literal notranslate"><span class="pre">?sits_xgboost</span></code></p>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<ul class="simple" id="gareth-2013">
+<li><p>James, Gareth, et al. An introduction to statistical learning. Vol. 112. New York: springer, 2013.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="som.html" class="btn btn-neutral float-right" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="access-ts.html" class="btn btn-neutral float-left" title="Acesso a Séries Temporais com o sits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, INPE.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-178140681-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

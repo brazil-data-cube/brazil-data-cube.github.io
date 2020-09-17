@@ -1,0 +1,112 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+.. _time-series-ml-accuracy:
+
+
+Estimação de acurácia
+=====================
+
+
+Prática com R Notebook
+----------------------
+
+.. figure:: ../../img/worcap-2020/time-series-ml/accuracy/sits-accuracy.png
+    :alt: sits accuracy estimation
+    :width: 280
+    :figclass: align-right
+    :name: time-series-ml:accuracy:sits-accuracy
+
+
+Neste *hands-on*, organizamos uma atividade prática no ``sits`` de acordo com o fluxograma apresentado ao lado. Nele, mostramos como é realizada a avaliação de acurácia do método de classificação. Aqui você aprenderá a:
+
+- realizar validação cruzada usando amostras de treinamento
+
+Notebook Kaggle: https://www.kaggle.com/rolfsimoes/sits-kaggle
+
+
+Validação Cruzada
+-----------------
+
+Existem muitas maneiras de estimar a acurácia ou performance de um classificador. Aqui nos concentraremos em uma técnica conhecida como validação cruzada ou *k-fold cross-validation*. A figura abaixo ilustra como diferentes partições dos dados de treinamento podem ser divididos para o treinamento e para a validação. A técnica consiste em realizar esse processo ``k`` vezes e agregar os resultados numa matriz de confusão.
+
+.. figure:: ../../img/worcap-2020/time-series-ml/accuracy/k-folds.png
+    :alt: sits accuracy estimation
+    :width: 480
+    :figclass: align-center
+    :name: time-series-ml:accuracy:k-folds
+
+
+No ``sits``, a função ``sits_kfold_validate()`` realiza a validação cruzada. Ela recebe como argumento o conjunto de amostras usado para treinar o modelo de validação. O exemplo a seguir mostra a sintaxe:
+
+
+.. code-block:: R
+    :caption: Validação cruzada k-Fold
+    :linenos:
+
+    # Realiza uma avaliação de acurácia de um modelo Random Forest
+    # usando parâmetros default. k=5
+    prediction.mx <- sits_kfold_validate(samples_2bands,
+                                         folds = 5,
+                                         ml_method = sits_rfor(num_trees = 200))
+
+
+
+Matriz de Confusão
+------------------
+
+Uma matriz de confusão é uma matriz cujas linhas (colunas) representam as amostras classificadas numa determinada classe e colunas (linhas) representam as classes de referências das amostras. Cada célula pode conter uma contagem ou proporção de amostras. A tabela a seguir ilustra a configuração de uma matriz de confusão.
+
+
++------------+------------+------------+------------+------------+
+|  Classes   |         Classes de Referência        |            |
++  Preditas  +------------+------------+------------+            +
+|            | Classe A   | Classe B   | Classe C   | Total      |
++============+============+============+============+============+
+| Classe A   |     AA     |     AB     |     AC     |     AT     |
++------------+------------+------------+------------+------------+
+| Classe B   |     BA     |     BB     |     BC     |     BT     |
++------------+------------+------------+------------+------------+
+| Classe C   |     CA     |     CB     |     CC     |     CT     |
++------------+------------+------------+------------+------------+
+| Total      |     TA     |     TB     |     TC     |     TT     |
++------------+------------+------------+------------+------------+
+
+
+Algumas métricas de acurácia que podem ser calculadas a partir da matriz de confusão são:
+
+.. math::
+    AG=\frac{(AA+BB+CC)}{TT}
+
+.. math::
+    AU_A=\frac{AA}{AT}
+
+.. math::
+    AU_B=\frac{BB}{BT}
+
+.. math::
+    AU_C=\frac{CC}{CT}
+
+.. math::
+    AP_A=\frac{AA}{TA}
+
+.. math::
+    AP_B=\frac{BB}{TB}
+
+.. math::
+    AP_C=\frac{CC}{TC}
+
+
+Onde :math:`AG` é a Acurácia Global; :math:`AU_i` é a Acurácia do Usuário da classe :math:`i`; e :math:`AP_i` é a Acurácia do Produtor da classe :math:`i`. A função que mostra a matriz de confusão é ``sits_conf_matrix()`` e já computa as métricas de acurácia acima.
+
+.. code-block:: R
+    :caption: Computa e mostra a matriz de confusão.
+    :linenos:
+
+    # Mostra a matriz de confusão e métricas de acurácia
+    sits_conf_matrix(prediction.mx)

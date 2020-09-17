@@ -1,0 +1,169 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+.. _time-series-ml-class-ts:
+
+
+Classificação de Séries Temporais
+=================================
+
+
+Prática com R Notebook
+----------------------
+
+.. figure:: ../../img/worcap-2020/time-series-ml/class-ts/sits-classify.png
+    :alt: sits time series classification
+    :width: 280
+    :figclass: align-right
+    :name: time-series-ml:class-ts:sits-classify
+
+
+Neste *hands-on*, organizamos uma atividade prática no ``sits`` de acordo com o fluxograma apresentado ao lado. Nele, mostramos como é realizada a classificação de uma série temporal. Aqui você aprenderá a:
+
+- Interface comum e funções de *machine learning* do `sits`
+- treinar um modelo de *machine learning*
+- consultar a documentação do *sits*
+
+Notebook Kaggle: https://www.kaggle.com/rolfsimoes/sits-kaggle
+
+
+*Machine Learning*
+------------------
+
+O termo *machine learning*, ou em português aprendizado de máquina, se refere a técnicas que procuram estabelecer regras de relação entre elementos de dois conjuntos a partir de exemplares conhecidos. Essa regra pode ser representada por uma função :math:`f` que liga o elementos do domínio :math:`X` a elementos do conjunto imagem :math:`Y`. Quando :math:`Y` é contínuo, dizemos que :math:`f` realiza uma *regressão*. Quando :math:`Y` é discreto, dizemos que :math:`f` realiza uma *classificação* :ref:`(Gareth et al., 2013) <gareth_2013>`.
+
+Em nosso caso concreto, temos como conjunto :math:`X` séries temporais de um determinado intervalo de tempo e atributos espectrais (i.e. bandas e/ou índices espectrais). Por exemplo, séries temporais de NDVI e EVI com 23 observações no tempo, indo de setembro de um ano até agosto do ano seguinte. Quando dizemos que queremos treinar um modelo de machine learning, o que queremos é obter uma regra útil :math:`f` que associe as séries temporais de :math:`X` às classes de uso e cobertura da terra, elementos do conjunto :math:`Y`, como ilustrado na Figura abaixo. Existem vários métodos para isso.
+
+.. figure:: ../../img/worcap-2020/time-series-ml/class-ts/ml-function.png
+    :alt: machine learning function
+    :width: 280
+    :figclass: align-center
+    :name: time-series-ml:class-ts:ml-function
+
+    Classificação de séries temporais usando *Machine Learning*.
+
+
+
+Interface comum e funções de *machine learning* do `sits`
+---------------------------------------------------------
+
+Atualmente, o pacote ``sits`` oferece suporte para 11 algoritmos de *machine learning* listados na tabela abaixo.
+
++--------------------------------------------+-------------------------+------------+
+| Algoritmo                                  | Função ``sits``         | Pacote     |
++============================================+=========================+============+
+| Análise discriminante linear               | ``sits_lda()``          | ``MASS``   |
++--------------------------------------------+-------------------------+------------+
+| Análise discriminante quadrática           | ``sits_qda()``          | ``MASS``   |
++--------------------------------------------+-------------------------+------------+
+| Regressão logística multinomial            | ``sits_mlr()``          | ``nnet``   |
++--------------------------------------------+-------------------------+------------+
+| *Support vector machine* (SVM)             | ``sits_svm()``          | ``e1071``  |
++--------------------------------------------+-------------------------+------------+
+| *Random forests* (RF)                      | ``sits_rfor()``         | ``ranger`` |
++--------------------------------------------+-------------------------+------------+
+| *Extreme gradient boosting*                | ``sits_xgboost()``      | ``xgboost``|
++--------------------------------------------+-------------------------+------------+
+| *Multi-layer perceptrons* (MLP)            | ``sits_deeplearning()`` | ``keras``  |
++--------------------------------------------+-------------------------+------------+
+| Redes neurais convolucionais (CNN) em 1D   | ``sits_FCN()``          | ``keras``  |
++--------------------------------------------+-------------------------+------------+
+| CNN em 1D e MLP                            | ``sits_TempCNN()``      | ``keras``  |
++--------------------------------------------+-------------------------+------------+
+| ResNet em 1D                               | ``sits_ResNet()``       | ``keras``  |
++--------------------------------------------+-------------------------+------------+
+| *Long-short term memory* com uma CNN em 1D | ``sits_LSTM_FCN()``     | ``keras``  |
++--------------------------------------------+-------------------------+------------+
+
+Esses algoritmos são implementados por outros pacotes dos quais o ``sits`` depende para realizar as classificações. Essas funções oferecem uma documentação de seus parâmetros que pode ser acessado usando o comando ``?`` seguido do nome da função.
+
+O pacote ``sits`` fornece uma interface comum para treinar classificadores utilizando a função ``sits_train()``. Esta função toma dois parâmetros, as amostras de dados de entrada e o método *machine learning* utilizando uma das funções acima. Após o modelo ser treinado, ele pode ser utilizado para classificar séries temporais individuais ou *bricks* utilizando a função ``sits_classify()``. Nos exemplos abaixo, mostramos como aplicar o classificador para uma série temporal armazenada numa tabela de amostras.
+
+Para os nossos exemplos, utilizaremos as 1.892 amostras do Mato Grosso. Esse conjunto contém 9 classes de uso e cobertura da terra. O primeiro exemplo usa o algoritmo RF para estimar dois classificadores: o primeiro usando as bandas e índices espectrais NDVI, EVI, NIR e MIR, disponíveis na tabela de amostra ``samples``; e o segundo usando apenas o NDVI, disponível em ``samples_ndvi``. Já o segundo exemplo usa o algorito MLP para treinar um modelo usando apenas o NDVI.
+
+
+Exemplo com Random Forests
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. code-block:: R
+    :caption: Treinando um classificador RF.
+    :linenos:
+
+    # Treina um modelo RF com 200 árvores usando as bandas
+    # 'ndvi', 'evi', 'nir' e 'mir'
+    rf1 <- sits_train(samples,
+                      ml_method = sits_rfor(num_trees = 200))
+
+    # Treina um modelo RF com 200 árvores usando a banda 'ndvi'
+    rf2 <- sits_train(samples_ndvi,
+                      ml_method = sits_rfor(num_trees = 200))
+
+
+Podemos agora utilizar os modelos treinados para classificar uma série temporal utilizando a função ``sits_classify()``. Os resultados podem ser mostrados em formato texto utilizando a função `sits_show_prediction()` ou graficamente utilizando a função `plot()`. Vamos usar a série temporal armazenada na variável ``ts1`` para realizar esta classificação.
+
+.. code-block:: R
+    :caption: Classificação de uma série temporal usando RF.
+    :linenos:
+
+    # rf1: modelo RF bandas 'ndvi', 'evi', 'nir' e 'mir'
+    ts_4bands <- sits_select(ts1,
+                             bands = c('ndvi', 'evi', 'nir', 'mir'))
+
+    # Classifica série temporal
+    rf_class1 <- sits_classify(ts_4bands, ml_model = rf1)
+
+    # rf2: modelo RF banda 'ndvi'
+    ts_ndvi <- sits_select(ts1,
+                           bands = c('ndvi'))
+
+    # Classifica série temporal
+    rf_class2 <- sits_classify(ts_ndvi, ml_model = rf2)
+
+    # Mostra os gráficos das classificações
+    plot(rf_class1)
+    plot(rf_class2)
+
+
+
+Exemplo com Deep Learning MLP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: R
+    :caption: Treinando e classificando com o algoritmo MLP.
+    :linenos:
+
+    # Treina um modelo MLP com 5 camadas escondidas, 512 unidades,
+    #  função de ativação 'elu', banda 'ndvi'
+    dl1 <- sits_train(samples_ndvi,
+                      ml_method = sits_deeplearning(epochs = 200))
+
+    # dl1: modelo MLP banda 'ndvi'
+    # Classifica série temporal
+    dl_class1 <- sits_classify(ts_ndvi, ml_model = dl1)
+
+    # Mostra os gráficos das classificações
+    plot(dl_class1)
+
+
+
+Consultando a documentação do ``sits``
+--------------------------------------
+
+O pacote ``sits`` tem uma ampla documentação de suas funções. Além da documentação, que pode ser acessada com o comando ``?``, existem tutoriais também conhecido como *vignettes*, que podem ser acessados a partir do repositório `e-sensing/sits-docs <https://github.com/e-sensing/sits-docs>` no GitHub. Além desse material, existem demonstrações de uso do pacote que pode ser acessado pelo comando do R ``demo()``.
+
+.. hint::
+    A documentação de uma função pode ser acessada usando o comando ``?`` antes do nome da função. Exemplos: ``?sits_svm`` ``?sits_xgboost``
+
+
+Referências
+-----------
+
+.. _gareth_2013:
+
+- James, Gareth, et al. An introduction to statistical learning. Vol. 112. New York: springer, 2013.
