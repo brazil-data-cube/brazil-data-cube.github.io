@@ -1,0 +1,42 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+.. _postgresql_software:
+
+Instalando o PostgreSQL e PostGIS
++++++++++++++++++++++++++++++++++
+
+
+Este documento apresenta os passos necessários para instalação do software livre PostgreSQL para as plataformas Linux (Ubuntu), macOS e Microsoft Windows, bem como da extensão geográfica PostGIS.
+
+
+O `PostgreSQL <http://www.postgresql.org>`_ é um sistema gerenciador de banco de dados objeto-relacional, gratuito e de código fonte aberto, desenvolvido a partir do projeto Postgres, iniciado em 1986, na Universidade da Califórnia em Berkeley, sob a liderança do professor Michael Stonebraker.
+
+
+O `PostGIS <https://postgis.net/>`_ é uma biblioteca de software livre, sob a licença GNU GPL versão 2 (GPLv2), que fornece ao SGBD PostgreSQL uma extensão geoespacial.
+
+
+Neste curso, utilizaremos o PostgreSQL versão 11 e sua extensão geográfica PostGIS 2.5 para exemplificar as funcionalidades presentes em um servidor típico de bancos de dados capaz de suportar o domínio geoespacial.
+
+
+.. note::
+
+    Você poderá instalar versões mais recentes, como o PostgreSQL 12 e o PostGIS 3.
+
+
+Siga as instruções de instalação abaixo, de acordo com sua plataforma de preferência:
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./software/pg/install-linux-ubuntu
+    ./software/pg/install-macos
+    ./software/pg/install-windows-10
+

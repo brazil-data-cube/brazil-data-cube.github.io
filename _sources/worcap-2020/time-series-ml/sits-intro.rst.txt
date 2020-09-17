@@ -5,22 +5,28 @@
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
+
 .. _time-series-ml-sits-intro:
 
 Introdução a séries temporais de imagens de satélites
-=====================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 Introdução
-----------
+**********
+
 
 Ao longo das últimas décadas, presenciamos um aumento significativo de lançamentos de plataformas orbitais para fins de observação da terra :ref:`(Finer et al., 2018) <finer_2018>`. Esse crescente interesse está relacionado com a capacidade de monitorar diversos aspectos da superfície do planeta e de sua biodiversidade.
 
+
 Hoje, a observação da terra é um dos meios mais efetivos e consistentes para esse tipo de monitoramento, pois é possível recobrir grandes áreas e obter imagens de um mesmo local ao longo do tempo :ref:`(Picoli et al., 2018) <picoli_2018>`.
+
 
 Uma aplicação direta das imagens de sensores orbitais é o mapeamento de uso e cobertura da terra, que é um importante instrumento para apoiar políticas públicas e medir taxas de emissão de gases de efeito estufa :ref:`(Simoes et al., 2020) <simoes_2020>`.
 
+
 Existem muitas técnicas de mapeamento de uso e cobertura da terra. Aqui, nos vamos nos concentrar numa abordagem específica de mapeamento usando séries temporais. As séries temporais são obtidas a partir do arranjo sistemático de imagens de diferentes datas de observação.
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/sits-intro/satellite-images.png
     :alt: Satellite Image Time Series
@@ -31,11 +37,12 @@ Existem muitas técnicas de mapeamento de uso e cobertura da terra. Aqui, nos va
     Satellite Image Time Series
 
 
-
 Perfil espectro-temporal de uso e cobertura da terra
-----------------------------------------------------
+****************************************************
+
 
 Uma hipótese fundamental da abordagem de mapeamento de uso e cobertura da terra usando séries temporais é a de que cada classe de uso e cobertura está associada a um comportamento espectral específico no tempo. Na figura abaixo, podemos observar diferentes comportamentos nas séries temporais de NDVI para cada classe de uso e cobertura da terra.
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/sits-intro/land-trajectory.png
     :alt: Land trajectory
@@ -50,13 +57,17 @@ Mudanças de classes de cobertura ao longo do tempo devido a diferentes usos da 
 
 
 Mapeamento de uso e cobertura da terra
---------------------------------------
+**************************************
+
 
 Uso de *machine learning* para o mapeamento de uso e cobertura da terra permite delegar a detecção dos padrões relevantes da série temporal de cada classe para um algoritmo a partir de amostras previamente conhecidas. Para melhor entender esse processo, podemos citar outras duas abordagens de classificação de séries temporais, o TIMESAT e o TWDTW.
 
+
 O TIMESAT é uma técnica que extrai atributos específicos (e.g. mínimos, máximos) das séries temporais para, a partir de tais atributos, realizar a classificação. O pressuposto é o de que alguns desses atributos podem ser mais importante que outros para diferenciar as classes umas das outras.
 
+
 O TWDTW é uma técnica que identifica similaridades entre formas de séries temporais para realizar a classificação. O pressuposto é o de que a menor distância (i.e. distância DTW) entre duas séries temporais determine a classe de uso e cobertura. Na prática, leves mudanças de alongamento, à esquerda ou à direita, da curva que representa a série temporal não deve influenciar significativamente a distância DTW.
+
 
 Ao contrário dessas duas abordagens, o uso do *machine learning* não parte de pressupostos específicos para a identificação de padrões. O processo de aprendizado do algoritmo identificará aqueles atributos que melhor diferenciam uma classe da outra.
 
@@ -70,9 +81,9 @@ Ao contrário dessas duas abordagens, o uso do *machine learning* não parte de 
     Diferentes abordagens de classificação de séries temporais.
 
 
-
 Pacote ``sits``
----------------
+***************
+
 
 O ``sits`` é um pacote desenvolvido na linguagem R para classificação de uso e cobertura da terra usando séries temporais. Seu código é aberto e pode ser acessado no `GitHub <https://github.com/e-sensing/sits>`. A figura a seguir apresenta um fluxograma resumido das tarefas propostas pelo pacote.
 
@@ -104,9 +115,9 @@ O ``sits`` é um pacote desenvolvido na linguagem R para classificação de uso 
 O pacote ``sits`` fornece uma API de funções que permite o trânsito entre as etapas conectadas com as setas. As estruturas de dados consistem em basicamente três: 1) uma tabela de metadados de cubos/imagens ou de serviços Web que fornecem acesso a séries temporais; 2) uma tabela para armazenar metadados de amostras e suas respectivas séries temporais; e 3) um modelo de dados para guardar o classificador treinado.
 
 
-
 Práticas com os R Notebooks
----------------------------
+***************************
+
 
 No que se segue, organizamos as atividades práticas de acordo com o fluxograma apresentado acima. No primeiro *hands-on*, mostramos como preparar o ambiente Kaggle e como instalar o pacote ``sits``. No segundo *hands-on*, mostramos como é realizazdo o acesso a séries temporais usando o pacote ``sits``. No terceiro, mostramos como treinar e classificar séries temporais esparças no ``sits``. No quarto *hands-on*, apresentamos um método de avaliação de qualidade das amostras usando a técnica de *self-organized maps*. No quinto, mostramos como classificar um mapa a partir de séries temporais armazenadas em arquivos locais (bricks). Por fim, apresentamos como podemos avaliar o modelo e os mapas gerados.
 
@@ -124,7 +135,7 @@ No que se segue, organizamos as atividades práticas de acordo com o fluxograma 
 
 
 Referências
------------
+***********
 
 
 .. _finer_2018:

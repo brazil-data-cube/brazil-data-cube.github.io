@@ -14,9 +14,9 @@ Preparação para o Curso
     :maxdepth: 1
     :titlesonly:
 
-    ./kaggle
-    ./qgis
-    ./postgresql
-    ./dados
+    ./getting-started/kaggle
+    ./getting-started/qgis
+    ./getting-started/postgresql
+    ./getting-started/dados
 
 

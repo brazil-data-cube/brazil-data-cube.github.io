@@ -11,11 +11,12 @@
 
 
 Acesso a Séries Temporais com o sits
-====================================
+++++++++++++++++++++++++++++++++++++
 
 
 Prática com R Notebook
-----------------------
+**********************
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/access-ts/sits-access-ts.png
     :alt: sits access time series
@@ -26,18 +27,23 @@ Prática com R Notebook
 
 Neste *hands-on*, organizamos uma atividade prática no ``sits`` de acordo com o fluxograma apresentado ao lado. Nele, mostramos como é realizado o acesso a séries temporais no ``sits``. Aqui você aprenderá a:
 
-- acessar séries temporais do serviço WTSS pelo `sits`
-- acessar múltiplas séries temporais a partir de um arquivo CSV
+- acessar séries temporais do serviço WTSS pelo ``sits``.
+
+- acessar múltiplas séries temporais a partir de um arquivo CSV.
+
 
 Notebook Kaggle: https://www.kaggle.com/rolfsimoes/sits-kaggle
 
 
 Acesso à provedores de séries temporais
----------------------------------------
+***************************************
+
 
 Séries temporais de imagens de satélite podem ser obtidas de várias formas. Atualmente, o ``sits`` é capaz de acessar os serviços Web WTSS e SATVEG de séries temporais. Além desses serviços, o ``sits``, em breve, será capaz de acessar os produtos do projeto Brazil Data Cube. Além desses serviços Web, o ``sits`` permite acesso a arquivos GeoTIF remotos ou locais organizados como *bricks* (veremos como acessá-los mais adiante).
 
+
 Nesta prática, nos concentraremos em um tipo de acesso a séries temporais: o serviço Web WTSS. No ``sits``, a função ``sits_cube()`` cria referências a provedores de séries temporais. O código a seguir mostra um exemplo de chamada a essa função que cria uma referência ao serviço WTSS do INPE.
+
 
 .. code-block:: R
     :caption: Acesso ao WTSS no ``sits``.
@@ -58,11 +64,14 @@ Para acessar uma série temporal, é necessário chamar a função ``sits_get_da
 
 
 Formato de arquivo CSV para acesso em lote a séries temporais
--------------------------------------------------------------
+*************************************************************
+
 
 A função ``sits_get_data()`` também permite o acesso em lote a séries temporais cujos metadados estejam salvos em formato CSV ou ESRI Shapefile de pontos. Veremos aqui como usar o formato CSV para obter um conjunto de séries temporais.
 
+
 O formato CSV consiste em um arquivo texto que representa dados tabulares geralmente separados por vírgula. O arquivo CSV do ``sits`` deve ter o seguinte formato:
+
 
 +----------------+-----------------------+-----------------------+
 | Campo          | Formato               | Exemplos              |
@@ -82,7 +91,9 @@ O formato CSV consiste em um arquivo texto que representa dados tabulares geralm
 |                |                       | - Soja_Milheto        |
 +----------------+-----------------------+-----------------------+
 
+
 Em nosso ambiente Kaggle, há um arquivo CSV de exemplo localizado em ``"../input/sits-dataset/examples.csv"``. Seu conteúdo pode ser lido
+
 
 .. code-block:: R
 
@@ -90,6 +101,7 @@ Em nosso ambiente Kaggle, há um arquivo CSV de exemplo localizado em ``"../inpu
 
 
 Podemos passar esse arquivo para a função ``sits_get_data()`` acessar as séries temporais em lote, como no exemplo a seguir:
+
 
 .. code-block:: R
     :caption: Acesso em lote a séries temporais no WTSS.
@@ -100,20 +112,28 @@ Podemos passar esse arquivo para a função ``sits_get_data()`` acessar as séri
 
 
 Formato da tabela de dados de amostras no ``sits``
---------------------------------------------------
+**************************************************
+
 
 No ``sits``, todos os conjuntos de amostras são um objeto ``tibble`` do R com as seguintes colunas:
 
 - *longitude*: coordenada leste-oeste em EPSG:4326
+
 - *latitude*: coordenada norte-sul em EPSG:4326
+
 - *start_date*: data inicial da série temporal
+
 - *end_date*: data final da série temporal
+
 - *label*: classe associada à série temporal
+
 - *cube*: nome do cubo de dados que originou a série temporal
+
 - *time_series*: lista contendo os valores da série temporal armazenadas como ``tibble``
 
 
 Para visualizar a tabela podemos usar o comando ``print()`` sobre a variável que armazena a tabela de amostras.
+
 
 .. code-block:: R
     :caption: Print objeto ``tibble`` no ``sits``.
@@ -127,12 +147,14 @@ Essa tabela é gerada toda vez que o usuário utiliza a função ``sits_get_data
 
 
 Salvando e lendo tabelas de amostras
-------------------------------------
+************************************
 
 
 Como qualquer objeto R, a tabela de amostras pode ser salva para e lida de um dos formatos de arquivos suportados pelo R. Usaremos aqui o formato RDS para salver e carregar conjunto de dados no ambiente R.
 
+
 Para salvar uma tabela de amostras usamos o comando ``saveRDS()`` sobre a variável contendo a tabela a ser salva e adicionalmente informamos o local onde será salvo o arquivo. A leitura de um arquivo RDS é feita com a função ``readRDS()``
+
 
 .. code-block:: R
     :caption: Salvando e lendo tabela de amostras.
@@ -150,6 +172,7 @@ Para salvar uma tabela de amostras usamos o comando ``saveRDS()`` sobre a variá
 
 Em nosso ambiente Kaggle, temos um conjunto com 1.892 amostras do Mato Grosso usadas para gerar o mapa descrito em [Simoes et al. (2020)](#simoes2020). O arquivo encontra-se em ``"../input/sits-dataset/samples.rds"`` e vamos carregá-lo para a variável ``samples``:
 
+
 .. code-block:: R
     :caption: Lendo uma tabela de amostras.
     :linenos:
@@ -162,10 +185,11 @@ Em nosso ambiente Kaggle, temos um conjunto com 1.892 amostras do Mato Grosso us
 
 
 Obtendo informações de uma tabela de amostras
----------------------------------------------
+*********************************************
 
 
 O pacote ``sits`` possui algumas funções que fornecem informações úteis sobre uma tabela de amostras. Por exemplo, para sabermos as classes existentes e a quantidade de amostras de cada classe, podemos usar a função ``sits_labels()``. Já a função ``sits_bands()`` nos informa sobre os nomes das bandas ou dos índices espectrais presentes no dado.
+
 
 .. code-block:: R
     :caption: Obtendo informações de uma tabela de amostras.
@@ -179,10 +203,11 @@ O pacote ``sits`` possui algumas funções que fornecem informações úteis sob
 
 
 Filtrando uma tabela de amostras
---------------------------------
+********************************
 
 
 As tabelas de amostras são armazenados como um objeto ``tibble``. Uma vez que esse formato de dados é comum ao ``tidyverse``, é possível usar as mesmas funções de manipulação de tabelas do ``dplyr``. No exemplo a seguir, usamos a função ``filter()``, do pacote ``dplyr``, para filtrar as amostras da classe ``"Forest"``:
+
 
 .. code-block:: R
     :caption: Filtrando uma tabela de amostras.
@@ -197,6 +222,7 @@ As tabelas de amostras são armazenados como um objeto ``tibble``. Uma vez que e
 
 Também é possível extrair bandas específicas dos dados usando a função ``sits_select()``. Essa função faz uma cópia dos dados de amostras mas selecionando apenas as bandas solicitadas. No exemplo a seguir, criamos uma variável para armazenar uma cópia de ``samples`` mas apenas com a banda ``'NDVI'``:
 
+
 .. code-block:: R
     :caption: Selecionando a banda 'NDVI' de uma tabela de amostras.
     :linenos:
@@ -208,12 +234,12 @@ Também é possível extrair bandas específicas dos dados usando a função ``s
     sits_bands(samples_ndvi)
 
 
-
 Gerando gráficos das séries temporais
--------------------------------------
+*************************************
 
 
 Para gerar um gráfico com as séries temporais podemos usar a função genérica do R ``plot()`` sobre a variável que contém a tabela com as amostras e, assim, obter o gráfico das séries temporais correspondentes. A seguir mostramos exemplos de uso dessas funções:
+
 
 .. code-block:: R
     :caption: Visualizando série temporais.

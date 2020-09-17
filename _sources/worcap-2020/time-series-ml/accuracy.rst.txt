@@ -10,11 +10,12 @@
 
 
 Estimação de acurácia
-=====================
++++++++++++++++++++++
 
 
 Prática com R Notebook
-----------------------
+**********************
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/accuracy/sits-accuracy.png
     :alt: sits accuracy estimation
@@ -27,13 +28,16 @@ Neste *hands-on*, organizamos uma atividade prática no ``sits`` de acordo com o
 
 - realizar validação cruzada usando amostras de treinamento
 
+
 Notebook Kaggle: https://www.kaggle.com/rolfsimoes/sits-kaggle
 
 
 Validação Cruzada
------------------
+*****************
+
 
 Existem muitas maneiras de estimar a acurácia ou performance de um classificador. Aqui nos concentraremos em uma técnica conhecida como validação cruzada ou *k-fold cross-validation*. A figura abaixo ilustra como diferentes partições dos dados de treinamento podem ser divididos para o treinamento e para a validação. A técnica consiste em realizar esse processo ``k`` vezes e agregar os resultados numa matriz de confusão.
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/accuracy/k-folds.png
     :alt: sits accuracy estimation
@@ -58,7 +62,8 @@ No ``sits``, a função ``sits_kfold_validate()`` realiza a validação cruzada.
 
 
 Matriz de Confusão
-------------------
+******************
+
 
 Uma matriz de confusão é uma matriz cujas linhas (colunas) representam as amostras classificadas numa determinada classe e colunas (linhas) representam as classes de referências das amostras. Cada célula pode conter uma contagem ou proporção de amostras. A tabela a seguir ilustra a configuração de uma matriz de confusão.
 
@@ -103,6 +108,7 @@ Algumas métricas de acurácia que podem ser calculadas a partir da matriz de co
 
 
 Onde :math:`AG` é a Acurácia Global; :math:`AU_i` é a Acurácia do Usuário da classe :math:`i`; e :math:`AP_i` é a Acurácia do Produtor da classe :math:`i`. A função que mostra a matriz de confusão é ``sits_conf_matrix()`` e já computa as métricas de acurácia acima.
+
 
 .. code-block:: R
     :caption: Computa e mostra a matriz de confusão.

@@ -10,15 +10,18 @@
 
 
 Instalando o pacote ``sits``
-============================
+++++++++++++++++++++++++++++
 
 
 Instruções de instalação do ``sits`` em R Notebooks do Kaggle
--------------------------------------------------------------
+*************************************************************
+
 
 Para instalar o ``sits`` diretamente do GitHub, precisamos carregar a bibioteca ``devtools`` e usar a função ``install_github``, fornecendo o endereço relativo do pacote no site GitHub, no caso ``"e-sensing/sits"``.
 
+
 Outro pacote requerido para acessar séries temporais usando o serviço WTSS é o pacote ``wtss``. Para instalá-los, usamos o seguinte código:
+
 
 .. code-block:: R
     :caption: Instalando ``sits`` no Kaggle.
@@ -31,9 +34,11 @@ Outro pacote requerido para acessar séries temporais usando o serviço WTSS é 
 
 
 Instruções de instalação do ``sits`` numa máquina local
--------------------------------------------------------
+*******************************************************
+
 
 Para instalar o ``sits`` em uma máquina local, você deve garantir que todas as dependências estão instaladas. O pacote ``sits`` depende dos pacotes ``sf`` e ``rgdal``, que por sua vez, requerem a instalação das bibliotecas GDAL e PROJ.
+
 
 .. code-block:: R
     :caption: Instalando ``sits`` no Kaggle.
@@ -44,6 +49,7 @@ Para instalar o ``sits`` em uma máquina local, você deve garantir que todas as
 
 
 Após a instalação dos pacotes ``sf`` e ``rgdal``, o usuário pode usar o seguinte *script* para instalar outras dependências:
+
 
 .. code-block:: R
     :caption: Instalando ``sits`` no Kaggle.

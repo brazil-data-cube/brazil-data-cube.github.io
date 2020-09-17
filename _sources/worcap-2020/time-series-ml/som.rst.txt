@@ -8,12 +8,13 @@
 
 .. _time-series-ml-som:
 
-
 Avaliação da qualidade das amostras usando SOM clustering
-=========================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 Prática com R Notebook
-----------------------
+**********************
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/som/sits-clustering.png
     :alt: sits-clustering
@@ -24,15 +25,17 @@ Prática com R Notebook
 
 Neste *hands-on*, organizamos uma atividade prática no ``sits`` de acordo com o fluxograma apresentado ao lado. Nele, mostramos como é realizada a avaliação de amostras no ``sits``. Aqui você aprenderá a:
 
-- realizar a análise de clustering utilizando o SOM
-- obter um conjunto de amostras de melhor qualidade
+- realizar a análise de clustering utilizando o SOM.
+
+- obter um conjunto de amostras de melhor qualidade.
+
 
 Notebook Kaggle: https://www.kaggle.com/lorenalves01/clustering-worcap/
 
 
-
 Introdução
-----------
+**********
+
 
 Um dos desafios chave quando utilizamos amostras para treinar modelos de classificação supervisonada é avaliar a qualidade do modelo gerado.
 Um conjunto de amostras ruidoso e imperfeito pode causar um efeito negativo no desempenho da classificação :ref:`(Frenay et al., 2013) <Frenay_2013>`.
@@ -42,7 +45,8 @@ um conjunto de dados de séries temporais de imagem de satélite utilizando como
 
 
 Efeitos de ruído de classe na classificação
--------------------------------------------
+*******************************************
+
 
 Para ilustrar os efeitos que um conjunto de amostras com qualidade ruim  pode causar na geração de um modelo de aprendizado de máquina,
 apresentamos o exemplo da :numref:`Figura %s <time-series-ml:som:noisy>`, onde a  classificação de uma série temporal de uso e cobertura da terra ao longo de 16 anos foi realizada.
@@ -57,11 +61,13 @@ O conjunto de dados utilizado para treinamento do modelo random forest possui am
 
     Resultado de uma classificação ruim de uma série temporal utilizando o método random forest.
 
+
 Na classificação gerada pelo modelo random forest, na :numref:`Figura %s <time-series-ml:som:noisy>`, uma inconsistência é apresentada durante a trajetória da classificação apresentando o anos de 2007 e 2008 classificados como floresta logo em seguida de pasto.
 Dado que em um ano uma floresta não se regenera, podemos notar a presença de um erro na classificação da série temporal para estes anos. Isto se deve ao fato de possuir amostras que deveriam ter sido rotuladas como pasto ou alum tipo de agricultura, no entanto elas foram rotuladas como floresta.
 
 
 A :numref:`Figura %s <time-series-ml:som:good>` apresenta a classificação da mesma série temporal apresentada anteriormente, porém houve um pré-processamento no conjunto de dados utilizado para treinar o modelo do random forest  para a remoção de ruídos de clases.
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/som/good.png
     :alt: good
@@ -71,11 +77,12 @@ A :numref:`Figura %s <time-series-ml:som:good>` apresenta a classificação da m
 
     Classificação da mesma série temporal após a remoção de amostras ruidosas.
 
+
 O metódo SOM no contexto do projeto Brazil Data Cube é utilizado  para avaliar a qualidade e a remoção de cada uma das amostras do conjunto de dados de treinamento.
 
 
 Método SOM para identificação de ruído de classe
-------------------------------------------------
+************************************************
 
 
 O método SOM é uma rede neural não supervisionada que mapeia um conjunto de dados de alta dimensionalidade em um de baixa dimensionalidade, geralmente uma grade bi-dimensional.
@@ -95,6 +102,7 @@ similaridade da vizinhança dos neurônios prevaleça :ref:`Kohonen et al. (2001
 
     Estrutura da rede SOM. Fonte: :ref:`(Santos et al, 2020) <santos_2020>`.
 
+
 Após o treinamento da rede SOM, cada amostra está associada a neurônio, portanto os neurônios podem ser rotulados a partir da técnica de voto majoritário
 Assim o mapa SOM é usado para avaliar a qualidade de cada elemento do conjunto de treinamento.
 Cada neurônio será associado a uma distribuição de probabilidade discreta, a qual denominamos probabilidade condicional.
@@ -105,7 +113,6 @@ de cada neurônio de um mapa SOM fornecem informações adicionais sobre a varia
 Portanto, aplicamos a inferência bayesiana às vizinhanças do mapa SOM para melhorar a avaliação da qualidade de cada série temporal, chamamos a probabilidade que sofre influência
 dos neurônios vizinhos de probabilidade posterior. Na :numref:`Figura %s <time-series-ml:som:sombayes>` o neurônio 3 pertence a Classe 2 porque 75% das amostras que foram associadas a este neurônio
 pertecem a Classe 2. No entanto, todos os neurônios vizinhos pertecem a Classe 1, isto influência na confiabilidade das amostras associadas ao neurônio 3, fazendo com que a probabilidade posterior seja menor que condicional.
-
 
 
 .. figure:: ../../img/worcap-2020/time-series-ml/som/sombayes.png
@@ -131,6 +138,7 @@ As probabilidades condicional e posterior indicam o nível de confiabilidade del
 | 3            | Pasto       | 70%                  | 20%            |
 +--------------+-------------+----------------------+----------------+
 
+
 Para determinar se a amostra deve ser removida, mantida ou analisada, as probabilidades devem ser analisadas em conjunto.
 A :numref:`Figura %s <time-series-ml:som:decision>` apresenta um fluxograma que indica qual decisão será tomada a partir dos limiares definidos para definir a qualidade do
 conjunto de amostras.
@@ -144,30 +152,34 @@ conjunto de amostras.
 
     Fluxogama de tomada de decisão.
 
+
 Utilizando as amostras que foram ilustradas na tabela acima e os limiares apresentados na :numref:`Figura %s <time-series-ml:som:decision>`,
 a amostra 1 deve ser mantida conjunto de dados, a amostra 2 é automaticamente removida do conjuntos de dados,
 e a amostra 3 deve ser avalidada por especialistas para verificar se elas devem ser mantidas ou não conjunto de dados.
+
 
 Devida a alta probabilidade condicional da amostra 3, a primeira hipótese é que um subconjunto de amostras de pasto pode conter padrões diferentes dos demais,
 portanto, este subconjunto pode está mapeado longe de sua vizinhança do espaço de atributos do SOM, sendo assim, essas amostras devem ser mantidas no conjunto de dados.
 A segunda hipótese é que este subconjunto de dados pode ruído de classe, logo, estas amostras devem ser removidas do conjunto de dados.
 
 
-
 Referências
------------
+***********
 
 .. _Frenay_2013:
 
 - Frénay, B., and Verleysen, M. Classification in the presence of label noise: a survey. IEEE transactions on neural networks and learning systems, 25(5):845–869, (2013).
 
+
 .. _Kohonen_2001:
 
 - Kohonen,T., Schroeder M. R., and Huang, T. S. Self-Organizing Maps. Springer-Verlag New York, Inc., Secaucus, NJ, USA, 3rd edition, 2001.
 
+
 .. _santos_2017:
 
 - Santos, Lorena A., et al. "Clustering Methods to Asses Land Cover Samples of MODIS Vegetation Indexes Time Series." International Conference on Computational Science and Its Applications. Springer, Cham, 2017.
+
 
 .. _santos_2020:
 

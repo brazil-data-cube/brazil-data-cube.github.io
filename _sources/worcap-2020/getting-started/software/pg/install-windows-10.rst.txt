@@ -1,0 +1,304 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Instalação do PostgreSQL/PostGIS para Microsoft Windows 10
+**********************************************************
+
+
+Instalação do PostgreSQL 11.6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Na página de download do `PostgreSQL <https://www.postgresql.org/download/>`_, selecione a opção ``Windows``, como mostrado na figura abaixo.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-download.png
+    :alt: Download page PostgreSQL
+    :width: 800
+    :align: center
+
+
+Ao selecionar a opção ``Windows`` você será redirecionado para a página de instaladores do Windows. Acesse o *link* ``Download the installer`` como mostrado a seguir:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-download-2.png
+    :alt: Windows page installer PostgreSQL
+    :width: 800
+    :align: center
+
+
+Após o acesso, é exibida uma tabela de opções de instaladores. Selecione a opção ``PostgreSQL Version`` ``11.6`` para ``Windows x86-64`` como indicado na figura.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-download-3.png
+    :alt: PostgreSQL Database Download
+    :width: 800
+    :align: center
+
+
+Após o download ser concluído, siga os passos apresentados a seguir:
+
+
+**1.** No diretório de Downloads do Windows, abra o instalador ``postgresql-11.6-3-windows-x64``:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-01.png
+    :alt: PostgreSQL Installer
+    :width: 800
+    :align: center
+
+
+**2.** Após iniciar o instalador, será exibida uma janela para configuração do PostgreSQL (``Setup - PostgreSQL``). Pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-02.png
+    :alt: PostgreSQL Setup
+    :width: 800
+    :align: center
+
+
+**3.** Se você possui um disco SSD de pequeno porte, sugerimos alterar o local da pasta de destino do PostgreSQL para um disco com maior capacidade. Aponte para o diretório que você deseja instalar o PostgreSQL e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-03.png
+    :alt: PostgreSQL Install Directory
+    :width: 800
+    :align: center
+
+
+**4.** O instalador irá apresentar as opções de componentes a serem instalados. Selecione as opções de acordo com a imagem a seguir, e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-04.png
+    :alt: PostgreSQL Components
+    :width: 800
+    :align: center
+
+
+**5.** Assim como no **passo 3**, se você possui um disco SSD de pequeno porte, sugerimos alterar o local da pasta de destino dos dados a serem armazenados para um disco com maior capacidade. Aponte para a pasta desejada e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-05.png
+    :alt: PostgreSQL Data Directory
+    :width: 800
+    :align: center
+
+
+**6.** Defina uma senha para o super-usuário postgresql, e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-06.png
+    :alt: PostgreSQL Password
+    :width: 800
+    :align: center
+
+
+**7.** Selecione o número da porta desejada para o servidor PostgreSQL. Por padrão define-se o número de porta ``5432``. Caso a porta ``5432`` já esteja em uso por outra aplicação, utilize outro número de porta para o servidor PostgreSQL. Pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-07.png
+    :alt: PostgreSQL Port
+    :width: 800
+    :align: center
+
+
+**8.** Na etapa de opções avançadas (``Advanced Options``) mantenha ``Locale`` definido como apresentado na figura abaixo, e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-08.png
+    :alt: PostgreSQL Advanced Options
+    :width: 800
+    :align: center
+
+
+**9.** A próxima janela apresenta um resumo das opções de configuração que serão utilizadas na instalação do PostgreSQL. Pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-09.png
+    :alt: PostgreSQL Installation Summary
+    :width: 800
+    :align: center
+
+
+**10.** Essa janela mostra apenas que o processo de instalação encontra-se em progresso:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-10.png
+    :alt: PostgreSQL Progress
+    :width: 800
+    :align: center
+
+
+**11.** Ao final da instalação, uma janela como mostrada abaixo será apresentada. Mantenha a opção ``Stack Builder`` selecionada. Pressione ``Finish`` para finalilzar a instalação do PostgreSQL:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-11.png
+    :alt: PostgreSQL Finish
+    :width: 800
+    :align: center
+
+
+Instalação do PostGIS 2.5
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Mantendo a opção ``Stack Builder`` selecionada ao final da instalação do PostgreSQL, será apresentada uma nova janela de instalação (``Stack Builder 4.2.0``). O ``Stack Builder`` é utilizado para fazer o download e instalação de ferramentas e aplicações adicionais ao PostgreSQL.
+
+
+O ``Stack Builder`` será utilizado para instalação da extensão espacial PostGIS, para isto, siga os passos apresentados a seguir:
+
+
+**1.** Na primeira janela exibida pelo ``Stack Builder`` é apresentada a versão (ou versões) do PostgreSQL instalada no sistema. Selecione a opção ``PostgreSQL 11(x64)`` como mostrado na figura abaixo e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-12.png
+    :alt: Welcome to Stack Builder
+    :width: 800
+    :align: center
+
+
+**2.** No item ``Categories``, abra o subitem ``Spatial Extensions`` e selecione a opção ``PostGIS 2.5 Bundle for PostgreSQL 11 (64bit) v2.5.3`` como ilustrado na próxima figura. Pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-13.png
+    :alt: Stack Builder Categories
+    :width: 800
+    :align: center
+
+
+**3.** Aponte para o diretório que você deseja realizar o download do instalador PostGIS e pressione ``Next >`` para continuar.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-14.png
+    :alt: Stack Builder PostGIS Directory Download
+    :width: 800
+    :align: center
+
+
+**4.** Conforme apresenta a próxima imagem, mantenha a opção ``Skip Installation`` desmarcada e pressione ``Next >`` para iniciar a instalação do PostGIS.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-install-15.png
+    :alt: Stack Builder PostGIS Download Finish
+    :width: 800
+    :align: center
+
+
+**5.** Ao final do processo de download será exibida uma nova janela para dar continuidade a instalação do PostGIS. O PostGIS é baseado em diversos softwares livres. Nessa janela você deverá aceitar os termos da licença do PostGIS e de outros sistemas ou bibliotecas. Pressione ``I Agree >`` para continuar:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-01.png
+    :alt: PostGIS License Agreement
+    :width: 800
+    :align: center
+
+
+**6.** Na opção de componentes a serem instalados, selecione conforme indicado na figura e pressione ``Next >``.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-02.png
+    :alt: PostGIS Choose Components
+    :width: 800
+    :align: center
+
+
+**7.** Aponte para o diretório que você deseja instalar o PostGIS e pressione ``Next >``.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-03.png
+    :alt: PostGIS Choose Install Location
+    :width: 800
+    :align: center
+
+
+**8.** Essa janela mostra apenas que o processo de instalação do PostGIS encontra-se em progresso:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-04.png
+    :alt: PostGIS Progress
+    :width: 800
+    :align: center
+
+
+**9.** Selecione ``Sim (Yes)`` para registrar a variável de ambiente ``GDAL_DATA`` como apresentado abaixo:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-05.png
+    :alt: PostGIS GDAL_DATA
+    :width: 800
+    :align: center
+
+
+**10.** Selecione ``Sim (Yes)`` para habilitar os drives de dados raster, registrando a variável de ambiente ``POSTGIS_GDAL_ENABLED_DRIVERS``.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-06.png
+    :alt: PostGIS POSTGIS_GDAL_ENABLED_DRIVERS
+    :width: 800
+    :align: center
+
+
+**11.** Selecione ``Sim (Yes)`` para registrar a variável de ambiente ``POSTGIS_ENABLE_OUTDB_RASTERS`` como indicado.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-07.png
+    :alt: PostGIS POSTGIS_ENABLE_OUTDB_RASTERS
+    :width: 800
+    :align: center
+
+
+**12.** Se o processo de instalação foi realizado com sucesso, uma janela como mostrada abaixo será apresentada. Pressione ``Close`` para finalilzar a instalação:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-08.png
+    :alt: PostGIS Install Finish
+    :width: 800
+    :align: center
+
+
+**13.** Ao final da instalação, será apresentada a janela do ``Stack Builder`` confirmando o processo de instalação do PostGIS. Pressione ``Finish`` para finalilzar o processo.
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgis-win-install-09.png
+    :alt: Stack Builder PostGIS Install Finish
+    :width: 800
+    :align: center
+
+
+Testando a instalação do PostgreSQL/PostGIS para Microsoft Windows 10
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+O PostgreSQL/PostGIS pode ser acessado através de diferentes formas. Utilizaremos a aplicação ``pgAdmin4`` (instalado durante o processo de instalação do PostgreSQL).
+
+
+No menu de aplicações do Windows 10 encontre e inicialize o ``pgAdmin 4`` como indicado na figura abaixo:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pg-win-start-pgadmin.png
+    :alt: Menu Win pgAdmin
+    :width: 800
+    :align: center
+
+
+No primeiro acesso ao ``pgAdmin 4``, será necessário definir uma senha (aplicável apenas a usuários do modo de área de trabalho) que irá ser utilizada para proteger e desbloquear posteriormente as senhas salvas do servidor. Pressione ``OK`` para continuar
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgadmin4-password.png
+    :alt: pgAdmin Password
+    :width: 800
+    :align: center
+
+
+Ao inicializar o ``pgAdmin 4``, uma janela como a mostrada abaixo será exibida:
+
+
+.. image:: ../../../../img/worcap-2020/software/postgresql/install/windows-10/pgadmin4-tela-inicial.png
+    :alt: pgAdmin Tela Inicial
+    :width: 800
+    :align: center

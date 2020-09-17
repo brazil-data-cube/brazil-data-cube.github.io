@@ -10,11 +10,12 @@
 
 
 Classificação de bricks e geração de mapas
-==========================================
+++++++++++++++++++++++++++++++++++++++++++
 
 
 Prática com R Notebook
-----------------------
+**********************
+
 
 .. figure:: ../../img/worcap-2020/time-series-ml/class-brick/sits-postproc.png
   :alt: sits bricks classification
@@ -25,31 +26,38 @@ Prática com R Notebook
 
 Neste *hands-on*, organizamos uma atividade prática no ``sits`` de acordo com o fluxograma apresentado ao lado. Nele, mostramos como é realizado a classificação de bricks e geração de mapas no ``sits``. Aqui você aprenderá a:
 
-- acessar e classificar *bricks* locais
-- gerar mapas a partir de *bricks* de probabilidades
-- visualizar mapas gerados
+- acessar e classificar *bricks* locais.
+
+- gerar mapas a partir de *bricks* de probabilidades.
+
+- visualizar mapas gerados.
+
 
 Notebook Kaggle: https://www.kaggle.com/rolfsimoes/sits-kaggle
 
 
 Referências a Cubos de Dados
-----------------------------
+****************************
+
 
 Um cubo de dados de observação da terra pode ser representado de várias formas.
 Eles podem fornecer séries temporais que geralmente são geradas por um processo de organização sistemática de imagens de um determinado sensor/satélite. Essa organização realiza as correções e os ajustes necessários para que os pixels correspondentes de imagens de diferentes datas se refiram a um mesmo local geográfico.
+
 
 No ``sits``, a função que faz referência a uma fonte de séries temporais é a função ``sits_cube()``. O que essa função faz é retornar uma tabela de metadados que descreva um cubo de dados, seja um *brick* ou um serviço Web como o WTSS. Vimos em exemplos anteriores como usar o WTSS para acessar séries temporais. Aqui, mostraremos ainda como acessar outro serviço de séries temporais, o SATVeg.
 
 
 .. note::
+
     Em breve, o pacote ``sits`` poderá fazer referências aos cubos do Projeto *Brazil Data Cube*.
 
 
-
 Exemplo acesso serviço SATVeg
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 O SATVeg é um serviço de séries temporais desenvolvido pela Embrapa Informática Agropecuária. Atualmente o serviço fornece séries temporais dos produtos MOD13Q1 e MYD13Q1 do sensor MODIS. O acesso pode ser realizado como mostrado no exemplo a seguir:
+
 
 .. code-block:: R
     :caption: Acesso ao serviço SATVeg da Embrapa.
@@ -77,16 +85,19 @@ O SATVeg é um serviço de séries temporais desenvolvido pela Embrapa Informát
 Tanto o WTSS quanto o SATVEG são úteis para coletar séries temporais de pontos esparsos. Entretanto, devido a natureza desses serviços, não são adequados para gerar mapas de uso e cobertura. Uma possível solução para gerar mapas de uso e cobertura da terra é o uso de *bricks*.
 
 
-
 Exemplo acesso/classificação de *brick* local
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Quando se quer gerar um mapa de uma área de estudo relativamente pequena, que não imponha entraves para o gerenciamento dos arquivos e da memória, os *bricks* tornam-se uma solução interessante. Um *brick* consiste em um arquivo no formato GeoTIF cujas bandas ou camadas se referem a diferentes instâncias no tempo. Por exemplo, um *brick* de NDVI do produto MOD13Q1 (MODIS), com 23 observações ao longo do ano de 2014 e compreendendo a região do município de Sinop-MT é armazenado em um único arquivo. Suas 23 observações ao longo do ano são organizadas como bandas do arquivo GeoTIF.
+
 
 Como não existe um padrão definido para gravar metadados em arquivos GeoTIF, geralmete algumas informações extras precisam ser forncedidas pelo usuário, tais como valores mínimo e máximo teóricos, fator de escala do dado, etc.
 Além disso, os bricks precisam de um arquivo texto que indique as datas correspondentes às suas camadas. Com essas informações, é possível acessar um *brick* a partir do ``sits`` e gerar mapas de uso e cobertura da terra.
 
+
 No ambiente do Kaggle, disponibilizamos dois *bricks* sobre o município de Sinop-MT, um com os valores de NDVI e o outro com os de EVI, ambos do mesmo ano-calendário. O código a seguir cria a referência para esses bricks:
+
 
 .. code-block:: R
     :caption: Acesso aos bricks de Sinop-MT.
@@ -111,6 +122,7 @@ No ambiente do Kaggle, disponibilizamos dois *bricks* sobre o município de Sino
 
 Como nos exemplos anteriores, este cubo provê acesso às séries temporais usando a função ``sits_get_data()``. No entanto, diferentemente dos outros cubos, este pode ser usado com a função ``sits_classify()`` para ser classificado e gerar um mapa de probabilidades de classes com a mesma extensão espacial.
 
+
 .. code-block:: R
     :caption: Classificação dos bricks de Sinop-MT.
     :linenos:
@@ -129,6 +141,7 @@ Como nos exemplos anteriores, este cubo provê acesso às séries temporais usan
 
 
 A última etapa para gerar um mapa de uso e cobertura da terra é converter as probabilidades em classes discretas. A estratégia mais simples é escolher a classe com a maior probabilidade usando a função ``sits_label_classification()``. Esta função permite também gerar mapas espacialmente suavizados a partir de várias estratégias.
+
 
 .. code-block:: R
     :caption: Mapa de uso e cobertura da terra de Sinop-MT.

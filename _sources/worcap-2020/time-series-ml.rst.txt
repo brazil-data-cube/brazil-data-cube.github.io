@@ -8,7 +8,7 @@
 .. _time-series-ml:
 
 Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning
-=================================================================================================
+-------------------------------------------------------------------------------------------------
 
 .. toctree::
   :maxdepth: 1
