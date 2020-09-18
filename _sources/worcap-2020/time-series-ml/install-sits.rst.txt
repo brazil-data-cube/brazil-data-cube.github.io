@@ -8,7 +8,6 @@
 
 .. _time-series-ml-install-sits:
 
-
 Instalando o pacote ``sits``
 ++++++++++++++++++++++++++++
 

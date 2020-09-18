@@ -39,4 +39,3 @@ Siga as instruções de instalação abaixo, de acordo com sua plataforma de pre
     ./software/pg/install-linux-ubuntu
     ./software/pg/install-macos
     ./software/pg/install-windows-10
-

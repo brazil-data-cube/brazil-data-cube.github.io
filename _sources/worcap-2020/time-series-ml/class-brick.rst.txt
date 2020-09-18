@@ -8,7 +8,6 @@
 
 .. _time-series-ml-class-brick:
 
-
 Classificação de bricks e geração de mapas
 ++++++++++++++++++++++++++++++++++++++++++
 

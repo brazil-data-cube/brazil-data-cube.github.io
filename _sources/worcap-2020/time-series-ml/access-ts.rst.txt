@@ -8,8 +8,6 @@
 
 .. _time-series-ml-access-ts:
 
-
-
 Acesso a Séries Temporais com o sits
 ++++++++++++++++++++++++++++++++++++
 

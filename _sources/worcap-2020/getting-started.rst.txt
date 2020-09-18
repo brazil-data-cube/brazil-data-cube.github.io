@@ -18,5 +18,3 @@ Preparação para o Curso
     ./getting-started/qgis
     ./getting-started/postgresql
     ./getting-started/dados
-
-
