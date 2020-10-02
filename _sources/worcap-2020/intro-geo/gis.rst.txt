@@ -11,12 +11,12 @@ Sistemas de Informação Geográfica (SIG)
 
 
 .. figure:: ../../img/worcap-2020/intro-geo/foss4g.jpg
-    :alt: Free and Open Source Software fo GIS
+    :alt: Free and Open Source Software for GIS
     :width: 800
     :figclass: align-center
     :name: worcap-2020:intro-geo:foss4g
 
-    Free and Open Source Software fo GIS (FOSS4G).
+    Free and Open Source Software for GIS (FOSS4G).
 
 
 Aplicativos Desktop

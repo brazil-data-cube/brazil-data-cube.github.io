@@ -1,0 +1,25 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+BDC Grid
+--------
+
+
+BDC tiling system consists in three hierarchical grids generated using an Albers Equal Area projection and SIRGAS 2000 datum. The three grids are generated using the -54 central meridian to generate 6 x 4, 3 x 2 and 1.5 x 1 degree tiles and can be seen in :numref:`Figure %s <products:bdc-grid>`. The grids are named *BDC_LG*, *BDC_MD*, *BDC_SM*, referring to Large, Medium and Small sizes, respectively.
+
+
+.. figure:: ../../img/products/bdc-grid.png
+    :alt: BDC Grid
+    :width: 720
+    :figclass: align-center
+    :name: products:bdc-grid
+
+    BDC Grid.
+
+
+Each BDC grid is used to accommodate data according to its images spatial resolution. The *BDC_LG* grid present tiles of approximately 672 x 440 kilometers and is used for CBERS-4 AWFI collections (64m), which implies on images of 10504 x 6865 pixels. The *BDC_MD* grid present tiles of approximately 336 x 220 kilometers and is used for Landsat-8 OLI collections (30m), which implies on images of 11204 x 7324 pixels. The *BDC_SM* grid present tiles of approximately 168 x 110 kilometers and is used on Sentinel-2 MSI collections (10m), which implies on images of 16806 x 10986 pixels.

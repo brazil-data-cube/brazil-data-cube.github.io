@@ -17,10 +17,10 @@ More info regarding Brazil Data Cube Products can be seen in:
     :maxdepth: 1
     :titlesonly:
 
-    ./input-data.rst
-    ./concepts.rst
-    ./bdc-grid.rst
-    ./processing-flow.rst
-    ./naming.rst
-    ./product-access.rst
-    ./experiments.rst
+    ./specifications/input-data.rst
+    ./specifications/concepts.rst
+    ./specifications/bdc-grid.rst
+    ./specifications/processing-flow.rst
+    ./specifications/naming.rst
+    ./specifications/product-access.rst
+    ./specifications/experiments.rst
