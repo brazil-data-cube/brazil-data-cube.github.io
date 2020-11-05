@@ -93,7 +93,7 @@ Notebook Plot de imagem
 Façamos agora um exercício consultando imagens do projeto Brazil Data Cube e plota-las utilizando um Python Notebook:
 
 
-- https://www.kaggle.com/marujore/cbers-plot/
+- https://github.com/brazil-data-cube/jupyter-gallery/blob/master/Python/stac/stac-introduction.ipynb
 
 
 Referências

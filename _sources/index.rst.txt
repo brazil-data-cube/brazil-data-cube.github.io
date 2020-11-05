@@ -33,6 +33,7 @@ Welcome to the **Brazil Data Cube** project!
     :caption: Tutorials:
 
     worcap-2020
+    datascience-2020
 
 
 .. toctree::

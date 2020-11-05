@@ -16,4 +16,4 @@ Uma aplicação recorrente em imagens imagens obitidas por satélites consiste n
 Uma abordagem bastante simplista para essa aplicação consiste em obter imagens de datas distintas e verificar a diferença no valor de reflectância das mesmas, de modo que preferencialmente as diferenças esperadas nessas imagens sejam potencializadas no intervalo de tempo escolhido. Para isso, vamos fazer um simples exercício de obter imagens de uma área agrícola no período do inicio do plantio e outra quando as culturas já estiverem mais desenvolvidas.
 
 
-- https://www.kaggle.com/marujore/cbers-date-difference/
+- https://github.com/brazil-data-cube/jupyter-gallery/blob/master/Python/stac/stac-image-difference.ipynb

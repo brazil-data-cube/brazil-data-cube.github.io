@@ -76,7 +76,7 @@ Notebook Aplicando Threshold
 Façamos agora um exercício utilizando imagens do projeto Brazil Data Cube e aplicando um limiar sobre as imagens para separar diferentes alvos presentes na mesmapor meio de Python Notebook:
 
 
-- https://www.kaggle.com/marujore/cbers-ndvi-threshold/
+- https://github.com/brazil-data-cube/jupyter-gallery/blob/master/Python/stac/stac-image-threshold.ipynb
 
 
 
