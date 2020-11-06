@@ -17,7 +17,6 @@ CAP-394 - Introdução a Data Science (2020)
     ./worcap-2020/access-view/intro
     ./worcap-2020/access-view/cbers-input
     ./worcap-2020/access-view/plot
-    STAC <https://stacspec.org/>
     STAC Introduction (Python)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/Python/stac/stac-introduction.ipynb>
     STAC Introduction (R)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/R/stac/stac-introduction.ipynb>
     ./worcap-2020/access-view/index
