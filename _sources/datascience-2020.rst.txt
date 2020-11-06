@@ -17,7 +17,7 @@ CAP-394 - Introdução a Data Science (2020)
     ./worcap-2020/access-view/intro
     ./worcap-2020/access-view/cbers-input
     ./worcap-2020/access-view/plot
-    STAC <https://brazil-data-cube.github.io/tech-talks/stac.html#>
+    STAC <https://stacspec.org/>
     STAC Introduction (Python)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/Python/stac/stac-introduction.ipynb>
     STAC Introduction (R)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/R/stac/stac-introduction.ipynb>
     ./worcap-2020/access-view/index
@@ -26,7 +26,8 @@ CAP-394 - Introdução a Data Science (2020)
     WTSS <https://wtss.readthedocs.io/en/latest/>
     WTSS Introduction (Python)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/Python/wtss/wtss-introduction.ipynb>
     WTSS Introduction (R)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/R/wtss/wtss-introduction.ipynb>
-    WTSS examples <https://github.com/brazil-data-cube/jupyter-gallery/tree/master/Python/wtss/wtss-examples.ipynb>
+    WTSS examples (Python) <https://github.com/brazil-data-cube/jupyter-gallery/tree/master/Python/wtss/wtss-examples.ipynb>
+    WTSS examples (R)<https://github.com/brazil-data-cube/jupyter-gallery/blob/master/R/wtss/wtss-examples.ipynb>
 
 
 Links:
