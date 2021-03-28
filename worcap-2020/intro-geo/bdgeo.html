@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Bancos de Dados Geográficos com o PostGIS &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/intro-geo/bdgeo.html"/>
+
   
 
   
@@ -34,7 +38,6 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -59,7 +62,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -118,6 +121,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -162,6 +169,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -177,7 +186,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -186,10 +195,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="../access-view.html" class="btn btn-neutral float-right" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../access-view.html" class="btn btn-neutral float-right" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="gis.html" class="btn btn-neutral float-left" title="Sistemas de Informação Geográfica (SIG)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="gis.html" class="btn btn-neutral float-left" title="Sistemas de Informação Geográfica (SIG)" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -215,16 +224,16 @@
 </ul>
 <a class="reference internal image-reference" href="../../_images/stock_elephant.png"><img alt="PostGIS" class="align-right" src="../../_images/stock_elephant.png" style="width: 125px;" /></a>
 <p>O <a class="reference external" href="https://postgis.net/">PostGIS</a> é uma biblioteca de software livre, sob a licença <a class="reference external" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU GPL versão 2</a> (GPLv2), que fornece ao SGBD PostgreSQL uma extensão geoespacial. Inicialmente, esta extensão foi desenvolvida pela empresa Canadense <a class="reference external" href="http://postgis.refractions.net">Refractions Research</a>, para suportar os tipos geométricos e operadores espaciais da OGC Simple Feature (<a class="reference internal" href="#herring-2011-a"><span class="std std-ref">Herring, 2011a</span></a> e <a class="reference internal" href="#herring-2011-b"><span class="std std-ref">Herring, 2011b</span></a>), bem como fornecer um mecanismo de indexação baseado nas Árvores-R. No entanto, com a evolução dessa extensão, a implementação passou a adotar o padrão <code class="docutils literal notranslate"><span class="pre">ISO/SQL</span></code>, relativo a <em>SQL multimedia and application packages - Part 3: Spatial</em> (<a class="reference internal" href="#iso-2016"><span class="std std-ref">ISO, 2016</span></a>). Assim, além dos tipos existentes na OGC-SFS, encontramos os tipos circulares e compostos da ISO/SQL.</p>
-<p>Nos últimos anos, a extensão PostGIS passou a integrar diversas outras funcionalidades, como suporte a dados matriciais através do módulo <code class="docutils literal notranslate"><span class="pre">PostGIS</span> <span class="pre">Raster</span></code>, do módulo <code class="docutils literal notranslate"><span class="pre">SFSCGAL</span></code> para trabalhar com dados em 3D, entre vários outros módulos. A Figura <a class="reference internal" href="#worcap-2020-intro-geo-arqpgis"><span class="std std-numref">Figura 23</span></a> mostra o PostGIS como uma extensão do SGBD PostgreSQL, integrando as bibliotecas <a class="reference external" href="https://trac.osgeo.org/geos/">GEOS</a>, <a class="reference external" href="https://proj.org/">Proj</a>, <a class="reference external" href="https://gdal.org">GDAL</a> e <a class="reference external" href="https://www.cgal.org/">CGAL</a>. Repare que o servidor PostgreSQL possui todos os elementos para análise sintática das consultas, para definir os planos ou estratégias de execução das consultas, bem como cuidar do gerenciamento dos dados em disco e memória.</p>
+<p>Nos últimos anos, a extensão PostGIS passou a integrar diversas outras funcionalidades, como suporte a dados matriciais através do módulo <code class="docutils literal notranslate"><span class="pre">PostGIS</span> <span class="pre">Raster</span></code>, do módulo <code class="docutils literal notranslate"><span class="pre">SFSCGAL</span></code> para trabalhar com dados em 3D, entre vários outros módulos. A Figura <a class="reference internal" href="#worcap-2020-intro-geo-arqpgis"><span class="std std-numref">Figura 28</span></a> mostra o PostGIS como uma extensão do SGBD PostgreSQL, integrando as bibliotecas <a class="reference external" href="https://trac.osgeo.org/geos/">GEOS</a>, <a class="reference external" href="https://proj.org/">Proj</a>, <a class="reference external" href="https://gdal.org">GDAL</a> e <a class="reference external" href="https://www.cgal.org/">CGAL</a>. Repare que o servidor PostgreSQL possui todos os elementos para análise sintática das consultas, para definir os planos ou estratégias de execução das consultas, bem como cuidar do gerenciamento dos dados em disco e memória.</p>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-arqpgis">
 <a class="reference internal image-reference" href="../../_images/arquitetura-postgis.png"><img alt="Arquitetura PostGIS" src="../../_images/arquitetura-postgis.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 23 - </span><span class="caption-text">Arquitetura PostGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-arqpgis" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 28 - </span><span class="caption-text">Arquitetura PostGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-arqpgis" title="Permalink to this image">¶</a></p>
 </div>
 <p>Neste curso, utilizaremos o PostgreSQL versão 11 e sua extensão geográfica PostGIS 2.5 para exemplificar as funcionalidades presentes em um servidor típico de bancos de dados capaz de suportar o domínio geoespacial.</p>
-<p>Esta seção introduz o tipo <code class="docutils literal notranslate"><span class="pre">PostGIS</span> <span class="pre">Geometry</span></code>, isto é, geometrias no <code class="docutils literal notranslate"><span class="pre">Plano</span> <span class="pre">Cartesiano​</span></code> (<a class="reference internal" href="#worcap-2020-intro-geo-plano-cartesiano"><span class="std std-numref">Figura 24</span></a>). Logo, as operações são realizadas em 2D, mesmo quando a geometria possui valores de coordenada <span class="math notranslate nohighlight">\(z\)</span> ou <span class="math notranslate nohighlight">\(m\)</span>. Além disso, as operações como área e perímetro são realizadas na unidade do sistema de referência espacial associada à geometria.​</p>
+<p>Esta seção introduz o tipo <code class="docutils literal notranslate"><span class="pre">PostGIS</span> <span class="pre">Geometry</span></code>, isto é, geometrias no <code class="docutils literal notranslate"><span class="pre">Plano</span> <span class="pre">Cartesiano​</span></code> (<a class="reference internal" href="#worcap-2020-intro-geo-plano-cartesiano"><span class="std std-numref">Figura 29</span></a>). Logo, as operações são realizadas em 2D, mesmo quando a geometria possui valores de coordenada <span class="math notranslate nohighlight">\(z\)</span> ou <span class="math notranslate nohighlight">\(m\)</span>. Além disso, as operações como área e perímetro são realizadas na unidade do sistema de referência espacial associada à geometria.​</p>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-plano-cartesiano">
 <a class="reference internal image-reference" href="../../_images/plano-cartesiano.png"><img alt="Tipo Geometry" src="../../_images/plano-cartesiano.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 24 - </span><span class="caption-text">Tipo <code class="docutils literal notranslate"><span class="pre">Geometry</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-plano-cartesiano" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 29 - </span><span class="caption-text">Tipo <code class="docutils literal notranslate"><span class="pre">Geometry</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-plano-cartesiano" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="carregando-a-extensao-postgis">
 <h2>Carregando a Extensão PostGIS<a class="headerlink" href="#carregando-a-extensao-postgis" title="Permalink to this headline">¶</a></h2>
@@ -362,29 +371,21 @@ psql -U postgres -h localhost -p <span class="m">5432</span> -d worcap -f focos_
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../access-view.html" class="btn btn-neutral float-right" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="gis.html" class="btn btn-neutral float-left" title="Sistemas de Informação Geográfica (SIG)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../access-view.html" class="btn btn-neutral float-right" title="Acesso e visualização de dados de observação da Terra do projeto Brasil Data Cube em linguagem Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gis.html" class="btn btn-neutral float-left" title="Sistemas de Informação Geográfica (SIG)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -410,6 +411,7 @@ psql -U postgres -h localhost -p <span class="m">5432</span> -d worcap -f focos_
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

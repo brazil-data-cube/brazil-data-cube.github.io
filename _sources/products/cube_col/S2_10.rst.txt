@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2021 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -10,7 +10,7 @@ S2_10
 -----
 
 
-The S2_10 product contains MSI surface reflectance at full spatial resolution (10m) and the satellite sensor original Temporal Resolution (Temporal Compositing identity), which implies images at most each 5 days when Sentinel-2A and Sentinel-2B are operating together, after March 2017, and each 10 days before. Table lists the S2_10 product characteristics:
+The S2_10 product contains MSI surface reflectance at full spatial resolution (10m) and the satellite sensor original Temporal Resolution (Temporal Compositing identity). The following Table lists the S2_10 product characteristics:
 
 
 +-----------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
@@ -40,9 +40,18 @@ The S2_10 product contains MSI surface reflectance at full spatial resolution (1
 +-----------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
 | band12                                        | swir22      | Int16     | 0          | 10000      | -9999   | 0.0001 | 10                     | Identity                 |
 +-----------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| evi                                           | evi         | Int16     | -10000     | 10000      | -9999   | 0.0001 | 10                     | Identity                 |
+| EVI                                           | evi         | Int16     | -10000     | 10000      | -9999   | 0.0001 | 10                     | Identity                 |
 +-----------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| ndvi                                          | ndvi        | Int16     | -10000     | 10000      | -9999   | 0.0001 | 10                     | Identity                 |
+| NDVI                                          | ndvi        | Int16     | -10000     | 10000      | -9999   | 0.0001 | 10                     | Identity                 |
 +-----------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| :doc:`Fmask4 <../specifications/bands/FMASK>` | quality     | Int16     | 0          | 4          | 255     | 1      | 10                     | Identity                 |
+| :doc:`Fmask4 <../specifications/bands/FMASK>` | quality     | Byte      | 0          | 4          | 255     | 1      | 10                     | Identity                 |
 +-----------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
+
+
++------------+-----------+-------------+
+| S2_10 Files                          |
++------------+-----------+-------------+
+| Asset Name | Data Type | Description |
++============+===========+=============+
+| thumbnail  | image/png | Quicklook   |
++------------+-----------+-------------+

@@ -1,0 +1,39 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2021 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Retrieving Trajectory
+========================
+
+
+The Python :numref:`Code snippet %s <wlts:tj-retrieve>` shows how to retrieve a trajectory for the location with ``longitude = -54.0`` and ``latitude = -12.0`` for the collection `MapBiomas <mapbiomas.org>`_ and `TerraClass <https://www.terraclass.gov.br/>`_:
+
+
+.. code-block:: python
+    :caption: Retrieving trajectory.
+    :linenos:
+    :name: wlts:tj-retrieve
+
+    import wlts
+
+    service = wlts.WLTS('http://brazildatacube.dpi.inpe.br/wlts')
+
+    tj = service.tj(latitude=-12.0, longitude=-54.0, collections='mapbiomas5_amazonia,terraclass_amazonia')
+
+    tj.df()
+
+
+The output of the above code snippet is a dataframe with trajectory of land use and cover as shown in :numref:`Figure %s <wlts:ts-df_plot>`:
+
+
+.. figure:: ../../img/wlts/trajectory_plot.png
+    :alt: Trajectory Plot
+    :width: 480
+    :figclass: align-center
+    :name: wlts:ts-df_plot
+
+    Trajectory Plot.

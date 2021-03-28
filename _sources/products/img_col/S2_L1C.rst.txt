@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2021 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -10,11 +10,11 @@ S2_L1C
 ------
 
 
-The S2_L1C image collection product contains Sentinel-2A/MSI and Sentinel-2B/MSI Top of atmosphere data at its native spatial resolution. These images are the same that can be found at Copernicus SciHub image catalog under the Sentinel-2 L1C dataset (https://scihub.copernicus.eu/dhus/#/home).
+The S2_L1C image collection product contains Sentinel-2A/MSI and Sentinel-2B/MSI Top of atmosphere data at its native spatial resolution. These images are the same that can be found at Copernicus SciHub image catalog under the Sentinel-2 L1C dataset (https://scihub.copernicus.eu/dhus/#/home), converted to GeoTiff, instead of JPEG2000, and with a nodata value set to -9999.
 
 
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
-| S2_L1C                                                                                                     |
+| S2_L1C Bands                                                                                               |
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
 | Band Name  | Common Name | Data Type | Min. Value | Max. Value | No Data | Scale  | Spatial Resolution (m) |
 +============+=============+===========+============+============+=========+========+========================+
@@ -44,3 +44,14 @@ The S2_L1C image collection product contains Sentinel-2A/MSI and Sentinel-2B/MSI
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
 | B12        | swir22      | Int16     | 0          | 10000      | -9999   | 0.0001 | 20                     |
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
+
+
++------------+-------------------+-----------------------------------+
+| S2_L1C Files                                                       |
++------------+-------------------+-----------------------------------+
+| Asset Name | Data Type         | Description                       |
++============+===================+===================================+
+| asset      | application/zip   | compressed file containing assets |
++------------+-------------------+-----------------------------------+
+| thumbnail  | image/png         | Quicklook                         |
++------------+-------------------+-----------------------------------+

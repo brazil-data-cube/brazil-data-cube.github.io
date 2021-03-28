@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2021 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -14,7 +14,7 @@ The HLS_S30 image collection product contains Harmonized (NBAR) Sentinel-2/MSI s
 
 
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
-| HLS_S30                                                                                                    |
+| HLS_S30 Bands                                                                                              |
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
 | Band Name  | Common Name | Data Type | Min. Value | Max. Value | No Data | Scale  | Spatial Resolution (m) |
 +============+=============+===========+============+============+=========+========+========================+
@@ -44,5 +44,5 @@ The HLS_S30 image collection product contains Harmonized (NBAR) Sentinel-2/MSI s
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
 | B12        | swir22      | Int16     | 1          | 12000      | -1000   | 0.0001 | 30                     |
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+
-| QA         | quality     | UInt16    | 0          | 254        | 255     | 1      | 30                     |
+| QA         | quality     | Int8      | 0          | 254        | 255     | 1      | 30                     |
 +------------+-------------+-----------+------------+------------+---------+--------+------------------------+

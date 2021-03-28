@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Acesso a Séries Temporais com o sits &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/time-series-ml/access-ts.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -122,6 +124,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -166,6 +172,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -183,7 +191,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -192,10 +200,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="class-ts.html" class="btn btn-neutral float-right" title="Classificação de Séries Temporais" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="class-ts.html" class="btn btn-neutral float-right" title="Classificação de Séries Temporais" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="install-sits.html" class="btn btn-neutral float-left" title="Instalando o pacote sits" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install-sits.html" class="btn btn-neutral float-left" title="Instalando o pacote sits" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -223,16 +231,16 @@
 <p>Séries temporais de imagens de satélite podem ser obtidas de várias formas. Atualmente, o <code class="docutils literal notranslate"><span class="pre">sits</span></code> é capaz de acessar os serviços Web WTSS e SATVEG de séries temporais. Além desses serviços, o <code class="docutils literal notranslate"><span class="pre">sits</span></code>, em breve, será capaz de acessar os produtos do projeto Brazil Data Cube. Além desses serviços Web, o <code class="docutils literal notranslate"><span class="pre">sits</span></code> permite acesso a arquivos GeoTIF remotos ou locais organizados como <em>bricks</em> (veremos como acessá-los mais adiante).</p>
 <p>Nesta prática, nos concentraremos em um tipo de acesso a séries temporais: o serviço Web WTSS. No <code class="docutils literal notranslate"><span class="pre">sits</span></code>, a função <code class="docutils literal notranslate"><span class="pre">sits_cube()</span></code> cria referências a provedores de séries temporais. O código a seguir mostra um exemplo de chamada a essa função que cria uma referência ao serviço WTSS do INPE.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Code snippet 5 - </span><span class="caption-text">Acesso ao WTSS no <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Cria uma referencia ao servico WTSS do INPE</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 7 - </span><span class="caption-text">Acesso ao WTSS no <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Cria uma referencia ao servico WTSS do INPE</span>
 <span class="n">wtss</span> <span class="o">&lt;-</span> <span class="nf">sits_cube</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;WTSS&quot;</span><span class="p">,</span>
                   <span class="n">URL</span> <span class="o">=</span> <span class="s">&quot;http://www.esensing.dpi.inpe.br/wtss&quot;</span><span class="p">,</span>
                   <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;MOD13Q1&quot;</span><span class="p">)</span>
@@ -300,9 +308,9 @@
 </div>
 <p>Podemos passar esse arquivo para a função <code class="docutils literal notranslate"><span class="pre">sits_get_data()</span></code> acessar as séries temporais em lote, como no exemplo a seguir:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Code snippet 6 - </span><span class="caption-text">Acesso em lote a séries temporais no WTSS.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ts2</span> <span class="o">&lt;-</span> <span class="nf">sits_get_data</span><span class="p">(</span><span class="n">cube</span> <span class="o">=</span> <span class="n">wtss</span><span class="p">,</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 8 - </span><span class="caption-text">Acesso em lote a séries temporais no WTSS.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ts2</span> <span class="o">&lt;-</span> <span class="nf">sits_get_data</span><span class="p">(</span><span class="n">cube</span> <span class="o">=</span> <span class="n">wtss</span><span class="p">,</span>
                      <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;../input/sits-dataset/examples.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
@@ -322,9 +330,9 @@
 </ul>
 <p>Para visualizar a tabela podemos usar o comando <code class="docutils literal notranslate"><span class="pre">print()</span></code> sobre a variável que armazena a tabela de amostras.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Code snippet 7 - </span><span class="caption-text">Print objeto <code class="docutils literal notranslate"><span class="pre">tibble</span></code> no <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Mostra as primeiras linhas da tabela de amostras</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 9 - </span><span class="caption-text">Print objeto <code class="docutils literal notranslate"><span class="pre">tibble</span></code> no <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Mostra as primeiras linhas da tabela de amostras</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">ts2</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
@@ -336,15 +344,15 @@
 <p>Como qualquer objeto R, a tabela de amostras pode ser salva para e lida de um dos formatos de arquivos suportados pelo R. Usaremos aqui o formato RDS para salver e carregar conjunto de dados no ambiente R.</p>
 <p>Para salvar uma tabela de amostras usamos o comando <code class="docutils literal notranslate"><span class="pre">saveRDS()</span></code> sobre a variável contendo a tabela a ser salva e adicionalmente informamos o local onde será salvo o arquivo. A leitura de um arquivo RDS é feita com a função <code class="docutils literal notranslate"><span class="pre">readRDS()</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Code snippet 8 - </span><span class="caption-text">Salvando e lendo tabela de amostras.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Salva a tabela em um arquivo &#39;tabela.rds&#39;</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 10 - </span><span class="caption-text">Salvando e lendo tabela de amostras.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Salva a tabela em um arquivo &#39;tabela.rds&#39;</span>
 <span class="nf">saveRDS</span><span class="p">(</span><span class="n">ts2</span><span class="p">,</span> <span class="s">&quot;tabela.rds&quot;</span><span class="p">)</span>
 
 <span class="c1"># Lê o arquivo e armazena na variável `ts3`</span>
@@ -357,12 +365,12 @@
 </div>
 <p>Em nosso ambiente Kaggle, temos um conjunto com 1.892 amostras do Mato Grosso usadas para gerar o mapa descrito em [Simoes et al. (2020)](#simoes2020). O arquivo encontra-se em <code class="docutils literal notranslate"><span class="pre">&quot;../input/sits-dataset/samples.rds&quot;</span></code> e vamos carregá-lo para a variável <code class="docutils literal notranslate"><span class="pre">samples</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-number">Code snippet 9 - </span><span class="caption-text">Lendo uma tabela de amostras.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Lê o arquivo de amostras e armazena na variável `samples`</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 11 - </span><span class="caption-text">Lendo uma tabela de amostras.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Lê o arquivo de amostras e armazena na variável `samples`</span>
 <span class="n">samples</span> <span class="o">&lt;-</span> <span class="nf">readRDS</span><span class="p">(</span><span class="s">&quot;../input/sits-dataset/samples.rds&quot;</span><span class="p">)</span>
 
 <span class="c1"># Mostra as primeiras linhas da tabela</span>
@@ -375,12 +383,12 @@
 <h2>Obtendo informações de uma tabela de amostras<a class="headerlink" href="#obtendo-informacoes-de-uma-tabela-de-amostras" title="Permalink to this headline">¶</a></h2>
 <p>O pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code> possui algumas funções que fornecem informações úteis sobre uma tabela de amostras. Por exemplo, para sabermos as classes existentes e a quantidade de amostras de cada classe, podemos usar a função <code class="docutils literal notranslate"><span class="pre">sits_labels()</span></code>. Já a função <code class="docutils literal notranslate"><span class="pre">sits_bands()</span></code> nos informa sobre os nomes das bandas ou dos índices espectrais presentes no dado.</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-number">Code snippet 10 - </span><span class="caption-text">Obtendo informações de uma tabela de amostras.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Quais bandas estão presentes?</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 12 - </span><span class="caption-text">Obtendo informações de uma tabela de amostras.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Quais bandas estão presentes?</span>
 <span class="nf">sits_bands</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
 
 <span class="c1"># Quantas amostras existem em cada classe?</span>
@@ -393,12 +401,12 @@
 <h2>Filtrando uma tabela de amostras<a class="headerlink" href="#filtrando-uma-tabela-de-amostras" title="Permalink to this headline">¶</a></h2>
 <p>As tabelas de amostras são armazenados como um objeto <code class="docutils literal notranslate"><span class="pre">tibble</span></code>. Uma vez que esse formato de dados é comum ao <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>, é possível usar as mesmas funções de manipulação de tabelas do <code class="docutils literal notranslate"><span class="pre">dplyr</span></code>. No exemplo a seguir, usamos a função <code class="docutils literal notranslate"><span class="pre">filter()</span></code>, do pacote <code class="docutils literal notranslate"><span class="pre">dplyr</span></code>, para filtrar as amostras da classe <code class="docutils literal notranslate"><span class="pre">&quot;Forest&quot;</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-number">Code snippet 11 - </span><span class="caption-text">Filtrando uma tabela de amostras.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Carrega a biblioteca `dplyr`</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 13 - </span><span class="caption-text">Filtrando uma tabela de amostras.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Carrega a biblioteca `dplyr`</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
 
 <span class="c1"># Filtra as amostras e mostra as primeiras linhas da tabela</span>
@@ -408,12 +416,12 @@
 </div>
 <p>Também é possível extrair bandas específicas dos dados usando a função <code class="docutils literal notranslate"><span class="pre">sits_select()</span></code>. Essa função faz uma cópia dos dados de amostras mas selecionando apenas as bandas solicitadas. No exemplo a seguir, criamos uma variável para armazenar uma cópia de <code class="docutils literal notranslate"><span class="pre">samples</span></code> mas apenas com a banda <code class="docutils literal notranslate"><span class="pre">'NDVI'</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-number">Code snippet 12 - </span><span class="caption-text">Selecionando a banda ‘NDVI’ de uma tabela de amostras.</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Copia a tabela apenas com a banda &#39;NDVI&#39;</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 14 - </span><span class="caption-text">Selecionando a banda ‘NDVI’ de uma tabela de amostras.</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Copia a tabela apenas com a banda &#39;NDVI&#39;</span>
 <span class="n">samples_ndvi</span> <span class="o">&lt;-</span> <span class="nf">sits_select</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">bands</span> <span class="o">=</span> <span class="s">&quot;NDVI&quot;</span><span class="p">)</span>
 
 <span class="c1"># Mostra as bandas presentes na tabela de amostras</span>
@@ -426,15 +434,15 @@
 <h2>Gerando gráficos das séries temporais<a class="headerlink" href="#gerando-graficos-das-series-temporais" title="Permalink to this headline">¶</a></h2>
 <p>Para gerar um gráfico com as séries temporais podemos usar a função genérica do R <code class="docutils literal notranslate"><span class="pre">plot()</span></code> sobre a variável que contém a tabela com as amostras e, assim, obter o gráfico das séries temporais correspondentes. A seguir mostramos exemplos de uso dessas funções:</p>
 <div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-number">Code snippet 13 - </span><span class="caption-text">Visualizando série temporais.</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Gera gráfico da serie temporal `ts1`</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 15 - </span><span class="caption-text">Visualizando série temporais.</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Gera gráfico da serie temporal `ts1`</span>
 <span class="nf">plot</span><span class="p">(</span><span class="n">ts1</span><span class="p">)</span>
 
 <span class="c1"># Gera gráfico da primeira série temporal em `samples`</span>
@@ -453,29 +461,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="class-ts.html" class="btn btn-neutral float-right" title="Classificação de Séries Temporais" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="install-sits.html" class="btn btn-neutral float-left" title="Instalando o pacote sits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="class-ts.html" class="btn btn-neutral float-right" title="Classificação de Séries Temporais" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="install-sits.html" class="btn btn-neutral float-left" title="Instalando o pacote sits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -501,6 +501,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

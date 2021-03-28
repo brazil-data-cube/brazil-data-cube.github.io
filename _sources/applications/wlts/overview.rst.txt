@@ -1,0 +1,28 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2021 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Overview
+=========
+
+Contextualization
++++++++++++++++++
+
+Currently, there are several data sets on regional, national and global scales with information on land use and land cover that aim to meet a large number of applications, including the management of natural resources, climate change and its impacts and conservation of biodiversity. These data products are generated using different approaches and methodologies, which present information about different classes of the earth's surface, such as forests, agricultural plantations, among others. Initiatives that generate land use and land cover maps usually develop their own classification system, with different nomenclatures and meanings of the classes used. In addition, they provide this information in the most diverse formats and representations (vector and raster). The WLTS (Web Land Trajectory Service) facilitates access to these various collections through a specialized API, allowing researchers and specialists to make better use of their time for analytical questions, since these tools provide a greater integration of this data and introduces the concept of Land Use and Cover Trajectories as a high-level abstraction.
+
+
+Applications
+++++++++++++
+
+WLTS can be used in a range of application, such as in validation of land cover data sets, in the selection of trainning samples to support Machine Learning algorithms used in the generation of new classification maps.
+
+.. figure:: ../../img/wlts/applications.png
+    :alt: WLTS Examples of applications
+    :width: 780
+    :height: 450
+    :figclass: align-center
+    :name: wlts:op:applications

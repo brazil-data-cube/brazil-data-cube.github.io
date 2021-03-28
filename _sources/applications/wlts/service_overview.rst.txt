@@ -1,0 +1,48 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2021 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Service Overview
+================
+
+
+WLTS is based on three operations:
+
+- ``list_collection``: returns the list of all available collections in the service.
+
+
+.. figure:: ../../img/wlts/list_collection.png
+    :alt: WLTS list_collection operation
+    :width: 780
+    :figclass: align-center
+    :name: wlts:op:list-collection
+
+    WLTS ``list_collection`` operation.
+
+
+- ``describe_collection``: returns the metadata of a given collection. This metadata includes spatial and temporal information that can assist in querying trajectories.
+
+
+.. figure:: ../../img/wlts/describe_collection.png
+    :alt: WLTS describe_collection operation
+    :width: 680
+    :figclass: align-center
+    :name: wlts:op:describe-collection
+
+    WLTS ``describe_collection`` operation.
+
+
+- ``trajectory``: query the trajectory for a given location and time interval.
+
+
+.. figure:: ../../img/wlts/trajectory.png
+    :alt: WLTS trajectory operation
+    :width: 880
+    :figclass: align-center
+    :name: wlts:op:trajectory
+
+    WLTS ``trajectory`` operation.

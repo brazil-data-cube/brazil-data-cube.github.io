@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Classificação de Séries Temporais &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/time-series-ml/class-ts.html"/>
+
   
 
   
@@ -34,7 +38,6 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -59,7 +62,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -122,6 +125,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -166,6 +173,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -183,7 +192,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -192,10 +201,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="som.html" class="btn btn-neutral float-right" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="som.html" class="btn btn-neutral float-right" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="access-ts.html" class="btn btn-neutral float-left" title="Acesso a Séries Temporais com o sits" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="access-ts.html" class="btn btn-neutral float-left" title="Acesso a Séries Temporais com o sits" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -225,7 +234,7 @@
 <p>Em nosso caso concreto, temos como conjunto <span class="math notranslate nohighlight">\(X\)</span> séries temporais de um determinado intervalo de tempo e atributos espectrais (i.e. bandas e/ou índices espectrais). Por exemplo, séries temporais de NDVI e EVI com 23 observações no tempo, indo de setembro de um ano até agosto do ano seguinte. Quando dizemos que queremos treinar um modelo de machine learning, o que queremos é obter uma regra útil <span class="math notranslate nohighlight">\(f\)</span> que associe as séries temporais de <span class="math notranslate nohighlight">\(X\)</span> às classes de uso e cobertura da terra, elementos do conjunto <span class="math notranslate nohighlight">\(Y\)</span>, como ilustrado na Figura abaixo. Existem vários métodos para isso.</p>
 <div class="align-center figure align-default" id="time-series-ml-class-ts-ml-function">
 <a class="reference internal image-reference" href="../../_images/ml-function.png"><img alt="machine learning function" src="../../_images/ml-function.png" style="width: 280px;" /></a>
-<p class="caption"><span class="caption-number">Figure 41 - </span><span class="caption-text">Classificação de séries temporais usando <em>Machine Learning</em>.</span><a class="headerlink" href="#time-series-ml-class-ts-ml-function" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 44 - </span><span class="caption-text">Classificação de séries temporais usando <em>Machine Learning</em>.</span><a class="headerlink" href="#time-series-ml-class-ts-ml-function" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="interface-comum-e-funcoes-de-machine-learning-do-sits">
@@ -296,15 +305,15 @@
 <div class="section" id="exemplo-com-random-forests">
 <h3>Exemplo com Random Forests<a class="headerlink" href="#exemplo-com-random-forests" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Code snippet 14 - </span><span class="caption-text">Treinando um classificador RF.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Treina um modelo RF com 200 árvores usando as bandas</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 16 - </span><span class="caption-text">Treinando um classificador RF.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Treina um modelo RF com 200 árvores usando as bandas</span>
 <span class="c1"># &#39;ndvi&#39;, &#39;evi&#39;, &#39;nir&#39; e &#39;mir&#39;</span>
 <span class="n">rf1</span> <span class="o">&lt;-</span> <span class="nf">sits_train</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span>
                   <span class="n">ml_method</span> <span class="o">=</span> <span class="nf">sits_rfor</span><span class="p">(</span><span class="n">num_trees</span> <span class="o">=</span> <span class="m">200</span><span class="p">))</span>
@@ -317,24 +326,24 @@
 </div>
 <p>Podemos agora utilizar os modelos treinados para classificar uma série temporal utilizando a função <code class="docutils literal notranslate"><span class="pre">sits_classify()</span></code>. Os resultados podem ser mostrados em formato texto utilizando a função <cite>sits_show_prediction()</cite> ou graficamente utilizando a função <cite>plot()</cite>. Vamos usar a série temporal armazenada na variável <code class="docutils literal notranslate"><span class="pre">ts1</span></code> para realizar esta classificação.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Code snippet 15 - </span><span class="caption-text">Classificação de uma série temporal usando RF.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># rf1: modelo RF bandas &#39;ndvi&#39;, &#39;evi&#39;, &#39;nir&#39; e &#39;mir&#39;</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 17 - </span><span class="caption-text">Classificação de uma série temporal usando RF.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># rf1: modelo RF bandas &#39;ndvi&#39;, &#39;evi&#39;, &#39;nir&#39; e &#39;mir&#39;</span>
 <span class="n">ts_4bands</span> <span class="o">&lt;-</span> <span class="nf">sits_select</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span>
                          <span class="n">bands</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;ndvi&#39;</span><span class="p">,</span> <span class="s">&#39;evi&#39;</span><span class="p">,</span> <span class="s">&#39;nir&#39;</span><span class="p">,</span> <span class="s">&#39;mir&#39;</span><span class="p">))</span>
 
@@ -358,18 +367,18 @@
 <div class="section" id="exemplo-com-deep-learning-mlp">
 <h3>Exemplo com Deep Learning MLP<a class="headerlink" href="#exemplo-com-deep-learning-mlp" title="Permalink to this headline">¶</a></h3>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Code snippet 16 - </span><span class="caption-text">Treinando e classificando com o algoritmo MLP.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Treina um modelo MLP com 5 camadas escondidas, 512 unidades,</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 18 - </span><span class="caption-text">Treinando e classificando com o algoritmo MLP.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Treina um modelo MLP com 5 camadas escondidas, 512 unidades,</span>
 <span class="c1">#  função de ativação &#39;elu&#39;, banda &#39;ndvi&#39;</span>
 <span class="n">dl1</span> <span class="o">&lt;-</span> <span class="nf">sits_train</span><span class="p">(</span><span class="n">samples_ndvi</span><span class="p">,</span>
                   <span class="n">ml_method</span> <span class="o">=</span> <span class="nf">sits_deeplearning</span><span class="p">(</span><span class="n">epochs</span> <span class="o">=</span> <span class="m">200</span><span class="p">))</span>
@@ -406,29 +415,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="som.html" class="btn btn-neutral float-right" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="access-ts.html" class="btn btn-neutral float-left" title="Acesso a Séries Temporais com o sits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="som.html" class="btn btn-neutral float-right" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="access-ts.html" class="btn btn-neutral float-left" title="Acesso a Séries Temporais com o sits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -454,6 +455,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

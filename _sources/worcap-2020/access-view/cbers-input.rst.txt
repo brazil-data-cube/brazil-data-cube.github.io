@@ -42,7 +42,7 @@ Dito isso, vale a pena verificar os seguintes tópicos:
     - :ref:`CB4_64 <cb4_64>`
 
 
-    - :ref:`CB4_64_16D_STK_v1 <cb4_64_16d_stk_v1>`
+    - :ref:`CB4_64_16D_STK <cb4_64_16d_stk>`
 
 
 Referências

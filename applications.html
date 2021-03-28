@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Services and Applications &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -45,7 +47,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="SpatioTemporal Asset Catalog (STAC)" href="applications/stac.html" />
-    <link rel="prev" title="BDC Experiments" href="products/specifications/experiments.html" /> 
+    <link rel="prev" title="BDC Product Access" href="products/specifications/product-access.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -59,7 +61,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -102,6 +104,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Services and Applications</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="applications/stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applications/wtss.html">Web Time Series Services (WTSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications/odc.html">Open Data Cube (ODC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications/wlts.html">Web Land Trajectory Service (WLTS)</a></li>
 </ul>
 </li>
 </ul>
@@ -109,6 +113,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
@@ -154,6 +162,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -165,7 +175,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -174,10 +184,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="applications/stac.html" class="btn btn-neutral float-right" title="SpatioTemporal Asset Catalog (STAC)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="applications/stac.html" class="btn btn-neutral float-right" title="SpatioTemporal Asset Catalog (STAC)" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="products/specifications/experiments.html" class="btn btn-neutral float-left" title="BDC Experiments" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="products/specifications/product-access.html" class="btn btn-neutral float-left" title="BDC Product Access" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -193,6 +203,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="applications/stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="applications/wtss.html">Web Time Series Services (WTSS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications/odc.html">Open Data Cube (ODC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications/wlts.html">Web Land Trajectory Service (WLTS)</a></li>
 </ul>
 </div>
 </div>
@@ -202,29 +214,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="applications/stac.html" class="btn btn-neutral float-right" title="SpatioTemporal Asset Catalog (STAC)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="products/specifications/experiments.html" class="btn btn-neutral float-left" title="BDC Experiments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="applications/stac.html" class="btn btn-neutral float-right" title="SpatioTemporal Asset Catalog (STAC)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="products/specifications/product-access.html" class="btn btn-neutral float-left" title="BDC Product Access" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -250,6 +254,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

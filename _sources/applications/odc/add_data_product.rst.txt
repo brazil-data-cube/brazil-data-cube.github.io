@@ -1,0 +1,80 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+Adding a ODC Data Product
+==========================
+
+With all the infrastructure configured, it is now possible to catalog the data within the ``ODC-Core``. The first step to cataloging is the addition of products in the ``ODC-Core``. To do this, it is necessary to `define the product <https://datacube-core.readthedocs.io/en/latest/ops/product.html>`_. Usually, this step would be done manually, filling several fields in a ``YAML`` file. For the BDC data products were created, the ``stac2odc`` tool, which through `BDC-STAC <https://github.com/brazil-data-cube/bdc-stac>`_ queries, makes the ``YAML`` files automatically.
+
+To use this tool, first access the ``ODC-Core`` container::
+
+    docker exec -it bdc-odc-core /bin/bash
+
+
+Inside the container, execute the commands to download the ``bdc-odc`` repository, where ``stac2odc`` is, and make its installation::
+
+    git clone https://github.com/brazil-data-cube/bdc-odc
+
+    cd bdc-odc/stac2odc
+
+    sudo pip3 install -e .[all]
+
+
+Now, extract the information from a collection that is available in BDC-STAC. For this example the ``CB4_64_16D_STK-1`` collection was selected
+
+.. note::
+
+    The STAC and ODC nomenclatures differ in some points. What STAC calls a collection, the ODC calls a product. Also, STAC items are datasets in the ODC
+
+
+Create a directory to store the ``YAML`` file with the extracted information::
+
+    mkdir -p ~/products/CB4_64_16D_STK_1/datasets
+
+
+Now, using ``stac2odc``, do the extraction of the product settings ``CB4_64_16D_STK-1``. Note that the ``unit``, ``instrument``, and ``type`` options need to be defined by the library user; this happens since, in the ODC, the user is the one who defines the standard of the nomenclatures, and to maintain this flexibility, these options were left open.
+
+.. code-block:: shell
+
+    stac2odc collection2product -c CB4_64_16D_STK-1 \
+                                -o ~/products/CB4_64_16D_STK_1/CB4_64_16D_STK_1.yaml \
+                                --units m \
+                                -p CBERS4 \
+                                --instrument AWFI \
+                                --type eo  \
+                               --access-token BDC_ACCESS_TOKEN
+
+.. note::
+
+    Access to the data, done by the above command, depends on authentication to the Brazil Data Cube project services. Replace the value ``BDC_ACCESS_TOKEN`` with your access key. If you do not have this key, it can be generated through the `BDC Portal <https://brazildatacube.dpi.inpe.br/portal/>`_ .
+
+.. note::
+
+    If you want, you can use the ``--verbose`` option to follow the steps that are being made.
+
+
+After executing the script, you can view the result by going directly to the location indicated in the ``-o`` option of ``stac2odc``.
+
+
+.. code-block:: shell
+
+    cat ~/products/CB4_64_16D_STK_1/CB4_64_16D_STK_1.yaml
+
+
+With the definition made, add the product to the ``ODC-Core`` catalog::
+
+    datacube product add ~/products/CB4_64_16D_STK_1/CB4_64_16D_STK_1.yaml
+
+
+To check if everything is right, list the products available in the ``ODC-Core`` catalog::
+
+    datacube product list
+
+
+The output of the above command should be something like::
+
+    CB4_64_16D_STK_1  This datacube was generated with all available surface reflectance images from CB4_64 cube. The data is provided with 64 meters of spatial resolution, reprojected and cropped to BDC_LG grid, considering a temporal compositing function of 16 days using the best pixel approach (Stack)

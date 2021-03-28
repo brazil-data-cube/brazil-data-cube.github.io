@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2021 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -10,7 +10,20 @@ BDC Grid
 --------
 
 
-BDC tiling system consists in three hierarchical grids generated using an Albers Equal Area projection and SIRGAS 2000 datum. The three grids are generated using the -54 central meridian to generate 6 x 4, 3 x 2 and 1.5 x 1 degree tiles and can be seen in :numref:`Figure %s <products:bdc-grid>`. The grids are named *BDC_LG*, *BDC_MD*, *BDC_SM*, referring to Large, Medium and Small sizes, respectively.
+The Albers Equal-Area Conic is the reference map projection for the BDC tiling system, named BDC Grid. Like other normal conics, the Albers Equal-Area Conic projection has concentric arcs of circles for parallels and equally spaced radii as meridians. The parallels are not equally spaced, but they are farthest apart in the latitudes between the standard parallels and closer together to the north and south. The pole is not the center of the circles, but it is normally an arc itself. Scale along the parallels is too small between the standard parallels and too large beyond them. The scale along the meridians is just the opposite and, in fact, the scale factor along meridians is the reciprocal of the scale factor along the parallels to maintain equal area :cite:`snyder:1987`.
+
+
+BDC Grid includes 1°x1.5°, 2°x3°, and 4°x6° tiles, depending on the spatial resolution and the file size of output images of interest. Sentinel-2/MSI images use 1°x1.5° tiles, Landsat-8/OLI images are accommodated in 2°x3° tiles, and CBERS-4/AWFI images operate in 4°x6° tiles. The rationale behind the BDC Grid tiling system follows the concept illustrated below in :numref:`Figure %s <products:bdc-grid-seed>`. Tile seeds are initially positioned in a way that their upper left corners coincide at the intersection of the equator with the meridian 54° west. With those initial tile seeds defined, other tiles of the same corresponding sizes, always defined by Albers Equal-Area Conic plane coordinates, are automatically generated to entirely cover the cartesian plane of the reference map projection system. For each tile size, upper boundaries perfectly match lower boundaries of tiles above and left boundaries perfectly match right boundaries of tiles on the left. The hierarchical relation between the different BDC Grids can be seen in :numref:`Figure %s <products:bdc-grid>`.
+
+
+.. figure:: ../../img/products/bdc-grid-seed.png
+    :alt: BDC Grid seed
+    :width: 720
+    :figclass: align-center
+    :name: products:bdc-grid-seed
+
+    Tile seeds for BDC Grid.
+
 
 
 .. figure:: ../../img/products/bdc-grid.png
@@ -22,4 +35,10 @@ BDC tiling system consists in three hierarchical grids generated using an Albers
     BDC Grid.
 
 
-Each BDC grid is used to accommodate data according to its images spatial resolution. The *BDC_LG* grid present tiles of approximately 672 x 440 kilometers and is used for CBERS-4 AWFI collections (64m), which implies on images of 10504 x 6865 pixels. The *BDC_MD* grid present tiles of approximately 336 x 220 kilometers and is used for Landsat-8 OLI collections (30m), which implies on images of 11204 x 7324 pixels. The *BDC_SM* grid present tiles of approximately 168 x 110 kilometers and is used on Sentinel-2 MSI collections (10m), which implies on images of 16806 x 10986 pixels.
+The Albers Equal-Area Conic projection parameters follow the cartographic standards defined by Instituto Brasileiro de Geografia e Estatística (IBGE), which is the official civilian mapping agency of Brazil :cite:`franca:2015`. BDC Grid uses parallel 12° south and meridian 54° west as origin and defines two standard parallels at latitudes 2° south and 22° south. Offsets of 5,000,000 meters and 10,000,000 meters are respectively applied to X and Y coordinates at the origin. SIRGAS-2000, the official planimetric datum of Brazil, is the reference geodetic system. In short, the Coordinate Reference System for the BDC Grid can be expressed by:
+
+
+.. math::
+
+    crs: +proj=aea +lat\_0=-12 +lon\_0=-54 +lat\_1=-2 +lat\_2=-22 \\
+    +x\_0=5000000 +y\_0 = 10000000 +ellps=GRS80 +units=m +no\_defs.

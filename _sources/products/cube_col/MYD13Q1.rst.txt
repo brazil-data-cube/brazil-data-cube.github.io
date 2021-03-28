@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2021 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -10,7 +10,7 @@ MYD13Q1
 -------
 
 
-The MYD13Q1 collection product contains AQUA/MODIS Surface Reflectance data at its native spatial resolution (250m). These images are the same that can be found at NASA's Earth Date and USGS's Earth Explorer image catalogs (https://search.earthdata.nasa.gov/search or https://earthexplorer.usgs.gov/).
+The MYD13Q1 collection product contains AQUA/MODIS Surface Reflectance data at its native spatial resolution (250m). These images are the same that can be found at NASA's Earth Date (https://search.earthdata.nasa.gov/search) or USGS's Earth Explorer (https://earthexplorer.usgs.gov/) catalogs.
 
 
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
@@ -32,13 +32,22 @@ The MYD13Q1 collection product contains AQUA/MODIS Surface Reflectance data at i
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
 | 250m_16_days_VI_QUALITY               | quality     | UInt16    | 0          | 65534      | 65535   | 1      | 250                    | 16 days                  |
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| 250m_16_days_view_zenith_angle        |             | Int16     | 0          | 18000      | -10000  | 0.01   | 250                    | 16 days                  |
+| 250m_16_days_view_zenith_angle        | VZA         | Int16     | 0          | 18000      | -10000  | 0.01   | 250                    | 16 days                  |
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| 250m_16_days_sun_zenith_angle         |             | Int16     | 0          | 18000      | -10000  | 0.01   | 250                    | 16 days                  |
+| 250m_16_days_sun_zenith_angle         | SZA         | Int16     | 0          | 18000      | -10000  | 0.01   | 250                    | 16 days                  |
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| 250m_16_days_relative_azimuth_angle   |             | Int16     | -18000     | 18000      | -10000  | 0.01   | 250                    | 16 days                  |
+| 250m_16_days_relative_azimuth_angle   | RZA         | Int16     | -18000     | 18000      | -4000   | 0.01   | 250                    | 16 days                  |
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
 | 250m_16_days_composit_day_of_the_year | quality     | Int16     | 1          | 366        | -1      | 1      | 250                    | 16 days                  |
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
-| 250m_16_days_pixel_reliability        | quality     | Int16     | 0          | 3          | -1      | 1      | 250                    | 16 days                  |
+| 250m_16_days_pixel_reliability        | quality     | Byte      | 0          | 3          | 255     | 1      | 250                    | 16 days                  |
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
+
+
++------------+-----------+-------------+
+| MYD13Q1 Files                        |
++------------+-----------+-------------+
+| Asset Name | Data Type | Description |
++============+===========+=============+
+| thumbnail  | image/png | Quicklook   |
++------------+-----------+-------------+

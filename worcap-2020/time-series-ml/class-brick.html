@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Classificação de bricks e geração de mapas &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/time-series-ml/class-brick.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -122,6 +124,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -166,6 +172,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -183,7 +191,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -192,10 +200,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="accuracy.html" class="btn btn-neutral float-right" title="Estimação de acurácia" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="accuracy.html" class="btn btn-neutral float-right" title="Estimação de acurácia" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="som.html" class="btn btn-neutral float-left" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="som.html" class="btn btn-neutral float-left" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -232,24 +240,24 @@ Eles podem fornecer séries temporais que geralmente são geradas por um process
 <h3>Exemplo acesso serviço SATVeg<a class="headerlink" href="#exemplo-acesso-servico-satveg" title="Permalink to this headline">¶</a></h3>
 <p>O SATVeg é um serviço de séries temporais desenvolvido pela Embrapa Informática Agropecuária. Atualmente o serviço fornece séries temporais dos produtos MOD13Q1 e MYD13Q1 do sensor MODIS. O acesso pode ser realizado como mostrado no exemplo a seguir:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Code snippet 17 - </span><span class="caption-text">Acesso ao serviço SATVeg da Embrapa.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Cria referências para diferentes bases de séries temporais</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 19 - </span><span class="caption-text">Acesso ao serviço SATVeg da Embrapa.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Cria referências para diferentes bases de séries temporais</span>
 <span class="n">terra</span> <span class="o">&lt;-</span> <span class="nf">sits_cube</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;SATVEG&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;terra&quot;</span><span class="p">)</span>
 <span class="n">aqua</span> <span class="o">&lt;-</span> <span class="nf">sits_cube</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;SATVEG&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;aqua&quot;</span><span class="p">)</span>
 <span class="n">combined</span> <span class="o">&lt;-</span> <span class="nf">sits_cube</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&quot;SATVEG&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;comb&quot;</span><span class="p">)</span>
@@ -278,22 +286,22 @@ Eles podem fornecer séries temporais que geralmente são geradas por um process
 Além disso, os bricks precisam de um arquivo texto que indique as datas correspondentes às suas camadas. Com essas informações, é possível acessar um <em>brick</em> a partir do <code class="docutils literal notranslate"><span class="pre">sits</span></code> e gerar mapas de uso e cobertura da terra.</p>
 <p>No ambiente do Kaggle, disponibilizamos dois <em>bricks</em> sobre o município de Sinop-MT, um com os valores de NDVI e o outro com os de EVI, ambos do mesmo ano-calendário. O código a seguir cria a referência para esses bricks:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Code snippet 18 - </span><span class="caption-text">Acesso aos bricks de Sinop-MT.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Carrega timeline do arquivo</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 20 - </span><span class="caption-text">Acesso aos bricks de Sinop-MT.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Carrega timeline do arquivo</span>
 <span class="n">timeline</span> <span class="o">&lt;-</span> <span class="nf">readLines</span><span class="p">(</span><span class="s">&quot;../input/sits-dataset/timeline.txt&quot;</span><span class="p">)</span>
 
 <span class="c1"># Informa o caminho dos arquivos GeoTIF</span>
@@ -313,18 +321,18 @@ Além disso, os bricks precisam de um arquivo texto que indique as datas corresp
 </div>
 <p>Como nos exemplos anteriores, este cubo provê acesso às séries temporais usando a função <code class="docutils literal notranslate"><span class="pre">sits_get_data()</span></code>. No entanto, diferentemente dos outros cubos, este pode ser usado com a função <code class="docutils literal notranslate"><span class="pre">sits_classify()</span></code> para ser classificado e gerar um mapa de probabilidades de classes com a mesma extensão espacial.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Code snippet 19 - </span><span class="caption-text">Classificação dos bricks de Sinop-MT.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Cria um novo conjunto de amostras apenas com as bandas &#39;ndvi&#39; e &#39;evi&#39;</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 21 - </span><span class="caption-text">Classificação dos bricks de Sinop-MT.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Cria um novo conjunto de amostras apenas com as bandas &#39;ndvi&#39; e &#39;evi&#39;</span>
 <span class="n">samples_2bands</span> <span class="o">&lt;-</span> <span class="nf">sits_select</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">bands</span> <span class="o">=</span> <span class="nf">sits_bands</span><span class="p">(</span><span class="n">sinop</span><span class="p">))</span>
 
 <span class="c1"># Treina um modelo RF com 200 árvores</span>
@@ -340,12 +348,12 @@ Além disso, os bricks precisam de um arquivo texto que indique as datas corresp
 </div>
 <p>A última etapa para gerar um mapa de uso e cobertura da terra é converter as probabilidades em classes discretas. A estratégia mais simples é escolher a classe com a maior probabilidade usando a função <code class="docutils literal notranslate"><span class="pre">sits_label_classification()</span></code>. Esta função permite também gerar mapas espacialmente suavizados a partir de várias estratégias.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Code snippet 20 - </span><span class="caption-text">Mapa de uso e cobertura da terra de Sinop-MT.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Gera mapa de uso e cobertura da terra</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 22 - </span><span class="caption-text">Mapa de uso e cobertura da terra de Sinop-MT.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Gera mapa de uso e cobertura da terra</span>
 <span class="n">maps</span> <span class="o">&lt;-</span> <span class="nf">sits_label_classification</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
 
 <span class="c1"># Mostra mapa de uso e cobertura da terra</span>
@@ -365,29 +373,21 @@ Além disso, os bricks precisam de um arquivo texto que indique as datas corresp
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="accuracy.html" class="btn btn-neutral float-right" title="Estimação de acurácia" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="som.html" class="btn btn-neutral float-left" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="accuracy.html" class="btn btn-neutral float-right" title="Estimação de acurácia" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="som.html" class="btn btn-neutral float-left" title="Avaliação da qualidade das amostras usando SOM clustering" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -413,6 +413,7 @@ Além disso, os bricks precisam de um arquivo texto que indique as datas corresp
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Introdução &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/intro-geo/introducao.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -118,6 +120,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -162,6 +168,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -177,7 +185,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -186,10 +194,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="gis.html" class="btn btn-neutral float-right" title="Sistemas de Informação Geográfica (SIG)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gis.html" class="btn btn-neutral float-right" title="Sistemas de Informação Geográfica (SIG)" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="../intro-geo.html" class="btn btn-neutral float-left" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../intro-geo.html" class="btn btn-neutral float-left" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -207,37 +215,37 @@
 <p>Para representar os dados dessas duas formas de conceitualização do espaço geográfico, em geral, utilizamos a <strong>representação matricial</strong> para fenômenos modelados como campos contínuos, e a <strong>representação vetorial</strong> para entidades discretas.</p>
 <p>As entidades codificadas usando dados vetoriais são usualmente chamadas de <strong>feições</strong> (ou <em>features</em>). Nesse contexto, uma feição pode ser representada computacionalmente por diversas características, as quais chamamos de <strong>atributos da feição</strong>. Um <strong>atributo</strong> possui um nome, sendo associado a um determinado <strong>tipo de dado</strong>, como um número, uma sequência de caracteres (texto), ou uma data.</p>
 <p>Além dos atributos alfanuméricos, uma feição é descrita por um ou mais <strong>atributos geométricos</strong>, associados a um tipo de dado geométrico. Um <strong>tipo de dado geométrico</strong> é capaz de representar elementos geométricos primitivos tais como pontos, linhas e polígonos ou coleções desses elementos.</p>
-<p>A <a class="reference internal" href="#tipos-geometricos-exemplos"><span class="std std-numref">Tabela 2</span></a> apresenta alguns tipos de objetos geográficos representados por feições com representações geométricas de pontos (hidrelétricas e termoelétricas), linhas (logradouros) e polígonos (municípios brasileiros).</p>
-<table class="colwidths-given docutils align-center" id="tipos-geometricos-exemplos" style="width: 640">
-<caption><span class="caption-number">Table 2 - </span><span class="caption-text">Representação de feições geográficas através de objetos geométricos.</span><a class="headerlink" href="#tipos-geometricos-exemplos" title="Permalink to this table">¶</a></caption>
+<p>A <a class="reference internal" href="#tipos-geometricos-exemplos"><span class="std std-numref">Tabela 1</span></a> apresenta alguns tipos de objetos geográficos representados por feições com representações geométricas de pontos (hidrelétricas e termoelétricas), linhas (logradouros) e polígonos (municípios brasileiros).</p>
+<table class="colwidths-given styled-table docutils align-center" id="tipos-geometricos-exemplos" style="width: 640">
+<caption><span class="caption-number">Table 1 - </span><span class="caption-text">Representação de feições geográficas através de objetos geométricos.</span><a class="headerlink" href="#tipos-geometricos-exemplos" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Hidrelétricas/Termoelétricas</p></th>
-<th class="head"><p>Logradouros</p></th>
-<th class="head"><p>Municípios</p></th>
+<tr class="row-odd"><th class="left-align head"><p>Hidrelétricas/Termoelétricas</p></th>
+<th class="left-align head"><p>Logradouros</p></th>
+<th class="left-align head"><p>Municípios</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><img alt="geom-pts" src="../../_images/geom-pts.png" /></p></td>
-<td><p><img alt="geom-lins" src="../../_images/geom-lns.png" /></p></td>
-<td><p><img alt="geom-pol" src="../../_images/geom-pols.png" /></p></td>
+<tr class="row-even"><td class="left-align"><p><img alt="geom-pts" src="../../_images/geom-pts.png" /></p></td>
+<td class="left-align"><p><img alt="geom-lins" src="../../_images/geom-lns.png" /></p></td>
+<td class="left-align"><p><img alt="geom-pol" src="../../_images/geom-pols.png" /></p></td>
 </tr>
 </tbody>
 </table>
-<p>A <a class="reference internal" href="#tipos-geometricos-feature-collection"><span class="std std-numref">Figura 12</span></a> ilustra o esquema de uma coleção de feições, onde podemos observar os atributos alfanuméricos e geométricos.</p>
+<p>A <a class="reference internal" href="#tipos-geometricos-feature-collection"><span class="std std-numref">Figura 17</span></a> ilustra o esquema de uma coleção de feições, onde podemos observar os atributos alfanuméricos e geométricos.</p>
 <div class="align-center figure align-default" id="tipos-geometricos-feature-collection">
 <a class="reference internal image-reference" href="../../_images/feature-collection-uf.png"><img alt="Coleção de Feições (Feature Collection)" src="../../_images/feature-collection-uf.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 12 - </span><span class="caption-text">Coleção de Feições (<em>Feature Collection</em>).</span><a class="headerlink" href="#tipos-geometricos-feature-collection" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 17 - </span><span class="caption-text">Coleção de Feições (<em>Feature Collection</em>).</span><a class="headerlink" href="#tipos-geometricos-feature-collection" title="Permalink to this image">¶</a></p>
 </div>
 <p>As entidades codificados como dados matriciais, também chamadas de <strong>raster</strong> ou <strong>imagens</strong>, formam um plano subdividido em células de tamanho fixo, frequentemente chamadas de <strong>pixels</strong>. Para cada par de coordenada (x, y) nesse plano há um valor de intensidade, por vezes chamado nível de cinza, que indica o valor de alguma medida para aquele ponto.</p>
-<p>A <a class="reference internal" href="#tipo-raster-img-cbers4"><span class="std std-numref">Figura 13</span></a> apresenta uma imagem do satélite CBERS-4 sensor WFI, um dado matricial em que cada célula, representa uma área de 64 metros da superfície terrestre e o valor de intensidade cada célula indica uma aproximação da cor refletida por essa superfície.</p>
+<p>A <a class="reference internal" href="#tipo-raster-img-cbers4"><span class="std std-numref">Figura 18</span></a> apresenta uma imagem do satélite CBERS-4 sensor WFI, um dado matricial em que cada célula, representa uma área de 64 metros da superfície terrestre e o valor de intensidade cada célula indica uma aproximação da cor refletida por essa superfície.</p>
 <div class="align-center figure align-default" id="tipo-raster-img-cbers4">
 <a class="reference internal image-reference" href="../../_images/imagem-cbers4.png"><img alt="Imagem do satélite CBERS-4 sensor WFI" src="../../_images/imagem-cbers4.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 13 - </span><span class="caption-text">Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial, em composição colorida.</span><a class="headerlink" href="#tipo-raster-img-cbers4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial, em composição colorida.</span><a class="headerlink" href="#tipo-raster-img-cbers4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Ambos os formatos, vetorial e matricial, apresentam vantagens e desvantagens quando comparados entre sí. Dados matriciais por exemplo, apresentam uma estrutura bastante simples, uma grade regular com valores para cada célula. Entretanto, essa codificação assume que perdas de informação no espaço são aceitáveis, uma vez que cada célula é uma representação generalizada de uma área com variações no espaço real. Já os dados em formato vetorial apresentam a vantagem de utilizarem menor espaço de armazenamento, além de dependerem da resolução em que o dado foi gerado, o que possibilita utilizar o dado em diferentes escalas com menor distorção. Entretanto, dados vetoriais são mais complexos para manipular.</p>
 </div>
@@ -247,29 +255,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="gis.html" class="btn btn-neutral float-right" title="Sistemas de Informação Geográfica (SIG)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../intro-geo.html" class="btn btn-neutral float-left" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="gis.html" class="btn btn-neutral float-right" title="Sistemas de Informação Geográfica (SIG)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../intro-geo.html" class="btn btn-neutral float-left" title="Introdução a Geoinformática e Sistemas de Informação Geográfica" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -295,6 +295,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

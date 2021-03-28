@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Web Time Series Services (WTSS) &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/applications/wtss.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -112,6 +114,8 @@
 <li class="toctree-l3"><a class="reference internal" href="wtss/general.html#references">References</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="odc.html">Open Data Cube (ODC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wlts.html">Web Land Trajectory Service (WLTS)</a></li>
 </ul>
 </li>
 </ul>
@@ -119,6 +123,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
@@ -164,6 +172,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -177,7 +187,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -186,10 +196,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -201,10 +211,10 @@
   <div class="section" id="web-time-series-services-wtss">
 <h1>Web Time Series Services (WTSS)<a class="headerlink" href="#web-time-series-services-wtss" title="Permalink to this headline">¶</a></h1>
 <p><strong>W</strong>eb <strong>T</strong>ime <strong>S</strong>eries <strong>S</strong>ervice (WTSS) is a lightweight web service for handling time series data from remote sensing imagery. Given a location and a time interval you can retrieve the according time series.</p>
-<p>In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (<a class="reference internal" href="#wtss-coverage"><span class="std std-numref">Figure 6</span></a>).</p>
+<p>In WTSS a coverage is a three dimensional array associated to spatial and temporal reference systems (<a class="reference internal" href="#wtss-coverage"><span class="std std-numref">Figure 7</span></a>).</p>
 <div class="align-center figure align-default" id="wtss-coverage">
 <a class="reference internal image-reference" href="../_images/image-time-series.png"><img alt="Coverage as a three dimensional array" src="../_images/image-time-series.png" style="width: 240px;" /></a>
-<p class="caption"><span class="caption-number">Figure 6 - </span><span class="caption-text">A coverage as a three dimensional array.</span><a class="headerlink" href="#wtss-coverage" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 7 - </span><span class="caption-text">A coverage as a three dimensional array.</span><a class="headerlink" href="#wtss-coverage" title="Permalink to this image">¶</a></p>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
@@ -225,29 +235,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="wtss/retrieving_ts.html" class="btn btn-neutral float-right" title="Retrieving a Time Series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="stac/general.html" class="btn btn-neutral float-left" title="Python Client Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -273,6 +275,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

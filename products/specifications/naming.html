@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>BDC Naming &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/products/specifications/naming.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -108,7 +110,6 @@
 <li class="toctree-l3"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Naming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
-<li class="toctree-l3"><a class="reference internal" href="experiments.html">BDC Experiments</a></li>
 </ul>
 </li>
 </ul>
@@ -119,6 +120,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
 </ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
@@ -164,6 +169,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -179,7 +186,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -188,10 +195,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="product-access.html" class="btn btn-neutral float-right" title="BDC Product Access" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="product-access.html" class="btn btn-neutral float-right" title="BDC Product Access" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="bands/PROVENANCE.html" class="btn btn-neutral float-left" title="PROVENANCE" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="bands/PROVENANCE.html" class="btn btn-neutral float-left" title="PROVENANCE" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -205,26 +212,26 @@
 <div class="section" id="data-cube-collection-naming">
 <span id="dc-collection-naming"></span><h2>Data Cube Collection Naming<a class="headerlink" href="#data-cube-collection-naming" title="Permalink to this headline">¶</a></h2>
 <p>Each BDC Data Cube Collection is named following the convention:</p>
-<p>&lt;Satellite Sensor Alias&gt;_&lt;Spatial Resolution&gt;_&lt;Time Step&gt;*_&lt;Temporal Compositing Function&gt;*-&lt;Version&gt;</p>
+<p>&lt;Satellite Sensor Alias&gt;_&lt;Spatial Resolution&gt;_&lt;Time Step&gt;*_&lt;Temporal Compositing Function&gt;</p>
 <p><strong>Satellite Sensor Alias</strong> is an alias to an image collection satellite e. g. S2, LC8, C4, representing Sentinel-2, Landsat-8 and CBERS-4, respectively. In cases where multiple image collections are used to build a Data Cube Collection, hifen is used to separate then in alphabetical order e. g. LC8-S2;</p>
 <p><strong>Spatial Resolution</strong> is the spatial resolution;</p>
 <p><strong>Time Step</strong> only is required when the data cube is time-composed. The Time Step is represented in naming by an integer followed by a capital letter, which can be <em>D</em>, <em>M</em> or <em>Y</em>, representing day, month and year, respectively;</p>
 <p><strong>Temporal Compositing Function</strong> only is required when the data cube is time-composed. The Temporal Temporal Compositing Function in naming is described as three capital letters e. g. AVG, MED, STK, which represents average, median and stack, respectively.</p>
-<p><strong>Version</strong> indicates de product version.</p>
-<p>Examples of Data Cube names are: C4_64_v001, C4_64_16D_STK_v001, LC8_30_v001, LC8_30_16D_STK_v001, S2_10_v001 and S2_10_16D_STK_v001.</p>
+<p>Examples of Data Cube names are: C4_64, C4_64_16D_STK, LC8_30, LC8_30_16D_STK, S2_10 and S2_10_16D_STK.</p>
 </div>
 <div class="section" id="data-cube-collection-file-naming">
 <h2>Data Cube Collection File Naming<a class="headerlink" href="#data-cube-collection-file-naming" title="Permalink to this headline">¶</a></h2>
-<p>&lt;Data Cube Collection&gt;_&lt;Tile&gt;_&lt;Start Period&gt;_&lt;End Period&gt;_&lt;Band&gt;.tif</p>
+<p>&lt;Data Cube Collection&gt;_&lt;Version&gt;_&lt;Tile&gt;_&lt;Start Period&gt;_&lt;End Period&gt;_&lt;Band&gt;.tif</p>
 <ul class="simple">
 <li><p><strong>Data Cube Collection</strong> is the BDC data cube collection described in <a class="reference internal" href="#dc-collection-naming"><span class="std std-ref">Data Cube Collection Naming</span></a>;</p></li>
+<li><p><strong>Version</strong> is the version of the Data Cube;</p></li>
 <li><p><strong>Tile</strong> is the BDC grid tile in which the image is contained;</p></li>
 <li><p><strong>Start Period</strong> is written as year-month-day and refers the first date of the compositing period;</p></li>
 <li><p><strong>End Period</strong> is also written as year-month-day and refers the end date of the compositing period;</p></li>
 <li><p><strong>Band</strong> indicates the file band</p></li>
 </ul>
-<p>.tif indicate the file format, Geotiff in this case.</p>
-<p>The file name “CB4_64_16D_STK_v001_083101_2019-01-01_2019-01-16_B14.tif”, for instance, represents a cube composed by images from the C4_64_16D_STK_v001 data cube collection (CBERS-4 AWFI at a spatial resolution of 64m, using the stack time compositing function each 16 days, version 1), from the BDC Grid tile 083101, ranging from January 01, 2019 to January 16, 2019, specifically the green band image (B14).</p>
+<p>.tif indicate the file format, Cloud Optimized Geotiff (COG) in this case.</p>
+<p>The file name “CB4_64_16D_STK_v001_083101_2019-01-01_2019-01-16_B14.tif”, for instance, represents a cube composed by images from the C4_64_16D_STK data cube collection (CBERS-4 AWFI at a spatial resolution of 64m, using the stack time compositing function each 16 days), version 1, from the BDC Grid tile 083101, ranging from January 01, 2019 to January 16, 2019, specifically the green band image (B14).</p>
 </div>
 </div>
 
@@ -233,29 +240,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="product-access.html" class="btn btn-neutral float-right" title="BDC Product Access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="bands/PROVENANCE.html" class="btn btn-neutral float-left" title="PROVENANCE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="product-access.html" class="btn btn-neutral float-right" title="BDC Product Access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bands/PROVENANCE.html" class="btn btn-neutral float-left" title="PROVENANCE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -281,6 +280,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Sistemas de Informação Geográfica (SIG) &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/intro-geo/gis.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -118,6 +120,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -162,6 +168,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -177,7 +185,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -186,10 +194,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="bdgeo.html" class="btn btn-neutral float-right" title="Bancos de Dados Geográficos com o PostGIS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="bdgeo.html" class="btn btn-neutral float-right" title="Bancos de Dados Geográficos com o PostGIS" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="introducao.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="introducao.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -202,21 +210,21 @@
 <h1>Sistemas de Informação Geográfica (SIG)<a class="headerlink" href="#sistemas-de-informacao-geografica-sig" title="Permalink to this headline">¶</a></h1>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-foss4g">
 <a class="reference internal image-reference" href="../../_images/foss4g.jpg"><img alt="Free and Open Source Software for GIS" src="../../_images/foss4g.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 14 - </span><span class="caption-text">Free and Open Source Software for GIS (FOSS4G).</span><a class="headerlink" href="#worcap-2020-intro-geo-foss4g" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 19 - </span><span class="caption-text">Free and Open Source Software for GIS (FOSS4G).</span><a class="headerlink" href="#worcap-2020-intro-geo-foss4g" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="aplicativos-desktop">
 <h2>Aplicativos Desktop<a class="headerlink" href="#aplicativos-desktop" title="Permalink to this headline">¶</a></h2>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-qgis">
 <a class="reference internal image-reference" href="../../_images/qgis.png"><img alt="QGIS" src="../../_images/qgis.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 15 - </span><span class="caption-text">QGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 20 - </span><span class="caption-text">QGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis" title="Permalink to this image">¶</a></p>
 </div>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-gvsig">
 <a class="reference internal image-reference" href="../../_images/gvsig.png"><img alt="gvSIG" src="../../_images/gvsig.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 16 - </span><span class="caption-text">gvSIG.</span><a class="headerlink" href="#worcap-2020-intro-geo-gvsig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 21 - </span><span class="caption-text">gvSIG.</span><a class="headerlink" href="#worcap-2020-intro-geo-gvsig" title="Permalink to this image">¶</a></p>
 </div>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-tview">
 <a class="reference internal image-reference" href="../../_images/tview.png"><img alt="TerraView" src="../../_images/tview.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 17 - </span><span class="caption-text">TerraView.</span><a class="headerlink" href="#worcap-2020-intro-geo-tview" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 22 - </span><span class="caption-text">TerraView.</span><a class="headerlink" href="#worcap-2020-intro-geo-tview" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="atividades-com-o-qgis">
@@ -227,13 +235,13 @@
 <p>Estrutura de um arquivo ESRI Shapefile:</p>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-shapefile">
 <a class="reference internal image-reference" href="../../_images/esri-shapefile.png"><img alt="ESRI Shapefile" src="../../_images/esri-shapefile.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">Estrutura de um arquivo <code class="docutils literal notranslate"><span class="pre">ESRI</span> <span class="pre">Shapefile</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-shapefile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 23 - </span><span class="caption-text">Estrutura de um arquivo <code class="docutils literal notranslate"><span class="pre">ESRI</span> <span class="pre">Shapefile</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-shapefile" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<p>Ao carregar o arquivo <code class="docutils literal notranslate"><span class="pre">municipios_2018.shp</span></code>, você deverá ver um mapa como o apresentado na <a class="reference internal" href="#worcap-2020-intro-geo-qgis-camada-municipios"><span class="std std-numref">Figura 19</span></a>.</p>
+<p>Ao carregar o arquivo <code class="docutils literal notranslate"><span class="pre">municipios_2018.shp</span></code>, você deverá ver um mapa como o apresentado na <a class="reference internal" href="#worcap-2020-intro-geo-qgis-camada-municipios"><span class="std std-numref">Figura 24</span></a>.</p>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-qgis-camada-municipios">
 <a class="reference internal image-reference" href="../../_images/qgis-camada-municipios.png"><img alt="Carregando a camada de municípios." src="../../_images/qgis-camada-municipios.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 19 - </span><span class="caption-text">Carregando a camada de municípios.</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis-camada-municipios" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 24 - </span><span class="caption-text">Carregando a camada de municípios.</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis-camada-municipios" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -246,10 +254,10 @@
 </ul>
 </div>
 <p><strong>2.</strong> Carregar o arquivo com <a class="reference internal" href="../getting-started/dados.html#shp-focos-dados"><span class="std std-ref">ocorrências de fogo na vegetação</span></a>.</p>
-<p>Ao carregar o arquivo <code class="docutils literal notranslate"><span class="pre">focos_2020.shp</span></code>, você deverá ver um mapa como o apresentado na <a class="reference internal" href="#worcap-2020-intro-geo-qgis-vector-layers"><span class="std std-numref">Figura 20</span></a>.</p>
+<p>Ao carregar o arquivo <code class="docutils literal notranslate"><span class="pre">focos_2020.shp</span></code>, você deverá ver um mapa como o apresentado na <a class="reference internal" href="#worcap-2020-intro-geo-qgis-vector-layers"><span class="std std-numref">Figura 25</span></a>.</p>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-qgis-vector-layers">
 <a class="reference internal image-reference" href="../../_images/qgis-vector-layers.png"><img alt="Camadas vetoriais no QGIS" src="../../_images/qgis-vector-layers.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 20 - </span><span class="caption-text">Camadas vetoriais no QGIS: focos (pontos) e municípios (polígonos).</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis-vector-layers" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 25 - </span><span class="caption-text">Camadas vetoriais no QGIS: focos (pontos) e municípios (polígonos).</span><a class="headerlink" href="#worcap-2020-intro-geo-qgis-vector-layers" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -267,14 +275,14 @@
 </div>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-raster-layers">
 <a class="reference internal image-reference" href="../../_images/raster-layers.png"><img alt="Camadas matriciais no QGIS" src="../../_images/raster-layers.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 21 - </span><span class="caption-text">Camadas matriciais no QGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-raster-layers" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 26 - </span><span class="caption-text">Camadas matriciais no QGIS.</span><a class="headerlink" href="#worcap-2020-intro-geo-raster-layers" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Como obter a composição colorida mostrada acima?</p>
 <div class="align-center figure align-default" id="worcap-2020-intro-geo-geotiff">
 <a class="reference internal image-reference" href="../../_images/rgb_raster.png"><img alt="Composição colorida das imagens GeoTIFF" src="../../_images/rgb_raster.png" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Figure 22 - </span><span class="caption-text">Composição colorida das imagens <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-geotiff" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 27 - </span><span class="caption-text">Composição colorida das imagens <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code>.</span><a class="headerlink" href="#worcap-2020-intro-geo-geotiff" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <p><strong>4.</strong> Defina transparência para a camada vetorial dos municípios.</p>
@@ -301,29 +309,21 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="bdgeo.html" class="btn btn-neutral float-right" title="Bancos de Dados Geográficos com o PostGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="introducao.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="bdgeo.html" class="btn btn-neutral float-right" title="Bancos de Dados Geográficos com o PostGIS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introducao.html" class="btn btn-neutral float-left" title="Introdução" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -349,6 +349,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 

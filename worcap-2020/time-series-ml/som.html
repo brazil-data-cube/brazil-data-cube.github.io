@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Avaliação da qualidade das amostras usando SOM clustering &mdash; Brazil Data Cube</title>
   
@@ -14,14 +14,18 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   
+
   
   
-    <link rel="canonical" href="https://brazil-data-cube.github.io/worcap-2020/time-series-ml/som.html"/>
+
   
 
   
@@ -34,10 +38,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -59,7 +61,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Brazil Data Cube
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
           
 
           
@@ -122,6 +124,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
 <p class="caption"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
@@ -166,6 +172,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -183,7 +191,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -192,10 +200,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="class-brick.html" class="btn btn-neutral float-right" title="Classificação de bricks e geração de mapas" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="class-brick.html" class="btn btn-neutral float-right" title="Classificação de bricks e geração de mapas" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="class-ts.html" class="btn btn-neutral float-left" title="Classificação de Séries Temporais" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="class-ts.html" class="btn btn-neutral float-left" title="Classificação de Séries Temporais" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -229,25 +237,25 @@ um conjunto de dados de séries temporais de imagem de satélite utilizando como
 <div class="section" id="efeitos-de-ruido-de-classe-na-classificacao">
 <h2>Efeitos de ruído de classe na classificação<a class="headerlink" href="#efeitos-de-ruido-de-classe-na-classificacao" title="Permalink to this headline">¶</a></h2>
 <p>Para ilustrar os efeitos que um conjunto de amostras com qualidade ruim  pode causar na geração de um modelo de aprendizado de máquina,
-apresentamos o exemplo da <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 43</span></a>, onde a  classificação de uma série temporal de uso e cobertura da terra ao longo de 16 anos foi realizada.
+apresentamos o exemplo da <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 45</span></a>, onde a  classificação de uma série temporal de uso e cobertura da terra ao longo de 16 anos foi realizada.
 O conjunto de dados utilizado para treinamento do modelo random forest possui amostras que foram rotuladas de forma errônea.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-noisy">
 <a class="reference internal image-reference" href="../../_images/noisy.png"><img alt="Noisy" src="../../_images/noisy.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 43 - </span><span class="caption-text">Resultado de uma classificação ruim de uma série temporal utilizando o método random forest.</span><a class="headerlink" href="#time-series-ml-som-noisy" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 45 - </span><span class="caption-text">Resultado de uma classificação ruim de uma série temporal utilizando o método random forest.</span><a class="headerlink" href="#time-series-ml-som-noisy" title="Permalink to this image">¶</a></p>
 </div>
-<p>Na classificação gerada pelo modelo random forest, na <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 43</span></a>, uma inconsistência é apresentada durante a trajetória da classificação apresentando o anos de 2007 e 2008 classificados como floresta logo em seguida de pasto.
+<p>Na classificação gerada pelo modelo random forest, na <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 45</span></a>, uma inconsistência é apresentada durante a trajetória da classificação apresentando o anos de 2007 e 2008 classificados como floresta logo em seguida de pasto.
 Dado que em um ano uma floresta não se regenera, podemos notar a presença de um erro na classificação da série temporal para estes anos. Isto se deve ao fato de possuir amostras que deveriam ter sido rotuladas como pasto ou alum tipo de agricultura, no entanto elas foram rotuladas como floresta.</p>
-<p>A <a class="reference internal" href="#time-series-ml-som-good"><span class="std std-numref">Figura 44</span></a> apresenta a classificação da mesma série temporal apresentada anteriormente, porém houve um pré-processamento no conjunto de dados utilizado para treinar o modelo do random forest  para a remoção de ruídos de clases.</p>
+<p>A <a class="reference internal" href="#time-series-ml-som-good"><span class="std std-numref">Figura 46</span></a> apresenta a classificação da mesma série temporal apresentada anteriormente, porém houve um pré-processamento no conjunto de dados utilizado para treinar o modelo do random forest  para a remoção de ruídos de clases.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-good">
 <a class="reference internal image-reference" href="../../_images/good.png"><img alt="good" src="../../_images/good.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 44 - </span><span class="caption-text">Classificação da mesma série temporal após a remoção de amostras ruidosas.</span><a class="headerlink" href="#time-series-ml-som-good" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 46 - </span><span class="caption-text">Classificação da mesma série temporal após a remoção de amostras ruidosas.</span><a class="headerlink" href="#time-series-ml-som-good" title="Permalink to this image">¶</a></p>
 </div>
 <p>O metódo SOM no contexto do projeto Brazil Data Cube é utilizado  para avaliar a qualidade e a remoção de cada uma das amostras do conjunto de dados de treinamento.</p>
 </div>
 <div class="section" id="metodo-som-para-identificacao-de-ruido-de-classe">
 <h2>Método SOM para identificação de ruído de classe<a class="headerlink" href="#metodo-som-para-identificacao-de-ruido-de-classe" title="Permalink to this headline">¶</a></h2>
 <p>O método SOM é uma rede neural não supervisionada que mapeia um conjunto de dados de alta dimensionalidade em um de baixa dimensionalidade, geralmente uma grade bi-dimensional.
-A <a class="reference internal" href="#time-series-ml-som-redesom"><span class="std std-numref">Figura 45</span></a> apresenta a estrutura da rede SOM. O espaço de saída da rede é composta por unidades chamadas neurônios.
+A <a class="reference internal" href="#time-series-ml-som-redesom"><span class="std std-numref">Figura 47</span></a> apresenta a estrutura da rede SOM. O espaço de saída da rede é composta por unidades chamadas neurônios.
 Cada neurônio possui um vetor de pesos associados a ele, onde cada vetor de peso possui a mesma dimensão que o dado de entrada.
 Geralmente, a inicialização do método pode ser realizada de forma aleatória e então a rede é treinada através de aprendizado competitivo.
 A ideia principal do SOM é calcular a distância entre cada amostra do conjunto de dados e todos os neurônios afim/a fim de encontrar o neurônio que possui a menor distância.
@@ -255,7 +263,7 @@ O neurônio que possui a menor distância é chamado de melhor unidade de medida
 similaridade da vizinhança dos neurônios prevaleça <a class="reference internal" href="#kohonen-2001"><span class="std std-ref">Kohonen et al. (2001)</span></a>.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-redesom">
 <a class="reference internal image-reference" href="../../_images/redesom.png"><img alt="redesom" src="../../_images/redesom.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 45 - </span><span class="caption-text">Estrutura da rede SOM. Fonte: <a class="reference internal" href="#santos-2020"><span class="std std-ref">(Santos et al, 2020)</span></a>.</span><a class="headerlink" href="#time-series-ml-som-redesom" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 47 - </span><span class="caption-text">Estrutura da rede SOM. Fonte: <a class="reference internal" href="#santos-2020"><span class="std std-ref">(Santos et al, 2020)</span></a>.</span><a class="headerlink" href="#time-series-ml-som-redesom" title="Permalink to this image">¶</a></p>
 </div>
 <p>Após o treinamento da rede SOM, cada amostra está associada a neurônio, portanto os neurônios podem ser rotulados a partir da técnica de voto majoritário
 Assim o mapa SOM é usado para avaliar a qualidade de cada elemento do conjunto de treinamento.
@@ -265,11 +273,11 @@ Neurônios heterogêneos, aqueles com duas ou mais classes com probabilidade sig
 Além disso consideramos que a probabilidade da classe de neurônios (probabilidade condicional) não é a melhor medida de ruído de classe porque os vizinhos
 de cada neurônio de um mapa SOM fornecem informações adicionais sobre a variabilidade intraclasse e interclasse.
 Portanto, aplicamos a inferência bayesiana às vizinhanças do mapa SOM para melhorar a avaliação da qualidade de cada série temporal, chamamos a probabilidade que sofre influência
-dos neurônios vizinhos de probabilidade posterior. Na <a class="reference internal" href="#time-series-ml-som-sombayes"><span class="std std-numref">Figura 46</span></a> o neurônio 3 pertence a Classe 2 porque 75% das amostras que foram associadas a este neurônio
+dos neurônios vizinhos de probabilidade posterior. Na <a class="reference internal" href="#time-series-ml-som-sombayes"><span class="std std-numref">Figura 48</span></a> o neurônio 3 pertence a Classe 2 porque 75% das amostras que foram associadas a este neurônio
 pertecem a Classe 2. No entanto, todos os neurônios vizinhos pertecem a Classe 1, isto influência na confiabilidade das amostras associadas ao neurônio 3, fazendo com que a probabilidade posterior seja menor que condicional.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-sombayes">
 <a class="reference internal image-reference" href="../../_images/sombayes.png"><img alt="sombayes" src="../../_images/sombayes.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 46 - </span><span class="caption-text">Aplicando a inferência bayesiana no neurônio 3</span><a class="headerlink" href="#time-series-ml-som-sombayes" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 48 - </span><span class="caption-text">Aplicando a inferência bayesiana no neurônio 3</span><a class="headerlink" href="#time-series-ml-som-sombayes" title="Permalink to this image">¶</a></p>
 </div>
 <p>A tabela abaixo apresenta um exemplo da saída do método de qualidade de amostras.
 As probabilidades condicional e posterior indicam o nível de confiabilidade delas realmente pertecerem a classe pasto dado o neurônio onde elas foram alocadas e a sua  vizinhança.</p>
@@ -304,13 +312,13 @@ As probabilidades condicional e posterior indicam o nível de confiabilidade del
 </tbody>
 </table>
 <p>Para determinar se a amostra deve ser removida, mantida ou analisada, as probabilidades devem ser analisadas em conjunto.
-A <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 47</span></a> apresenta um fluxograma que indica qual decisão será tomada a partir dos limiares definidos para definir a qualidade do
+A <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 49</span></a> apresenta um fluxograma que indica qual decisão será tomada a partir dos limiares definidos para definir a qualidade do
 conjunto de amostras.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-decision">
 <a class="reference internal image-reference" href="../../_images/decision.png"><img alt="decision" src="../../_images/decision.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 47 - </span><span class="caption-text">Fluxogama de tomada de decisão.</span><a class="headerlink" href="#time-series-ml-som-decision" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 49 - </span><span class="caption-text">Fluxogama de tomada de decisão.</span><a class="headerlink" href="#time-series-ml-som-decision" title="Permalink to this image">¶</a></p>
 </div>
-<p>Utilizando as amostras que foram ilustradas na tabela acima e os limiares apresentados na <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 47</span></a>,
+<p>Utilizando as amostras que foram ilustradas na tabela acima e os limiares apresentados na <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 49</span></a>,
 a amostra 1 deve ser mantida conjunto de dados, a amostra 2 é automaticamente removida do conjuntos de dados,
 e a amostra 3 deve ser avalidada por especialistas para verificar se elas devem ser mantidas ou não conjunto de dados.</p>
 <p>Devida a alta probabilidade condicional da amostra 3, a primeira hipótese é que um subconjunto de amostras de pasto pode conter padrões diferentes dos demais,
@@ -339,29 +347,21 @@ A segunda hipótese é que este subconjunto de dados pode ruído de classe, logo
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="class-brick.html" class="btn btn-neutral float-right" title="Classificação de bricks e geração de mapas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="class-ts.html" class="btn btn-neutral float-left" title="Classificação de Séries Temporais" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="class-brick.html" class="btn btn-neutral float-right" title="Classificação de bricks e geração de mapas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class-ts.html" class="btn btn-neutral float-left" title="Classificação de Séries Temporais" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, INPE.
+        &#169; Copyright 2020, INPE..
 
     </p>
   </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -387,6 +387,7 @@ A segunda hipótese é que este subconjunto de dados pode ruído de classe, logo
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-178140681-1', 'auto');
+    
     ga('send', 'pageview');
     </script>
 
