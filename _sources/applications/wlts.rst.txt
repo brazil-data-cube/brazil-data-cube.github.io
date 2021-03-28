@@ -21,6 +21,7 @@ WLTS brings the concept of Land Use and Cover Trajectories as a high level abstr
     :figclass: align-center
     :name: wlts:trajectory
 
+    Land use and cover trajectory.
 
 
 .. toctree::

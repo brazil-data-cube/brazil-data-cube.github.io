@@ -12,7 +12,7 @@ Brazil Data Cube Documentation
 
 Welcome to the **Brazil Data Cube** project!
 
-:cite:`ferreira:2020`
+
 
 
 .. toctree::
