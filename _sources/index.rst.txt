@@ -13,8 +13,6 @@ Brazil Data Cube Documentation
 Welcome to the **Brazil Data Cube** project!
 
 
-
-
 .. toctree::
     :hidden:
 
@@ -34,6 +32,7 @@ Welcome to the **Brazil Data Cube** project!
     :maxdepth: 1
     :caption: Tutorials:
 
+    sbsr-2021
     worcap-2020
     datascience-2020
 

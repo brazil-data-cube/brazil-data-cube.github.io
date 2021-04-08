@@ -16,12 +16,12 @@ Several procedures are performed to generate BDC Data cube collections. Based on
 
 
 .. figure:: ../../img/products/bdc.png
-    :alt: BDC Image collection injestion and Data Cube generation
+    :alt: BDC Image collection ingestion and Data Cube generation
     :width: 720
     :figclass: align-center
     :name: products:processing-flow
 
-    BDC Image collection injestion and Data Cube generation.
+    BDC Image collection ingestion and Data Cube generation.
 
 
 Image Collection builder

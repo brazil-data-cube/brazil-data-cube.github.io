@@ -1,0 +1,34 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2021 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+SBSR Interim 2021 - Simpósio Brasileiro de Sensoriamento Remoto
+===============================================================
+
+
+.. figure:: ./img/sbsr-2021/sbsr2021.png
+    :alt: Banner Simpósio Brasileiro de Sensoriamento Remoto 2021 (SBSR)
+    :width: 480
+    :figclass: align-center
+
+
+O Simpósio Brasileiro de Sensoriamento Remoto 2021 (SBSR) é um evento que reúne a comunidade científica, técnicos e usuários das áreas do Sensoriamento Remoto e Geotecnologias e suas aplicações para apresentar suas pesquisas mais recentes e seus desenvolvimentos tecnológicos.
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./sbsr-2021/course-info
+    ./sbsr-2021/getting-started
+
+
+Links:
+
+- Vídeo: `Projeto Brazil Data Cube e pesquisas em Computação Aplicada - Dra. Karine Reis Ferreira (CAP/INPE) <https://www.youtube.com/watch?v=x1H22k5wR6A>`_.
+
+- `Página do Projeto Brazil Data Cube <http://brazildatacube.org/>`_.

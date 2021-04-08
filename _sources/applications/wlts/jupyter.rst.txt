@@ -12,4 +12,4 @@ Jupyter Notebooks
 
 If you want to learn from a practical example, please, take a look at the following Jupyter Notebook:
 
-`Jupyter Notebook - Access and Visualization of Trajectory <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wlts/wlts-examples.ipynb>`_
+`Jupyter Notebook - Access and Visualization of Trajectory <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wlts/wlts-example.ipynb>`_
