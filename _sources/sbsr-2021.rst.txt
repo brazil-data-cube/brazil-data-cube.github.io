@@ -25,6 +25,8 @@ O Simpósio Brasileiro de Sensoriamento Remoto 2021 (SBSR) é um evento que reú
 
     ./sbsr-2021/course-info
     ./sbsr-2021/getting-started
+    ./sbsr-2021/modulo1
+    ./sbsr-2021/modulo2
 
 
 Links:
