@@ -22,9 +22,9 @@ BDC acquires CBERS-4 Surface Reflectance Image Collections containing a cloud ma
 +--------------+-------------+
 | Class        | Pixel value |
 +==============+=============+
-| Clear Pixel  | 0           |
+| Clear Pixel  | 127         |
 +--------------+-------------+
-| Cloud        | 4           |
+| Cloud        | 255         |
 +--------------+-------------+
-| No Data      | 255         |
+| No Data      | 0           |
 +--------------+-------------+
