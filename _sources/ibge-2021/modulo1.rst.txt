@@ -21,18 +21,18 @@ Brazil Data Cube (BDC)
 SpatioTemporal Asset Catalog (STAC)
 +++++++++++++++++++++++++++++++++++
 
-- [link a ser inserido]
-- [link a ser inserido]
+- https://www.kaggle.com/brazildatacube/ibge-stac-introduction-r
+- https://www.kaggle.com/brazildatacube/ibge-stac-image-processing-r
 
 Web Time Series Service (WTSS)
 ++++++++++++++++++++++++++++++
 
-- [link a ser inserido]
-- [link a ser inserido]
+- https://www.kaggle.com/brazildatacube/ibge-wtss-introduction-r
+- https://www.kaggle.com/brazildatacube/ibge-wtss-examples-r
 
 
 Web Land Trajectory Series (WLTS)
 +++++++++++++++++++++++++++++++++
 
-- [link a ser inserido]
-- [link a ser inserido]
+- https://www.kaggle.com/brazildatacube/ibge-wlts-introduction-r
+- https://www.kaggle.com/brazildatacube/ibge-wlts-example-r

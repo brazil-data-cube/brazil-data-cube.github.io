@@ -39,10 +39,10 @@ Dito isso, vale a pena verificar os seguintes tópicos:
     - :ref:`BDC Processing Flow <processing_flow>`
 
 
-    - :ref:`CB4_64 <cb4_64>`
+    - :ref:`CB4_64-1 <cb4_64-1>`
 
 
-    - :ref:`CB4_64_16D_STK <cb4_64_16d_stk>`
+    - :ref:`CB4_64_16D_STK-1 <cb4_64_16d_stk-1>`
 
 
 Referências
