@@ -1,0 +1,36 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2021 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+IBGE 2021 - Workshop Brazil Data Cube com IBGE
+==============================================
+
+
+.. figure:: ./img/ibge-2021/logo_bdc_ibge.png
+    :alt: Banner Workshop Brazil Data Cube com IBGE
+    :width: 480
+    :figclass: align-center
+
+
+O Workshop Brazil Data Cube com IBGE é um evento do projeto Brazil Data Cube (BDC) que reúne a comunidade tecnico-científica, das áreas do Sensoriamento Remoto e Geotecnologias, do Instituto Brasileiro de Geografia e Estatistica (IBGE) para um treinamento de utilização dos serviços, dados e ferramentas fornecidos pelo BDC para estudos de uso e cobertura da Terra.
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./ibge-2021/course-info
+    ./ibge-2021/getting-started
+    ./ibge-2021/modulo1
+    ./ibge-2021/modulo2
+
+
+Links:
+
+- Vídeo: `Projeto Brazil Data Cube e pesquisas em Computação Aplicada - Dra. Karine Reis Ferreira (CAP/INPE) <https://www.youtube.com/watch?v=x1H22k5wR6A>`_.
+
+- `Página do Projeto Brazil Data Cube <http://brazildatacube.org/>`_.
