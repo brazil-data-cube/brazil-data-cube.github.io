@@ -16,8 +16,6 @@ Os códigos para acompanhamento do curso estão disponíveis na plataforma Kaggl
 Brazil Data Cube (BDC)
 ++++++++++++++++++++++
 
-- link para apresentação
-
 SpatioTemporal Asset Catalog (STAC)
 +++++++++++++++++++++++++++++++++++
 

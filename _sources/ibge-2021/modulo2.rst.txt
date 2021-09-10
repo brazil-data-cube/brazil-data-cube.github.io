@@ -16,5 +16,5 @@ Os códigos para acompanhamento do curso estão disponíveis na plataforma Kaggl
 SITS - Satellite Image Time Series: Análise para Cubos de Dados de Observação da Terra
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-- [link a ser inserido]
-- [link a ser inserido]
+- https://www.kaggle.com/brazildatacube/ibge-sits-clustering-r
+- https://www.kaggle.com/brazildatacube/ibge-sits-classification-r
