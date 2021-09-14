@@ -37,3 +37,11 @@ The CB4_AWFI_L4_SR-1 image collection product contains data from CBERS-4/AWFI pr
 +============+===========+=============+
 | thumbnail  | image/png | Quicklook   |
 +------------+-----------+-------------+
+
+Information Regarding Cloud Mask Band can be found on:
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    ../specifications/bands/CMASK

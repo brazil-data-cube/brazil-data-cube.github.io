@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Fundamentos de imagens &mdash; Brazil Data Cube</title>
+  <title>Fundamentos sobre imagens &mdash; Brazil Data Cube</title>
   
 
   
@@ -40,7 +40,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -48,7 +47,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Cubos de dados de Observação da Terra" href="data-cube.html" />
-    <link rel="prev" title="Introdução ao STAC e WTSS" href="../course.html" /> 
+    <link rel="prev" title="Introdução Brazil Data Cube" href="intro-bdc.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -106,15 +105,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting-started/getting-started.html">Configurações no Kaggle</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../course.html">Introdução ao STAC e WTSS</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Fundamentos de imagens</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-cube.html">Cubos de dados de Observação da Terra</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intro-bdc.html">Introdução Brazil Data Cube</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../products/specifications/bdc-grid.html">BDC Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../products/specifications/processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Fundamentos sobre imagens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-cube.html">Cubos de dados de Observação da Terra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">Fluxo de Processamento dos dados do BDC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html">Dados de Entrada</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
 </ul>
@@ -182,11 +180,11 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
+          <li><a href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a> &raquo;</li>
         
           <li><a href="../course.html">Introdução ao STAC e WTSS</a> &raquo;</li>
         
-      <li>Fundamentos de imagens</li>
+      <li>Fundamentos sobre imagens</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,7 +201,7 @@
         <a href="data-cube.html" class="btn btn-neutral float-right" title="Cubos de dados de Observação da Terra" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="../course.html" class="btn btn-neutral float-left" title="Introdução ao STAC e WTSS" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="intro-bdc.html" class="btn btn-neutral float-left" title="Introdução Brazil Data Cube" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -212,93 +210,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="fundamentos-de-imagens">
-<h1>Fundamentos de imagens<a class="headerlink" href="#fundamentos-de-imagens" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="fundamentos-sobre-imagens">
+<h1>Fundamentos sobre imagens<a class="headerlink" href="#fundamentos-sobre-imagens" title="Permalink to this headline">¶</a></h1>
 <p>Antes de iniciar a parte prática do curso, vamos relembrar brevemente alguns fundamentos e conceitos comuns quando trabalha-se com imagens digitais.</p>
 <div class="section" id="fundamentos-de-cor">
 <h2>Fundamentos de cor<a class="headerlink" href="#fundamentos-de-cor" title="Permalink to this headline">¶</a></h2>
 <p>Basicamente, as cores que humanos e outros animais notam são determinadas pela natureza da luz refletida por um objeto. Como pode ser observado na Figura abaixo, a luz visivel é composta por bandas estreitas de frequências no espectro eletromagnético <span id="id1">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</p>
-<div class="align-center figure align-default" id="id14">
+<div class="align-center figure align-default" id="id7">
 <a class="reference internal image-reference" href="../../_images/prisma.png"><img alt="Prisma" src="../../_images/prisma.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">Espectro de cores observado quando luz passa por um prisma. Fonte: <span id="id2">[<a class="reference internal" href="../../references.html#id9">8</a>]</span></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">Espectro de cores observado quando luz passa por um prisma. Fonte: <span id="id2">[<a class="reference internal" href="../../references.html#id9">8</a>]</span></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p>Os cones, sensores no olho responsáveis pela visão colorida, são capazes capaz de diferenciar 3 categorias principais de cores: azul, verde e vermelho, de modo que a Figura abaixo ilustra uma média experimental da luz absorvida, nos comprimentos de onda citados, pelo olho humano <span id="id3">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</p>
-<div class="align-center figure align-default" id="id15">
+<div class="align-center figure align-default" id="id8">
 <a class="reference internal image-reference" href="../../_images/rgb-absortion.png"><img alt="RGB absortion" src="../../_images/rgb-absortion.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 19 - </span><span class="caption-text">Absorção da luz vermelha, verde e azul por cones no olho humano em função do comprimento de onda. Fonte: <span id="id4">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 19 - </span><span class="caption-text">Absorção da luz vermelha, verde e azul por cones no olho humano em função do comprimento de onda. Fonte: <span id="id4">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-<p>Sensores podem ser utilizados para medir a resposta de alvos e gerar imagens digitais. A próxima Figura ilustra esse processo, no qual uma fonte de iluminação interaje com um elemento de uma cena, é observado por um sistema imageador, projetado em um plano e digitalizado <span id="id5">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>, seguida de uma demonstração de como seriam os valores digitais dessa imagem.</p>
-<div class="align-center figure align-default" id="id16">
+<p>Sensores podem ser utilizados para medir a resposta de alvos e gerar imagens digitais. Como ilustrado na Figura abaixo:</p>
+<div class="align-center figure align-default" id="id9">
+<a class="reference internal image-reference" href="../../_images/remote-sensing.png"><img alt="Remote Sensing" src="../../_images/remote-sensing.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 20 - </span><span class="caption-text">Uma fonte (1), neste caso o sol, emite energia eletromagnética (2), que interage com um alvo na superfície terrestre (3), sendo parcialmente refletida (2) e registrada por um sistema sensor em uma plataforma (4), que transmite a medição para uma estação na Terra (5), que é interpretada por um software (6) e analisada para obter resultados (7). Fonte: <a class="reference external" href="https://paititi.info/research-technology/remote-sensing-from-space/">Paititi Research</a>.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Outra exemplificação desse processo pode ser observada na próxima Figura, na qual uma fonte de iluminação interaje com um elemento de uma cena, que é observado por um sistema imageador, projetado em um plano e digitalizado <span id="id5">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>, seguida de uma demonstração de como seriam os valores digitais dessa imagem.</p>
+<div class="align-center figure align-default" id="id10">
 <a class="reference internal image-reference" href="../../_images/image-sensing.png"><img alt="Image Sensing" src="../../_images/image-sensing.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 20 - </span><span class="caption-text">Exemplo do processo de aquisição de uma imagem digital. (a) Fonte de Energia (“iluminação”). (b) Elemento de uma cena. (c) Sistema Imageador. (d) Projeção da cena em um plano de imagem. (e) Digitalização da imagem. Fonte: <span id="id6">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 21 - </span><span class="caption-text">Exemplo do processo de aquisição de uma imagem digital. (a) Fonte de Energia (“iluminação”). (b) Elemento de uma cena. (c) Sistema Imageador. (d) Projeção da cena em um plano de imagem. (e) Digitalização da imagem. Fonte: <span id="id6">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-<div class="align-center figure align-default" id="id17">
+<div class="align-center figure align-default" id="id11">
 <a class="reference internal image-reference" href="../../_images/image-matrix.png"><img alt="Image Matrix" src="../../_images/image-matrix.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Figure 21 - </span><span class="caption-text">Exemplo de valores das células de uma imagem.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 22 - </span><span class="caption-text">Exemplo de valores das células de uma imagem.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="imagens-coloridas">
 <h3>Imagens Coloridas<a class="headerlink" href="#imagens-coloridas" title="Permalink to this headline">¶</a></h3>
 <p>Sistemas imageadores geram imagens digitais para um determinado intervalos de comprimentos de onda, também chamado bandas espectrais. A amplitude de valores dessas imagens pode ser atribuída a cores que nossos olhos percebem (azul, verde e vermelho) para assim gerarmos imagens coloridas, como ilustrado:</p>
-<div class="align-center figure align-default" id="id18">
+<div class="align-center figure align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/color.png"><img alt="Color" src="../../_images/color.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 22 - </span><span class="caption-text">Exemplo de composição de imagem colorida utilizando bandas vermelho, verde e azul. Fonte: modificado de <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=18673639">Nevit</a> .</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 23 - </span><span class="caption-text">Exemplo de composição de imagem colorida utilizando bandas vermelho, verde e azul. Fonte: modificado de <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=18673639">Nevit</a> .</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-</div>
-<div class="section" id="indices-espectrais">
-<h2>Índices Espectrais<a class="headerlink" href="#indices-espectrais" title="Permalink to this headline">¶</a></h2>
-<p>Índices espectrais são aritméticas feitas utilizando as diferentes bandas de um sensor para destacar determinada característica de um alvo ou reduzir certos efeitos. Neste contexto, índices de vegetação, são índices espectrais que realçam características de alvos vegetativos, utilizando para isso bandas como o infravermelho próximo (do inglês, Near Infra-red, NIR), região que a vegetação mostra a mais intensa reflectância e bandas situada no vermelho (do inglês, red), onde a vegetação possui a mais alta absorção da luz solar visível devido à presença em sua constituição do pigmento verde clorofila <span id="id7">[<a class="reference internal" href="../../references.html#id11">10</a>]</span>. O comportamento dessas bandas espectrais em alguns tipos de alvos pode ser observado a seguir:</p>
-<div class="align-center figure align-default" id="id19">
-<a class="reference internal image-reference" href="../../_images/spectral-profile.png"><img alt="Spectral Profile" src="../../_images/spectral-profile.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 23 - </span><span class="caption-text">Perfil espectral ideal de diferentes alvos. Fonte: modificado de <span id="id8">[<a class="reference internal" href="../../references.html#id13">12</a>]</span>.</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="normalized-difference-vegetation-index-ndvi">
-<h3>Normalized Difference Vegetation Index (NDVI):<a class="headerlink" href="#normalized-difference-vegetation-index-ndvi" title="Permalink to this headline">¶</a></h3>
-<p>Dentre os índices de vegetação, um dos mais utilizados é o <em>Normalized Difference Vegetation Index</em> (NDVI). Tal índice é um indicativo para verificar se uma vegetação é sadia. O NDVI consiste na diferença normalizada pela soma das bandas situadas no infravermelho próximo (NIR) <span id="id9">[<a class="reference internal" href="../../references.html#id11">10</a>]</span>. A Formula matemática do NDVI consiste em:</p>
-<div class="math notranslate nohighlight">
-\[(NIR - Red)/(NIR + Red)\]</div>
-</div>
-</div>
-<div class="section" id="histograma">
-<h2>Histograma<a class="headerlink" href="#histograma" title="Permalink to this headline">¶</a></h2>
-<p>O histograma de uma imagem digital, também conhecido como distribuição de frequências, é a representação gráfica em colunas de um conjunto de dados que mostra a intensidade de valores e a quantidade de pixels com tal intensidade e são base para diversos tipos de processamento digital de imagens <span id="id10">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>. Alguns tipos de histograma podem ser observados a seguir:</p>
-<div class="align-center figure align-default" id="id20">
-<a class="reference internal image-reference" href="../../_images/histogram.png"><img alt="Histogram" src="../../_images/histogram.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 24 - </span><span class="caption-text">Quatro tipos básicos de imagens: escura, clara, baixo contraste e alto contraste, e seus respectivos histogramas. Fonte: <span id="id11">[<a class="reference internal" href="../../references.html#id9">8</a>]</span>.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="diagrama-de-dispersao-scatterplot">
-<h2>Diagrama de dispersão (Scatterplot)<a class="headerlink" href="#diagrama-de-dispersao-scatterplot" title="Permalink to this headline">¶</a></h2>
-<p>Diagramas de dispersão ou <em>scatterplot</em> é a representação gráfica no plano cartesiano do comportomanto de duas ou mais variáveis. <em>Scatterplots</em> são úteis para analisar a correlação entre dados. Em um <em>scatterplot</em>, os dados são exibidos como um conjunto de pontos, cada um com o valor associado a cada varíavel do gráfico.</p>
-<p>Devido a dificuldade de visualização de um plano 3d em um plano 2d, é mais comum que scatterplots de 2 dimensões sejam utilizados para análises (2 varíaveis). Um exemplo de <em>scatterplots</em> pode ser observado a seguir:</p>
-<div class="align-center figure align-default" id="id21">
-<a class="reference internal image-reference" href="../../_images/simple-scatterplot.png"><img alt="Scatter Plot" src="../../_images/simple-scatterplot.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Figure 25 - </span><span class="caption-text">Exemplo de Diagrama de dispersão (scatterplot).</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="atribuicao-de-classes-por-threshold-limiarizacao">
-<h2>Atribuição de classes por threshold (limiarização)<a class="headerlink" href="#atribuicao-de-classes-por-threshold-limiarizacao" title="Permalink to this headline">¶</a></h2>
-<p>Classificação de imagens digitais é um tópico bastante amplo e consiste em basicamente atribuir rótulos à alvos em um conjunto de dados, também chamados de classes. Embora muitas das abordagens de classificação sejam complexas, há algumas abordagens simples para resolução de determinados problemas, como é o caso da limiarização, do inglês thresholding.</p>
-<p>A idéia de atribuir uma classe seguindo uma limiarização assume que os dados podem ser separados por uma simples “linha”, isso pode ser observado nas próximas figuras em um histograma e em um scatterplot:</p>
-<div class="align-center figure align-default" id="id22">
-<a class="reference internal image-reference" href="../../_images/histogram-threshold.png"><img alt="Scatter Plot" src="../../_images/histogram-threshold.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 26 - </span><span class="caption-text">Exemplo limiarização por histograma. Fonte: <a class="reference external" href="https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_multiotsu.html">scikit-image doc</a> .</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
-</div>
-<p>O mesmo procedimento pode ser feito utilizando scatterplots, como pode ser visto em:</p>
-<div class="align-center figure align-default" id="id23">
-<a class="reference internal image-reference" href="../../_images/scatterplot1.png"><img alt="Scatter Plot" src="../../_images/scatterplot1.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 27 - </span><span class="caption-text">Exemplo de Diagrama de dispersão (scatterplot) utilizando bandas 6 e 7 do sensor MODIS, com linha separando classe de nuvem das demais classes. Fonte: modificado de modificado de <span id="id12">[<a class="reference internal" href="../../references.html#id13">12</a>]</span>.</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
-</div>
-<div class="align-center figure align-default" id="id24">
-<a class="reference internal image-reference" href="../../_images/scatterplot2.png"><img alt="Scatter Plot" src="../../_images/scatterplot2.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Figure 28 - </span><span class="caption-text">Exemplo de Diagrama de dispersão (scatterplot) utilizando bandas 11 e 3 do sensor MODIS, com linha separando classes de nuvem e neve das demais classes. Fonte: modificado de modificado de <span id="id13">[<a class="reference internal" href="../../references.html#id13">12</a>]</span>.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
-</div>
-<p>Nas figuras de exemplo, um mesmo conjunto de dados de entrada é utilizado. Entretanto as váriaveis (eixos) do gráfico são de bandas espectrais diferentes. Nessas figuras é possível observar que há separação de algumas classes, como por exemplo pixels referentes a alvos de água e vegetação. Com isso, é possível estabelecer um valor ou reta limiar (threshold) para separar essas classes.</p>
-</div>
-<div class="section" id="diferenca-entre-imagens">
-<h2>Diferença entre Imagens<a class="headerlink" href="#diferenca-entre-imagens" title="Permalink to this headline">¶</a></h2>
-<p>Uma aplicação recorrente em imagens imagens obitidas por satélites consiste na detecção de mudanças na superfície terrestre. Esse é um tema bastante complexo e que depende bastante dos tipos de alvos analisados, entretanto, a idéia base consiste em comparar dois ou mais instantes de tempo e verificar quais alvos sofreram mudanças.</p>
-<p>Uma abordagem bastante simplista para essa aplicação consiste em obter imagens de datas distintas e verificar a diferença no valor de reflectância das mesmas, de modo que preferencialmente as diferenças esperadas nessas imagens sejam potencializadas no intervalo de tempo escolhido. Para isso, vamos fazer um simples exercício de obter imagens de uma área agrícola no período do inicio do plantio e outra quando as culturas já estiverem mais desenvolvidas.</p>
 </div>
 </div>
 
@@ -309,7 +257,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="data-cube.html" class="btn btn-neutral float-right" title="Cubos de dados de Observação da Terra" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../course.html" class="btn btn-neutral float-left" title="Introdução ao STAC e WTSS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="intro-bdc.html" class="btn btn-neutral float-left" title="Introdução Brazil Data Cube" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

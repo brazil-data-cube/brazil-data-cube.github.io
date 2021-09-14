@@ -63,3 +63,11 @@ The LC8_SR-1 image collection product contains data from the image collection :d
 +----------------------+-------------------+--------------------------------+
 | solar_zenith_band4   | image/tiff        | SZA - solar zenith angle band  |
 +----------------------+-------------------+--------------------------------+
+
+Information Regarding Cloud Mask Band can be found on:
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    ../specifications/bands/FMASK

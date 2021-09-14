@@ -105,7 +105,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sbsr-2021.html">SBSR Interim 2021 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
@@ -239,16 +239,16 @@
 </tr>
 </tbody>
 </table>
-<p>A <a class="reference internal" href="#tipos-geometricos-feature-collection"><span class="std std-numref">Figura 34</span></a> ilustra o esquema de uma coleção de feições, onde podemos observar os atributos alfanuméricos e geométricos.</p>
+<p>A <a class="reference internal" href="#tipos-geometricos-feature-collection"><span class="std std-numref">Figura 33</span></a> ilustra o esquema de uma coleção de feições, onde podemos observar os atributos alfanuméricos e geométricos.</p>
 <div class="align-center figure align-default" id="tipos-geometricos-feature-collection">
 <a class="reference internal image-reference" href="../../_images/feature-collection-uf.png"><img alt="Coleção de Feições (Feature Collection)" src="../../_images/feature-collection-uf.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 34 - </span><span class="caption-text">Coleção de Feições (<em>Feature Collection</em>).</span><a class="headerlink" href="#tipos-geometricos-feature-collection" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 33 - </span><span class="caption-text">Coleção de Feições (<em>Feature Collection</em>).</span><a class="headerlink" href="#tipos-geometricos-feature-collection" title="Permalink to this image">¶</a></p>
 </div>
 <p>As entidades codificados como dados matriciais, também chamadas de <strong>raster</strong> ou <strong>imagens</strong>, formam um plano subdividido em células de tamanho fixo, frequentemente chamadas de <strong>pixels</strong>. Para cada par de coordenada (x, y) nesse plano há um valor de intensidade, por vezes chamado nível de cinza, que indica o valor de alguma medida para aquele ponto.</p>
-<p>A <a class="reference internal" href="#tipo-raster-img-cbers4"><span class="std std-numref">Figura 35</span></a> apresenta uma imagem do satélite CBERS-4 sensor WFI, um dado matricial em que cada célula, representa uma área de 64 metros da superfície terrestre e o valor de intensidade cada célula indica uma aproximação da cor refletida por essa superfície.</p>
+<p>A <a class="reference internal" href="#tipo-raster-img-cbers4"><span class="std std-numref">Figura 34</span></a> apresenta uma imagem do satélite CBERS-4 sensor WFI, um dado matricial em que cada célula, representa uma área de 64 metros da superfície terrestre e o valor de intensidade cada célula indica uma aproximação da cor refletida por essa superfície.</p>
 <div class="align-center figure align-default" id="tipo-raster-img-cbers4">
 <a class="reference internal image-reference" href="../../_images/imagem-cbers4.png"><img alt="Imagem do satélite CBERS-4 sensor WFI" src="../../_images/imagem-cbers4.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 35 - </span><span class="caption-text">Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial, em composição colorida.</span><a class="headerlink" href="#tipo-raster-img-cbers4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 34 - </span><span class="caption-text">Imagem do satélite CBERS-4 sensor WFI com 64 metros de resolução espacial, em composição colorida.</span><a class="headerlink" href="#tipo-raster-img-cbers4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Ambos os formatos, vetorial e matricial, apresentam vantagens e desvantagens quando comparados entre sí. Dados matriciais por exemplo, apresentam uma estrutura bastante simples, uma grade regular com valores para cada célula. Entretanto, essa codificação assume que perdas de informação no espaço são aceitáveis, uma vez que cada célula é uma representação generalizada de uma área com variações no espaço real. Já os dados em formato vetorial apresentam a vantagem de utilizarem menor espaço de armazenamento, além de dependerem da resolução em que o dado foi gerado, o que possibilita utilizar o dado em diferentes escalas com menor distorção. Entretanto, dados vetoriais são mais complexos para manipular.</p>
 </div>

@@ -6,8 +6,8 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 
-WorCAP 2021 - Geoinformática com Aplicações de Machine Learning
-===============================================================
+WorCAP 2021 - Introdução ao STAC e WTSS
+=======================================
 
 
 .. figure:: /img/worcap-2021/banner-worcap2021-site.png

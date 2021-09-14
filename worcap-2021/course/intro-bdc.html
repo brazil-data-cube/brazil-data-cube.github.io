@@ -46,8 +46,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Dados de Entrada" href="data.html" />
-    <link rel="prev" title="Cubos de dados de Observação da Terra" href="data-cube.html" /> 
+    <link rel="next" title="Fundamentos sobre imagens" href="image-processing.html" />
+    <link rel="prev" title="Introdução ao STAC e WTSS" href="../course.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,15 +105,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting-started/getting-started.html">Configurações no Kaggle</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../course.html">Introdução ao STAC e WTSS</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="image-processing.html">Fundamentos de imagens</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-cube.html">Cubos de dados de Observação da Terra</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Introdução Brazil Data Cube</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../products/specifications/bdc-grid.html">BDC Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../products/specifications/processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image-processing.html">Fundamentos sobre imagens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data-cube.html">Cubos de dados de Observação da Terra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">Fluxo de Processamento dos dados do BDC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html">Dados de Entrada</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
 </ul>
@@ -181,7 +180,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
+          <li><a href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a> &raquo;</li>
         
           <li><a href="../course.html">Introdução ao STAC e WTSS</a> &raquo;</li>
         
@@ -199,10 +198,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="data.html" class="btn btn-neutral float-right" title="Dados de Entrada" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="image-processing.html" class="btn btn-neutral float-right" title="Fundamentos sobre imagens" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="data-cube.html" class="btn btn-neutral float-left" title="Cubos de dados de Observação da Terra" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../course.html" class="btn btn-neutral float-left" title="Introdução ao STAC e WTSS" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -216,17 +215,23 @@
 <div class="align-right figure align-default">
 <a class="reference internal image-reference" href="../../_images/logo-bdc.png"><img alt="Python Logo" src="../../_images/logo-bdc.png" style="width: 150px;" /></a>
 </div>
-<p><a class="reference external" href="http://brazildatacube.dpi.inpe.br/portal/explore">Brazil Data Cube (BDC)</a> é um projeto que está sendo desenvolvido desde janeiro de 2019 pelo <a class="reference external" href="http://www.inpe.br/">Instituto Nacional de Pesquisas Espaciais (INPE)</a>, Brasil, com o objetivo de criar cubos de dados multidimensionais prontos para análise a partir de imagens de média resolução espacial de satélites de observação da Terra, para todo o território brasileiro e gerar informações de uso e cobertura do solo a partir desses cubos de dados usando aprendizado de máquina e análise de séries temporais de imagens de satélites.</p>
+<p><a class="reference external" href="http://brazildatacube.dpi.inpe.br/portal/explore">Brazil Data Cube (BDC)</a> é um projeto que está sendo desenvolvido desde janeiro de 2019 pelo <a class="reference external" href="http://www.inpe.br/">Instituto Nacional de Pesquisas Espaciais (INPE)</a>, Brasil, com o objetivo de criar cubos de dados multidimensionais prontos para análise a partir de imagens de média resolução espacial de satélites de observação da Terra, para todo o território brasileiro e gerar informações de uso e cobertura do solo a partir desses cubos de dados usando aprendizado de máquina e análise de séries temporais de imagens de satélites. Conforme pode ser observado na Figura a seguir:</p>
+<div class="align-center figure align-default">
+<a class="reference internal image-reference" href="../../_images/abstract.png"><img alt="GitHub Logo" src="../../_images/abstract.png" style="width: 600px;" /></a>
+</div>
 <p>O Brazil Data Cube é um subprojeto do projeto Monitoramento Ambiental dos Biomas Brasileiros, financiado com recursos do <a class="reference external" href="http://www.fundoamazonia.gov.br/pt/projeto/Monitoramento-Ambiental-dos-Biomas-Brasileiros/">Fundo Amazônia</a>, por meio da colaboração financeira BNDES e <a class="reference external" href="https://www.funcate.org.br/pt/">FUNCATE</a> nº 17.2.0536.1. Brazil Data Cube é o sucessor do projeto de pesquisa <a class="reference external" href="http://www.esensing.org/">e-sensing</a> financiado pela FAPESP (Fapesp 2014/08398-6).</p>
 <div class="align-left figure align-default">
 <a class="reference internal image-reference" href="../../_images/github-logo.png"><img alt="GitHub Logo" src="../../_images/github-logo.png" style="width: 100px;" /></a>
 </div>
-<p>Todos os códigos do projeto BDC estão disponíveis, como <em>open source</em>, no <a class="reference external" href="https://github.com/brazil-data-cube">repositório oficial do projeto BDC no Github</a>, e incluem os frameworks de <a class="reference external" href="https://github.com/brazil-data-cube/bdc-collection-builder">acquisição e processamento de dados</a>, <a class="reference external" href="https://github.com/brazil-data-cube/cube-builder">geração de cubos de dados</a>, <a class="reference external" href="https://github.com/brazil-data-cube/bdc-db">modelo de banco de dados</a>, página do portal, serviços como <a class="reference external" href="https://brazil-data-cube.github.io/applications/wtss.html">WTSS</a>, entre outros.</p>
+<p>Todos os códigos do projeto BDC estão disponíveis, como <em>open source</em>, no <a class="reference external" href="https://github.com/brazil-data-cube">repositório oficial do projeto BDC no Github</a>, e incluem os frameworks de <a class="reference external" href="https://github.com/brazil-data-cube/bdc-collection-builder">acquisição e processamento de dados</a>, <a class="reference external" href="https://github.com/brazil-data-cube/cube-builder">geração de cubos de dados</a>, <a class="reference external" href="https://github.com/brazil-data-cube/bdc-db">modelo de banco de dados</a>, página do portal, serviços como <a class="reference external" href="https://brazil-data-cube.github.io/applications/wtss.html">WTSS</a>, entre outros, como pode ser visto na Figura abaixo:</p>
+<div class="align-center figure align-default">
+<a class="reference internal image-reference" href="../../_images/bdc-architecture.png"><img alt="BDC architecture" src="../../_images/bdc-architecture.png" style="width: 600px;" /></a>
+</div>
 <div class="align-right figure align-default">
 <a class="reference internal image-reference" href="../../_images/python-logo.png"><img alt="Python Logo" src="../../_images/python-logo.png" style="width: 100px;" /></a>
 </div>
 <p>Muitos desses repositórios são desenvolvidos em linguagem <a class="reference external" href="http://www.python.org/">Python</a>, a mesma linguagem que será utilizada no decorrer deste módulo do minicurso.</p>
-<p>O projeto BDC processa e disponibiliza imagens de diferentes sensores, fornecendo diversos produtos prontos para uso pelos usuários, os também chamado <em>Analysys Ready Data</em> (ARD), de modo que os cientistas possam focar-se em análises e não em processamentos. Os diversos produtos gerados pelo projeto podem ser vistos em <a class="reference external" href="https://brazil-data-cube.github.io/products.html">https://brazil-data-cube.github.io/products.html</a>. As imagens processadas pelo BDC são disponibilizadas gratuitamente no <a class="reference external" href="http://brazildatacube.dpi.inpe.br/portal/explore">portal do projeto</a>, o que é feito por meio do <em>SpatioTemporal Asset Catalog</em> (STAC) que veremos posteriormente neste minicurso.</p>
+<p>O projeto BDC processa e disponibiliza imagens de diferentes sensores, fornecendo diversos produtos prontos para uso pelos usuários, os também chamado <em>Analysys Ready Data</em> (ARD), de modo que os cientistas possam focar-se em análises e não em processamentos. Os diversos produtos gerados pelo projeto podem ser vistos em <a class="reference external" href="https://brazil-data-cube.github.io/products.html">https://brazil-data-cube.github.io/products.html</a>. As imagens processadas pelo BDC são disponibilizadas gratuitamente no <a class="reference external" href="http://brazildatacube.dpi.inpe.br/portal/explore">portal do projeto</a>, o que é feito por meio do <em>SpatioTemporal Asset Catalog</em> (STAC) que veremos neste minicurso.</p>
 </div>
 
 
@@ -235,8 +240,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="data.html" class="btn btn-neutral float-right" title="Dados de Entrada" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="data-cube.html" class="btn btn-neutral float-left" title="Cubos de dados de Observação da Terra" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="image-processing.html" class="btn btn-neutral float-right" title="Fundamentos sobre imagens" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../course.html" class="btn btn-neutral float-left" title="Introdução ao STAC e WTSS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

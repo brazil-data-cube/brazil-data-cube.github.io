@@ -46,8 +46,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introdução Brazil Data Cube" href="intro-bdc.html" />
-    <link rel="prev" title="Fundamentos de imagens" href="image-processing.html" /> 
+    <link rel="next" title="Fluxo de Processamento dos dados do BDC" href="processing-flow.html" />
+    <link rel="prev" title="Fundamentos sobre imagens" href="image-processing.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,15 +105,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../course-info.html">Informações sobre o curso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting-started/getting-started.html">Configurações no Kaggle</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../course.html">Introdução ao STAC e WTSS</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="image-processing.html">Fundamentos de imagens</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Cubos de dados de Observação da Terra</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intro-bdc.html">Introdução Brazil Data Cube</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../products/specifications/bdc-grid.html">BDC Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../products/specifications/processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image-processing.html">Fundamentos sobre imagens</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cubos de dados de Observação da Terra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">Fluxo de Processamento dos dados do BDC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data.html">Dados de Entrada</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks.html">Notebooks</a></li>
 </ul>
@@ -181,7 +180,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
+          <li><a href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a> &raquo;</li>
         
           <li><a href="../course.html">Introdução ao STAC e WTSS</a> &raquo;</li>
         
@@ -199,10 +198,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="intro-bdc.html" class="btn btn-neutral float-right" title="Introdução Brazil Data Cube" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="processing-flow.html" class="btn btn-neutral float-right" title="Fluxo de Processamento dos dados do BDC" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="image-processing.html" class="btn btn-neutral float-left" title="Fundamentos de imagens" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="image-processing.html" class="btn btn-neutral float-left" title="Fundamentos sobre imagens" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -214,49 +213,49 @@
   <div class="section" id="cubos-de-dados-de-observacao-da-terra">
 <h1>Cubos de dados de Observação da Terra<a class="headerlink" href="#cubos-de-dados-de-observacao-da-terra" title="Permalink to this headline">¶</a></h1>
 <p>Plataformas orbitais de observação da Terra, ou satélites de observação da Terra, são atualmente uma das formas mais consistentes e amplamente utilizadas para a realização do monitoramento da superfície terrestre e sua biodiversidade. A ampla utilização dessas plataformas está relacionada com sua capacidade de capturar, de forma contínua, imagens das mesmas regiões do planeta em diferentes instantes de tempo, formando assim, coleções de imagens.</p>
-<p>A <a class="reference internal" href="#fig-time-series-image-collection"><span class="std std-numref">Figura 29</span></a> resume como essas coleções de imagens são formadas. Para uma mesma região, tem-se a captura de múltiplas imagens, que registram a variação ocorrida ao longo do tempo.</p>
+<p>A <a class="reference internal" href="#fig-time-series-image-collection"><span class="std std-numref">Figura 24</span></a> resume como essas coleções de imagens são formadas. Para uma mesma região, tem-se a captura de múltiplas imagens, que registram a variação ocorrida ao longo do tempo.</p>
 <div class="align-center figure align-default" id="fig-time-series-image-collection">
 <a class="reference internal image-reference" href="../../_images/image-collection.png"><img alt="image collection" src="../../_images/image-collection.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 29 - </span><span class="caption-text">Captura de múltiplas imagens formando uma coleção.</span><a class="headerlink" href="#fig-time-series-image-collection" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 24 - </span><span class="caption-text">Captura de múltiplas imagens formando uma coleção.</span><a class="headerlink" href="#fig-time-series-image-collection" title="Permalink to this image">¶</a></p>
 </div>
-<p>Com a organização dessa sequência de imagens de forma sistemática, ajustadas no espaço e ordenadas no tempo, tem-se a possibilidade de monitorar o planeta através da investigação e o entendimento das dinâmicas ocorridas na superfície terrestre ao longo do tempo. Por exemplo, <span id="id1">[<a class="reference internal" href="../../references.html#id14">13</a>]</span>, utilizando de uma coleção de imagens da missão Landsat, mostra toda a dinâmica do Lago Milh, localizado no Iraque. O resultado obtido pelos autores é apresentado na <a class="reference internal" href="#fig-milhlake"><span class="std std-numref">Figura 30</span></a>.</p>
+<p>Com a organização dessa sequência de imagens de forma sistemática, ajustadas no espaço e ordenadas no tempo, tem-se a possibilidade de monitorar o planeta através da investigação e o entendimento das dinâmicas ocorridas na superfície terrestre ao longo do tempo. Por exemplo, <span id="id1">[<a class="reference internal" href="../../references.html#id14">11</a>]</span>, utilizando de uma coleção de imagens da missão Landsat, mostra toda a dinâmica do Lago Milh, localizado no Iraque. O resultado obtido pelos autores é apresentado na <a class="reference internal" href="#fig-milhlake"><span class="std std-numref">Figura 25</span></a>.</p>
 <div class="align-center rotate270deg figure align-default" id="fig-milhlake">
 <a class="reference internal image-reference" href="https://global-surface-water.appspot.com/gsw/video/gif/razaza.gif"><img alt="Milh Lake" src="https://global-surface-water.appspot.com/gsw/video/gif/razaza.gif" style="width: 280px;" /></a>
-<p class="caption"><span class="caption-number">Figure 30 - </span><span class="caption-text">Dinâmica do <code class="docutils literal notranslate"><span class="pre">Lago</span> <span class="pre">Milh</span></code> (Iraque) ao longo do tempo - Fonte: <span id="id2">[<a class="reference internal" href="../../references.html#id14">13</a>]</span>.</span><a class="headerlink" href="#fig-milhlake" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 25 - </span><span class="caption-text">Dinâmica do <code class="docutils literal notranslate"><span class="pre">Lago</span> <span class="pre">Milh</span></code> (Iraque) ao longo do tempo - Fonte: <span id="id2">[<a class="reference internal" href="../../references.html#id14">11</a>]</span>.</span><a class="headerlink" href="#fig-milhlake" title="Permalink to this image">¶</a></p>
 </div>
-<p>Outros exemplos notórios são de trabalhos que utilizam a avaliação temporal de coleções de imagens de satélite para a criação de mapas de Uso e Cobertura da Terra (LULC, do inglês <em>Land Use and Land Cover</em>). Por exemplo, <span id="id3">[<a class="reference internal" href="../../references.html#id20">18</a>]</span>, utilizaram de dados séries temporais, extraídas de coleções de dados MODIS, junto a algoritmos de Aprendizado de Máquina para a criação de mapas de LULC para o estado do Mato Grosso/Brasil. Outro exemplo é o trabalho apresentado por <span id="id4">[<a class="reference internal" href="../../references.html#id18">17</a>]</span>, em que os autores fizeram o uso de séries temporais, extraídas de coleções de dados Sentinel-2/MSI, para a identificação de áreas desmatadas na Amazônia Legal.</p>
+<p>Outros exemplos notórios são de trabalhos que utilizam a avaliação temporal de coleções de imagens de satélite para a criação de mapas de Uso e Cobertura da Terra (LULC, do inglês <em>Land Use and Land Cover</em>). Por exemplo, <span id="id3">[<a class="reference internal" href="../../references.html#id20">16</a>]</span>, utilizaram de dados séries temporais, extraídas de coleções de dados MODIS, junto a algoritmos de Aprendizado de Máquina para a criação de mapas de LULC para o estado do Mato Grosso/Brasil. Outro exemplo é o trabalho apresentado por <span id="id4">[<a class="reference internal" href="../../references.html#id18">15</a>]</span>, em que os autores fizeram o uso de séries temporais, extraídas de coleções de dados Sentinel-2/MSI, para a identificação de áreas desmatadas na Amazônia Legal.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Para os interessados, está disponível no canal do YouTube da Computação Aplicada/INPE, o curso <a class="reference external" href="https://www.youtube.com/watch?v=X7h9KyxNwM4">Geoinformática com Aplicações de Machine Learning</a>, o qual apresenta o uso conjunto de séries temporais e Aprendizado de Máquina para a criação de mapas de LULC.</p>
 </div>
 <p>Entretanto, fazer a utilização dessas coleções de imagens para a realização de avaliações temporais, pode não ser uma tarefa trivial. Isso ocorre já que, no uso desses dados, todas as operações que antecedem a análise temporal, como por exemplo, etapas de pré-processamento, organização e armazenamento dos dados, devem ser feitas para todas as imagens da coleção.</p>
-<p>Considerando este cenário, os pesquisadores passaram a produzir Dados Prontos para Análise (ARD, do inglês <em>Analysis Ready Data</em>), os quais são processados e organizados para permitir análises imediatas <span id="id5">[<a class="reference internal" href="../../references.html#id22">19</a>]</span>. Em seguida, esses dados ARD passaram a ser organizados como cubos de dados de imagens de satélite <span id="id6">[<a class="reference internal" href="../../references.html#id7">6</a>]</span>, tornando a realização de avaliações temporais, com dados extraídos de coleções de imagens, mais simples e intuitivas <span id="id7">[<a class="reference internal" href="../../references.html#id2">1</a>]</span>.</p>
-<p>Segundo as definições adotadas pelo Brazil Data Cube <span id="id8">[<a class="reference internal" href="../../references.html#id7">6</a>]</span>, um cubo de dados é uma matriz de quatro dimensões: <code class="docutils literal notranslate"><span class="pre">X</span></code> (longitude), <code class="docutils literal notranslate"><span class="pre">Y</span></code> (latitude), <code class="docutils literal notranslate"><span class="pre">Tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">Bandas</span></code>. Além disso, para que um conjunto de dados seja considerado um cubo de dados, ele deve atender aos seguintes requisitos <span id="id9">[<a class="reference internal" href="../../references.html#id20">18</a>]</span>:</p>
+<p>Considerando este cenário, os pesquisadores passaram a produzir Dados Prontos para Análise (ARD, do inglês <em>Analysis Ready Data</em>), os quais são processados e organizados para permitir análises imediatas <span id="id5">[<a class="reference internal" href="../../references.html#id22">17</a>]</span>. Em seguida, esses dados ARD passaram a ser organizados como cubos de dados de imagens de satélite <span id="id6">[<a class="reference internal" href="../../references.html#id7">6</a>]</span>, tornando a realização de avaliações temporais, com dados extraídos de coleções de imagens, mais simples e intuitivas <span id="id7">[<a class="reference internal" href="../../references.html#id2">1</a>]</span>.</p>
+<p>Segundo as definições adotadas pelo Brazil Data Cube <span id="id8">[<a class="reference internal" href="../../references.html#id7">6</a>]</span>, um cubo de dados é uma matriz de quatro dimensões: <code class="docutils literal notranslate"><span class="pre">X</span></code> (longitude), <code class="docutils literal notranslate"><span class="pre">Y</span></code> (latitude), <code class="docutils literal notranslate"><span class="pre">Tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">Bandas</span></code>. Além disso, para que um conjunto de dados seja considerado um cubo de dados, ele deve atender aos seguintes requisitos <span id="id9">[<a class="reference internal" href="../../references.html#id20">16</a>]</span>:</p>
 <ol class="arabic simple">
 <li><p>Suas dimensões espaciais referem-se a um único sistema de referência espacial (SRS, do inglês <em>Spatial Reference System</em>);</p></li>
 <li><p>As células de um cubo de dados tem um tamanho espacial constante em relação ao SRS do cubo;</p></li>
 <li><p>Uma célula possui um único valor.</p></li>
 </ol>
-<p>Na <a class="reference internal" href="#fig-time-series-data-cube-representation"><span class="std std-numref">Figura 31</span></a>, é feita uma representação em alto nível de um cubo de dados. À esquerda da Figura, está uma coleção de imagens, a qual não possui as propriedades de um cubo de dados, podendo ter imagens desalinhada no tempo e espaço. Na direta, tem-se um cubo de dados, o qual possui alinhamento espacial e temporal.</p>
+<p>Na <a class="reference internal" href="#fig-time-series-data-cube-representation"><span class="std std-numref">Figura 26</span></a>, é feita uma representação em alto nível de um cubo de dados. À esquerda da Figura, está uma coleção de imagens, a qual não possui as propriedades de um cubo de dados, podendo ter imagens desalinhada no tempo e espaço. Na direta, tem-se um cubo de dados, o qual possui alinhamento espacial e temporal.</p>
 <div class="align-center figure align-default" id="fig-time-series-data-cube-representation">
 <a class="reference internal image-reference" href="../../_images/datacube-representation.png"><img alt="datacube representation" src="../../_images/datacube-representation.png" style="width: 620px;" /></a>
-<p class="caption"><span class="caption-number">Figure 31 - </span><span class="caption-text">Representação de um cubo de dados.</span><a class="headerlink" href="#fig-time-series-data-cube-representation" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 26 - </span><span class="caption-text">Representação de um cubo de dados.</span><a class="headerlink" href="#fig-time-series-data-cube-representation" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Considerando a definição apresentada anteriormente, tem-se que, a representação de cubos de dados apresentada na <a class="reference internal" href="#fig-time-series-data-cube-representation"><span class="std std-numref">Figura 31</span></a>, é repetida para cada uma das bandas que compõe o cubo.</p>
+<p>Considerando a definição apresentada anteriormente, tem-se que, a representação de cubos de dados apresentada na <a class="reference internal" href="#fig-time-series-data-cube-representation"><span class="std std-numref">Figura 26</span></a>, é repetida para cada uma das bandas que compõe o cubo.</p>
 </div>
 <p>Com as coleções de imagens de satélite sendo organizadas como cubos de dados, pode-se então realizar a <code class="docutils literal notranslate"><span class="pre">seleção</span> <span class="pre">de</span> <span class="pre">imagens</span></code> e a <code class="docutils literal notranslate"><span class="pre">extração</span> <span class="pre">de</span> <span class="pre">séries</span> <span class="pre">temporais</span></code>. Na <code class="docutils literal notranslate"><span class="pre">seleção</span> <span class="pre">de</span> <span class="pre">imagens</span></code>, o usuário do cubo de dados, escolhe por um ou mais instantes de tempo e ao aplicar a operação no cubo, tem como retorno um conjunto de imagens 2D válidas.</p>
-<p>A <a class="reference internal" href="#fig-time-series-data-cube-selection"><span class="std std-numref">Figura 32</span></a> ilustra esta operação com dois exemplos. À esquerda é apresentada a seleção de uma imagem em um instante de tempo (Azul claro). Na direita, tem-se a seleção de dois instantes de tempos distintos (Azul claro e Azul escuro).</p>
+<p>A <a class="reference internal" href="#fig-time-series-data-cube-selection"><span class="std std-numref">Figura 27</span></a> ilustra esta operação com dois exemplos. À esquerda é apresentada a seleção de uma imagem em um instante de tempo (Azul claro). Na direita, tem-se a seleção de dois instantes de tempos distintos (Azul claro e Azul escuro).</p>
 <div class="align-center figure align-default" id="fig-time-series-data-cube-selection">
 <a class="reference internal image-reference" href="../../_images/data-cube-selection.png"><img alt="data cube selection" src="../../_images/data-cube-selection.png" style="width: 620px;" /></a>
-<p class="caption"><span class="caption-number">Figure 32 - </span><span class="caption-text">Seleção de instantes de tempo em um cubo de dados.</span><a class="headerlink" href="#fig-time-series-data-cube-selection" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 27 - </span><span class="caption-text">Seleção de instantes de tempo em um cubo de dados.</span><a class="headerlink" href="#fig-time-series-data-cube-selection" title="Permalink to this image">¶</a></p>
 </div>
 <p>Para a segunda operação, <code class="docutils literal notranslate"><span class="pre">extração</span> <span class="pre">de</span> <span class="pre">séries</span> <span class="pre">temporais</span></code>, o usuário define uma localização no espaço geográfico e ao aplicar a operação no cubo, tem como retorno uma série temporal válida. Esta série temporal é formada pelos valores da localização definida em cada uma das imagens que compõe o cubo.</p>
-<p>Na <a class="reference internal" href="#fig-time-series-data-cube-operation-extraction"><span class="std std-numref">Figura 33</span></a>, é feita a representação desta operação. Para a localização definida (Amarelo), faz-se a extração dos valores de todas as imagens associadas ao cubo de dados.</p>
+<p>Na <a class="reference internal" href="#fig-time-series-data-cube-operation-extraction"><span class="std std-numref">Figura 28</span></a>, é feita a representação desta operação. Para a localização definida (Amarelo), faz-se a extração dos valores de todas as imagens associadas ao cubo de dados.</p>
 <div class="align-center figure align-default" id="fig-time-series-data-cube-operation-extraction">
 <a class="reference internal image-reference" href="../../_images/data-cube-extraction.png"><img alt="data cube extraction" src="../../_images/data-cube-extraction.png" style="width: 620px;" /></a>
-<p class="caption"><span class="caption-number">Figure 33 - </span><span class="caption-text">Extra de série temporal a partir de uma localização em um cubo de dados.</span><a class="headerlink" href="#fig-time-series-data-cube-operation-extraction" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 28 - </span><span class="caption-text">Extra de série temporal a partir de uma localização em um cubo de dados.</span><a class="headerlink" href="#fig-time-series-data-cube-operation-extraction" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -275,8 +274,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="intro-bdc.html" class="btn btn-neutral float-right" title="Introdução Brazil Data Cube" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="image-processing.html" class="btn btn-neutral float-left" title="Fundamentos de imagens" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="processing-flow.html" class="btn btn-neutral float-right" title="Fluxo de Processamento dos dados do BDC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="image-processing.html" class="btn btn-neutral float-left" title="Fundamentos sobre imagens" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

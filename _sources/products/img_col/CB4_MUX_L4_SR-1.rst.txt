@@ -37,3 +37,11 @@ The CB4_MUX_L4_SR-1 image collection product contains data from the CBERS-4/MUX 
 +============+===================+===================================+
 | thumbnail  | image/png         | Quicklook                         |
 +------------+-------------------+-----------------------------------+
+
+Information Regarding Cloud Mask Band can be found on:
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    ../specifications/bands/CMASK

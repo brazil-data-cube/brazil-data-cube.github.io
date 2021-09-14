@@ -19,10 +19,9 @@ Veremos agora alguns conceitos introdutórios sobre processamento digital de ima
     :maxdepth: 1
     :titlesonly:
 
+    ./course/intro-bdc
     ./course/image-processing
     ./course/data-cube
-    ./course/intro-bdc
-    ../../products/specifications/bdc-grid
-    ../../products/specifications/processing-flow
+    ./course/processing-flow
     ./course/data
     ./course/notebooks

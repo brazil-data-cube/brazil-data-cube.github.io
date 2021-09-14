@@ -19,6 +19,6 @@ In summary, BDC catalogs and distributes data from the mentioned satellite senso
     :maxdepth: 1
     :titlesonly:
 
+    ./products/specifications.rst
     ./products/image-collections.rst
     ./products/cube-collections.rst
-    ./products/specifications.rst
