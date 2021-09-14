@@ -100,25 +100,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../products.html">BDC Data Products</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../image-collections.html">Image Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cube-collections.html">Data Cube Collections</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../specifications.html">Specifications</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html">BDC Naming</a></li>
-<li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
-<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Geoinformática com Aplicações de Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../worcap-2021/course-info.html">Informações sobre o curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../worcap-2021/getting-started/getting-started.html">Configurações no Kaggle</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../worcap-2021/course.html">Introdução ao STAC e WTSS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../worcap-2021/course/image-processing.html">Fundamentos de imagens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../worcap-2021/course/data-cube.html">Cubos de dados de Observação da Terra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../worcap-2021/course/intro-bdc.html">Introdução Brazil Data Cube</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../worcap-2021/course/data.html">Dados de Entrada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../worcap-2021/course/notebooks.html">Notebooks</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sbsr-2021.html">SBSR Interim 2021 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
@@ -212,7 +214,7 @@
             
   <div class="section" id="bdc-grid">
 <h1>BDC Grid<a class="headerlink" href="#bdc-grid" title="Permalink to this headline">¶</a></h1>
-<p>The Albers Equal-Area Conic is the reference map projection for the BDC tiling system, named BDC Grid. Like other normal conics, the Albers Equal-Area Conic projection has concentric arcs of circles for parallels and equally spaced radii as meridians. The parallels are not equally spaced, but they are farthest apart in the latitudes between the standard parallels and closer together to the north and south. The pole is not the center of the circles, but it is normally an arc itself. Scale along the parallels is too small between the standard parallels and too large beyond them. The scale along the meridians is just the opposite and, in fact, the scale factor along meridians is the reciprocal of the scale factor along the parallels to maintain equal area <span id="id1">[<a class="reference internal" href="../../references.html#id13">11</a>]</span>.</p>
+<p>The Albers Equal-Area Conic is the reference map projection for the BDC tiling system, named BDC Grid. Like other normal conics, the Albers Equal-Area Conic projection has concentric arcs of circles for parallels and equally spaced radii as meridians. The parallels are not equally spaced, but they are farthest apart in the latitudes between the standard parallels and closer together to the north and south. The pole is not the center of the circles, but it is normally an arc itself. Scale along the parallels is too small between the standard parallels and too large beyond them. The scale along the meridians is just the opposite and, in fact, the scale factor along meridians is the reciprocal of the scale factor along the parallels to maintain equal area <span id="id1">[<a class="reference internal" href="../../references.html#id23">20</a>]</span>.</p>
 <p>BDC Grid includes 1°x1.5°, 2°x3°, and 4°x6° tiles, depending on the spatial resolution and the file size of output images of interest. Sentinel-2/MSI images use 1°x1.5° tiles, Landsat-8/OLI images are accommodated in 2°x3° tiles, and CBERS-4/AWFI images operate in 4°x6° tiles. The rationale behind the BDC Grid tiling system follows the concept illustrated below in <a class="reference internal" href="#products-bdc-grid-seed"><span class="std std-numref">Figure 1</span></a>. Tile seeds are initially positioned in a way that their upper left corners coincide at the intersection of the equator with the meridian 54° west. With those initial tile seeds defined, other tiles of the same corresponding sizes, always defined by Albers Equal-Area Conic plane coordinates, are automatically generated to entirely cover the cartesian plane of the reference map projection system. For each tile size, upper boundaries perfectly match lower boundaries of tiles above and left boundaries perfectly match right boundaries of tiles on the left. The hierarchical relation between the different BDC Grids can be seen in <a class="reference internal" href="#products-bdc-grid"><span class="std std-numref">Figure 2</span></a>.</p>
 <div class="align-center figure align-default" id="products-bdc-grid-seed">
 <a class="reference internal image-reference" href="../../_images/bdc-grid-seed.png"><img alt="BDC Grid seed" src="../../_images/bdc-grid-seed.png" style="width: 720px;" /></a>
@@ -222,7 +224,7 @@
 <a class="reference internal image-reference" href="../../_images/bdc-grid.png"><img alt="BDC Grid" src="../../_images/bdc-grid.png" style="width: 720px;" /></a>
 <p class="caption"><span class="caption-number">Figure 2 - </span><span class="caption-text">BDC Grid.</span><a class="headerlink" href="#products-bdc-grid" title="Permalink to this image">¶</a></p>
 </div>
-<p>The Albers Equal-Area Conic projection parameters follow the cartographic standards defined by Instituto Brasileiro de Geografia e Estatística (IBGE), which is the official civilian mapping agency of Brazil <span id="id2">[<a class="reference internal" href="../../references.html#id6">5</a>]</span>. BDC Grid uses parallel 12° south and meridian 54° west as origin and defines two standard parallels at latitudes 2° south and 22° south. Offsets of 5,000,000 meters and 10,000,000 meters are respectively applied to X and Y coordinates at the origin. SIRGAS-2000, the official planimetric datum of Brazil, is the reference geodetic system. In short, the PROJ string for the BDC Grid can be expressed by:</p>
+<p>The Albers Equal-Area Conic projection parameters follow the cartographic standards defined by Instituto Brasileiro de Geografia e Estatística (IBGE), which is the official civilian mapping agency of Brazil <span id="id2">[<a class="reference internal" href="../../references.html#id8">7</a>]</span>. BDC Grid uses parallel 12° south and meridian 54° west as origin and defines two standard parallels at latitudes 2° south and 22° south. Offsets of 5,000,000 meters and 10,000,000 meters are respectively applied to X and Y coordinates at the origin. SIRGAS-2000, the official planimetric datum of Brazil, is the reference geodetic system. In short, the PROJ string for the BDC Grid can be expressed by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}crs: +proj=aea +lat\_0=-12 +lon\_0=-54 +lat\_1=-2 +lat\_2=-22 \\
 +x\_0=5000000 +y\_0 = 10000000 +ellps=GRS80 +units=m +no\_defs.\end{split}\]</div>
@@ -242,7 +244,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, INPE..
+        &#169; Copyright 2020, INPE.
 
     </p>
   </div> 

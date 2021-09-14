@@ -1,0 +1,25 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+Time Series
+===========
+
+.. image:: ../../img/dc-explorer/timeseries.png
+    :alt: Time Series Modal
+    :align: center
+
+Time Series Features
+++++++++++++++++++++
+
+-   You can open the **time series** window by clicking on the time series button, and then clicking on view button on the time series sub-menu, after **point** a cursor on the map;
+-   At the top of the time series window, you can see the **name** of the collection being generating, the selected **period** and the **position**;
+-   Inside the window, we present each of the band as a checkbox with a band name. It’s possible to **view** the time series with all selected bands within the search period;
+
+Additional Features
++++++++++++++++++++
+
+-   It is also possible to select all bands from a single collection, by clicking on the **select all** checkbox;

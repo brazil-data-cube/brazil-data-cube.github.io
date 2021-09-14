@@ -21,3 +21,4 @@ The Brazil Data Cube provides a set of core applications to allow researchers an
     ./applications/wtss
     ./applications/odc
     ./applications/wlts
+    ./applications/dc_explorer

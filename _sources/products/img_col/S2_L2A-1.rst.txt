@@ -62,3 +62,12 @@ The S2_L2A-1 image collection product contains data from the image collection :d
 +------------+-------------------+------------------+
 | MTD_MSIL2A | application/xml   | metadata         |
 +------------+-------------------+------------------+
+
+
+Information Regarding Cloud Mask Band can be found on:
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ../specifications/bands/SCL.rst

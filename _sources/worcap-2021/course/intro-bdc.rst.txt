@@ -1,0 +1,43 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Introdução Brazil Data Cube
+---------------------------
+
+
+.. figure:: ../../img/logo-bdc.png
+    :alt: Python Logo
+    :width: 150
+    :figclass: align-right
+
+
+`Brazil Data Cube (BDC) <http://brazildatacube.dpi.inpe.br/portal/explore>`_ é um projeto que está sendo desenvolvido desde janeiro de 2019 pelo `Instituto Nacional de Pesquisas Espaciais (INPE) <http://www.inpe.br/>`_, Brasil, com o objetivo de criar cubos de dados multidimensionais prontos para análise a partir de imagens de média resolução espacial de satélites de observação da Terra, para todo o território brasileiro e gerar informações de uso e cobertura do solo a partir desses cubos de dados usando aprendizado de máquina e análise de séries temporais de imagens de satélites.
+
+
+O Brazil Data Cube é um subprojeto do projeto Monitoramento Ambiental dos Biomas Brasileiros, financiado com recursos do `Fundo Amazônia <http://www.fundoamazonia.gov.br/pt/projeto/Monitoramento-Ambiental-dos-Biomas-Brasileiros/>`_, por meio da colaboração financeira BNDES e `FUNCATE <https://www.funcate.org.br/pt/>`_ nº 17.2.0536.1. Brazil Data Cube é o sucessor do projeto de pesquisa `e-sensing <http://www.esensing.org/>`_ financiado pela FAPESP (Fapesp 2014/08398-6).
+
+
+.. figure:: ../../img/worcap-2020/access-view/github-logo.png
+    :alt: GitHub Logo
+    :width: 100
+    :figclass: align-left
+
+
+Todos os códigos do projeto BDC estão disponíveis, como *open source*, no `repositório oficial do projeto BDC no Github <https://github.com/brazil-data-cube>`_, e incluem os frameworks de `acquisição e processamento de dados <https://github.com/brazil-data-cube/bdc-collection-builder>`_, `geração de cubos de dados <https://github.com/brazil-data-cube/cube-builder>`_, `modelo de banco de dados <https://github.com/brazil-data-cube/bdc-db>`_, página do portal, serviços como `WTSS <https://brazil-data-cube.github.io/applications/wtss.html>`_, entre outros.
+
+
+.. figure:: ../../img/worcap-2020/access-view/python-logo.png
+    :alt: Python Logo
+    :width: 100
+    :figclass: align-right
+
+
+Muitos desses repositórios são desenvolvidos em linguagem `Python <http://www.python.org/>`_, a mesma linguagem que será utilizada no decorrer deste módulo do minicurso.
+
+
+O projeto BDC processa e disponibiliza imagens de diferentes sensores, fornecendo diversos produtos prontos para uso pelos usuários, os também chamado *Analysys Ready Data* (ARD), de modo que os cientistas possam focar-se em análises e não em processamentos. Os diversos produtos gerados pelo projeto podem ser vistos em https://brazil-data-cube.github.io/products.html. As imagens processadas pelo BDC são disponibilizadas gratuitamente no `portal do projeto <http://brazildatacube.dpi.inpe.br/portal/explore>`_, o que é feito por meio do *SpatioTemporal Asset Catalog* (STAC) que veremos posteriormente neste minicurso.

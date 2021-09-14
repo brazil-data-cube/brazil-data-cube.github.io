@@ -47,4 +47,6 @@ span.eqno {
     float: right;
 }
 
-
+.rotate270deg img {
+  transform: rotate(270deg);
+}
