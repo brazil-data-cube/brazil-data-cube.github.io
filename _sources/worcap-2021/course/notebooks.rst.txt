@@ -13,11 +13,11 @@ Notebooks
 SpatioTemporal Asset Catalog (STAC)
 +++++++++++++++++++++++++++++++++++
 
-- [link a ser inserido]
-- [link a ser inserido]
+- https://www.kaggle.com/brazildatacube/worcap-stac-introduction
+- https://www.kaggle.com/brazildatacube/worcap-stac-image-processing
 
 Web Time Series Service (WTSS)
 ++++++++++++++++++++++++++++++
 
-- [link a ser inserido]
-- [link a ser inserido]
+- https://www.kaggle.com/brazildatacube/worcap-wtss-introduction
+- https://www.kaggle.com/brazildatacube/worcap-wtss-examples
