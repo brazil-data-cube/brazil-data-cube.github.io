@@ -10,7 +10,7 @@ MYD13Q1-6
 ---------
 
 
-The MYD13Q1-6 collection product contains AQUA/MODIS Surface Reflectance data at its native spatial resolution (250m). These images are the same that can be found at NASA's Earth Date (https://search.earthdata.nasa.gov/search) or USGS's Earth Explorer (https://earthexplorer.usgs.gov/) catalogs.
+The MYD13Q1-6 collection product contains AQUA/MODIS Surface Reflectance data at its native ground spatial distance (231m). These images are the same that can be found at NASA's Earth Date (https://search.earthdata.nasa.gov/search) or USGS's Earth Explorer (https://earthexplorer.usgs.gov/) catalogs.
 
 
 +---------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
