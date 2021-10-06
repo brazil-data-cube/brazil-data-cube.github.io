@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2021 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -10,11 +10,10 @@ Jupyter Notebooks
 =================
 
 
-If you want to learn from a practical example, please, take a look at the following Jupyter Notebook: `Jupyter Notebook - Discover and Access to Data Products in Brazil Data Cube <https://github.com/brazil-data-cube/stac.py/blob/master/examples/stac.ipynb>`_.
+If you want to learn from a practical example, please, take a look at the following Jupyter Notebook: `Jupyter Notebook - Introduction to the SpatioTemporal Asset Catalog (STAC) <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/stac/stac-introduction.ipynb>`_.
 
 
 This jupyter notebook will explain step by step how to use the STAC client library to retrieve metadata and access the image collections or data cube collections.
 
 
-**TODO:** show an image plot from the jupyter notebook
-
+More examples regarding how to use STAC and a few applications can be found on `Jupyter Notebook - Image processing on images obtained through STAC <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/stac/stac-image-processing.ipynb>`_.
