@@ -10,7 +10,7 @@ S2-SEN2COR_10_16D_STK-1
 -----------------------
 
 
-The S2-SEN2COR_10_16D_STK-1 product contains MSI surface reflectance at full spatial resolution (10m) and 16 days Temporal Compositing applyed over the :doc:`S2-SEN2COR_10-1 <./S2-SEN2COR_10-1>` Identity Data Cube. The following Table lists the S2-SEN2COR_10_16D_STK-1 product characteristics:
+The S2-SEN2COR_10_16D_STK-1 product contains MSI surface reflectance at full spatial resolution (10m) and 16 days Temporal Compositing. The following Table lists the S2-SEN2COR_10_16D_STK-1 product characteristics:
 
 
 +--------------------------------------------------------+-------------+-----------+------------+------------+---------+--------+------------------------+--------------------------+
