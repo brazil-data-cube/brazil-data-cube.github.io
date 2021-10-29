@@ -25,3 +25,4 @@ The **Data Cube Explorer** (A.K.A. BDC Explorer) is Web Portal for visualizing d
     ./dc_explorer/timeseries-module
     ./dc_explorer/layers-module
     ./dc_explorer/sidebyside-module
+    ./dc_explorer/token-module
