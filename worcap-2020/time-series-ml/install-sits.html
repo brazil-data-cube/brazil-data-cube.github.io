@@ -1,81 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Instalando o pacote sits &mdash; Brazil Data Cube</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Acesso a Séries Temporais com o sits" href="access-ts.html" />
     <link rel="prev" title="Introdução a séries temporais de imagens de satélites" href="sits-intro.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #2980B9" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
-          
-
-          
-            
             <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,27 +43,16 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
@@ -127,227 +76,139 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">General Information:</span></p>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Brazil Data Cube</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
-        
           <li><a href="../time-series-ml.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning</a> &raquo;</li>
-        
           <li><a href="sits-intro.html">Introdução a séries temporais de imagens de satélites</a> &raquo;</li>
-        
       <li>Instalando o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code></li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="access-ts.html" class="btn btn-neutral float-right" title="Acesso a Séries Temporais com o sits" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="sits-intro.html" class="btn btn-neutral float-left" title="Introdução a séries temporais de imagens de satélites" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="access-ts.html" class="btn btn-neutral float-right" title="Acesso a Séries Temporais com o sits" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="section" id="instalando-o-pacote-sits">
-<span id="time-series-ml-install-sits"></span><h1>Instalando o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code><a class="headerlink" href="#instalando-o-pacote-sits" title="Permalink to this headline">¶</a></h1>
+<span id="time-series-ml-install-sits"></span><h1>Instalando o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code><a class="headerlink" href="#instalando-o-pacote-sits" title="Permalink to this headline"></a></h1>
 <div class="section" id="instrucoes-de-instalacao-do-sits-em-r-notebooks-do-kaggle">
-<h2>Instruções de instalação do <code class="docutils literal notranslate"><span class="pre">sits</span></code> em R Notebooks do Kaggle<a class="headerlink" href="#instrucoes-de-instalacao-do-sits-em-r-notebooks-do-kaggle" title="Permalink to this headline">¶</a></h2>
+<h2>Instruções de instalação do <code class="docutils literal notranslate"><span class="pre">sits</span></code> em R Notebooks do Kaggle<a class="headerlink" href="#instrucoes-de-instalacao-do-sits-em-r-notebooks-do-kaggle" title="Permalink to this headline"></a></h2>
 <p>Para instalar o <code class="docutils literal notranslate"><span class="pre">sits</span></code> diretamente do GitHub, precisamos carregar a bibioteca <code class="docutils literal notranslate"><span class="pre">devtools</span></code> e usar a função <code class="docutils literal notranslate"><span class="pre">install_github</span></code>, fornecendo o endereço relativo do pacote no site GitHub, no caso <code class="docutils literal notranslate"><span class="pre">&quot;e-sensing/sits&quot;</span></code>.</p>
 <p>Outro pacote requerido para acessar séries temporais usando o serviço WTSS é o pacote <code class="docutils literal notranslate"><span class="pre">wtss</span></code>. Para instalá-los, usamos o seguinte código:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Code snippet 4 - </span><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">sits</span></code> no Kaggle.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
-
-<span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;e-sensing/wtss&quot;</span><span class="p">)</span>
-<span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;e-sensing/sits&quot;</span><span class="p">)</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 4 - </span><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">sits</span></code> no Kaggle.</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;e-sensing/wtss&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;e-sensing/sits&quot;</span><span class="p">)</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="instrucoes-de-instalacao-do-sits-numa-maquina-local">
-<h2>Instruções de instalação do <code class="docutils literal notranslate"><span class="pre">sits</span></code> numa máquina local<a class="headerlink" href="#instrucoes-de-instalacao-do-sits-numa-maquina-local" title="Permalink to this headline">¶</a></h2>
+<h2>Instruções de instalação do <code class="docutils literal notranslate"><span class="pre">sits</span></code> numa máquina local<a class="headerlink" href="#instrucoes-de-instalacao-do-sits-numa-maquina-local" title="Permalink to this headline"></a></h2>
 <p>Para instalar o <code class="docutils literal notranslate"><span class="pre">sits</span></code> em uma máquina local, você deve garantir que todas as dependências estão instaladas. O pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code> depende dos pacotes <code class="docutils literal notranslate"><span class="pre">sf</span></code> e <code class="docutils literal notranslate"><span class="pre">rgdal</span></code>, que por sua vez, requerem a instalação das bibliotecas GDAL e PROJ.</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Code snippet 5 - </span><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">sits</span></code> no Kaggle.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;sf&quot;</span><span class="p">)</span>
-<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;rgdal&quot;</span><span class="p">)</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 5 - </span><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">sits</span></code> no Kaggle.</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;sf&quot;</span><span class="p">)</span>
+<span class="linenos">2</span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;rgdal&quot;</span><span class="p">)</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <p>Após a instalação dos pacotes <code class="docutils literal notranslate"><span class="pre">sf</span></code> e <code class="docutils literal notranslate"><span class="pre">rgdal</span></code>, o usuário pode usar o seguinte <em>script</em> para instalar outras dependências:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Code snippet 6 - </span><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">sits</span></code> no Kaggle.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-R notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Install devtools, rmarkdown, knitr, testthat and Rcpp</span>
-<span class="c1"># if not already installed.</span>
-<span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">,</span> <span class="s">&quot;rmarkdown&quot;</span><span class="p">,</span> <span class="s">&quot;Rcpp&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;knitr&quot;</span><span class="p">,</span> <span class="s">&quot;testthat&quot;</span><span class="p">))</span>
-
-<span class="c1"># Install the Suggested packages that are used by sits</span>
-<span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;DBI&quot;</span><span class="p">,</span><span class="s">&quot;dendextend&quot;</span><span class="p">,</span> <span class="s">&quot;dtwclust&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;dtwSat&quot;</span><span class="p">,</span> <span class="s">&quot;e1071&quot;</span><span class="p">,</span> <span class="s">&quot;flexclust&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;imager&quot;</span><span class="p">,</span> <span class="s">&quot;imputeTS&quot;</span><span class="p">,</span> <span class="s">&quot;kohonen&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;lwgeom&quot;</span><span class="p">,</span> <span class="s">&quot;MASS&quot;</span><span class="p">,</span> <span class="s">&quot;mgcv&quot;</span><span class="p">,</span> <span class="s">&quot;nnet&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;proto&quot;</span><span class="p">,</span> <span class="s">&quot;proxy&quot;</span><span class="p">,</span> <span class="s">&quot;ptw&quot;</span><span class="p">,</span> <span class="s">&quot;ranger&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;RCurl&quot;</span><span class="p">,</span> <span class="s">&quot;RSQLite&quot;</span><span class="p">,</span> <span class="s">&quot;signal&quot;</span><span class="p">,</span>
-                   <span class="s">&quot;xgboost&quot;</span><span class="p">,</span> <span class="s">&quot;zoo&quot;</span><span class="p">))</span>
-
-<span class="c1"># Install the Keras package from the RStudio repository</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
-<span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;rstudio/reticulate&quot;</span><span class="p">)</span>
-<span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;rstudio/keras&quot;</span><span class="p">)</span>
-
-<span class="c1"># Build the keras environment</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">keras</span><span class="p">)</span>
-<span class="nf">install_keras</span><span class="p">()</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 6 - </span><span class="caption-text">Instalando <code class="docutils literal notranslate"><span class="pre">sits</span></code> no Kaggle.</span><a class="headerlink" href="#id3" title="Permalink to this code"></a></div>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Install devtools, rmarkdown, knitr, testthat and Rcpp</span>
+<span class="linenos"> 2</span><span class="c1"># if not already installed.</span>
+<span class="linenos"> 3</span><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">,</span> <span class="s">&quot;rmarkdown&quot;</span><span class="p">,</span> <span class="s">&quot;Rcpp&quot;</span><span class="p">,</span>
+<span class="linenos"> 4</span>                   <span class="s">&quot;knitr&quot;</span><span class="p">,</span> <span class="s">&quot;testthat&quot;</span><span class="p">))</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># Install the Suggested packages that are used by sits</span>
+<span class="linenos"> 7</span><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;DBI&quot;</span><span class="p">,</span><span class="s">&quot;dendextend&quot;</span><span class="p">,</span> <span class="s">&quot;dtwclust&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>                   <span class="s">&quot;dtwSat&quot;</span><span class="p">,</span> <span class="s">&quot;e1071&quot;</span><span class="p">,</span> <span class="s">&quot;flexclust&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>                   <span class="s">&quot;imager&quot;</span><span class="p">,</span> <span class="s">&quot;imputeTS&quot;</span><span class="p">,</span> <span class="s">&quot;kohonen&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>                   <span class="s">&quot;lwgeom&quot;</span><span class="p">,</span> <span class="s">&quot;MASS&quot;</span><span class="p">,</span> <span class="s">&quot;mgcv&quot;</span><span class="p">,</span> <span class="s">&quot;nnet&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>                   <span class="s">&quot;proto&quot;</span><span class="p">,</span> <span class="s">&quot;proxy&quot;</span><span class="p">,</span> <span class="s">&quot;ptw&quot;</span><span class="p">,</span> <span class="s">&quot;ranger&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>                   <span class="s">&quot;RCurl&quot;</span><span class="p">,</span> <span class="s">&quot;RSQLite&quot;</span><span class="p">,</span> <span class="s">&quot;signal&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>                   <span class="s">&quot;xgboost&quot;</span><span class="p">,</span> <span class="s">&quot;zoo&quot;</span><span class="p">))</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Install the Keras package from the RStudio repository</span>
+<span class="linenos">16</span><span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
+<span class="linenos">17</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;rstudio/reticulate&quot;</span><span class="p">)</span>
+<span class="linenos">18</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;rstudio/keras&quot;</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1"># Build the keras environment</span>
+<span class="linenos">21</span><span class="nf">library</span><span class="p">(</span><span class="n">keras</span><span class="p">)</span>
+<span class="linenos">22</span><span class="nf">install_keras</span><span class="p">()</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="access-ts.html" class="btn btn-neutral float-right" title="Acesso a Séries Temporais com o sits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="sits-intro.html" class="btn btn-neutral float-left" title="Introdução a séries temporais de imagens de satélites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="access-ts.html" class="btn btn-neutral float-right" title="Acesso a Séries Temporais com o sits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, INPE.
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(false);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-178140681-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-   
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

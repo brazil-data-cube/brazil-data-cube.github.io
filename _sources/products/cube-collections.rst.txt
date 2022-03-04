@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020-2021 INPE.
+    Copyright 2020-2022 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -13,13 +13,9 @@ Data Cube Collections
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 | Cube Collection                                                     | Satellite      | Sensors | Spatial Resolution (m) | Temporal Compositing |
 +=====================================================================+================+=========+========================+======================+
-| :doc:`CB4_64-1 <./cube_col/CB4_64-1>`                               | CBERS-4        | AWFI    | 64                     | Identity             |
-+---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 | :doc:`CB4_64_16D_STK-1 <./cube_col/CB4_64_16D_STK-1>`               | CBERS-4        | AWFI    | 64                     | 16 days Stack        |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`CB4_20_1M_STK-1 <./cube_col/CB4_20_1M_STK-1>`                 | CBERS-4        | MUX     | 20                     | 1 month Stack        |
-+---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`LC8_30-1 <./cube_col/LC8_30-1>`                               | Landsat-8      | OLI     | 30                     | Identity             |
+| :doc:`CB4MUX_20_1M_STK-1 <./cube_col/CB4MUX_20_1M_STK-1>`           | CBERS-4        | MUX     | 20                     | 1 month Stack        |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 | :doc:`LC8_30_16D_STK-1 <./cube_col/LC8_30_16D_STK-1>`               | Landsat-8      | OLI     | 30                     | 16 days Stack        |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
@@ -35,10 +31,8 @@ Data Cube Collections
     :maxdepth: 1
     :hidden:
 
-    ./cube_col/CB4_64-1
     ./cube_col/CB4_64_16D_STK-1
-    ./cube_col/CB4_20_1M_STK-1
-    ./cube_col/LC8_30-1
+    ./cube_col/CB4MUX_20_1M_STK-1
     ./cube_col/LC8_30_16D_STK-1
     ./cube_col/MOD13Q1-6
     ./cube_col/MYD13Q1-6

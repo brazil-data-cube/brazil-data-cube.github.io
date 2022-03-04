@@ -29,7 +29,7 @@ Neste minicurso faremos uso de imagens provenientes do sensor AWFI acoplada ao s
 Dito isso, vale a pena verificar os seguintes tópicos:
 
 
-    - :ref:`CB4_64-1 <cb4_64-1>`
+    - CB4_64-1
 
 
     - :ref:`CB4_64_16D_STK-1 <cb4_64_16d_stk-1>`

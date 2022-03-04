@@ -1,81 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Introdução a séries temporais de imagens de satélites &mdash; Brazil Data Cube</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Instalando o pacote sits" href="install-sits.html" />
     <link rel="prev" title="Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning" href="../time-series-ml.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #2980B9" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
-          
-
-          
-            
             <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,27 +43,16 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
@@ -127,131 +76,83 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">General Information:</span></p>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Brazil Data Cube</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a> &raquo;</li>
-        
           <li><a href="../time-series-ml.html">Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning</a> &raquo;</li>
-        
       <li>Introdução a séries temporais de imagens de satélites</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="install-sits.html" class="btn btn-neutral float-right" title="Instalando o pacote sits" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="../time-series-ml.html" class="btn btn-neutral float-left" title="Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="install-sits.html" class="btn btn-neutral float-right" title="Instalando o pacote sits" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="section" id="introducao-a-series-temporais-de-imagens-de-satelites">
-<span id="time-series-ml-sits-intro"></span><h1>Introdução a séries temporais de imagens de satélites<a class="headerlink" href="#introducao-a-series-temporais-de-imagens-de-satelites" title="Permalink to this headline">¶</a></h1>
+<span id="time-series-ml-sits-intro"></span><h1>Introdução a séries temporais de imagens de satélites<a class="headerlink" href="#introducao-a-series-temporais-de-imagens-de-satelites" title="Permalink to this headline"></a></h1>
 <div class="section" id="introducao">
-<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h2>
+<h2>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline"></a></h2>
 <p>Ao longo das últimas décadas, presenciamos um aumento significativo de lançamentos de plataformas orbitais para fins de observação da terra <a class="reference internal" href="#finer-2018"><span class="std std-ref">(Finer et al., 2018)</span></a>. Esse crescente interesse está relacionado com a capacidade de monitorar diversos aspectos da superfície do planeta e de sua biodiversidade.</p>
 <p>Hoje, a observação da terra é um dos meios mais efetivos e consistentes para esse tipo de monitoramento, pois é possível recobrir grandes áreas e obter imagens de um mesmo local ao longo do tempo <a class="reference internal" href="#picoli-2018"><span class="std std-ref">(Picoli et al., 2018)</span></a>.</p>
 <p>Uma aplicação direta das imagens de sensores orbitais é o mapeamento de uso e cobertura da terra, que é um importante instrumento para apoiar políticas públicas e medir taxas de emissão de gases de efeito estufa <a class="reference internal" href="#simoes-2020"><span class="std std-ref">(Simoes et al., 2020)</span></a>.</p>
 <p>Existem muitas técnicas de mapeamento de uso e cobertura da terra. Aqui, nos vamos nos concentrar numa abordagem específica de mapeamento usando séries temporais. As séries temporais são obtidas a partir do arranjo sistemático de imagens de diferentes datas de observação.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-satellite-images">
 <a class="reference internal image-reference" href="../../_images/satellite-images.png"><img alt="Satellite Image Time Series" src="../../_images/satellite-images.png" style="width: 280px;" /></a>
-<p class="caption"><span class="caption-number">Figure 56 - </span><span class="caption-text">Satellite Image Time Series</span><a class="headerlink" href="#time-series-ml-sits-intro-satellite-images" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 56 - </span><span class="caption-text">Satellite Image Time Series</span><a class="headerlink" href="#time-series-ml-sits-intro-satellite-images" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="perfil-espectro-temporal-de-uso-e-cobertura-da-terra">
-<h2>Perfil espectro-temporal de uso e cobertura da terra<a class="headerlink" href="#perfil-espectro-temporal-de-uso-e-cobertura-da-terra" title="Permalink to this headline">¶</a></h2>
+<h2>Perfil espectro-temporal de uso e cobertura da terra<a class="headerlink" href="#perfil-espectro-temporal-de-uso-e-cobertura-da-terra" title="Permalink to this headline"></a></h2>
 <p>Uma hipótese fundamental da abordagem de mapeamento de uso e cobertura da terra usando séries temporais é a de que cada classe de uso e cobertura está associada a um comportamento espectral específico no tempo. Na figura abaixo, podemos observar diferentes comportamentos nas séries temporais de NDVI para cada classe de uso e cobertura da terra.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-land-trajectory">
 <a class="reference internal image-reference" href="../../_images/land-trajectory.png"><img alt="Land trajectory" src="../../_images/land-trajectory.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 57 - </span><span class="caption-text">Trajetória da terra. Fonte: Victor Maus</span><a class="headerlink" href="#time-series-ml-sits-intro-land-trajectory" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 57 - </span><span class="caption-text">Trajetória da terra. Fonte: Victor Maus</span><a class="headerlink" href="#time-series-ml-sits-intro-land-trajectory" title="Permalink to this image"></a></p>
 </div>
 <p>Mudanças de classes de cobertura ao longo do tempo devido a diferentes usos da terra podem ser capturadas por mudanças nos perfis das séries temporais. Ao conjunto dessas mudanças de classes denominamos trajetória de uso e cobertura da terra.</p>
 </div>
 <div class="section" id="mapeamento-de-uso-e-cobertura-da-terra">
-<h2>Mapeamento de uso e cobertura da terra<a class="headerlink" href="#mapeamento-de-uso-e-cobertura-da-terra" title="Permalink to this headline">¶</a></h2>
+<h2>Mapeamento de uso e cobertura da terra<a class="headerlink" href="#mapeamento-de-uso-e-cobertura-da-terra" title="Permalink to this headline"></a></h2>
 <p>Uso de <em>machine learning</em> para o mapeamento de uso e cobertura da terra permite delegar a detecção dos padrões relevantes da série temporal de cada classe para um algoritmo a partir de amostras previamente conhecidas. Para melhor entender esse processo, podemos citar outras duas abordagens de classificação de séries temporais, o TIMESAT e o TWDTW.</p>
 <p>O TIMESAT é uma técnica que extrai atributos específicos (e.g. mínimos, máximos) das séries temporais para, a partir de tais atributos, realizar a classificação. O pressuposto é o de que alguns desses atributos podem ser mais importante que outros para diferenciar as classes umas das outras.</p>
 <p>O TWDTW é uma técnica que identifica similaridades entre formas de séries temporais para realizar a classificação. O pressuposto é o de que a menor distância (i.e. distância DTW) entre duas séries temporais determine a classe de uso e cobertura. Na prática, leves mudanças de alongamento, à esquerda ou à direita, da curva que representa a série temporal não deve influenciar significativamente a distância DTW.</p>
 <p>Ao contrário dessas duas abordagens, o uso do <em>machine learning</em> não parte de pressupostos específicos para a identificação de padrões. O processo de aprendizado do algoritmo identificará aqueles atributos que melhor diferenciam uma classe da outra.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-ml-approach">
 <a class="reference internal image-reference" href="../../_images/ml-approach.png"><img alt="Machine learning approach" src="../../_images/ml-approach.png" style="width: 580px;" /></a>
-<p class="caption"><span class="caption-number">Figure 58 - </span><span class="caption-text">Diferentes abordagens de classificação de séries temporais.</span><a class="headerlink" href="#time-series-ml-sits-intro-ml-approach" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 58 - </span><span class="caption-text">Diferentes abordagens de classificação de séries temporais.</span><a class="headerlink" href="#time-series-ml-sits-intro-ml-approach" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="pacote-sits">
-<h2>Pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code><a class="headerlink" href="#pacote-sits" title="Permalink to this headline">¶</a></h2>
+<h2>Pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code><a class="headerlink" href="#pacote-sits" title="Permalink to this headline"></a></h2>
 <p>O <code class="docutils literal notranslate"><span class="pre">sits</span></code> é um pacote desenvolvido na linguagem R para classificação de uso e cobertura da terra usando séries temporais. Seu código é aberto e pode ser acessado no <cite>GitHub &lt;https://github.com/e-sensing/sits&gt;</cite>. A figura a seguir apresenta um fluxograma resumido das tarefas propostas pelo pacote.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-sits-workflow">
 <a class="reference internal image-reference" href="../../_images/sits-workflow.png"><img alt="sits workflow" src="../../_images/sits-workflow.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 59 - </span><span class="caption-text">Fluxo de trabalho do pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#time-series-ml-sits-intro-sits-workflow" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 59 - </span><span class="caption-text">Fluxo de trabalho do pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#time-series-ml-sits-intro-sits-workflow" title="Permalink to this image"></a></p>
 </div>
 <ul class="simple">
 <li><p><strong>Time series</strong>: representado no diagrama como uma nuvem, consiste em qualquer fonte de séries temporais de imagens de satélite, desde serviços Web, como WTSS <a class="reference internal" href="#queiroz-2015"><span class="std std-ref">(Queiroz et al., 2015)</span></a> e SATVeg <a class="reference internal" href="#esquerdo-2020"><span class="std std-ref">(Esquerdo et al., 2020)</span></a>, a arquivos na nuvem ou locais.</p></li>
@@ -265,7 +166,7 @@
 <p>O pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code> fornece uma API de funções que permite o trânsito entre as etapas conectadas com as setas. As estruturas de dados consistem em basicamente três: 1) uma tabela de metadados de cubos/imagens ou de serviços Web que fornecem acesso a séries temporais; 2) uma tabela para armazenar metadados de amostras e suas respectivas séries temporais; e 3) um modelo de dados para guardar o classificador treinado.</p>
 </div>
 <div class="section" id="praticas-com-os-r-notebooks">
-<h2>Práticas com os R Notebooks<a class="headerlink" href="#praticas-com-os-r-notebooks" title="Permalink to this headline">¶</a></h2>
+<h2>Práticas com os R Notebooks<a class="headerlink" href="#praticas-com-os-r-notebooks" title="Permalink to this headline"></a></h2>
 <p>No que se segue, organizamos as atividades práticas de acordo com o fluxograma apresentado acima. No primeiro <em>hands-on</em>, mostramos como preparar o ambiente Kaggle e como instalar o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code>. No segundo <em>hands-on</em>, mostramos como é realizazdo o acesso a séries temporais usando o pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code>. No terceiro, mostramos como treinar e classificar séries temporais esparças no <code class="docutils literal notranslate"><span class="pre">sits</span></code>. No quarto <em>hands-on</em>, apresentamos um método de avaliação de qualidade das amostras usando a técnica de <em>self-organized maps</em>. No quinto, mostramos como classificar um mapa a partir de séries temporais armazenadas em arquivos locais (bricks). Por fim, apresentamos como podemos avaliar o modelo e os mapas gerados.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -279,7 +180,7 @@
 </div>
 </div>
 <div class="section" id="referencias">
-<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline"></a></h2>
 <ul class="simple" id="finer-2018">
 <li><p>Finer, Matt, et al. “Combating deforestation: From satellite to intervention.” Science 360.6395 (2018): 1303-1305.</p></li>
 </ul>
@@ -306,55 +207,41 @@
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="install-sits.html" class="btn btn-neutral float-right" title="Instalando o pacote sits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../time-series-ml.html" class="btn btn-neutral float-left" title="Introdução a séries temporais de imagens de sensoriamento remoto e aplicações de Machine Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install-sits.html" class="btn btn-neutral float-right" title="Instalando o pacote sits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, INPE.
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(false);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-178140681-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-   
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

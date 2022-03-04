@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020-2021 INPE.
+    Copyright 2020-2022 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -39,7 +39,7 @@ Cloud Masking
 ~~~~~~~~~~~~~
 
 
-Cloud masking algorithms can be used to detect undesirable areas, such as cloud, cloud shadows or snow. However, cloud masking algorithm also depends on the characteristic of each sensor. Based on that, for Sentinel-2 we use the standard SCL product provided by Sen2cor, for Landsat-8 the Fmask (version 4.2) is being used :cite:`qiu:2019` while for CBERS-4 this processing is performed using CMASK due to it reduced number of spectral bands. Once this process is performed and the data is cataloged, the Surface Reflectance Image Collections becomes available.
+Cloud masking algorithms can be used to detect undesirable areas, such as cloud, cloud shadows or snow. However, cloud masking algorithm also depends on the characteristic of each sensor. Based on that, for Sentinel-2 we use the standard `SCL <https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm>`__ product provided by Sen2cor, for Landsat-8 the Fmask (version 4.2) is being used :cite:`qiu:2019` while for CBERS-4 this processing is performed using :doc:`CMASK <./bands/CMASK>` due to it reduced number of spectral bands. Once this process is performed and the data is cataloged, the Surface Reflectance Image Collections becomes available.
 
 
 Data Cube Builder
@@ -66,9 +66,23 @@ Temporal Compositing
 ~~~~~~~~~~~~~~~~~~~~
 
 
-BDC Data Cube Collections can be categorized in two types, identity and regular. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called regular data cubes.
+BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.
 
-Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *ii* ) median, and ( *iii* ) stack. These functions are operations applied on valid observations, which are not detected as cloud or cloud shadow by the quality assessment band, considering the time dimension and a time step, e. g. monthly or 16 days. The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in :numref:`Figure %s <products:compositing-functions>`.
+Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *ii* ) median, and ( *iii* ) stack. Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:
+
+
++------------------------------+--------------+-------------------+-----------------------+-----------------------+
+| Cloud Mask                   | Nodata Value | Clear Data Values | Not Clear Data Values | Saturated Data Values |
++==============================+==============+===================+=======================+=======================+
+| :doc:`SCL <./bands/SCL>`     | 0            | 4, 5, 6, 7        | 2, 3, 8, 9, 10, 11    | 1                     |
++------------------------------+--------------+-------------------+-----------------------+-----------------------+
+| :doc:`FMASK <./bands/FMASK>` | 255          | 0, 1              | 2, 3, 4               |                       |
++------------------------------+--------------+-------------------+-----------------------+-----------------------+
+| :doc:`CMASK <./bands/CMASK>` | 0            | 127               | 255                   |                       |
++------------------------------+--------------+-------------------+-----------------------+-----------------------+
+
+
+The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in :numref:`Figure %s <products:compositing-functions>`.
 
 
 .. figure:: ../../img/products/compositing-function.png
@@ -79,6 +93,8 @@ Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *
 
     BDC Time Compositing Functions.
 
+
+.. note:: If there are only not clear observations values for a time step, the stack temporal compositing outputs the value from the clearest image.
 
 After the time compositing function is applied, the Brazil Data Cube Builder also calculates the NDVI and EVI spectral indices using the spectral bands of the time composed data cube. Besides that, for the time composed data cubes, three provenance bands are also generated for tracking characteristics of the composite period. The data product bands are :doc:`CLEAROB <./bands/CLEAROB>`, :doc:`TOTALOB <./bands/TOTALOB>` and :doc:`PROVENANCE <./bands/PROVENANCE>`.
 

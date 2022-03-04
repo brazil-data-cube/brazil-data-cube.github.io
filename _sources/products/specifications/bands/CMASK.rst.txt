@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020-2021 INPE.
+    Copyright 2020-2022 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -28,3 +28,5 @@ BDC acquires CBERS-4 Surface Reflectance Image Collections containing a cloud ma
 +--------------+-------------+
 | No Data      | 0           |
 +--------------+-------------+
+
+For a description on CMASK see: SILVA, Marco Aurélio Oliveira; LIPORACE, Frederico dos Santos. DETECÇÃO AUTOMÁTICA DE NUVEM E SOMBRA DE NUVEM EM IMAGENS DE SENSORIAMENTO REMOTO. Bulletin of Geodetic Sciences, v. 22, n. 2, june 2016. ISSN 1982-2170. Available at: <https://revistas.ufpr.br/bcg/article/view/47507>.
