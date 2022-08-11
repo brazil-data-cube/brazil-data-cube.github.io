@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CLEAROB" href="bands/CLEAROB.html" />
-    <link rel="prev" title="BDC Grid" href="bdc-grid.html" /> 
+    <link rel="prev" title="Projection used by BDC" href="bdc-grid.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,7 +53,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../specifications.html">Specifications</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bdc-grid.html">BDC Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bdc-grid.html">Projection used by BDC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bdc-grid.html#bdc-grid-system-v2">BDC Grid System (V2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bdc-grid.html#bdc-grid-system-v1">BDC Grid System (V1)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">BDC Processing Flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html">BDC Naming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="product-access.html">BDC Product Access</a></li>
@@ -103,7 +105,7 @@
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="BDC Grid" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="Projection used by BDC" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="bands/CLEAROB.html" class="btn btn-neutral float-right" title="CLEAROB" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -113,10 +115,10 @@
              
   <div class="section" id="bdc-processing-flow">
 <span id="processing-flow"></span><h1>BDC Processing Flow<a class="headerlink" href="#bdc-processing-flow" title="Permalink to this headline"></a></h1>
-<p>Several procedures are performed to generate BDC Data cube collections. Based on that, <a class="reference internal" href="#products-processing-flow"><span class="std std-numref">Figure 3</span></a> illustrates a diagram containing the main procedures used to generate BDC data products.</p>
+<p>Several procedures are performed to generate BDC Data cube collections. Based on that, <a class="reference internal" href="#products-processing-flow"><span class="std std-numref">Figure 4</span></a> illustrates a diagram containing the main procedures used to generate BDC data products.</p>
 <div class="align-center figure align-default" id="products-processing-flow">
 <a class="reference internal image-reference" href="../../_images/bdc.png"><img alt="BDC Image collection ingestion and Data Cube generation" src="../../_images/bdc.png" style="width: 720px;" /></a>
-<p class="caption"><span class="caption-number">Figure 3 - </span><span class="caption-text">BDC Image collection ingestion and Data Cube generation.</span><a class="headerlink" href="#products-processing-flow" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 4 - </span><span class="caption-text">BDC Image collection ingestion and Data Cube generation.</span><a class="headerlink" href="#products-processing-flow" title="Permalink to this image"></a></p>
 </div>
 <div class="section" id="image-collection-builder">
 <h2>Image Collection builder<a class="headerlink" href="#image-collection-builder" title="Permalink to this headline"></a></h2>
@@ -133,16 +135,16 @@
 <h2>Data Cube Builder<a class="headerlink" href="#data-cube-builder" title="Permalink to this headline"></a></h2>
 <div class="section" id="warp-merge-reprojecting-resampling-and-griding">
 <h3>Warp (Merge, Reprojecting, Resampling and Griding)<a class="headerlink" href="#warp-merge-reprojecting-resampling-and-griding" title="Permalink to this headline"></a></h3>
-<p>In order to build the data cube collections, all input images must be at the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization and can be seen in <a class="reference internal" href="#products-cube-builder"><span class="std std-numref">Figure 4</span></a>. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.</p>
+<p>In order to build the data cube collections, all input images must be at the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization and can be seen in <a class="reference internal" href="#products-cube-builder"><span class="std std-numref">Figure 5</span></a>. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.</p>
 <div class="align-center figure align-default" id="products-cube-builder">
 <a class="reference internal image-reference" href="../../_images/cube-builder.png"><img alt="BDC Cube generation" src="../../_images/cube-builder.png" style="width: 720px;" /></a>
-<p class="caption"><span class="caption-number">Figure 4 - </span><span class="caption-text">Data Cube generation.</span><a class="headerlink" href="#products-cube-builder" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 5 - </span><span class="caption-text">Data Cube generation.</span><a class="headerlink" href="#products-cube-builder" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="temporal-compositing">
 <h3>Temporal Compositing<a class="headerlink" href="#temporal-compositing" title="Permalink to this headline"></a></h3>
 <p>BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.</p>
-<p>Three temporal compositing functions are being used in BDC: ( <em>i</em> ) average, ( <em>ii</em> ) median, and ( <em>iii</em> ) stack. Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:</p>
+<p>Three temporal compositing functions are being used in BDC: ( <em>i</em> ) Average (AVG), ( <em>ii</em> ) Median (MED), and ( <em>iii</em> ) Least Cloud Cover First (LCF). Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 28%" />
@@ -180,14 +182,18 @@
 </tr>
 </tbody>
 </table>
-<p>The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in <a class="reference internal" href="#products-compositing-functions"><span class="std std-numref">Figure 5</span></a>.</p>
+<p>The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The Least Cloud Cover First (LCF) temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in <a class="reference internal" href="#products-compositing-functions"><span class="std std-numref">Figure 6</span></a>.</p>
 <div class="align-center figure align-default" id="products-compositing-functions">
 <a class="reference internal image-reference" href="../../_images/compositing-function.png"><img alt="BDC Time Compositing Functions" src="../../_images/compositing-function.png" style="width: 720px;" /></a>
-<p class="caption"><span class="caption-number">Figure 5 - </span><span class="caption-text">BDC Time Compositing Functions.</span><a class="headerlink" href="#products-compositing-functions" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 6 - </span><span class="caption-text">BDC Time Compositing Functions.</span><a class="headerlink" href="#products-compositing-functions" title="Permalink to this image"></a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If there are only not clear observations values for a time step, the stack temporal compositing outputs the value from the clearest image.</p>
+<p>If there are only not clear observations values for a time step, the LCF temporal compositing outputs the value from the clearest image.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Previouse versions of BDC, LCF was named STK (Stack). We adopt the LCF nomenclature to specify how values are selected on the compositing function.</p>
 </div>
 <p>After the time compositing function is applied, the Brazil Data Cube Builder also calculates the NDVI and EVI spectral indices using the spectral bands of the time composed data cube. Besides that, for the time composed data cubes, three provenance bands are also generated for tracking characteristics of the composite period. The data product bands are <a class="reference internal" href="bands/CLEAROB.html"><span class="doc">CLEAROB</span></a>, <a class="reference internal" href="bands/TOTALOB.html"><span class="doc">TOTALOB</span></a> and <a class="reference internal" href="bands/PROVENANCE.html"><span class="doc">PROVENANCE</span></a>.</p>
 <div class="toctree-wrapper compound">
@@ -200,7 +206,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="BDC Grid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="Projection used by BDC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="bands/CLEAROB.html" class="btn btn-neutral float-right" title="CLEAROB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

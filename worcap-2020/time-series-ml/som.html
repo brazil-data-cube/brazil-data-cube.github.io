@@ -140,25 +140,25 @@ um conjunto de dados de séries temporais de imagem de satélite utilizando como
 <div class="section" id="efeitos-de-ruido-de-classe-na-classificacao">
 <h2>Efeitos de ruído de classe na classificação<a class="headerlink" href="#efeitos-de-ruido-de-classe-na-classificacao" title="Permalink to this headline"></a></h2>
 <p>Para ilustrar os efeitos que um conjunto de amostras com qualidade ruim  pode causar na geração de um modelo de aprendizado de máquina,
-apresentamos o exemplo da <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 61</span></a>, onde a  classificação de uma série temporal de uso e cobertura da terra ao longo de 16 anos foi realizada.
+apresentamos o exemplo da <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 62</span></a>, onde a  classificação de uma série temporal de uso e cobertura da terra ao longo de 16 anos foi realizada.
 O conjunto de dados utilizado para treinamento do modelo random forest possui amostras que foram rotuladas de forma errônea.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-noisy">
 <a class="reference internal image-reference" href="../../_images/noisy.png"><img alt="Noisy" src="../../_images/noisy.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 61 - </span><span class="caption-text">Resultado de uma classificação ruim de uma série temporal utilizando o método random forest.</span><a class="headerlink" href="#time-series-ml-som-noisy" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 62 - </span><span class="caption-text">Resultado de uma classificação ruim de uma série temporal utilizando o método random forest.</span><a class="headerlink" href="#time-series-ml-som-noisy" title="Permalink to this image"></a></p>
 </div>
-<p>Na classificação gerada pelo modelo random forest, na <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 61</span></a>, uma inconsistência é apresentada durante a trajetória da classificação apresentando o anos de 2007 e 2008 classificados como floresta logo em seguida de pasto.
+<p>Na classificação gerada pelo modelo random forest, na <a class="reference internal" href="#time-series-ml-som-noisy"><span class="std std-numref">Figura 62</span></a>, uma inconsistência é apresentada durante a trajetória da classificação apresentando o anos de 2007 e 2008 classificados como floresta logo em seguida de pasto.
 Dado que em um ano uma floresta não se regenera, podemos notar a presença de um erro na classificação da série temporal para estes anos. Isto se deve ao fato de possuir amostras que deveriam ter sido rotuladas como pasto ou alum tipo de agricultura, no entanto elas foram rotuladas como floresta.</p>
-<p>A <a class="reference internal" href="#time-series-ml-som-good"><span class="std std-numref">Figura 62</span></a> apresenta a classificação da mesma série temporal apresentada anteriormente, porém houve um pré-processamento no conjunto de dados utilizado para treinar o modelo do random forest  para a remoção de ruídos de clases.</p>
+<p>A <a class="reference internal" href="#time-series-ml-som-good"><span class="std std-numref">Figura 63</span></a> apresenta a classificação da mesma série temporal apresentada anteriormente, porém houve um pré-processamento no conjunto de dados utilizado para treinar o modelo do random forest  para a remoção de ruídos de clases.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-good">
 <a class="reference internal image-reference" href="../../_images/good.png"><img alt="good" src="../../_images/good.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 62 - </span><span class="caption-text">Classificação da mesma série temporal após a remoção de amostras ruidosas.</span><a class="headerlink" href="#time-series-ml-som-good" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 63 - </span><span class="caption-text">Classificação da mesma série temporal após a remoção de amostras ruidosas.</span><a class="headerlink" href="#time-series-ml-som-good" title="Permalink to this image"></a></p>
 </div>
 <p>O metódo SOM no contexto do projeto Brazil Data Cube é utilizado  para avaliar a qualidade e a remoção de cada uma das amostras do conjunto de dados de treinamento.</p>
 </div>
 <div class="section" id="metodo-som-para-identificacao-de-ruido-de-classe">
 <h2>Método SOM para identificação de ruído de classe<a class="headerlink" href="#metodo-som-para-identificacao-de-ruido-de-classe" title="Permalink to this headline"></a></h2>
 <p>O método SOM é uma rede neural não supervisionada que mapeia um conjunto de dados de alta dimensionalidade em um de baixa dimensionalidade, geralmente uma grade bi-dimensional.
-A <a class="reference internal" href="#time-series-ml-som-redesom"><span class="std std-numref">Figura 63</span></a> apresenta a estrutura da rede SOM. O espaço de saída da rede é composta por unidades chamadas neurônios.
+A <a class="reference internal" href="#time-series-ml-som-redesom"><span class="std std-numref">Figura 64</span></a> apresenta a estrutura da rede SOM. O espaço de saída da rede é composta por unidades chamadas neurônios.
 Cada neurônio possui um vetor de pesos associados a ele, onde cada vetor de peso possui a mesma dimensão que o dado de entrada.
 Geralmente, a inicialização do método pode ser realizada de forma aleatória e então a rede é treinada através de aprendizado competitivo.
 A ideia principal do SOM é calcular a distância entre cada amostra do conjunto de dados e todos os neurônios afim/a fim de encontrar o neurônio que possui a menor distância.
@@ -166,7 +166,7 @@ O neurônio que possui a menor distância é chamado de melhor unidade de medida
 similaridade da vizinhança dos neurônios prevaleça <a class="reference internal" href="#kohonen-2001"><span class="std std-ref">Kohonen et al. (2001)</span></a>.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-redesom">
 <a class="reference internal image-reference" href="../../_images/redesom.png"><img alt="redesom" src="../../_images/redesom.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 63 - </span><span class="caption-text">Estrutura da rede SOM. Fonte: <a class="reference internal" href="#santos-2020"><span class="std std-ref">(Santos et al, 2020)</span></a>.</span><a class="headerlink" href="#time-series-ml-som-redesom" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 64 - </span><span class="caption-text">Estrutura da rede SOM. Fonte: <a class="reference internal" href="#santos-2020"><span class="std std-ref">(Santos et al, 2020)</span></a>.</span><a class="headerlink" href="#time-series-ml-som-redesom" title="Permalink to this image"></a></p>
 </div>
 <p>Após o treinamento da rede SOM, cada amostra está associada a neurônio, portanto os neurônios podem ser rotulados a partir da técnica de voto majoritário
 Assim o mapa SOM é usado para avaliar a qualidade de cada elemento do conjunto de treinamento.
@@ -176,11 +176,11 @@ Neurônios heterogêneos, aqueles com duas ou mais classes com probabilidade sig
 Além disso consideramos que a probabilidade da classe de neurônios (probabilidade condicional) não é a melhor medida de ruído de classe porque os vizinhos
 de cada neurônio de um mapa SOM fornecem informações adicionais sobre a variabilidade intraclasse e interclasse.
 Portanto, aplicamos a inferência bayesiana às vizinhanças do mapa SOM para melhorar a avaliação da qualidade de cada série temporal, chamamos a probabilidade que sofre influência
-dos neurônios vizinhos de probabilidade posterior. Na <a class="reference internal" href="#time-series-ml-som-sombayes"><span class="std std-numref">Figura 64</span></a> o neurônio 3 pertence a Classe 2 porque 75% das amostras que foram associadas a este neurônio
+dos neurônios vizinhos de probabilidade posterior. Na <a class="reference internal" href="#time-series-ml-som-sombayes"><span class="std std-numref">Figura 65</span></a> o neurônio 3 pertence a Classe 2 porque 75% das amostras que foram associadas a este neurônio
 pertecem a Classe 2. No entanto, todos os neurônios vizinhos pertecem a Classe 1, isto influência na confiabilidade das amostras associadas ao neurônio 3, fazendo com que a probabilidade posterior seja menor que condicional.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-sombayes">
 <a class="reference internal image-reference" href="../../_images/sombayes.png"><img alt="sombayes" src="../../_images/sombayes.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 64 - </span><span class="caption-text">Aplicando a inferência bayesiana no neurônio 3</span><a class="headerlink" href="#time-series-ml-som-sombayes" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 65 - </span><span class="caption-text">Aplicando a inferência bayesiana no neurônio 3</span><a class="headerlink" href="#time-series-ml-som-sombayes" title="Permalink to this image"></a></p>
 </div>
 <p>A tabela abaixo apresenta um exemplo da saída do método de qualidade de amostras.
 As probabilidades condicional e posterior indicam o nível de confiabilidade delas realmente pertecerem a classe pasto dado o neurônio onde elas foram alocadas e a sua  vizinhança.</p>
@@ -215,13 +215,13 @@ As probabilidades condicional e posterior indicam o nível de confiabilidade del
 </tbody>
 </table>
 <p>Para determinar se a amostra deve ser removida, mantida ou analisada, as probabilidades devem ser analisadas em conjunto.
-A <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 65</span></a> apresenta um fluxograma que indica qual decisão será tomada a partir dos limiares definidos para definir a qualidade do
+A <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 66</span></a> apresenta um fluxograma que indica qual decisão será tomada a partir dos limiares definidos para definir a qualidade do
 conjunto de amostras.</p>
 <div class="align-center figure align-default" id="time-series-ml-som-decision">
 <a class="reference internal image-reference" href="../../_images/decision.png"><img alt="decision" src="../../_images/decision.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-number">Figure 65 - </span><span class="caption-text">Fluxogama de tomada de decisão.</span><a class="headerlink" href="#time-series-ml-som-decision" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 66 - </span><span class="caption-text">Fluxogama de tomada de decisão.</span><a class="headerlink" href="#time-series-ml-som-decision" title="Permalink to this image"></a></p>
 </div>
-<p>Utilizando as amostras que foram ilustradas na tabela acima e os limiares apresentados na <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 65</span></a>,
+<p>Utilizando as amostras que foram ilustradas na tabela acima e os limiares apresentados na <a class="reference internal" href="#time-series-ml-som-decision"><span class="std std-numref">Figura 66</span></a>,
 a amostra 1 deve ser mantida conjunto de dados, a amostra 2 é automaticamente removida do conjuntos de dados,
 e a amostra 3 deve ser avalidada por especialistas para verificar se elas devem ser mantidas ou não conjunto de dados.</p>
 <p>Devida a alta probabilidade condicional da amostra 3, a primeira hipótese é que um subconjunto de amostras de pasto pode conter padrões diferentes dos demais,

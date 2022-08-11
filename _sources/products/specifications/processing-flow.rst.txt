@@ -68,7 +68,7 @@ Temporal Compositing
 
 BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.
 
-Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *ii* ) median, and ( *iii* ) stack. Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:
+Three temporal compositing functions are being used in BDC: ( *i* ) Average (AVG), ( *ii* ) Median (MED), and ( *iii* ) Least Cloud Cover First (LCF). Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:
 
 
 +------------------------------+--------------+-------------------+-----------------------+-----------------------+
@@ -82,7 +82,7 @@ Three temporal compositing functions are being used in BDC: ( *i* ) average, ( *
 +------------------------------+--------------+-------------------+-----------------------+-----------------------+
 
 
-The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The stack temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in :numref:`Figure %s <products:compositing-functions>`.
+The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The Least Cloud Cover First (LCF) temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in :numref:`Figure %s <products:compositing-functions>`.
 
 
 .. figure:: ../../img/products/compositing-function.png
@@ -94,7 +94,9 @@ The Average temporal composing consists in the average of the observed values. T
     BDC Time Compositing Functions.
 
 
-.. note:: If there are only not clear observations values for a time step, the stack temporal compositing outputs the value from the clearest image.
+.. note:: If there are only not clear observations values for a time step, the LCF temporal compositing outputs the value from the clearest image.
+
+.. note:: On Previouse versions of BDC, LCF was named STK (Stack). We adopt the LCF nomenclature to specify how values are selected on the compositing function.
 
 After the time compositing function is applied, the Brazil Data Cube Builder also calculates the NDVI and EVI spectral indices using the spectral bands of the time composed data cube. Besides that, for the time composed data cubes, three provenance bands are also generated for tracking characteristics of the composite period. The data product bands are :doc:`CLEAROB <./bands/CLEAROB>`, :doc:`TOTALOB <./bands/TOTALOB>` and :doc:`PROVENANCE <./bands/PROVENANCE>`.
 
