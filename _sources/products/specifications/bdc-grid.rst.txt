@@ -13,12 +13,7 @@ The Albers Equal-Area Conic is the reference map projection for the BDC tiling s
 
 The Albers Equal-Area Conic projection parameters follow the cartographic standards defined by Instituto Brasileiro de Geografia e Estatística (IBGE), which is the official civilian mapping agency of Brazil :cite:`franca:2015`. SIRGAS-2000, the official planimetric datum of Brazil, is the reference geodetic system. BDC Grid uses parallel 12° south and meridian 54° west as origin. To generate BDC Grid two standard parallels at latitudes 2° south and 22° south are used. Offsets of 5,000,000 meters and 10,000,000 meters are respectively applied to X and Y coordinates at the origin. In short, the PROJ string for the BDC Grid (V1) can be expressed by:
 
-
-.. math::
-
-    crs: +proj=aea +lat\_0=-12 +lon\_0=-54 +lat\_1=-2 +lat\_2=-22 \\
-    +x\_0=5000000 +y\_0 = 10000000 +ellps=GRS80 +units=m +no\_defs.
-
+crs: +proj=aea +lat\_0=-12 +lon\_0=-54 +lat\_1=-2 +lat\_2=-22 +x\_0=5000000 +y\_0 = 10000000 +ellps=GRS80 +units=m +no\_defs.
 
 The BDC Grid System includes three hierarchical Grids. The size of the grid tiles varies according to the grid version, see bellow more details. The rationale behind the BDC Grid tiling system follows the concept illustrated below in :numref:`Figure %s <products:bdc-grid-seed>`.
 
@@ -33,7 +28,7 @@ The BDC Grid System includes three hierarchical Grids. The size of the grid tile
 
 
 BDC Grid System (V2)
---------------------
+++++++++++++++++++++
 
 BDC Grid System (V2) includes three hierarchical Grids: 105600m x 105600m (Small, SM), 211200m x 211200m (Medium, SM) and 4224400m x 4224400m (Large, LG) tiles. Each product in BDC is generated using a specific grid, depending on the spatial resolution of the data and the output image size. Sentinel-2/MSI products are generated in the SM grid, Landsat-8/OLI and CBERS-4/MUX are generated in the MD grid and CBERS-4/WFI are generated in the LG grid.
 
@@ -49,12 +44,12 @@ The hierarchical relation between the different BDC Grids (V1) can be seen in :n
 
 
 Grid Generation
-+++++++++++++++
+~~~~~~~~~~~~~~~
 
 Tile seeds are initially positioned in a way that the center a tile in the smaller grid is with the meridian 54° west and parallel 12° south. With this initial tile seed defined, other tiles of the same corresponding sizes, always defined by Albers Equal-Area Conic plane coordinates, are automatically generated to entirely cover the cartesian plane of the reference map projection system. For each tile size, upper boundaries perfectly match lower boundaries of tiles above and left boundaries perfectly match right boundaries of tiles on the left. The remaining hierarchical levels are generated using the first grid as a reference.
 
 BDC Grid System (V1)
---------------------
+++++++++++++++++++++
 
 BDC Grid System (V1) includes three hierarchical Grids: 1.5°x1°, 3°x2°, and 6°x4° tiles. Each product in BDC is generated using a specific grid, depending on the spatial resolution of the data and the output image size. Sentinel-2/MSI products are generated in the 1.5°x1° (SM) grid, Landsat-8/OLI and CBERS-4/MUX products are generated in the 3°x2° (MD) grid and CBERS-4/WFI are generated in the 6°x4° (LG) grid.
 
@@ -70,6 +65,6 @@ The hierarchical relation between the different BDC Grids (V1) can be seen in :n
 
 
 Grid Generation
-+++++++++++++++
+~~~~~~~~~~~~~~~
 
 Tile seeds are initially positioned in a way that their upper left corners coincide at the intersection of the equator with the meridian 54° west. With those initial tile seeds defined, other tiles of the same corresponding sizes, always defined by Albers Equal-Area Conic plane coordinates, are automatically generated to entirely cover the cartesian plane of the reference map projection system. For each tile size, upper boundaries perfectly match lower boundaries of tiles above and left boundaries perfectly match right boundaries of tiles on the left.
