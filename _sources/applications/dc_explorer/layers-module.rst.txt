@@ -16,12 +16,7 @@ Layers Features
 +++++++++++++++
 
 -   You can open the **layers** window by clicking in the layers button (floating button in the upper right corner of your screen);
--   At the top of the layers window, you can see the two tabs: **base layers** e **layers**;
--   Within the base layers tab, it is possible to control visualization of the **background maps** and **grids**. Each one has a respective checkbox;
--   Within the layers tab, it is possible to control visualization of the non-base **layers**, each one also has a respective checkbox;
--   Also within the layers tab, it is possible to import external **WMS layer**.  To do so, you need to write the address of the WMS and click on **load**. After that, select which layer you want to import and click on **import**;
-
-Additional Features
-+++++++++++++++++++
-
--  You can **sort** how layers appear on the map. To do this, just drag the desired layer up or down inside the component. The order will dictate how the layers appear on the map;
+-   At the layers window, you can see the five groups: **Grids**, **Limits**, **Mosaics**, **External Maps** e **Uploaded Layers** ;
+-   Within each group, it is possible to control the visualization of each layer through switcher and open info window through info button;
+-   Within the **External Maps** group, it is also possible to see which **time** is selected, and for each layer through the calendar button edit the time;
+-   Also it is possible to import external **WMS layer**.  To do so, you need to write the address of the WMS and click on **load**. After that, select which layer you want to import and click on **import**;

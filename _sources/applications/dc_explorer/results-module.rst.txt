@@ -17,13 +17,13 @@ Research Features
 
 -   You can **enable** or **disable** the visualization of the collection using the switcher (left side of the collection tab);
 -   Inside the collection window, we present each of the features as a card with a preview of the feature. Inside it, it’s possible to **download** the feature or **zoom to the feature**;
--   At the bottom of the page, you can be see the visualization **timeline**. You can move the cursor to filter the results shown on the map and in the collection tab; (You can either use the full range or change);
+-   At the top of the page, you can be see the **timeline**. You can move the cursor to filter the results shown on the map and in the collection tab;
 
 Additional Features
 +++++++++++++++++++
 
--   Through the toolbar (top of the collection tab), it is possible to access tools for: **Zoom**, **View Time Series**, **Compare Two Images**, **Edit View** e **Save Images**;
--   Each of the tools on the toolbar refers applies to the collection in with it is part of. Each collection has a toolbar;
+-   Through the toolbar, it is possible to access: **Zoom**, **Compare Two Images**, **Edit View** e **Save Images**;
+-   Each of the tools on the toolbar applies to the collection in with it is part of. Each collection has a toolbar;
 
 .. image:: ../../img/dc-explorer/results-1.png
     :alt: Results Additional Features

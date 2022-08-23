@@ -6,7 +6,7 @@
     under the terms of the MIT License; see LICENSE file for more details.
 
 Create Token
-=============
+============
 
 .. image:: ../../img/dc-explorer/token.png
     :alt: Token Modal

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualization Overview &mdash; Brazil Data Cube</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Side-by-Side" href="sidebyside-module.html" />
+    <link rel="prev" title="Layers" href="layers-module.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
+            <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">Services and Applications</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wtss.html">Web Time Series Services (WTSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../odc.html">Open Data Cube (ODC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wlts.html">Web Land Trajectory Service (WLTS)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dc_explorer.html">Data Cube Explorer</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="search-module.html">Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results-module.html">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="download-module.html">Download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeseries-module.html">Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trajectory-module.html">Land Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers-module.html">Layers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Visualization Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidebyside-module.html">Side-by-Side</a></li>
+<li class="toctree-l3"><a class="reference internal" href="token-module.html">Create Token</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sbsr-2021.html">SBSR Interim 2021 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Brazil Data Cube</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../applications.html">Services and Applications</a> &raquo;</li>
+          <li><a href="../dc_explorer.html">Data Cube Explorer</a> &raquo;</li>
+      <li>Visualization Overview</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="layers-module.html" class="btn btn-neutral float-left" title="Layers" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sidebyside-module.html" class="btn btn-neutral float-right" title="Side-by-Side" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="visualization-overview">
+<h1>Visualization Overview<a class="headerlink" href="#visualization-overview" title="Permalink to this headline"></a></h1>
+<p>By default, layers viewed in Explorer are drawn in an order: the higher a layer is in this order, the higher (hence more visible) it will be in the map view. The table below presents this ordering and a brief description of the layers.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 21%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Order</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Base Maps</p></td>
+<td><p>Maps available through the Google API.
+These maps include: roadmap, satellite,
+hybrid and terrain.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Limits</p></td>
+<td><p>Maps as geographic boundaries of the IBGE</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>External maps</p></td>
+<td><p>Land use and land cover maps of well-known projects
+include PRODES, TerraClass IBGE and MapBiomas</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Uploaded Layers</p></td>
+<td><p>Layers imported by users through a url of the
+desired service.</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Mosaics</p></td>
+<td><p>Generated with BDC technologies to deal with big
+volumes of images and to select the best pixels
+(free of cloud and cloud shadow) obtained in one period</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Grids</p></td>
+<td><p>Tile Grids of satellites</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Cubes</p></td>
+<td><p>Multidimensional data cubes from analysis-ready
+data (ARD) of CBERS-4, CBERS-4A, Landsat-8 and
+Sentinel-2 satellite images</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Collections</p></td>
+<td><p>Surface Reflectance orthorectified
+imagery from CBERS-4, CBERS-4A, Landsat-8
+and Sentinel-2 satellites           |</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Classifications</p></td>
+<td><p>Classified land use and land cover maps generated
+automatically with artificial intelligence algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Wlts Plot</p></td>
+<td><p>Layers used to extract information in the land use and
+land cover     trajectory service.</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Geometry</p></td>
+<td><p>User-drawn geometries</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Google Label</p></td>
+<td><p>Google map with satellite view, labeled with
+alphabetical characters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="layers-module.html" class="btn btn-neutral float-left" title="Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sidebyside-module.html" class="btn btn-neutral float-right" title="Side-by-Side" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

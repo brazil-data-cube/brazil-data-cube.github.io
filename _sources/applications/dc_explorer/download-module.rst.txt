@@ -16,16 +16,16 @@ Download Features
 +++++++++++++++++
 
 -   You can **download** images by clicking the download button on the collection toolbar;
--   At the top of the download window, you can see the **name** of the collection being downloaded and the selected **period**;
--   Inside the window, we present each of the band as a checkbox with a band name. You can **download** a txt file with all selected bands, within the search period;
--   The **txt** file contains only the links to the images. This file is **ready-to-use** for download scripts;
+-   At the top of the download window, you can see the **name** of the collection being downloaded and the **period** selected;
+-   Within the window, we present each band as a checkbox with the band name. You can **download** a txt file with all the selected bands, within the search period;
+-   The **txt** file only contains the links to the images. This file is **ready-to-use** for download scripts;
 
 Additional Features
 +++++++++++++++++++
 
--   You can also **download** feature by clicking the download button on the feature card;
--   Just like in the collections download window, you can see the **name** of the feature, the **name** of the collection and the selected **period**;
--   Inside the window, we present each of the band as a download button. By clicking on it, the **image** download will start;
+-   You can also **download** the feature by clicking the download button on the feature card;
+-   As in the collections download window, you can see the **name** of the feature, the **name** of the collection and the **period** selected;
+-   Within the window, we present each of the bands as a download button. By clicking on it, the download of the **image** will start;
 
 .. image:: ../../img/dc-explorer/download-1.png
     :alt: Download Additional Features

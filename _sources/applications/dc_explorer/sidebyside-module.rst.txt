@@ -16,7 +16,7 @@ Side-by-Side Features
 +++++++++++++++++++++
 
 -   You can open the **side-by-side** window by clicking on the side-by-side button on the collection toolbar;
--   At the top of the side-by-side window, you can select two **periods** from the collection, and then compare the two images on the map in the center of the window, by just clicking **compare** button.
+-   At the top of the side-by-side window, you can select two **periods** from the selected collection, and then compare the two images by just clicking **compare** button.
 -   On the map, after clicking compare, you can see the two images, the first period on the left and the second period on the right, and drag the **divider** to see the change between the two images;
 
 Additional Features

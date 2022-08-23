@@ -8,25 +8,21 @@
 Search
 ======
 
-.. image:: ../../img/dc-explorer/search.png
+.. image:: ../../img/dc-explorer/search-1.png
     :alt: Search Component
     :align: center
 
 Search Features
 +++++++++++++++
 
--   Choose from which resources you want to get the data, between Data Cubes, Collections, Classifications and Mosaics (groups on the left side of your screen);
--   Choose from which **collection** you want to receive the data (check boxes inside the resources);
--   Filter the collection by using the **location**. You can do it either by drawing on the map with the select region button or enter a location in the search field on the right tab of the location component;
--   Filter the collection by using the **time range** by either typing the date or select the date from calendar;
+-   Choose from a set of resources to get data, between Data Cubes, Collections and Classifications (groups on the left side of the screen);
+-   Choose from a set of **collection** to get data (check boxes inside the resources);
+-   Filter the selected collections using the **location**. You can do this by drawing on the map with the select region button or by entering a location in the search field on the right tab of the location component;
+-   Filter the selected collections using the **time range** by typing the date or selecting the date from the calendar;
 
 Additional Features
 +++++++++++++++++++
 
 -   You can see the **full name** of a collection by hovering mouse over the collection name;
--   When selecting a collection, clicking on box icon, the **time range** fields will be filled (You can either use the full range or change);
--   Select Date by either typing the date or select the date from calendar;
-
-.. image:: ../../img/dc-explorer/search-1.png
-    :alt: Search Additional Features
-    :align: center
+-   When selecting a collection, clicking on the switcher, the **time range** fields will be filled (You can change it);
+-   Select Date by typing the date or selecting the date from the calendar;

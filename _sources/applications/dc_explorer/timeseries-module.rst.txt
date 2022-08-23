@@ -12,14 +12,19 @@ Time Series
     :alt: Time Series Modal
     :align: center
 
+.. image:: ../../img/dc-explorer/timeseries-2.png
+    :alt: Time Series Modal
+    :align: center
+
 Time Series Features
 ++++++++++++++++++++
 
--   You can open the **time series** window by clicking on the time series button, and then clicking on view button on the time series sub-menu, after **point** a cursor on the map;
--   At the top of the time series window, you can see the **name** of the collection being generating, the selected **period** and the **position**;
--   Inside the window, we present each of the band as a checkbox with a band name. It’s possible to **view** the time series with all selected bands within the search period;
+-   You can open the **time series** by clicking on **draw point**, draw a **point** with the cursor on the map and then clicking on graphic button on the sub-menu;
+-   At the top of the time series settings window, you can see the collection list, below the the list of **bands** from the selected **collections**;
+-   At the bottom of the land trajectory settings window, you can can select the start and end date of the search;
+-   Inside the window, we present each of the band as a switcher with a **band name**;
 
 Additional Features
 +++++++++++++++++++
 
--   It is also possible to select all bands from a single collection, by clicking on the **select all** checkbox;
+-   It is also possible to select bands from different collections, and view the time series with all **selected bands** within the search period;

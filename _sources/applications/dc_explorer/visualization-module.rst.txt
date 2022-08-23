@@ -1,0 +1,45 @@
+Visualization Overview
+++++++++++++++++++++++
+
+By default, layers viewed in Explorer are drawn in an order: the higher a layer is in this order, the higher (hence more visible) it will be in the map view. The table below presents this ordering and a brief description of the layers.
+
++-------+-----------------+---------------------------------------------------------+
+| Order |       Name      | Description                                             |
++=======+=================+=========================================================+
+| 1     | Base Maps       | Maps available through the Google API.                  |
+|       |                 | These maps include: roadmap, satellite,                 |
+|       |                 | hybrid and terrain.                                     |
++-------+-----------------+---------------------------------------------------------+
+| 2     | Limits          | Maps as geographic boundaries of the IBGE               |
++-------+-----------------+---------------------------------------------------------+
+| 3     | External maps   | Land use and land cover maps of well-known projects     | 
+|       |                 | include PRODES, TerraClass IBGE and MapBiomas           |
++-------+-----------------+---------------------------------------------------------+
+| 4     | Uploaded Layers | Layers imported by users through a url of the           |
+|       |                 | desired service.                                        |
++-------+-----------------+---------------------------------------------------------+
+| 5     | Mosaics         | Generated with BDC technologies to deal with big        |
+|       |                 | volumes of images and to select the best pixels         |
+|       |                 | (free of cloud and cloud shadow) obtained in one period |
++-------+-----------------+---------------------------------------------------------+
+| 6     | Grids           | Tile Grids of satellites                                |
++-------+-----------------+---------------------------------------------------------+
+| 7     | Cubes           | Multidimensional data cubes from analysis-ready         |
+|       |                 | data (ARD) of CBERS-4, CBERS-4A, Landsat-8 and          | 
+|       |                 | Sentinel-2 satellite images                             |
++-------+-----------------+---------------------------------------------------------+
+| 8     | Collections     | Surface Reflectance orthorectified                      |
+|       |                 | imagery from CBERS-4, CBERS-4A, Landsat-8               |
+|       |                 | and Sentinel-2 satellites           |                   |
++-------+-----------------+---------------------------------------------------------+
+| 9     | Classifications | Classified land use and land cover maps generated       |
+|       |                 | automatically with artificial intelligence algorithms   |
++-------+-----------------+---------------------------------------------------------+
+| 10    | Wlts Plot       | Layers used to extract information in the land use and  |
+|       |                 | land cover     trajectory service.                      |
++-------+-----------------+---------------------------------------------------------+
+| 11    | Geometry        | User-drawn geometries                                   |
++-------+-----------------+---------------------------------------------------------+
+| 12    | Google Label    | Google map with satellite view, labeled with            |
+|       |                 | alphabetical characters.                                |
++-------+-----------------+---------------------------------------------------------+
