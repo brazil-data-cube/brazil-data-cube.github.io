@@ -65,17 +65,3 @@ O treinamento 2022 apresenta os conceitos básicos de séries temporais e cubos 
 
 
 - Rolf Simões
-
-
-.. toctree::
-    :maxdepth: 1
-    :titlesonly:
-
-    ./day1
-    ./course/notebooks-day1
-    ./day2
-    ./course/notebooks-day2
-    ./day3
-    ./course/notebooks-day3
-    ./day4
-    ./day5

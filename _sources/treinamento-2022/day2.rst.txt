@@ -18,3 +18,10 @@ Amostras e uso dos serviços em Python - Dia 30/08/2022 - Terça Feira
 - :ref:`course-treinamento-2022-day2-notebooks-wtss`
 - :ref:`course-treinamento-2022-day2-notebooks-sample`
 - :ref:`course-treinamento-2022-day2-notebooks-wlts`
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./course/notebooks-day2

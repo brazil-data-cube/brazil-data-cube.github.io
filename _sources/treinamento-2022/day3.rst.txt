@@ -16,3 +16,9 @@ Uso dos serviços em R - Dia 31/08/2022 - Quarta Feira
 - Uso do serviço WLTS em R
 - Uso do serviço WTSS em R
 - Introdução ao SITS R package
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./course/notebooks-day3

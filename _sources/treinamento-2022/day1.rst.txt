@@ -17,3 +17,10 @@ Introdução ao projeto Brazil Data Cube - Dia 29/08/2022 - Segunda Feira
 - `Criação conta BDC e token <https://brazil-data-cube.github.io/applications/dc_explorer/token-module.html>`_  e `Preparação do ambiente Kaggle <https://brazil-data-cube.github.io/worcap-2020/getting-started/kaggle.html>`_
 - `Plataforma BDC Explorer <http://brazildatacube.dpi.inpe.br/portal/explore>`_
 - :ref:`course-treinamento-2022-day1-notebooks`
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./course/notebooks-day1
