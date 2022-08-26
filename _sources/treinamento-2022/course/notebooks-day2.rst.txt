@@ -16,6 +16,7 @@ Uso do serviços WTSS em Python
 
 - https://www.kaggle.com/code/brazildatacube/bdc-wtss-introduction-py
 - https://www.kaggle.com/code/brazildatacube/bdc-wtss-examples-py
+- https://www.kaggle.com/code/brazildatacube/bdc-wtss-whatsnew-py
 
 .. _course-treinamento-2022-day2-notebooks-sample:
 
