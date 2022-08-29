@@ -11,5 +11,5 @@
 Notebooks Python do serviço STAC
 --------------------------------
 
-- https://www.kaggle.com/brazildatacube/worcap-stac-introduction
-- https://www.kaggle.com/brazildatacube/worcap-stac-image-processing
+- https://www.kaggle.com/code/brazildatacube/bdc-stac-introduction-py
+- https://www.kaggle.com/code/brazildatacube/bdc-stac-examples-py
