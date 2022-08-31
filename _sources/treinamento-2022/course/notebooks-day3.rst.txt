@@ -14,7 +14,7 @@ Notebooks R dos Serviços e Pacotes do dia 3
 Uso do serviços STAC em R
 +++++++++++++++++++++++++
 
-- https://www.kaggle.com/code/brazildatacube/bdc-stac-introduction-r
+- https://www.kaggle.com/brazildatacube/bdc-stac-introduction-r/
 
 
 .. _course-treinamento-2022-day3-notebooks-wtss:
@@ -22,7 +22,7 @@ Uso do serviços STAC em R
 Uso do serviços WTSS em R
 ++++++++++++++++++++++++++++++
 
-- https://www.kaggle.com/code/brazildatacube/bdc-wtss-introduction-r
+- https://www.kaggle.com/brazildatacube/bdc-wtss-introduction-r
 
 
 .. _course-treinamento-2022-day3-notebooks-wlts:
@@ -30,7 +30,7 @@ Uso do serviços WTSS em R
 Uso do serviço WLTS em R
 +++++++++++++++++++++++++++++
 
-- https://www.kaggle.com/code/brazildatacube/bdc-wlts-introduction-r
+- https://www.kaggle.com/brazildatacube/bdc-wlts-introduction-r/
 
 
 .. _course-treinamento-2022-day3-notebooks-sits:
@@ -38,4 +38,4 @@ Uso do serviço WLTS em R
 Introdução ao pacote SITS em R
 ++++++++++++++++++++++++++++++
 
-- [link]
+- https://www.kaggle.com/code/esensing/part-1-introduction-to-sits
