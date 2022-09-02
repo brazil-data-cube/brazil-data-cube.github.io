@@ -11,5 +11,10 @@
 SITS R Package - Dia 01/09/2022 - Sexta Feira
 ---------------------------------------------
 
-
 - SITS R package
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./course/notebooks-day5

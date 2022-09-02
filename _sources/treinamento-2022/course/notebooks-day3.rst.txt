@@ -20,7 +20,7 @@ Uso do serviços STAC em R
 .. _course-treinamento-2022-day3-notebooks-wtss:
 
 Uso do serviços WTSS em R
-++++++++++++++++++++++++++++++
++++++++++++++++++++++++++
 
 - https://www.kaggle.com/brazildatacube/bdc-wtss-introduction-r
 
@@ -28,7 +28,7 @@ Uso do serviços WTSS em R
 .. _course-treinamento-2022-day3-notebooks-wlts:
 
 Uso do serviço WLTS em R
-+++++++++++++++++++++++++++++
+++++++++++++++++++++++++
 
 - https://www.kaggle.com/brazildatacube/bdc-wlts-introduction-r/
 

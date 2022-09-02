@@ -1,0 +1,32 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2022 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Notebooks R Pacote SITS (dia 5)
+-------------------------------
+
+.. _course-treinamento-2022-day5-sits-image-classification-in-data-cubes:
+
+Parte 4 - Classificação de imagens em cubos de dados
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- https://www.kaggle.com/code/esensing/part-4-image-classification-in-data-cubes
+
+.. _course-treinamento-2022-day5-sits-machine-learning-for-data-cubes:
+
+Parte 5 - Aprendizado de máquina em cubos de dados
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- https://www.kaggle.com/code/esensing/part-5-machine-learning-for-data-cubes
+
+
+.. _course-treinamento-2022-day5-sits-sample-quality-control-using-som:
+
+Parte 6 - Controle de qualidade de amostras no sits
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- https://www.kaggle.com/esensing/part-6-sample-quality-control-using-som
