@@ -1,9 +1,19 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020-2022 INPE.
+    Copyright (C) 2022 INPE.
 
-    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
-    under the terms of the MIT License; see LICENSE file for more details.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
 Data Cube Collections
@@ -13,17 +23,17 @@ Data Cube Collections
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 | Cube Collection                                                     | Satellite      | Sensors | Spatial Resolution (m) | Temporal Compositing |
 +=====================================================================+================+=========+========================+======================+
-| :doc:`CB4_64_16D_STK-1 <./cube_col/CB4_64_16D_STK-1>`               | CBERS-4        | AWFI    | 64                     | 16 days Stack        |
+| :doc:`CB4_64_16D_STK-1 <./cube_col/CB4_64_16D_STK-1>`               | CBERS-4        | AWFI    | 64                     | 16 days LCF          |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`CB4MUX_20_1M_STK-1 <./cube_col/CB4MUX_20_1M_STK-1>`           | CBERS-4        | MUX     | 20                     | 1 month Stack        |
+| :doc:`CB4MUX_20_1M_STK-1 <./cube_col/CB4MUX_20_1M_STK-1>`           | CBERS-4        | MUX     | 20                     | 1 month LCF          |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`LC8_30_16D_STK-1 <./cube_col/LC8_30_16D_STK-1>`               | Landsat-8      | OLI     | 30                     | 16 days Stack        |
+| :doc:`LC8_30_16D_STK-1 <./cube_col/LC8_30_16D_STK-1>`               | Landsat-8      | OLI     | 30                     | 16 days LCF          |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 | :doc:`MOD13Q1-6 <./cube_col/MOD13Q1-6>`                             | TERRA          | MODIS   | 250                    | 16 days Best Pixel   |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 | :doc:`MYD13Q1-6 <./cube_col/MYD13Q1-6>`                             | AQUA           | MODIS   | 250                    | 16 days Best Pixel   |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
-| :doc:`S2-SEN2COR_10_16D_STK-1 <./cube_col/S2-SEN2COR_10_16D_STK-1>` | Sentinel 2A/2B | MSI     | 10                     | 16 days Stack        |
+| :doc:`S2-16D-2 <./cube_col/S2-16D-2>`                               | Sentinel 2A/2B | MSI     | 10                     | 16 days LCF          |
 +---------------------------------------------------------------------+----------------+---------+------------------------+----------------------+
 
 
@@ -36,4 +46,4 @@ Data Cube Collections
     ./cube_col/LC8_30_16D_STK-1
     ./cube_col/MOD13Q1-6
     ./cube_col/MYD13Q1-6
-    ./cube_col/S2-SEN2COR_10_16D_STK-1
+    ./cube_col/S2-16D-2
