@@ -30,9 +30,9 @@ The BDC Grid System includes three hierarchical Grids. The size of the grid tile
 BDC Grid System (V2)
 ++++++++++++++++++++
 
-BDC Grid System (V2) includes three hierarchical Grids: 105600m x 105600m (Small, SM), 211200m x 211200m (Medium, SM) and 4224400m x 4224400m (Large, LG) tiles. Each product in BDC is generated using a specific grid, depending on the spatial resolution of the data and the output image size. Sentinel-2/MSI products are generated in the SM grid, Landsat-8/OLI and CBERS-4/MUX are generated in the MD grid and CBERS-4/WFI are generated in the LG grid.
+BDC Grid System (V2) includes three hierarchical Grids: 105600m x 105600m (Small, SM), 211200m x 211200m (Medium, MD) and 4224400m x 4224400m (Large, LG) tiles. Each product in BDC is generated using a specific grid, depending on the spatial resolution of the data and the output image size. Sentinel-2/MSI products are generated in the SM grid, Landsat-8/OLI and CBERS-4/MUX are generated in the MD grid and CBERS-4/WFI are generated in the LG grid.
 
-The hierarchical relation between the different BDC Grids (V1) can be seen in :numref:`Figure %s <products:bdc-grid-v2>`.
+The hierarchical relation between the different BDC Grids (V2) can be seen in :numref:`Figure %s <products:bdc-grid-v2>`.
 
 .. figure:: ../../img/products/bdc-grid-v2.png
     :alt: BDC Grid V2
