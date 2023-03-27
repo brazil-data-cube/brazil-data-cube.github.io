@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2023 INPE.
 
     Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
@@ -32,6 +32,7 @@ Welcome to the **Brazil Data Cube** project!
     :maxdepth: 1
     :caption: Tutorials:
 
+    sbsr-2023
     treinamento-2022
     worcap-2021
     ibge-2021

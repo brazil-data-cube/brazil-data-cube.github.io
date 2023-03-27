@@ -1,0 +1,51 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Informações sobre o curso
+-------------------------
+
+
+O minicurso Cubos de Dados de Observação da Terra e Análise de Séries Temporais de Imagens tem como objetivo apresentar uma introdução sobre conceitos de cubos de dados de observação da Terra e análise de séries temporais de imagens de sensoriamento remoto utilizando dados e serviços do projeto `Brazil Data Cube <http://brazildatacube.dpi.inpe.br/>`_,  do INPE. O curso será ministrado utilizando a linguagem R.
+
+
+O conteúdo será ministrado no dia 2 de Abril de 2023 com a seguinte programação:
+
+
+**Manhã**:
+
+- Introdução à cubos de dados de observação da Terra e análise de séries temporais
+
+- Produtos gerados pelo projeto Brazil Data Cube (BDC)
+
+- Plataforma BDC Explorer e TerraCollect
+
+- Serviços do projeto BDC - STAC, WTSS e WLTS: Ferramentas para descoberta e busca de dados, extração de séries temporais de imagens e trajetórias de uso e cobertura da terra
+
+**Tarde**:
+
+- SITS - Satellite Image Time Series: Análise de séries temporais de imagens extraídas de cubos de dados
+
+
+**Responsáveis:**
+
+
+- Gilberto Ribeiro de Queiroz
+
+
+- Karine Reis Ferreira
+
+
+- Felipe Souza
+
+
+- Rennan Marujo
+
+
+**Requisitos**
+
+Cada participante deve portar seu notebook.

@@ -1,0 +1,62 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
+    under the terms of the MIT License; see LICENSE file for more details.
+
+
+Preparação para o Curso
+-----------------------
+
+
+Configurações no Kaggle
++++++++++++++++++++++++
+
+
+.. figure:: ../img/worcap-2020/getting-started/kaggle_logo.png
+    :alt: Logo Kaggle
+    :width: 240
+    :figclass: align-right
+
+
+O *Minicurso Cubos de Dados de Observação da Terra e Análise de Séries Temporais* será feito utilizando o *Kaggle*. O *Kaggle*, é uma comunidade online de praticantes de data science e machine learning que inclui competições e desafios destes temas. O *Kaggle* permite a seus usuários encontrar data sets e construir modelos em um ambiente web nas linguagens Python e R. Deste modo, para realização deste curso é necessário ter uma conta criada em https://www.kaggle.com/ .
+
+
+Uma vez feito login, no menu esquerdo acesse o campo *Notebooks* e crie um novo utilizando o botão *New Notebook*.
+
+
+.. figure:: ../img/worcap-2020/getting-started/new_notebook.png
+    :alt: New Notebook printscreen
+    :width: 720
+    :figclass: align-center
+
+
+Um *Notebook* exemplo será criado. No menu direito expanda a caixa *Notebook options* e verifique o campo *Internet*. Caso o mesmo indique *Get phone verified*, clique sobre ele e verifique com um telefone válido.
+
+.. note::
+
+    Caso você tenha se cadastrado no Kaggle com uma conta Google, esta etapa pode ja estar ativada, dependendo das configurações pessoais da sua conta.
+
+.. figure:: ../img/sbsr-2023/kaggle/notebook_options.png
+    :alt: Create Notebook printscreen
+    :width: 360
+    :figclass: align-center
+
+
+.. figure:: ../img/sbsr-2023/kaggle/get_phone_verified.png
+    :alt: Require Internet printscreen
+    :width: 360
+    :figclass: align-center
+
+
+Agora no mesmo menu *Notebook options* ative o campo *Internet* para *on*.
+
+
+.. figure:: ../img/sbsr-2023/kaggle/internet_on.png
+    :alt: Activate Internet printscreen
+    :width: 360
+    :figclass: align-center
+
+
+Este procedimento é necessário para que o *Notebook* possa instalar pacotes externos e realizar consultas na internet. Com isso seu ambiente está apto para inicio do curso.
