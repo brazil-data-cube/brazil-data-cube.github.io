@@ -49,3 +49,9 @@ O conteúdo será ministrado no dia 2 de Abril de 2023 com a seguinte programaç
 **Requisitos**
 
 Cada participante deve portar seu notebook.
+
+**Links úteis**
+
+- Repositório oficial de Notebooks Jupyter do BDC, onde encontram-se diversos códigos de exemplo de uso das ferramentas do BDC: https://github.com/brazil-data-cube/code-gallery
+
+- Discord BDC, onde pode-se entrar em contato com usuários e desenvolvedores do BDC: https://discord.gg/TqaMJSBtUs
