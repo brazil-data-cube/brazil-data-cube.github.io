@@ -21,7 +21,7 @@ and the projstring:
 
 .. code-block::
 
-    crs: +proj=aea +lat\_0=-12 +lon\_0=-54 +lat\_1=-2 +lat\_2=-22 +x\_0=5000000 +y\_0=10000000 +ellps=GRS80 +units=m +no\_defs.
+    +proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs
 
 The BDC Grid System includes three hierarchical Grids. The size of the grid tiles varies according to the grid version, see bellow more details. The rationale behind the BDC Grid tiling system follows the concept illustrated below in :numref:`Figure %s <products:bdc-grid-seed>`.
 
