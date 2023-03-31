@@ -25,6 +25,8 @@ O Simpósio Brasileiro de Sensoriamento Remoto 2023 (SBSR) é um evento que reú
 
     ./sbsr-2023/course-info
     ./sbsr-2023/getting-started
+    ./sbsr-2023/modulo1
+    ./sbsr-2023/modulo2
 
 
 Links:

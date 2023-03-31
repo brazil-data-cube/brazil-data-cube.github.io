@@ -24,6 +24,7 @@ Web Time Series Service (WTSS)
 
 - https://www.kaggle.com/code/brazildatacube/sbsr2023-wtss-introduction
 - https://www.kaggle.com/code/brazildatacube/sbsr2023-wtss-examples
+- https://www.kaggle.com/code/brazildatacube/sbsr2023-wtss2
 
 Web Land Trajectory Service (WLTS)
 ++++++++++++++++++++++++++++++++++

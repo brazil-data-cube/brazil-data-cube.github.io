@@ -16,7 +16,9 @@ Os códigos para acompanhamento do curso estão disponíveis na plataforma Kaggl
 SITS - Satellite Image Time Series Analysis for Earth Observation Data Cubes
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-- https://www.kaggle.com/brazildatacube/sbsr2023-sits-part-1-introduction-to-sits
-- https://www.kaggle.com/brazildatacube/sbsr2023-sits-part-2-creating-data-cubes-in-sits
-- https://www.kaggle.com/brazildatacube/sbsr2023-sits-part-3-working-with-time-series-in-sits
-- https://www.kaggle.com/brazildatacube/sbsr2023-sits-part-4-image-classification-in-data-cubes
+- https://www.kaggle.com/brazildatacube/sbsr2023-introduction-to-sits
+- https://www.kaggle.com/brazildatacube/sbsr2023-creating-data-cubes-in-sits
+- https://www.kaggle.com/brazildatacube/sbsr2023-working-with-time-series-in-sits
+- https://www.kaggle.com/brazildatacube/sbsr2023-image-classification-in-data-cubes
+- https://www.kaggle.com/brazildatacube/sbsr2023-machine-learning-for-data-cubes
+- https://www.kaggle.com/brazildatacube/sbsr2023-sample-quality-control-using-som
