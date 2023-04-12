@@ -13,6 +13,13 @@ Nesse módulo os dados do projeto Brazil Data Cube (BDC) serão utilizando, por 
 
 Os códigos para acompanhamento do curso estão disponíveis na plataforma Kaggle nos links abaixo, mas os arquivos originais são mantidos e atualizados no repositório *Code-Gallery* no github do projeto (https://github.com/brazil-data-cube/code-gallery).
 
+Slides
+++++++
+
+- .. figure:: ../pdf/2023-04-02-SBSR-5-BDC-SITS.pdf
+    :alt: Classificação de cubo de dados de observação da Terra usando séries temporais com o pacote SITS
+    :width: 720
+
 SITS - Satellite Image Time Series Analysis for Earth Observation Data Cubes
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

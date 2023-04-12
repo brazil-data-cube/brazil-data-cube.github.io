@@ -14,6 +14,26 @@ Nesse período será feita uma introdução sobre séries temporais e cubos de d
 Os códigos para acompanhamento do curso estão disponíveis na plataforma Kaggle nos links abaixo, mas os arquivos originais são mantidos e atualizados no repositório *Code-Gallery* no github do projeto (https://github.com/brazil-data-cube/code-gallery).
 
 
+Slides
+++++++
+
+- .. figure:: ../pdf/2023-04-02-SBSR-1-BDC-Intro.pdf
+    :alt: Introdução ao projeto Brazil Data Cube
+    :width: 720
+
+- .. figure:: ../pdf/2023-04-02-SBSR-2-BDC-Products.pdf
+    :alt: Produtos de dados
+    :width: 720
+
+- .. figure:: ../pdf/2023-04-02-SBSR-3-BDC-Portal.pdf
+    :alt: BDC Explorer
+    :width: 720
+
+- .. figure:: ../pdf/2023-04-02-SBSR-4-BDC-TerraCollect.pdf
+    :alt: Terra Collect
+    :width: 720
+
+
 SpatioTemporal Asset Catalog (STAC)
 +++++++++++++++++++++++++++++++++++
 

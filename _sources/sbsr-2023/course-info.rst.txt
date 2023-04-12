@@ -55,3 +55,5 @@ Cada participante deve portar seu notebook.
 - Repositório oficial de Notebooks Jupyter do BDC, onde encontram-se diversos códigos de exemplo de uso das ferramentas do BDC: https://github.com/brazil-data-cube/code-gallery
 
 - Discord BDC, onde pode-se entrar em contato com usuários e desenvolvedores do BDC: https://discord.gg/TqaMJSBtUs
+
+- Release do curso no github: https://github.com/brazil-data-cube/code-gallery/releases/tag/sbsr2023
