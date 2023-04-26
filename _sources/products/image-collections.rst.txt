@@ -1,9 +1,17 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020-2022 INPE.
+    Copyright 2020-2023 INPE.
 
-    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
-    under the terms of the MIT License; see LICENSE file for more details.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
 Image Collections
@@ -24,6 +32,8 @@ Image Collections
 +------------------------------------------------------------+----------------+----------+----------------+------------+
 | :doc:`LC8_SR-1 <./img_col/LC8_SR-1>`                       | Landsat-8      | OLI      | 30             | SR         |
 +------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`LANDSAT_SR-2 <./img_col/LANDSAT_SR-2>`               | Landsat        | ---      | 30             | SR         |
++------------------------------------------------------------+----------------+----------+----------------+------------+
 | :doc:`S2_L1C-1 <./img_col/S2_L1C-1>`                       | Sentinel 2A/2B | MSI      | 10             | ToA        |
 +------------------------------------------------------------+----------------+----------+----------------+------------+
 | :doc:`S2_L2A-1 <./img_col/S2_L2A-1>`                       | Sentinel 2A/2B | MSI      | 10             | SR         |
@@ -37,6 +47,7 @@ Image Collections
     ./img_col/CBERS4_AWFI_L4_SR-1
     ./img_col/CBERS4_MUX_L4_SR-1
     ./img_col/CBERS4A_WFI_L4_SR-1
+    ./img_col/LANDSAT_SR-2
     ./img_col/LC8_DN-1
     ./img_col/LC8_SR-1
     ./img_col/S2_L1C-1

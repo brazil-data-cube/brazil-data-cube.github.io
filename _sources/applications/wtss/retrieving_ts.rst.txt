@@ -2,8 +2,16 @@
     This file is part of Brazil Data Cube Documentation.
     Copyright 2020 INPE.
 
-    Brazil Data Cube Documentation is free software; you can redistribute it and/or modify it
-    under the terms of the MIT License; see LICENSE file for more details.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
 Retrieving a Time Series
@@ -21,9 +29,9 @@ The Python :numref:`Code snippet %s <wtss:ts-retrieve>` shows how to retrieve a 
     import matplotlib.pyplot as plt
     from wtss import wtss
 
-    w = wtss('http://www.esensing.dpi.inpe.br/')
+    w = wtss('https://brazildatacube.dpi.inpe.br/')
 
-    ts = w.time_series(coverage='MOD13Q1', attributes=('red', 'nir'),
+    ts = w.time_series(coverage='MOD13Q1-6', attributes=('red_reflectance', 'NIR_reflectance'),
                        latitude=-12.0, longitude=-54.0,
                        start_date='2001-01-01', end_date='2001-12-31')
 
@@ -34,8 +42,8 @@ The Python :numref:`Code snippet %s <wtss:ts-retrieve>` shows how to retrieve a 
     plt.xlabel('Date', fontsize=16)
     plt.ylabel('Surface Reflectance', fontsize=16)
 
-    ax.plot(ts.timeline, ts['red'], color='red', ls='-', marker='o', label='red')
-    ax.plot(ts.timeline, ts['nir'], color='purple', ls='-', marker='o', label='nir')
+    ax.plot(ts.timeline, ts.red_reflectance, color='red', ls='-', marker='o', label='red')
+    ax.plot(ts.timeline, ts.NIR_reflectance, color='purple', ls='-', marker='o', label='nir')
 
     plt.legend()
 

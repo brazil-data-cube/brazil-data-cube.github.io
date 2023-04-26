@@ -68,6 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../dc_explorer.html">Data Cube Explorer</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../specifications.html">Specifications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
 <ul>
@@ -125,9 +126,9 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">wtss</span> <span class="kn">import</span> <span class="n">wtss</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="n">w</span> <span class="o">=</span> <span class="n">wtss</span><span class="p">(</span><span class="s1">&#39;http://www.esensing.dpi.inpe.br/&#39;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="n">w</span> <span class="o">=</span> <span class="n">wtss</span><span class="p">(</span><span class="s1">&#39;https://brazildatacube.dpi.inpe.br/&#39;</span><span class="p">)</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="n">ts</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">time_series</span><span class="p">(</span><span class="n">coverage</span><span class="o">=</span><span class="s1">&#39;MOD13Q1&#39;</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;nir&#39;</span><span class="p">),</span>
+<span class="linenos"> 6</span><span class="n">ts</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">time_series</span><span class="p">(</span><span class="n">coverage</span><span class="o">=</span><span class="s1">&#39;MOD13Q1-6&#39;</span><span class="p">,</span> <span class="n">attributes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;red_reflectance&#39;</span><span class="p">,</span> <span class="s1">&#39;NIR_reflectance&#39;</span><span class="p">),</span>
 <span class="linenos"> 7</span>                   <span class="n">latitude</span><span class="o">=-</span><span class="mf">12.0</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mf">54.0</span><span class="p">,</span>
 <span class="linenos"> 8</span>                   <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;2001-01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;2001-12-31&#39;</span><span class="p">)</span>
 <span class="linenos"> 9</span>
@@ -138,8 +139,8 @@
 <span class="linenos">14</span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="linenos">15</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Surface Reflectance&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">timeline</span><span class="p">,</span> <span class="n">ts</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="linenos">18</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">timeline</span><span class="p">,</span> <span class="n">ts</span><span class="p">[</span><span class="s1">&#39;nir&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;nir&#39;</span><span class="p">)</span>
+<span class="linenos">17</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">timeline</span><span class="p">,</span> <span class="n">ts</span><span class="o">.</span><span class="n">red_reflectance</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="linenos">18</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">timeline</span><span class="p">,</span> <span class="n">ts</span><span class="o">.</span><span class="n">NIR_reflectance</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;nir&#39;</span><span class="p">)</span>
 <span class="linenos">19</span>
 <span class="linenos">20</span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="linenos">21</span>
@@ -151,10 +152,10 @@
 </pre></div>
 </div>
 </div>
-<p>The output of the above code snippet is a time series chart as shown in <a class="reference internal" href="#wtss-ts-plot"><span class="std std-numref">Figure 9</span></a>:</p>
+<p>The output of the above code snippet is a time series chart as shown in <a class="reference internal" href="#wtss-ts-plot"><span class="std std-numref">Figure 3</span></a>:</p>
 <div class="align-center figure align-default" id="wtss-ts-plot">
 <a class="reference internal image-reference" href="../../_images/mod13q1-ts.png"><img alt="MOD13Q1 Time Series Plot" src="../../_images/mod13q1-ts.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 9 - </span><span class="caption-text">MOD13Q1 Time Series Plot.</span><a class="headerlink" href="#wtss-ts-plot" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 3 - </span><span class="caption-text">MOD13Q1 Time Series Plot.</span><a class="headerlink" href="#wtss-ts-plot" title="Permalink to this image"></a></p>
 </div>
 </div>
 
