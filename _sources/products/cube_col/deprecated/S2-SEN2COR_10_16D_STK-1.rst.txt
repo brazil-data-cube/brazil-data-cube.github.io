@@ -20,6 +20,13 @@ S2-SEN2COR_10_16D_STK-1
 -----------------------
 
 
+.. warning::
+
+    This product is deprecated and not be available anymore. S2-SEN2COR_10_16D_STK-1 was replaced by :doc:`S2-16D-2 <./../S2-16D-2>`. The new product was generated using BDC GRID newest version (version 2).
+
+    Brazil Data Cube Team.
+
+
 The S2-SEN2COR_10_16D_STK-1 product contains MSI surface reflectance at full spatial resolution (10m) and 16 days Temporal Compositing considering the :doc:`SCL <../../../specifications/bands/SCL>` cloud mask. The following Table lists the S2-SEN2COR_10_16D_STK-1 product characteristics:
 
 
