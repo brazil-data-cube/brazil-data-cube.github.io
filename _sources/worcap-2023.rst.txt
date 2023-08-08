@@ -1,0 +1,36 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+WORCAP 2023
+===========
+
+
+O Workshop de Computação Aplicada (WorCAP) é um evento do programa de Pós-Graduação em Computação Aplicada (CAP) do Instituto Nacional de Pesquisas Espaciais (INPE).
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./worcap-2023/course-info
+    ./worcap-2023/getting-started
+
+
+Links:
+
+- Vídeo: `Projeto Brazil Data Cube e pesquisas em Computação Aplicada - Dra. Karine Reis Ferreira (CAP/INPE) <https://www.youtube.com/watch?v=x1H22k5wR6A>`_.
+
+- `Página do Projeto Brazil Data Cube <http://brazildatacube.org/>`_.

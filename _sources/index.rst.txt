@@ -41,6 +41,7 @@ Welcome to the **Brazil Data Cube** project!
     :maxdepth: 1
     :caption: Tutorials:
 
+    worcap-2023
     sbsr-2023
     treinamento-2022
     worcap-2021

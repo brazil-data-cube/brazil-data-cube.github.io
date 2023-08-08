@@ -18,8 +18,8 @@ WorCAP 2021 - Introdução ao STAC e WTSS
 =======================================
 
 
-.. figure:: /img/worcap-2021/banner-worcap2021-site.png
-    :alt: Banner Workshop de Computação Aplicada 2020 (WorCAP)
+.. figure:: ./img/worcap-2021/banner-worcap2021-site.png
+    :alt: Banner Workshop de Computação Aplicada 2021 (WorCAP)
     :width: 480
     :figclass: align-center
 
