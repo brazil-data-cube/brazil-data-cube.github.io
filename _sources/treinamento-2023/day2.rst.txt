@@ -20,6 +20,7 @@ Serviços e plataformas do BDC - Dia 29/08/2023 - Terça-feira
 --------------------------------------------------------------------
 
 - `TerraCollect <https://brazildatacube.dpi.inpe.br/terracollect>`_
+- :ref:`course-treinamento-2022-day2-notebooks-stac`
 - :ref:`course-treinamento-2022-day2-notebooks-wtss`
 - :ref:`course-treinamento-2022-day2-notebooks-wlts`
 

@@ -17,6 +17,13 @@
 Notebooks em R dos serviços do dia 2
 --------------------------------------
 
+.. _course-treinamento-2022-day2-notebooks-stac:
+
+Uso do serviço STAC em R
+++++++++++++++++++++++++++++++
+
+- https://www.kaggle.com/code/brazildatacube/sbsr2023-stac-introduction
+
 .. _course-treinamento-2022-day2-notebooks-wtss:
 
 Uso do serviço WTSS em R

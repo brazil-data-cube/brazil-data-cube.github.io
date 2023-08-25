@@ -16,6 +16,8 @@
 Informações sobre o curso
 -------------------------
 
+    .. Note:: Início: 28 de Agosto a 01 de Setembro - às 09:00h ao 12:00h
+
 O treinamento 2023 apresenta os conceitos básicos de séries temporais e cubos de dados, bem como a forma de utilizá-los. Serão apresentados os serviços STAC, WTSS, WLTS e o pacote SITS, tecnologias e dados produzidos pelo time do projeto `Brazil Data Cube <http://brazildatacube.dpi.inpe.br/>`_.
 
 
@@ -26,12 +28,12 @@ O treinamento 2023 apresenta os conceitos básicos de séries temporais e cubos 
 - Geração das coleções e cubos de dados
 - Criação conta BDC e token
 - Plataforma BDC Explorer
-- Uso do serviço STAC em R
 
 :ref:`course-treinamento-2023-day2`
 
 - TerraCollect
-- Uso do serviços WTSS em R
+- Uso do serviço STAC em R
+- Uso do serviço WTSS em R
 - Uso do serviço WLTS em R
 
 :ref:`course-treinamento-2023-day3`
