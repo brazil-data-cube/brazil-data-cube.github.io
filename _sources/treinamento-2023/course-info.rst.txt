@@ -63,10 +63,12 @@ O treinamento 2023 apresenta os conceitos básicos de séries temporais e cubos 
 - Karine Reis Ferreira
 
 
-- Jeferson
+- Jeferson Arcanjo
 
 
 **Equipe de Colaboradores do Minicurso:**
+
+- Abner Anjos
 
 
 - Fabiana Zioti
@@ -75,4 +77,10 @@ O treinamento 2023 apresenta os conceitos básicos de séries temporais e cubos 
 - Felipe Souza
 
 
+- Gabriel Sansigolo
+
+
 - Pedro Brito
+
+
+
