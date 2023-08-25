@@ -49,6 +49,7 @@ Welcome to the **Brazil Data Cube** project!
     sbsr-2021
     worcap-2020
     datascience-2020
+    treinamento-2023
 
 
 .. toctree::
