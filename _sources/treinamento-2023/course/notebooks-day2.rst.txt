@@ -22,20 +22,20 @@ Notebooks em R dos serviços do dia 2
 Uso do serviço STAC em R
 ++++++++++++++++++++++++++++++
 
-- https://www.kaggle.com/code/brazildatacube/sbsr2023-stac-introduction
+- https://www.kaggle.com/code/brazildatacube/treinamento-prodes-2023-stac-introduction
 
 .. _course-treinamento-2022-day2-notebooks-wtss:
 
 Uso do serviço WTSS em R
 ++++++++++++++++++++++++++++++
 
-- https://www.kaggle.com/code/brazildatacube/sbsr2023-wtss-introduction
-- https://www.kaggle.com/code/brazildatacube/sbsr2023-wtss-examples
-- https://www.kaggle.com/code/brazildatacube/sbsr2023-wtss2
+- https://www.kaggle.com/code/brazildatacube/treinamento-prodes-2023-wtss-introduction
+- https://www.kaggle.com/code/brazildatacube/treinamento-prodes-2023-wtss-examples
+- https://www.kaggle.com/code/brazildatacube/treinamento-prodes-2023-wtss2
 
 .. _course-treinamento-2022-day2-notebooks-wlts:
 
 Uso do serviço WLTS em R
 +++++++++++++++++++++++++++++
 
-- https://www.kaggle.com/code/brazildatacube/sbsr2023-wlts-introduction
+- https://www.kaggle.com/code/brazildatacube/treinamento-prodes-wlts-introduction
