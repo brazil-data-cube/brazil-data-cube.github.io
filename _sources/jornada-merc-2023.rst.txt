@@ -1,0 +1,119 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul
+======================================================================
+
+
+.. figure:: /img/jornada-educacao-mercosul-2023/logo-jornada.png
+    :alt: Banner Jornada merc 2023
+    :width: 480
+    :figclass: align-center
+
+
+Informações sobre o curso
+-------------------------
+
+
+O minicurso Brazil Data Cube: Cubos de Dados de Observação da Terra e Análise de Séries Temporais de Imagens tem como objetivoapresentar uma introdução sobre conceitos de cubos de dados de observação da Terra e análise de séries temporais de imagens de sensoriamento remoto. O curso terá uma parte teórica e uma parte prática hands-on (na linguagem R e Python) utilizando os cubos de dados e os pacotes de software criados pelo projeto `Brazil Data Cube (BDC) <http://brazildatacube.dpi.inpe.br/>`_,  do INPE. Serão apresentados os produtos gerados pelo BDC, ferramentas para acesso e descoberta desses dados, extração de séries temporais e extração de trajetórias de uso e cobertura da terra. Também será apresentado o pacote SITS (Satellite Image Time Series) em R para geração de mapas de uso e cobertura da terra a partir de séries temporais de imagens usando machine learning e os cubos de dados do projeto BDC. O curso será oferecido em português e os participantes poderão fazer em seus próprios computadores acessando a plataforma Brazil Data Cube.
+
+
+O conteúdo será ministrado no dia 21 de Novembro de 2023 (8:30h às 18:00h).
+
+
+Público alvo
+~~~~~~~~~~~~
+
+
+Estudantes, pesquisadores, professores ou funcionários de empresas que trabalham com extração de informação a partir de imagens de satélites de observação da Terra.
+
+
+Ementa
+~~~~~~
+
+
+Introdução: cubos de dados de observação da Terra e análise de séries temporais de imagens; Produtos de dados e software desenvolvidos pelo projeto Brazil Data Cube (BDC); Plataforma BDC Explorer e TerraCollect; Ferramentas do projeto BDC (STAC, WTSS e WLTS) para descoberta e busca de dados, extração de séries temporais de imagens e trajetórias de uso e cobertura da terra; Pacote SITS (Satellite Image Time Series): geração de mapas de uso e cobertura da terra a partir de séries temporais de imagens extraídas de cubos de dados usando machine learning.
+
+
+Pré-requisito
+~~~~~~~~~~~~~
+
+É desejável conhecimento de R e/ou Python para a parte prática, mas não é pré-requisito (Poderá ser solicitado Notebook ao participante).
+
+
+**Responsáveis:**
+
+
+- Karine Reis Ferreira
+
+
+- Gilberto Ribeiro de Queiroz
+
+
+- Baggio Luiz de Castro e Silva
+
+
+- Felipe Souza
+
+
+- Rennan Marujo
+
+
+Contato
+~~~~~~~
+
+
+- brazildatacube@inpe.br
+
+- felipe.carvalho@inpe.br, baggio.silva@inpe.br rennan.marujo@inpe.br
+
+- Discord BDC, onde pode-se entrar em contato com usuários e desenvolvedores do BDC: https://discord.gg/TqaMJSBtUs
+
+
+**Requisitos**
+
+Cada participante deve portar seu notebook.
+
+
+Curso
+-----
+
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./jornada-merc-2023/getting-started
+    ./jornada-merc-2023/course
+    ./jornada-merc-2023/course/intro-bdc
+    ./jornada-merc-2023/course/image-processing
+    ./jornada-merc-2023/course/data-cube
+    ./jornada-merc-2023/course/processing-flow
+    ./jornada-merc-2023/course/notebooks-servicos
+    ./jornada-merc-2023/course/terra-collect
+    ./jornada-merc-2023/course/intro-reconhecimento
+    ./jornada-merc-2023/course/notebooks-sits
+
+
+**Links úteis**
+
+- Repositório oficial de Notebooks Jupyter do BDC, onde encontram-se diversos códigos de exemplo de uso das ferramentas do BDC: https://github.com/brazil-data-cube/code-gallery
+
+- Release do curso no github: https://github.com/brazil-data-cube/code-gallery/releases/tag/jormerc2023
+
+- Vídeo: `Projeto Brazil Data Cube e pesquisas em Computação Aplicada - Dra. Karine Reis Ferreira (CAP/INPE) <https://www.youtube.com/watch?v=x1H22k5wR6A>`_.
+
+- `Página do Projeto Brazil Data Cube <http://brazildatacube.org/>`_.

@@ -1,0 +1,105 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Cubos de dados de Observação da Terra
+-------------------------------------
+
+Plataformas orbitais de observação da Terra, ou satélites de observação da Terra, são atualmente uma das formas mais consistentes e amplamente utilizadas para a realização do monitoramento da superfície terrestre e sua biodiversidade. A ampla utilização dessas plataformas está relacionada com sua capacidade de capturar, de forma contínua, imagens das mesmas regiões do planeta em diferentes instantes de tempo, formando assim, coleções de imagens.
+
+A :numref:`Figura %s <fig:jormerc-time-series-image-collection>` resume como essas coleções de imagens são formadas. Para uma mesma região, tem-se a captura de múltiplas imagens, que registram a variação ocorrida ao longo do tempo.
+
+.. figure::  ../../img/worcap-2021/data-cube/image-collection.png
+    :alt: image collection
+    :width: 550
+    :figclass: align-center
+    :name: fig:jormerc-time-series-image-collection
+
+    Captura de múltiplas imagens formando uma coleção.
+
+Com a organização dessa sequência de imagens de forma sistemática, ajustadas no espaço e ordenadas no tempo, tem-se a possibilidade de monitorar o planeta através da investigação e o entendimento das dinâmicas ocorridas na superfície terrestre ao longo do tempo. Por exemplo, :cite:`pekel:2016`, utilizando de uma coleção de imagens da missão Landsat, mostra toda a dinâmica do Lago Milh, localizado no Iraque. O resultado obtido pelos autores é apresentado na :numref:`Figura %s <fig:jormerc-milhlake>`.
+
+.. figure:: https://global-surface-water.appspot.com/gsw/video/gif/razaza.gif
+    :alt: Milh Lake
+    :width: 280
+    :figclass: align-center rotate270deg
+    :name: fig:jormerc-milhlake
+
+    Dinâmica do ``Lago Milh`` (Iraque) ao longo do tempo - Fonte: :cite:`pekel:2016`.
+
+Outros exemplos notórios são de trabalhos que utilizam a avaliação temporal de coleções de imagens de satélite para a criação de mapas de Uso e Cobertura da Terra (LULC, do inglês *Land Use and Land Cover*). Por exemplo, :cite:`simoes:2019`, utilizaram de dados séries temporais, extraídas de coleções de dados MODIS, junto a algoritmos de Aprendizado de Máquina para a criação de mapas de LULC para o estado do Mato Grosso/Brasil. Outro exemplo é o trabalho apresentado por :cite:`sanchez:2019`, em que os autores fizeram o uso de séries temporais, extraídas de coleções de dados Sentinel-2/MSI, para a identificação de áreas desmatadas na Amazônia Legal.
+
+.. tip::
+
+    Para os interessados, está disponível no canal do YouTube da Computação Aplicada/INPE, o curso `Geoinformática com Aplicações de Machine Learning <https://www.youtube.com/watch?v=X7h9KyxNwM4>`_, o qual apresenta o uso conjunto de séries temporais e Aprendizado de Máquina para a criação de mapas de LULC.
+
+Entretanto, fazer a utilização dessas coleções de imagens para a realização de avaliações temporais, pode não ser uma tarefa trivial. Isso ocorre já que, no uso desses dados, todas as operações que antecedem a análise temporal, como por exemplo, etapas de pré-processamento, organização e armazenamento dos dados, devem ser feitas para todas as imagens da coleção.
+
+Considerando este cenário, os pesquisadores passaram a produzir Dados Prontos para Análise (ARD, do inglês *Analysis Ready Data*), os quais são processados e organizados para permitir análises imediatas :cite:`siqueira:2019`. Em seguida, esses dados ARD passaram a ser organizados como cubos de dados de imagens de satélite :cite:`ferreira:2020`, tornando a realização de avaliações temporais, com dados extraídos de coleções de imagens, mais simples e intuitivas :cite:`appel:2019`.
+
+Segundo as definições adotadas pelo Brazil Data Cube :cite:`ferreira:2020`, um cubo de dados é uma matriz de quatro dimensões: ``X`` (longitude), ``Y`` (latitude), ``Tempo`` e ``Bandas``. Além disso, para que um conjunto de dados seja considerado um cubo de dados, ele deve atender aos seguintes requisitos :cite:`simoes:2019`:
+
+1. Suas dimensões espaciais referem-se a um único sistema de referência espacial (SRS, do inglês *Spatial Reference System*);
+2. As células de um cubo de dados tem um tamanho espacial constante em relação ao SRS do cubo;
+3. Uma célula possui um único valor.
+
+Na :numref:`Figura %s <fig:jormerc-time-series-data-cube-representation>`, é feita uma representação em alto nível de um cubo de dados. À esquerda da Figura, está uma coleção de imagens, a qual não possui as propriedades de um cubo de dados, podendo ter imagens desalinhada no tempo e espaço. Na direta, tem-se um cubo de dados, o qual possui alinhamento espacial e temporal.
+
+.. figure::  ../../img/worcap-2021/data-cube/datacube-representation.png
+    :alt: datacube representation
+    :width: 620
+    :figclass: align-center
+    :name: fig:jormerc-time-series-data-cube-representation
+
+    Representação de um cubo de dados.
+
+.. note::
+
+    Considerando a definição apresentada anteriormente, tem-se que, a representação de cubos de dados apresentada na :numref:`Figura %s <fig:jormerc-time-series-data-cube-representation>`, é repetida para cada uma das bandas que compõe o cubo.
+
+Com as coleções de imagens de satélite sendo organizadas como cubos de dados, pode-se então realizar a ``seleção de imagens`` e a ``extração de séries temporais``. Na ``seleção de imagens``, o usuário do cubo de dados, escolhe por um ou mais instantes de tempo e ao aplicar a operação no cubo, tem como retorno um conjunto de imagens 2D válidas.
+
+A :numref:`Figura %s <fig:jormerc-time-series-data-cube-selection>` ilustra esta operação com dois exemplos. À esquerda é apresentada a seleção de uma imagem em um instante de tempo (Azul claro). Na direita, tem-se a seleção de dois instantes de tempos distintos (Azul claro e Azul escuro).
+
+.. figure::  ../../img/worcap-2021/data-cube/data-cube-selection.png
+    :alt: data cube selection
+    :width: 620
+    :figclass: align-center
+    :name: fig:jormerc-time-series-data-cube-selection
+
+    Seleção de instantes de tempo em um cubo de dados.
+
+Para a segunda operação, ``extração de séries temporais``, o usuário define uma localização no espaço geográfico e ao aplicar a operação no cubo, tem como retorno uma série temporal válida. Esta série temporal é formada pelos valores da localização definida em cada uma das imagens que compõe o cubo.
+
+Na :numref:`Figura %s <fig:jormerc-time-series-data-cube-operation-extraction>`, é feita a representação desta operação. Para a localização definida (Amarelo), faz-se a extração dos valores de todas as imagens associadas ao cubo de dados.
+
+.. figure::  ../../img/worcap-2021/data-cube/data-cube-extraction.png
+    :alt: data cube extraction
+    :width: 620
+    :figclass: align-center
+    :name: fig:jormerc-time-series-data-cube-operation-extraction
+
+    Extra de série temporal a partir de uma localização em um cubo de dados.
+
+.. note::
+
+    Utilizando as ferramentas do Brazil Data Cube, ambas operações de ``seleção`` e ``extração``, podem ser realizadas, respectivamente, pelos serviços `STAC <https://github.com/brazil-data-cube/stac.py>`_ e `WTSS <https://github.com/brazil-data-cube/wtss.py>`_, os quais serão apresentados neste minicurso.
+
+Iniciativas de cubos de dados
+++++++++++++++++++++++++++++++
+
+A utilização dos cubos de dados tem permitido que descobertas, aplicações e estudos inovadores sejam criados. Com o objetivo de operacionalizar a geração desses cubos, diversas iniciativas ao redor do mundo foram criadas, como `Australian Data Cube <https://datacube-core.readthedocs.io/en/datacube-1.2.2/>`_,  `Swiss Data Cube <https://www.swissdatacube.org/>`_, `Armenian Data Cube <http://datacube.sci.am/>`_, `Catalan Data Cube <http://datacube.uab.cat/>`_ e o `Digital Earth Africa <https://www.digitalearthafrica.org/>`_.
+
+No Brasil, a iniciativa ``Brazil Data Cube`` está sendo desenvolvida para a geração de cubos de dados para todo território nacional.
