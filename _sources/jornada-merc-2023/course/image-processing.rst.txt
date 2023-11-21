@@ -1,0 +1,92 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Fundamentos sobre imagens
+-------------------------
+
+
+Antes de iniciar a parte prática do curso, vamos relembrar brevemente alguns fundamentos e conceitos comuns quando trabalha-se com imagens digitais.
+
+
+Fundamentos de cor
+++++++++++++++++++
+
+
+Basicamente, as cores que humanos e outros animais notam são determinadas pela natureza da luz refletida por um objeto. Como pode ser observado na Figura abaixo, a luz visivel é composta por bandas estreitas de frequências no espectro eletromagnético :cite:`gonzalez:2007`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/prisma.png
+    :alt: Prisma
+    :width: 600
+    :figclass: align-center
+
+    Espectro de cores observado quando luz passa por um prisma. Fonte: :cite:`gonzalez:2007`
+
+
+Os cones, sensores no olho responsáveis pela visão colorida, são capazes capaz de diferenciar 3 categorias principais de cores: azul, verde e vermelho, de modo que a Figura abaixo ilustra uma média experimental da luz absorvida, nos comprimentos de onda citados, pelo olho humano :cite:`gonzalez:2007`.
+
+
+.. figure:: ../../img/worcap-2020/access-view/rgb-absortion.png
+    :alt: RGB absortion
+    :width: 600
+    :figclass: align-center
+
+    Absorção da luz vermelha, verde e azul por cones no olho humano em função do comprimento de onda. Fonte: :cite:`gonzalez:2007`.
+
+
+Sensores podem ser utilizados para medir a resposta de alvos e gerar imagens digitais. Como ilustrado na Figura abaixo:
+
+.. figure:: ../../img/worcap-2021/image-processing/remote-sensing.png
+    :alt: Remote Sensing
+    :width: 600
+    :figclass: align-center
+
+    Uma fonte (1), neste caso o sol, emite energia eletromagnética (2), que interage com um alvo na superfície terrestre (3), sendo parcialmente refletida (2) e registrada por um sistema sensor em uma plataforma (4), que transmite a medição para uma estação na Terra (5), que é interpretada por um software (6) e analisada para obter resultados (7). Fonte: `Paititi Research <https://paititi.info/research-technology/remote-sensing-from-space/>`_.
+
+
+Outra exemplificação desse processo pode ser observada na próxima Figura, na qual uma fonte de iluminação interaje com um elemento de uma cena, que é observado por um sistema imageador, projetado em um plano e digitalizado :cite:`gonzalez:2007`, seguida de uma demonstração de como seriam os valores digitais dessa imagem.
+
+
+.. figure:: ../../img/worcap-2020/access-view/image-sensing.png
+    :alt: Image Sensing
+    :width: 600
+    :figclass: align-center
+
+    Exemplo do processo de aquisição de uma imagem digital. (a) Fonte de Energia ("iluminação"). (b) Elemento de uma cena. (c) Sistema Imageador. (d) Projeção da cena em um plano de imagem. (e) Digitalização da imagem. Fonte: :cite:`gonzalez:2007`.
+
+
+.. figure:: ../../img/worcap-2021/image-processing/image-matrix.png
+    :alt: Image Matrix
+    :width: 400
+    :figclass: align-center
+
+    Exemplo de valores das células de uma imagem.
+
+
+Imagens Coloridas
+~~~~~~~~~~~~~~~~~
+
+
+Sistemas imageadores geram imagens digitais para um determinado intervalos de comprimentos de onda, também chamado bandas espectrais. A amplitude de valores dessas imagens pode ser atribuída a cores que nossos olhos percebem (azul, verde e vermelho) para assim gerarmos imagens coloridas, como ilustrado:
+
+
+.. figure:: ../../img/worcap-2020/access-view/color.png
+    :alt: Color
+    :width: 600
+    :figclass: align-center
+
+    Exemplo de composição de imagem colorida utilizando bandas vermelho, verde e azul. Fonte: modificado de `Nevit <https://commons.wikimedia.org/w/index.php?curid=18673639>`_ .
+

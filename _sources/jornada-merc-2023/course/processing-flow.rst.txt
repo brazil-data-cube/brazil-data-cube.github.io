@@ -1,0 +1,126 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Fluxo de Processamento dos dados do BDC
+---------------------------------------
+
+
+Image Collection builder
+++++++++++++++++++++++++
+
+
+Os cubos de dados do Brazil Data Cube são gerados utilizando uma ferramenta chamada `Cube Builder`. Entretanto, para que o `Cube Builder` possa atuar, é necessário a existência de coleções de imagens. Com esta finalidade, foi desenvolvido o `Collection builder`, que é responsável pela injestão e processamentos para gerar as coleções de imagens prontas para análise do BDC. Baseado nisso, a  :numref:`Figura %s <fig:jormerc-products-processing-flow>` ilustra um diagrama contendo os procedimentos principais usados para gerar os produtos de dados do BDC.
+
+
+.. figure:: ../../img/products/bdc.png
+    :alt: BDC Image collection ingestion and Data Cube generation
+    :width: 720
+    :figclass: align-center
+    :name: fig:jormerc-products-processing-flow
+
+    Injestão de coleções de imagem BDC e geração de cubos de dados.
+
+
+As imagens utilizadas pelo BDC são obtidas a partir de provedores oficiais dos dados, por exemplo os dados Sentinel-2 são obtidos através do portal copernicus da ESA e os dados Landsat-8 são obtidos através da USGS.
+
+
+Correção Atmosférica
+~~~~~~~~~~~~~~~~~~~~
+
+
+Uma vez que os dados são baixados dos provedores oficiais de dados, pode-se ser feito o processamento de correção atmosférica nos produtos, com finalidade de gerar produtos em nível de reflectância de superfície. A correção atmosférica é um procedimento que depende das características de cada sensor. Devido a isso, para cada sensor um processo diferente pode ser aplicado, por exemplo para imagens Sentinel-2/MSI esse procedimento pode ser feito utilizando o processador Sen2cor :cite:`louis:2016`, enquanto que para imagens Landsat-8/OLI esse procedimento é feito utilizando LaSRC :cite:`vermote:2016` (faziamos esse processamento quando trabalhavamos com o collection-1, na atualidade com o collection-2 ja obtemos esse produto processado) e para imagens CBERS-4/AWFI é feito utilizando o MS3 :cite:`silva:2013`. Uma vez que este processo é feito e os resultados são catalogados, Coleções de Reflectância de Superfície ficam disponíveis para serem utilizadas para gerar Cubos de Dados.
+
+O BDC também é capaz de obeter essas imagens ja processadas, no caso o produto L2A para produtos Sentinel-2 e o produto L2 da collection-2 para produtos Landsat.
+
+
+Máscaras de Nuvens
+~~~~~~~~~~~~~~~~~~
+
+
+Algoritmos de máscaras de nuvens, podem ser utilizados para detectar áreas indesejadas nas imagens, como por exemplo, nuvens, sombras de nuvens e neve. Entretanto, eles também dependem das bandas disponíveis a partir das imagens dos sensores. Com base nisso, para dados Sentinel-2, utiliza-se a máscara padrão gerada pelo Sen2cor, chamada SCL, para imagens Landsat-8 utilizavamos o Fmask (versão 4.2) :cite:`qiu:2019` para dados da collection-1, e utilizamos a máscara nátiva do produto (QA_pixel) para produtos da collection-2, enquanto que para imagens CBERS-4 este processo é feito utilizando a máscara CMASK que é fornecida junto ao produto.
+
+
+Data Cube Builder
++++++++++++++++++
+
+
+Uma vez com as coleções de imagens, é possível gerar os cubos de dados. Entretanto é preciso definir uma grade para a geração desses produtos. Assim, no contexto do BDC foram elaboradas três grades hierárquicas.
+
+
+Grades BDC
+~~~~~~~~~~
+
+A BDC Grid System (V2) consiste em três grades hierárquicas com células 105600m x 105600m (Small, SM), 211200m x 211200m (Medium, MD) e 4224400m x 4224400m (Large, LG). Cada produto de cubo de dados gerado pelo BDC esta específicado à uma grade, de acordo com a resolução espacial do dado utilizado, de modo a otimizar o volume para manipulação de uma imagem. Produtos Sentinel-2/MSI são gerados utilizando a grade SM, Landsat-8/OLI e CBERS-4/MUX utilizam a grade MD, enquanto que CBERS-4/WFI utilizam a grade LG.
+
+A relação hierárquica das grades BDC podem ser observadas na :numref:`Figura %s <fig:jormerc-bdc-grid-v2>`.
+
+
+.. figure:: ../../img/products/bdc-grid-v2.png
+    :alt: BDC Grid V2
+    :width: 720
+    :figclass: align-center
+    :name: fig:jormerc-bdc-grid-v2
+
+    BDC Grid V2.
+
+O datum SIRGAS-2000, planimétrico oficial do Brasil, é o sistema geodésico de referência. Em suma, a string PROJ para a grade BDC pode ser expressa por:
+
+
+.. code-block::
+
+    PROJCS["unknown",GEOGCS["unknown",DATUM["Unknown based on GRS80 ellipsoid",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",-12],PARAMETER["longitude_of_center",-54],PARAMETER["standard_parallel_1",-2],PARAMETER["standard_parallel_2",-22],PARAMETER["false_easting",5000000],PARAMETER["false_northing",10000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+
+and the projstring:
+
+.. code-block::
+
+    +proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs
+
+
+Warp
+~~~~
+
+
+Para construir os cubos de dados, todas as imagens devem estar em um mesmo sistema de projeção, usando a mesma grade e possuirem a mesma resolução espacial. O `Warp` é o procedimento que faz essa padronização, como pode ser visto na :numref:`Figura %s <fig:jormerc-products-cube-builder>`. Warp consiste em recortar e mosaicar espacialmente todas as imagens que sobrepõem uma célula comum da grade, para uma data específica. Este mosaico espacial é reprojetado para o sistema de referência e todas as bandas são reamostradas para uma resolução espacial determinada, geralmente adota-se a reamostragem bilinear, exceto para bandas de qualidade, em que adota-se a reamostragem por vizinho mais próximo para evitar mudanças nos valores originais da imagem.
+
+.. figure:: ../../img/products/cube-builder.png
+    :alt: BDC Cube generation
+    :width: 720
+    :figclass: align-center
+    :name: fig:jormerc-products-cube-builder
+
+    Geração de Cubos de Dados.
+
+
+Composição Temporal
+~~~~~~~~~~~~~~~~~~~
+
+
+Os Cubos de Dados BDC podem ser categorizados em 2 tipos, identidade e compostos no tempo. A natureza de um cubo de dados identidade consiste em disponibilizar as imagens na data de aquisição original do dado. Funções de composição temporal podem ser aplicadas sobre os cubos identidade para gerar cubos compostos no tempo, também chamados de regulares. Isto é feito para reduzir a dimensionalidade temporal do dado, uma vez que cubos identidade podem apresentar observações que não são equidistantes no tempo.
+
+3 funções de composição temporal estão disponíveis pelo BDC: (*i*) média, (*ii*) mediana, e (*iii*) Least Cloud Cover First (LCF). Estas funções operam sobre as observações válidas, ou seja, que não são detectadas como nuvens ou sombra de nuvens pelas bandas de qualidade, considerando a dimensão temporal e um passo de tempo, por exemplo 1 mês ou 16 dias. A composição temporal por média consiste em utilizar o valor médio obtido das observações. A composição temporal de Mediana consiste em utilizar o valor central das observações. A composição temporal por Least Cloud Cover First (LCF) consiste em uma abordagem de escolha de melhor pixel, em que a preferência destes é dada de acordo com a porção livre de nuvens e sombra de nuvens de sua imagem, por exemplo uma imagem com uma área de 5% coberta por nuvens é preferível para ser utilizada como imagem resultado ao ser comparada com uma imagem coberta 60% por nuvens. As funções de composição temporal mencionadas podem ser observadas na :numref:`Figura %s <fig:jormerc-products-compositing-functions>`.
+
+
+.. figure:: ../../img/products/compositing-function.png
+    :alt: BDC Time Compositing Functions
+    :width: 720
+    :figclass: align-center
+    :name: fig:jormerc-products-compositing-functions
+
+    Funções de Composição Temporal adotadas pelo BDC.
+
+
+Após a aplicação da Função de Composição Temporal, o Brazil Data Cube Builder também cálcula os índices espectrais NDVI e EVI usando o cubo gerado. Além disso, para cubos compostos no tempo, 3 bandas extras são geradas para verificação das características da composição. Essas bandas são `CLEAROB`, `TOTALOB` e `PROVENANCE`, e indicam a quantidade de observações livre de nuvens e sombra de nuvens dentro do período composto, o número total de observações para cada pixel, dentro do período composto e a data de acquisição (em dia juliano) do pixel resultante da composição.

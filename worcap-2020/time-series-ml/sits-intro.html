@@ -106,7 +106,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../jornada-merc-2023.html">XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2023.html">WORCAP 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../treinamento-2023.html">Treinamento PRODES 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sbsr-2023.html">SBSR 2023 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../treinamento-2022.html">Treinamento BDC 2022</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
@@ -130,7 +132,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../treinamento-2023.html">Treinamento BDC 2023</a></li>
 </ul>
 <p class="caption"><span class="caption-text">References</span></p>
 <ul>
@@ -228,7 +229,7 @@
 <p>Existem muitas técnicas de mapeamento de uso e cobertura da terra. Aqui, nos vamos nos concentrar numa abordagem específica de mapeamento usando séries temporais. As séries temporais são obtidas a partir do arranjo sistemático de imagens de diferentes datas de observação.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-satellite-images">
 <a class="reference internal image-reference" href="../../_images/satellite-images.png"><img alt="Satellite Image Time Series" src="../../_images/satellite-images.png" style="width: 280px;" /></a>
-<p class="caption"><span class="caption-number">Figure 57 - </span><span class="caption-text">Satellite Image Time Series</span><a class="headerlink" href="#time-series-ml-sits-intro-satellite-images" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 72 - </span><span class="caption-text">Satellite Image Time Series</span><a class="headerlink" href="#time-series-ml-sits-intro-satellite-images" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="perfil-espectro-temporal-de-uso-e-cobertura-da-terra">
@@ -236,7 +237,7 @@
 <p>Uma hipótese fundamental da abordagem de mapeamento de uso e cobertura da terra usando séries temporais é a de que cada classe de uso e cobertura está associada a um comportamento espectral específico no tempo. Na figura abaixo, podemos observar diferentes comportamentos nas séries temporais de NDVI para cada classe de uso e cobertura da terra.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-land-trajectory">
 <a class="reference internal image-reference" href="../../_images/land-trajectory.png"><img alt="Land trajectory" src="../../_images/land-trajectory.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 58 - </span><span class="caption-text">Trajetória da terra. Fonte: Victor Maus</span><a class="headerlink" href="#time-series-ml-sits-intro-land-trajectory" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 73 - </span><span class="caption-text">Trajetória da terra. Fonte: Victor Maus</span><a class="headerlink" href="#time-series-ml-sits-intro-land-trajectory" title="Permalink to this image">¶</a></p>
 </div>
 <p>Mudanças de classes de cobertura ao longo do tempo devido a diferentes usos da terra podem ser capturadas por mudanças nos perfis das séries temporais. Ao conjunto dessas mudanças de classes denominamos trajetória de uso e cobertura da terra.</p>
 </div>
@@ -248,7 +249,7 @@
 <p>Ao contrário dessas duas abordagens, o uso do <em>machine learning</em> não parte de pressupostos específicos para a identificação de padrões. O processo de aprendizado do algoritmo identificará aqueles atributos que melhor diferenciam uma classe da outra.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-ml-approach">
 <a class="reference internal image-reference" href="../../_images/ml-approach.png"><img alt="Machine learning approach" src="../../_images/ml-approach.png" style="width: 580px;" /></a>
-<p class="caption"><span class="caption-number">Figure 59 - </span><span class="caption-text">Diferentes abordagens de classificação de séries temporais.</span><a class="headerlink" href="#time-series-ml-sits-intro-ml-approach" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 74 - </span><span class="caption-text">Diferentes abordagens de classificação de séries temporais.</span><a class="headerlink" href="#time-series-ml-sits-intro-ml-approach" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="pacote-sits">
@@ -256,7 +257,7 @@
 <p>O <code class="docutils literal notranslate"><span class="pre">sits</span></code> é um pacote desenvolvido na linguagem R para classificação de uso e cobertura da terra usando séries temporais. Seu código é aberto e pode ser acessado no <cite>GitHub &lt;https://github.com/e-sensing/sits&gt;</cite>. A figura a seguir apresenta um fluxograma resumido das tarefas propostas pelo pacote.</p>
 <div class="align-center figure align-default" id="time-series-ml-sits-intro-sits-workflow">
 <a class="reference internal image-reference" href="../../_images/sits-workflow.png"><img alt="sits workflow" src="../../_images/sits-workflow.png" style="width: 480px;" /></a>
-<p class="caption"><span class="caption-number">Figure 60 - </span><span class="caption-text">Fluxo de trabalho do pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#time-series-ml-sits-intro-sits-workflow" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Figure 75 - </span><span class="caption-text">Fluxo de trabalho do pacote <code class="docutils literal notranslate"><span class="pre">sits</span></code>.</span><a class="headerlink" href="#time-series-ml-sits-intro-sits-workflow" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p><strong>Time series</strong>: representado no diagrama como uma nuvem, consiste em qualquer fonte de séries temporais de imagens de satélite, desde serviços Web, como WTSS <a class="reference internal" href="#queiroz-2015"><span class="std std-ref">(Queiroz et al., 2015)</span></a> e SATVeg <a class="reference internal" href="#esquerdo-2020"><span class="std std-ref">(Esquerdo et al., 2020)</span></a>, a arquivos na nuvem ou locais.</p></li>
