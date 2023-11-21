@@ -22,4 +22,14 @@ Satellite Imate Time Series (SITS)
 ++++++++++++++++++++++++++++++++++
 
 
-- notebooks-sits
+- `Introdução ao SITS <https://www.kaggle.com/code/esensing/introduction-to-sits>`_.
+
+- `Trabalhando com séries temporais de imagens de satélites <https://www.kaggle.com/code/esensing/working-with-time-series-in-sits>`_.
+
+- `Criação de cubos de dados <https://www.kaggle.com/code/esensing/creating-data-cubes-in-sits>`_.
+
+- `Operações em cubos de dados <https://www.kaggle.com/code/esensing/operations-in-data-cubes>`_.
+
+- `Classificação de imagens de satélites <https://www.kaggle.com/code/esensing/classification-of-raster-data-cubes>`_.
+
+- `Melhorando as amostras de treinamento <https://www.kaggle.com/code/esensing/improving-quality-of-training-samples>`_.
