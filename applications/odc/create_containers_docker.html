@@ -1,81 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Running ODC Services &mdash; Brazil Data Cube</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Configuring the ODC-Core" href="config_odc_core.html" />
     <link rel="prev" title="Creating Docker Images for the ODC Environment" href="create_image_docker.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #2980B9" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
-          
-
-          
-            
             <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,27 +43,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">Services and Applications</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dc_explorer.html">Data Cube Explorer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../wtss.html">Web Time Series Services (WTSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wlts.html">Web Land Trajectory Service (WLTS)</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../odc.html">Open Data Cube (ODC)</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create_image_docker.html">Creating Docker Images for the ODC Environment</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Running ODC Services</a></li>
@@ -115,13 +66,11 @@
 <li class="toctree-l3"><a class="reference internal" href="consuming.html">Using Jupyter Environment with the ODC</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../wlts.html">Web Land Trajectory Service (WLTS)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dc_explorer.html">Data Cube Explorer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../specifications.html">Specifications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../jornada-merc-2023.html">XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2023.html">WORCAP 2023</a></li>
@@ -134,94 +83,46 @@
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">General Information:</span></p>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Brazil Data Cube</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../applications.html">Services and Applications</a> &raquo;</li>
-        
           <li><a href="../odc.html">Open Data Cube (ODC)</a> &raquo;</li>
-        
       <li>Running ODC Services</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="config_odc_core.html" class="btn btn-neutral float-right" title="Configuring the ODC-Core" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="create_image_docker.html" class="btn btn-neutral float-left" title="Creating Docker Images for the ODC Environment" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="config_odc_core.html" class="btn btn-neutral float-right" title="Configuring the ODC-Core" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="section" id="running-odc-services">
-<h1>Running ODC Services<a class="headerlink" href="#running-odc-services" title="Permalink to this headline">¶</a></h1>
+<h1>Running ODC Services<a class="headerlink" href="#running-odc-services" title="Permalink to this headline"></a></h1>
 <p>With the Docker Images created, we will launch containers with the ODC environment. But first, we’ll create a specific network to link the various services.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">create</span> <span class="n">bdc</span><span class="o">-</span><span class="n">odc</span><span class="o">-</span><span class="n">net</span>
 </pre></div>
@@ -233,7 +134,7 @@
 <p>To create a container from this Docker Image:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">detach</span> \
            <span class="o">--</span><span class="n">name</span> <span class="n">bdc</span><span class="o">-</span><span class="n">odc</span><span class="o">-</span><span class="n">pg</span> \
-           <span class="o">--</span><span class="n">publish</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">5432</span><span class="p">:</span><span class="mi">5432</span> \
+           <span class="o">--</span><span class="n">publish</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">5432</span><span class="p">:</span><span class="mi">5432</span> \
            <span class="o">--</span><span class="n">hostname</span> <span class="n">bdc</span><span class="o">-</span><span class="n">odc</span><span class="o">-</span><span class="n">pg</span> \
            <span class="o">--</span><span class="n">network</span> <span class="n">bdc</span><span class="o">-</span><span class="n">odc</span><span class="o">-</span><span class="n">net</span> \
            <span class="o">--</span><span class="n">volume</span> <span class="n">bdc</span><span class="o">-</span><span class="n">odc</span><span class="o">-</span><span class="n">pgdata_vol</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span> \
@@ -255,7 +156,7 @@
 <p>The output of the above command should look like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                                                     <span class="n">version</span>
 <span class="o">------------------------------------------------------------------------------------------------------------------</span>
- <span class="n">PostgreSQL</span> <span class="mf">12.4</span> <span class="p">(</span><span class="n">Debian</span> <span class="mf">12.4</span><span class="o">-</span><span class="mf">1.</span><span class="n">pgdg100</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="n">on</span> <span class="n">x86_64</span><span class="o">-</span><span class="n">pc</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="p">,</span> <span class="n">compiled</span> <span class="n">by</span> <span class="n">gcc</span> <span class="p">(</span><span class="n">Debian</span> <span class="mf">8.3</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span> <span class="mf">8.3</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
+ <span class="n">PostgreSQL</span> <span class="mf">12.4</span> <span class="p">(</span><span class="n">Debian</span> <span class="mf">12.4</span><span class="o">-</span><span class="mf">1.</span><span class="n">pgdg100</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="n">on</span> <span class="n">x86_64</span><span class="o">-</span><span class="n">pc</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="p">,</span> <span class="n">compiled</span> <span class="n">by</span> <span class="n">gcc</span> <span class="p">(</span><span class="n">Debian</span> <span class="mf">8.3.0</span><span class="o">-</span><span class="mi">6</span><span class="p">)</span> <span class="mf">8.3.0</span><span class="p">,</span> <span class="mi">64</span><span class="o">-</span><span class="n">bit</span>
 <span class="p">(</span><span class="mi">1</span> <span class="n">row</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -286,55 +187,41 @@
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="config_odc_core.html" class="btn btn-neutral float-right" title="Configuring the ODC-Core" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="create_image_docker.html" class="btn btn-neutral float-left" title="Creating Docker Images for the ODC Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="config_odc_core.html" class="btn btn-neutral float-right" title="Configuring the ODC-Core" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, INPE.
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(false);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-178140681-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-   
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

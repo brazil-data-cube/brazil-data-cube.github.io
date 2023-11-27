@@ -22,27 +22,27 @@ SpatioTemporal Asset Catalog (STAC)
 +++++++++++++++++++++++++++++++++++
 
 
-- https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-stac-introduction-py
+- `Introdução ao serviço STAC usando Python <https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-stac-introduction-py>`_.
 
 
-- https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-stac-examples-py
+- `Exemplos de aplicações em Python usando o serviço STAC <https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-stac-examples-py>`_.
 
 
 Web Time Series Service (WTSS)
 ++++++++++++++++++++++++++++++
 
 
-- https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wtss-introduction-py
+- `Introdução ao serviço WTSS usando Python <https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wtss-introduction-py>`_.
 
 
-- https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wtss-examples-py
+- `Exemplos de aplicações em Python usando serviço WTSS <https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wtss-examples-py>`_.
 
 
 Web Time Series Service (WLTS)
 ++++++++++++++++++++++++++++++
 
 
-- https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wlts-introduction-py
+- `Introdução ao serviço WLTS usando Python <https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wlts-introduction-py>`_.
 
 
-- https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wlts-examples-py
+- `Exemplos de aplicações em Python usando serviço WLTS <https://www.kaggle.com/code/brazildatacube/xiii-jormerc-2023-wlts-examples-py>`_.

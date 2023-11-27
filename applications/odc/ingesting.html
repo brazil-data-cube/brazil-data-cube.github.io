@@ -1,81 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Data Ingestion &mdash; Brazil Data Cube</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Using Jupyter Environment with the ODC" href="consuming.html" />
     <link rel="prev" title="Registering Datasets in the ODC Database" href="register_dataset.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: #2980B9" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
-          
-
-          
-            
             <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -83,27 +43,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../products.html">BDC Data Products</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../applications.html">Services and Applications</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dc_explorer.html">Data Cube Explorer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../stac.html">SpatioTemporal Asset Catalog (STAC)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../wtss.html">Web Time Series Services (WTSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wlts.html">Web Land Trajectory Service (WLTS)</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../odc.html">Open Data Cube (ODC)</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create_image_docker.html">Creating Docker Images for the ODC Environment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create_containers_docker.html">Running ODC Services</a></li>
@@ -115,13 +66,11 @@
 <li class="toctree-l3"><a class="reference internal" href="consuming.html">Using Jupyter Environment with the ODC</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../wlts.html">Web Land Trajectory Service (WLTS)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dc_explorer.html">Data Cube Explorer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../specifications.html">Specifications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../jornada-merc-2023.html">XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2023.html">WORCAP 2023</a></li>
@@ -134,184 +83,136 @@
 <li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
 </ul>
-<p class="caption"><span class="caption-text">References</span></p>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
 </ul>
-<p class="caption"><span class="caption-text">General Information:</span></p>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Brazil Data Cube</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../applications.html">Services and Applications</a> &raquo;</li>
-        
           <li><a href="../odc.html">Open Data Cube (ODC)</a> &raquo;</li>
-        
       <li>Data Ingestion</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="consuming.html" class="btn btn-neutral float-right" title="Using Jupyter Environment with the ODC" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="register_dataset.html" class="btn btn-neutral float-left" title="Registering Datasets in the ODC Database" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="consuming.html" class="btn btn-neutral float-right" title="Using Jupyter Environment with the ODC" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="section" id="data-ingestion">
-<h1>Data Ingestion<a class="headerlink" href="#data-ingestion" title="Permalink to this headline">¶</a></h1>
+<h1>Data Ingestion<a class="headerlink" href="#data-ingestion" title="Permalink to this headline"></a></h1>
 <p>With the products and their cataloged datasets, it is possible to perform a data ingestion process. In this process, transformations such as <code class="docutils literal notranslate"><span class="pre">reprojection</span></code> and <code class="docutils literal notranslate"><span class="pre">tiling</span></code> can be applied to the data to be simpler to be loaded by the ODC and become more usual for different user analyses.</p>
 <p>As in all other steps presented in this tutorial, the completion of the ingestion process requires a YAML file. For this case, <code class="docutils literal notranslate"><span class="pre">stac2odc</span></code> has no utilities available yet</p>
 <p>To get around this issue and make the ingestion process easy, use the file <a class="reference external" href="https://raw.githubusercontent.com/brazil-data-cube/bdc-odc/master/config/datacube-core/ingest/CB4_64_16D_STK-1.ingest.yaml">CB4_64_16D_STK-1.ingest.yaml</a> is shown below, which contains the description of this operation.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Code snippet 2 - </span><span class="caption-text">File with the description of the ingestion process of the product <code class="docutils literal notranslate"><span class="pre">CB4_64_16D_STK-1</span></code>.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">source_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CB4_64_16D_STK_1</span>
-<span class="nt">output_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CB4_64_16D_STK_1_ingested</span>
+<div class="code-block-caption"><span class="caption-number">Code snippet 3 - </span><span class="caption-text">File with the description of the ingestion process of the product <code class="docutils literal notranslate"><span class="pre">CB4_64_16D_STK-1</span></code>.</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">source_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CB4_64_16D_STK_1</span><span class="w"></span>
+<span class="nt">output_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CB4_64_16D_STK_1_ingested</span><span class="w"></span>
 
-<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CBERS-4 ingested data</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CBERS-4 ingested data</span><span class="w"></span>
 
-<span class="nt">location</span><span class="p">:</span> <span class="s">&#39;/data/ingested/&#39;</span>
-<span class="nt">file_path_template</span><span class="p">:</span> <span class="s">&#39;CB4_64_16D_STK_1_ingested/CB4_64_16D_STK_1_ingested_{tile_index[0]}_{tile_index[1]}_{start_time}.nc&#39;</span>
+<span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/data/ingested/&#39;</span><span class="w"></span>
+<span class="nt">file_path_template</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;CB4_64_16D_STK_1_ingested/CB4_64_16D_STK_1_ingested_{tile_index[0]}_{tile_index[1]}_{start_time}.nc&#39;</span><span class="w"></span>
 
-<span class="nt">global_attributes</span><span class="p">:</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CBERS-4 (AWFI) Cube Stack 16 days (v001) - Tiled</span>
-    <span class="nt">summary</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CBERS-4 data product</span>
-    <span class="nt">source</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CBERS 4 version 1</span>
-    <span class="nt">institution</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INPE</span>
-    <span class="nt">instrument</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWFI</span>
-    <span class="nt">cdm_data_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Grid</span>
-    <span class="nt">keywords</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">REFLECTANCE,CBERS,EARTH SCIENCE</span>
-    <span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CBERS-4</span>
-    <span class="nt">processing_level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">L2</span>
-    <span class="nt">product_version</span><span class="p">:</span> <span class="s">&#39;v001&#39;</span>
-    <span class="nt">product_suite</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">INPE CBERS4</span>
-    <span class="nt">project</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">BDC</span>
-    <span class="nt">naming_authority</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bdc.inpe</span>
-    <span class="nt">acknowledgment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CBERS4 is provided by the National Institute for Space Research (INPE).</span>
+<span class="nt">global_attributes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CBERS-4 (AWFI) Cube Stack 16 days (v001) - Tiled</span><span class="w"></span>
+<span class="w">    </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CBERS-4 data product</span><span class="w"></span>
+<span class="w">    </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CBERS 4 version 1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">institution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INPE</span><span class="w"></span>
+<span class="w">    </span><span class="nt">instrument</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AWFI</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cdm_data_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Grid</span><span class="w"></span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REFLECTANCE,CBERS,EARTH SCIENCE</span><span class="w"></span>
+<span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CBERS-4</span><span class="w"></span>
+<span class="w">    </span><span class="nt">processing_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">L2</span><span class="w"></span>
+<span class="w">    </span><span class="nt">product_version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;v001&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">product_suite</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INPE CBERS4</span><span class="w"></span>
+<span class="w">    </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BDC</span><span class="w"></span>
+<span class="w">    </span><span class="nt">naming_authority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bdc.inpe</span><span class="w"></span>
+<span class="w">    </span><span class="nt">acknowledgment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CBERS4 is provided by the National Institute for Space Research (INPE).</span><span class="w"></span>
 
-<span class="nt">storage</span><span class="p">:</span>
-    <span class="nt">driver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">NetCDF CF</span>
+<span class="nt">storage</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetCDF CF</span><span class="w"></span>
 
-    <span class="nt">crs</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">+proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs</span>
-    <span class="nt">tile_size</span><span class="p">:</span>
-            <span class="nt">x</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100000.0</span>
-            <span class="nt">y</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100000.0</span>
-    <span class="nt">resolution</span><span class="p">:</span>
-            <span class="nt">x</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">64</span>
-            <span class="nt">y</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-64</span>
-    <span class="nt">chunking</span><span class="p">:</span>
-        <span class="nt">x</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
-        <span class="nt">y</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
-        <span class="nt">time</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">dimension_order</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;time&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;y&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;x&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">crs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">+proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs</span><span class="w"></span>
+<span class="w">    </span><span class="nt">tile_size</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000.0</span><span class="w"></span>
+<span class="w">            </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">resolution</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">64</span><span class="w"></span>
+<span class="w">            </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-64</span><span class="w"></span>
+<span class="w">    </span><span class="nt">chunking</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span><span class="w"></span>
+<span class="w">        </span><span class="nt">y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span><span class="w"></span>
+<span class="w">        </span><span class="nt">time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">dimension_order</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;time&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;y&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;x&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
 
-<span class="nt">measurements</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">BAND13</span>
-      <span class="nt">dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int16</span>
-      <span class="nt">nodata</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-9999</span>
-      <span class="nt">resampling_method</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nearest</span>
-      <span class="nt">src_varname</span><span class="p">:</span> <span class="s">&#39;BAND13&#39;</span>
-      <span class="nt">zlib</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-      <span class="nt">attrs</span><span class="p">:</span>
-        <span class="nt">alias</span><span class="p">:</span> <span class="s">&quot;blue&quot;</span>
+<span class="nt">measurements</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BAND13</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int16</span><span class="w"></span>
+<span class="w">      </span><span class="nt">nodata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-9999</span><span class="w"></span>
+<span class="w">      </span><span class="nt">resampling_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nearest</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src_varname</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;BAND13&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">zlib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">      </span><span class="nt">attrs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="w"></span>
 
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EVI</span>
-      <span class="nt">dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int16</span>
-      <span class="nt">nodata</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-9999</span>
-      <span class="nt">resampling_method</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nearest</span>
-      <span class="nt">src_varname</span><span class="p">:</span> <span class="s">&#39;EVI&#39;</span>
-      <span class="nt">zlib</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-      <span class="nt">attrs</span><span class="p">:</span>
-        <span class="nt">alias</span><span class="p">:</span> <span class="s">&quot;evi&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EVI</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int16</span><span class="w"></span>
+<span class="w">      </span><span class="nt">nodata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-9999</span><span class="w"></span>
+<span class="w">      </span><span class="nt">resampling_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nearest</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src_varname</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;EVI&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">zlib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">      </span><span class="nt">attrs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;evi&quot;</span><span class="w"></span>
 
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">BAND14</span>
-      <span class="nt">dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int16</span>
-      <span class="nt">nodata</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-9999</span>
-      <span class="nt">resampling_method</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nearest</span>
-      <span class="nt">src_varname</span><span class="p">:</span> <span class="s">&#39;BAND14&#39;</span>
-      <span class="nt">zlib</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-      <span class="nt">attrs</span><span class="p">:</span>
-        <span class="nt">alias</span><span class="p">:</span> <span class="s">&quot;green&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BAND14</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int16</span><span class="w"></span>
+<span class="w">      </span><span class="nt">nodata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-9999</span><span class="w"></span>
+<span class="w">      </span><span class="nt">resampling_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nearest</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src_varname</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;BAND14&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">zlib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">      </span><span class="nt">attrs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;green&quot;</span><span class="w"></span>
 
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">NDVI</span>
-      <span class="nt">dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int16</span>
-      <span class="nt">nodata</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-9999</span>
-      <span class="nt">resampling_method</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nearest</span>
-      <span class="nt">src_varname</span><span class="p">:</span> <span class="s">&#39;NDVI&#39;</span>
-      <span class="nt">zlib</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-      <span class="nt">attrs</span><span class="p">:</span>
-        <span class="nt">alias</span><span class="p">:</span> <span class="s">&quot;ndvi&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NDVI</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int16</span><span class="w"></span>
+<span class="w">      </span><span class="nt">nodata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-9999</span><span class="w"></span>
+<span class="w">      </span><span class="nt">resampling_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nearest</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src_varname</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NDVI&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">zlib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">      </span><span class="nt">attrs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ndvi&quot;</span><span class="w"></span>
 
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">BAND15</span>
-      <span class="nt">dtype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">int16</span>
-      <span class="nt">nodata</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-9999</span>
-      <span class="nt">resampling_method</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nearest</span>
-      <span class="nt">src_varname</span><span class="p">:</span> <span class="s">&#39;BAND15&#39;</span>
-      <span class="nt">zlib</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-      <span class="nt">attrs</span><span class="p">:</span>
-        <span class="nt">alias</span><span class="p">:</span> <span class="s">&quot;red&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BAND15</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dtype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int16</span><span class="w"></span>
+<span class="w">      </span><span class="nt">nodata</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-9999</span><span class="w"></span>
+<span class="w">      </span><span class="nt">resampling_method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nearest</span><span class="w"></span>
+<span class="w">      </span><span class="nt">src_varname</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;BAND15&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">zlib</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">      </span><span class="nt">attrs</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -330,55 +231,41 @@
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="consuming.html" class="btn btn-neutral float-right" title="Using Jupyter Environment with the ODC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="register_dataset.html" class="btn btn-neutral float-left" title="Registering Datasets in the ODC Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="consuming.html" class="btn btn-neutral float-right" title="Using Jupyter Environment with the ODC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, INPE.
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(false);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-178140681-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-   
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

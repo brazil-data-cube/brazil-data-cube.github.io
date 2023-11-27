@@ -18,6 +18,9 @@ Notebooks SITS
 --------------
 
 
+- `Livro SITS <https://e-sensing.github.io/sitsbook/>`_.
+
+
 Satellite Imate Time Series (SITS)
 ++++++++++++++++++++++++++++++++++
 

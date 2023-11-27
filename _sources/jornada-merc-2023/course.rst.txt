@@ -58,7 +58,7 @@ TerraCollect
 
 
 Introdução ao mapeamento de uso e cobertura da terra usando séries temporais  de imagens de satélite
-----------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
     :maxdepth: 1
