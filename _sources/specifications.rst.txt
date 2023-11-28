@@ -27,6 +27,7 @@ More info regarding Brazil Data Cube Products can be seen in:
 
     ./specifications/input-data.rst
     ./specifications/concepts.rst
+    ./specifications/bdc-projection.rst
     ./specifications/bdc-grid.rst
     ./specifications/processing-flow.rst
     ./specifications/naming.rst

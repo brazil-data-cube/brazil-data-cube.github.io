@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2023 INPE.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -14,14 +14,14 @@
     along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
-BDC Data Products
-=================
+BDC Available Data Products
+===========================
 
 
-Brazil Data Cube (BDC) project is a Brazililian National Institute for Space Research (INPE) initiative to produce a Virtual Constellation, which uses data from the Sentinel-2 MultiSpectral Instrument (MSI), Landsat-8 Operational Land Imager (OLI), CBERS-4 Advanced Wide-Field Imager (AWFI), CBERS-4 Multispectral Camera (MUX) and AQUA/TERRA Moderate Resolution Imaging Spectroradiometer (MODIS) remote sensing satellite sensors.
+Brazil Data Cube (BDC) project is a Brazililian National Institute for Space Research (INPE) initiative to produce medium spatial resolution Data Cubes for the Brazililian Territory. There are products using images from the Sentinel-2, satellites of the Landsat Program, CBERS-4 Wide-Field Imager (WFI), CBERS-4 Multispectral Camera (MUX) and AQUA/TERRA Moderate Resolution Imaging Spectroradiometer (MODIS) products.
 
 
-In summary, BDC catalogs and distributes data from the mentioned satellite sensors, as well as the preprocessed to surface reflectance images and processed products. The processed products are data cube collections, which standardize images through merge, reprojection, grid data to a common tiling system, mask clouds and cloud shadows and may apply temporal compositing functions. The available image collections and data cube collections are:
+In summary, BDC catalogs, process and distribute composed data from the mentioned satellite sensors, as well as the preprocessed to surface reflectance images. The processed products are Data Cubes, Image Collections and Mosaics, which are standardized by spatially mosaicking images, reprojecting them into a common projection, crop them into a tilling system and by selecting the best pixel through temporal compositing functions, considering clouds and cloud shadows masks. The available image collections and data cube collections are:
 
 .. toctree::
     :maxdepth: 1
@@ -29,3 +29,5 @@ In summary, BDC catalogs and distributes data from the mentioned satellite senso
 
     ./products/image-collections.rst
     ./products/cube-collections.rst
+    ./products/mosaics.rst
+    ./products/classifications.rst

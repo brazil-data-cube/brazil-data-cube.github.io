@@ -52,7 +52,7 @@ Now, using ``stac2odc``, do the extraction of the product settings ``CB4_64_16D_
                                 -o ~/products/CB4_64_16D_STK_1/CB4_64_16D_STK_1.yaml \
                                 --units m \
                                 -p CBERS4 \
-                                --instrument AWFI \
+                                --instrument WFI \
                                 --type eo  \
                                --access-token BDC_ACCESS_TOKEN
 

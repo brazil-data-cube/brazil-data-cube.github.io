@@ -20,7 +20,7 @@ Jupyter Notebooks
 
 If you want to learn from a practical example, please, take a look at the following Jupyter Notebook:
 
-`Jupyter Notebook - Access and Visualization of Remote Sensing Image Time Series <https://github.com/brazil-data-cube/wtss.py/blob/master/examples/wtss.ipynb>`_
+`Jupyter Notebook - Access and Visualization of Remote Sensing Image Time Series <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss-introduction.ipynb>`_
 
 
 This jupyter notebook will explain step by step how to use the WTSS client library to retrieve metadata and the time series data and how to create nice plots like the one shown below:

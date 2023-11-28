@@ -35,11 +35,11 @@ To get around this issue and make the ingestion process easy, use the file `CB4_
     file_path_template: 'CB4_64_16D_STK_1_ingested/CB4_64_16D_STK_1_ingested_{tile_index[0]}_{tile_index[1]}_{start_time}.nc'
 
     global_attributes:
-        title: CBERS-4 (AWFI) Cube Stack 16 days (v001) - Tiled
+        title: CBERS-4 (WFI) Cube Stack 16 days (v001) - Tiled
         summary: CBERS-4 data product
         source: CBERS 4 version 1
         institution: INPE
-        instrument: AWFI
+        instrument: WFI
         cdm_data_type: Grid
         keywords: REFLECTANCE,CBERS,EARTH SCIENCE
         platform: CBERS-4

@@ -1,0 +1,37 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Projection used by BDC
+----------------------
+
+
+The Albers Equal-Area Conic is the reference map projection for the BDC tiling system, named BDC Grid. Like other normal conics, the Albers Equal-Area Conic projection has concentric arcs of circles for parallels and equally spaced radii as meridians. The parallels are not equally spaced, but they are farthest apart in the latitudes between the standard parallels and closer together to the north and south. The pole is not the center of the circles, but it is normally an arc itself. Scale along the parallels is too small between the standard parallels and too large beyond them. The scale along the meridians is just the opposite and, in fact, the scale factor along meridians is the reciprocal of the scale factor along the parallels to maintain equal area :cite:`snyder:1987`.
+
+
+The Albers Equal-Area Conic projection parameters follow the cartographic standards defined by Instituto Brasileiro de Geografia e Estatística (IBGE), which is the official civilian mapping agency of Brazil :cite:`franca:2015`. SIRGAS-2000, the official planimetric datum of Brazil, is the reference geodetic system. BDC Grid uses parallel 12° south and meridian 54° west as origin. To generate BDC Grid two standard parallels at latitudes 2° south and 22° south are used. Offsets of 5,000,000 meters and 10,000,000 meters are respectively applied to X and Y coordinates at the origin. In short, the WKT for the BDC Grid can be expressed by:
+
+
+.. code-block::
+
+    PROJCS["unknown",GEOGCS["unknown",DATUM["Unknown based on GRS80 ellipsoid",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",-12],PARAMETER["longitude_of_center",-54],PARAMETER["standard_parallel_1",-2],PARAMETER["standard_parallel_2",-22],PARAMETER["false_easting",5000000],PARAMETER["false_northing",10000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+
+
+and the projstring:
+
+
+.. code-block::
+
+    +proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs

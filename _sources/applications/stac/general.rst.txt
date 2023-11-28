@@ -18,7 +18,7 @@ Python Client Library
 =====================
 
 
-If you want to access image collections and data cubes from Python programs, refer to: `Python Client Library for STAC <https://github.com/brazil-data-cube/stac.py>`_.
+If you want to access image collections and data cubes from Python programs, refer to: `PySTAC Client Documentation <https://pystac-client.readthedocs.io/en/stable/>`_.
 
 
 R Client Library
@@ -26,7 +26,3 @@ R Client Library
 
 
 If you want to access image collections and data cubes from R programs, refer to: `R Client Library for STAC <https://github.com/brazil-data-cube/rstac>`_.
-
-
-References
-==========

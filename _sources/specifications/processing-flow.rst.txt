@@ -20,7 +20,9 @@ BDC Processing Flow
 -------------------
 
 
-Several procedures are performed to generate BDC Data cube collections. Based on that, :numref:`Figure %s <products:processing-flow>` illustrates a diagram containing the main procedures used to generate BDC data products.
+Several procedures are performed to generate BDC Data cube collections. There are two main softwares that are responsible for processing the BDC data, the Image Collection Builder and Data Cube Builder.
+
+Based on that, :numref:`Figure %s <products:processing-flow>` illustrates a diagram containing the main procedures used to generate BDC data products.
 
 
 .. figure:: ../img/products/bdc.png
@@ -32,33 +34,85 @@ Several procedures are performed to generate BDC Data cube collections. Based on
     BDC Image collection ingestion and Data Cube generation.
 
 
-Image Collection builder
+Image Collection Builder
 ++++++++++++++++++++++++
+
+
+The Image Collection Builder is responsible for acquiring (download, process and publish) data, providing what is called Analysis Read Data (ARD). Although, to produce the BDC Data Cubes, recently we are obtaining and using already processed surface reflectance products the Image Collection Builder can also acquire and process non-ARD data.
+
+
+Image Acquisition
+~~~~~~~~~~~~~~~~~
+
+
+The Image Collection Builder is capable of acquiring CBERS-4, CBERS-4A, Sentinel-2, Landsat-5, Landsat-7, Landsat-8, Landsat-9, TERRA and AQUA images.
+
+
+Regarding CBERS Images, the BDC Image Collection Builder acquires Surface Reflectance products from CBERS-4/MUX, CBERS-4/WFI and CBERS-4A/WFI already processed by INPE.
+
+
+Landsat images can be downloaded from USGS at `Earth Explorer <https://earthexplorer.usgs.gov/>`_ . The tool can obtain L1 (Digital Number) and L2 (Surface Reflectance) products. We are collecting Landsat collection-2 data, but we used to collect Landsat collection-1 data in the past.
+
+
+Sentinel-2/MSI images from both Sentinel-2A and Sentinel-2B can be acquired directly from ESA at `DataSpace <https://dataspace.copernicus.eu/>`_ . The tool can obtain L1C products (TOA) and L2A products (Surface Reflectance).
+
+
+Regarding TERRA and AQUA, already processed products obtained. We collect the MOD13Q1 and MYD13Q1 data, which already are data cube following BDC concepts.
 
 
 Atmospheric Correction
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
-The atmospheric correction procedure relies on each sensor characteristics. Due to that, for each sensor different processes may be applied, for instance, atmospheric correction is performed for Sentinel-2/MSI images using the Sen2cor :cite:`louis:2016`, while for Landsat-8/OLI this procedure is performed through LaSRC :cite:`vermote:2016` and for CBERS-4/AWFI is executed by MS3 :cite:`silva:2013`. Once this process is performed and the resulting data is cataloged, Surface Reflectance collection are available to be used to produce Data Cube Collections.
+The BDC Image Collection builder has the option to process data and generate Surface Reflectance Products. When BDC performs the atmospheric correction procedure, algorithms change according to the input data. Once this process is performed and the resulting data is cataloged, Surface Reflectance collection are available to be used to produce Data Cube Collections.
+
+
+CBERS-4 and CBERS-4A are already obtained processed as Surface Reflectance Products at INPE's Image Catalog. Its Atmospheric Correction is performed through a software called MS3 :cite:`silva:2013`.
+
+
+Landsat-8 and Landsat-9 Collection-2 images are already obtained processed as Surface Reflectance Products at USGS Earth Explorer Catalog. Its Atmospheric Correction is performed through LaSRC :cite:`vermote:2016`.
+
+
+.. note:: In :doc:`deprecated <../products/cube-collections/cube-collections-deprecated>` Landsat-8 Data Cubes images were processed locally using LaSRC, and data from collection-1 was used. Recent products uses collection-2 and already processed to Surface Reflectance products. For detailed information check the (:doc:`Data Cube Products Page <../products/cube-collections>`).
+
+
+For Sentinel-2 we are using images processed using the Sen2cor :cite:`louis:2016`.
+
+
+.. note:: In :doc:`deprecated <../products/cube-collections/cube-collections-deprecated>` Sentinel-2 Data Cubes images were processed locally using LaSRC, which are no longer used in recent products. The images of Sentinel-2 Data Cubes are now all processed using Sen2cor. For detailed information check the (:doc:`Data Cube Products Page <../products/cube-collections>`).
 
 
 Cloud Masking
 ~~~~~~~~~~~~~
 
 
-Cloud masking algorithms can be used to detect undesirable areas, such as cloud, cloud shadows or snow. However, cloud masking algorithm also depends on the characteristic of each sensor. Based on that, for Sentinel-2 we use the standard `SCL <https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm>`__ product provided by Sen2cor, for Landsat-8 the Fmask (version 4.2) is being used :cite:`qiu:2019` while for CBERS-4 this processing is performed using :doc:`CMASK <./bands/CMASK>` due to it reduced number of spectral bands. Once this process is performed and the data is cataloged, the Surface Reflectance Image Collections becomes available.
+Cloud masking algorithms can be used to detect undesirable areas, such as cloud, cloud shadows or snow. However, cloud masking algorithm also depends on the characteristic of each sensor.
+
+
+CBERS-4 uses the :doc:`CMASK <./bands/CMASK>` due to it reduced number of spectral bands. To Produce BDC Data Products, we adopt the "Clear Pixel" value (127) as valid regions to build the Data Cubes through Best pixel approach.
+
+
+For Landsat-8 and Landsat-9 Collection-2 data we use the cloud mask provided within :doc:`QA_pixel <./bands/QA>`. To Produce BDC Data Products, we adopt bits 6 and 7 ("Clear" and "Water", respectivelly) as valid regions to build the Data Cubes through Best pixel approach, as long as they are not marked as 0, 1, 2, 3, 4 or 5 ("Fill", "Dilated Cloud", "Cirrus", "Cloud", "Cloud Shadow" or "Snow", respectivelly).
+
+
+.. note:: In deprecated Landsat Data Cubes (:doc:`LC8_30_16D_STK-1 <../products/cube-collections/LC8_30_16D_STK-1>`) we have used the :doc:`FMASK <./bands/FMASK>` cloud mask version 4.2 :cite:`qiu:2019` , which are no longer used in recent products. For detailed information check the (:doc:`Data Cube Products Page <../products/cube-collections>`).
+
+
+For Sentinel-2 data we use the cloud mask provided within the :doc:`SCL <./bands/SCL>` product that cames along with Sentinel-2 data. To Produce BDC Data Products, we adopt the values 4, 5 and 6 ("Vegetation", "Not Vegetated" and "Water", respectivelly) as valid regions to build the Data Cubes through Best pixel approach.
 
 
 Data Cube Builder
 +++++++++++++++++
 
 
+The Cube Builder is the software responsible for using ARD to generate Data Cubes.
+
+
 Warp (Merge, Reprojecting, Resampling and Griding)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-In order to build the data cube collections, all input images must be at the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization and can be seen in :numref:`Figure %s <products:cube-builder>`. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.
+In order to build the data cube collections, all input images must be at the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization and can be seen in :numref:`Figure %s <products:cube-builder>`. Warp consists in cropping and spatially mosaicking all images that superimpose a target tile of the grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a Nearest Neighbor function to avoid changes on the image values.
 
 
 .. figure:: ../img/products/cube-builder.png
@@ -74,20 +128,24 @@ Temporal Compositing
 ~~~~~~~~~~~~~~~~~~~~
 
 
-BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.
+BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube consists in all available images on their original acquisition date reprojected and cropped to a common grid. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.
 
-Three temporal compositing functions are being used in BDC: ( *i* ) Average (AVG), ( *ii* ) Median (MED), and ( *iii* ) Least Cloud Cover First (LCF). Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:
+Several compositing functions were tested in BDC: ( *i* ) Average (AVG), ( *ii* ) Median (MED), and ( *iii* ) Least Cloud Cover First (LCF). Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Tables:
 
 
 +------------------------------+--------------+-------------------+-----------------------+-----------------------+
 | Cloud Mask                   | Nodata Value | Clear Data Values | Not Clear Data Values | Saturated Data Values |
 +==============================+==============+===================+=======================+=======================+
-| :doc:`SCL <./bands/SCL>`     | 0            | 4, 5, 6           | 2, 3, 7, 8, 9, 10, 11 | 1                     |
-+------------------------------+--------------+-------------------+-----------------------+-----------------------+
-| :doc:`FMASK <./bands/FMASK>` | 255          | 0, 1              | 2, 3, 4               |                       |
-+------------------------------+--------------+-------------------+-----------------------+-----------------------+
 | :doc:`CMASK <./bands/CMASK>` | 0            | 127               | 255                   |                       |
 +------------------------------+--------------+-------------------+-----------------------+-----------------------+
+| :doc:`SCL <./bands/SCL>`     | 0            | 4, 5, 6           | 2, 3, 7, 8, 9, 10, 11 | 1                     |
++------------------------------+--------------+-------------------+-----------------------+-----------------------+
+
++------------------------------+------------+-------------------+-----------------------+---------------------+
+| Cloud Mask                   | Nodata Bit | Clear Data Bits   | Not Clear Data Bits   | Saturated Data Bits |
++==============================+============+===================+=======================+=====================+
+| :doc:`QA_Pixel <./bands/QA>` | 0          | 6, 7              | 1, 2, 3, 4, 5         |                     |
++------------------------------+------------+-------------------+-----------------------+---------------------+
 
 
 The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The Least Cloud Cover First (LCF) temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in :numref:`Figure %s <products:compositing-functions>`.
@@ -104,9 +162,14 @@ The Average temporal composing consists in the average of the observed values. T
 
 .. note:: If there are only not clear observations values for a time step, the LCF temporal compositing outputs the value from the clearest image.
 
+
 .. note:: On Previouse versions of BDC, LCF was named STK (Stack). We adopt the LCF nomenclature to specify how values are selected on the compositing function.
 
+
 After the time compositing function is applied, the Brazil Data Cube Builder also calculates the NDVI and EVI spectral indices using the spectral bands of the time composed data cube. Besides that, for the time composed data cubes, three provenance bands are also generated for tracking characteristics of the composite period. The data product bands are :doc:`CLEAROB <./bands/CLEAROB>`, :doc:`TOTALOB <./bands/TOTALOB>` and :doc:`PROVENANCE <./bands/PROVENANCE>`.
+
+
+.. note:: Aditional bands and idices may be generated for specific products. For detailed information check the (:doc:`Data Cube Products Page <../products/cube-collections>`.
 
 
 .. toctree::

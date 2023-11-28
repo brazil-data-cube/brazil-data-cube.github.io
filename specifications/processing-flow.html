@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CLEAROB" href="bands/CLEAROB.html" />
-    <link rel="prev" title="Projection used by BDC" href="bdc-grid.html" /> 
+    <link rel="prev" title="BDC Grids" href="bdc-grid.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,14 +49,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Available Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../specifications.html">Specifications</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bdc-grid.html">Projection used by BDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bdc-projection.html">Projection used by BDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bdc-grid.html">BDC Grids</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">BDC Processing Flow</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#image-collection-builder">Image Collection builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-collection-builder">Image Collection Builder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-cube-builder">Data Cube Builder</a></li>
 </ul>
 </li>
@@ -107,7 +108,7 @@
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="Projection used by BDC" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="BDC Grids" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="bands/CLEAROB.html" class="btn btn-neutral float-right" title="CLEAROB" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -117,36 +118,65 @@
              
   <div class="section" id="bdc-processing-flow">
 <span id="processing-flow"></span><h1>BDC Processing Flow<a class="headerlink" href="#bdc-processing-flow" title="Permalink to this headline"></a></h1>
-<p>Several procedures are performed to generate BDC Data cube collections. Based on that, <a class="reference internal" href="#products-processing-flow"><span class="std std-numref">Figure 16</span></a> illustrates a diagram containing the main procedures used to generate BDC data products.</p>
+<p>Several procedures are performed to generate BDC Data cube collections. There are two main softwares that are responsible for processing the BDC data, the Image Collection Builder and Data Cube Builder.</p>
+<p>Based on that, <a class="reference internal" href="#products-processing-flow"><span class="std std-numref">Figure 17</span></a> illustrates a diagram containing the main procedures used to generate BDC data products.</p>
 <div class="align-center figure align-default" id="products-processing-flow">
 <a class="reference internal image-reference" href="../_images/bdc.png"><img alt="BDC Image collection ingestion and Data Cube generation" src="../_images/bdc.png" style="width: 720px;" /></a>
-<p class="caption"><span class="caption-number">Figure 16 - </span><span class="caption-text">BDC Image collection ingestion and Data Cube generation.</span><a class="headerlink" href="#products-processing-flow" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 17 - </span><span class="caption-text">BDC Image collection ingestion and Data Cube generation.</span><a class="headerlink" href="#products-processing-flow" title="Permalink to this image"></a></p>
 </div>
 <div class="section" id="image-collection-builder">
-<h2>Image Collection builder<a class="headerlink" href="#image-collection-builder" title="Permalink to this headline"></a></h2>
+<h2>Image Collection Builder<a class="headerlink" href="#image-collection-builder" title="Permalink to this headline"></a></h2>
+<p>The Image Collection Builder is responsible for acquiring (download, process and publish) data, providing what is called Analysis Read Data (ARD). Although, to produce the BDC Data Cubes, recently we are obtaining and using already processed surface reflectance products the Image Collection Builder can also acquire and process non-ARD data.</p>
+<div class="section" id="image-acquisition">
+<h3>Image Acquisition<a class="headerlink" href="#image-acquisition" title="Permalink to this headline"></a></h3>
+<p>The Image Collection Builder is capable of acquiring CBERS-4, CBERS-4A, Sentinel-2, Landsat-5, Landsat-7, Landsat-8, Landsat-9, TERRA and AQUA images.</p>
+<p>Regarding CBERS Images, the BDC Image Collection Builder acquires Surface Reflectance products from CBERS-4/MUX, CBERS-4/WFI and CBERS-4A/WFI already processed by INPE.</p>
+<p>Landsat images can be downloaded from USGS at <a class="reference external" href="https://earthexplorer.usgs.gov/">Earth Explorer</a> . The tool can obtain L1 (Digital Number) and L2 (Surface Reflectance) products. We are collecting Landsat collection-2 data, but we used to collect Landsat collection-1 data in the past.</p>
+<p>Sentinel-2/MSI images from both Sentinel-2A and Sentinel-2B can be acquired directly from ESA at <a class="reference external" href="https://dataspace.copernicus.eu/">DataSpace</a> . The tool can obtain L1C products (TOA) and L2A products (Surface Reflectance).</p>
+<p>Regarding TERRA and AQUA, already processed products obtained. We collect the MOD13Q1 and MYD13Q1 data, which already are data cube following BDC concepts.</p>
+</div>
 <div class="section" id="atmospheric-correction">
 <h3>Atmospheric Correction<a class="headerlink" href="#atmospheric-correction" title="Permalink to this headline"></a></h3>
-<p>The atmospheric correction procedure relies on each sensor characteristics. Due to that, for each sensor different processes may be applied, for instance, atmospheric correction is performed for Sentinel-2/MSI images using the Sen2cor <span id="id1">[<a class="reference internal" href="../references.html#id10" title="Jérôme Louis, Vincent Debaecker, Bringfried Pflug, Magdalena Main-Knorn, Jakub Bieniarz, Uwe Mueller-Wilm, Enrico Cadau, and Ferran Gascon. Sentinel-2 SEN2COR: L2A processor for users. European Space Agency, (Special Publication) ESA SP, SP-740:9–13, 2016.">9</a>]</span>, while for Landsat-8/OLI this procedure is performed through LaSRC <span id="id2">[<a class="reference internal" href="../references.html#id26" title="Eric Vermote, Chris Justice, Martin Claverie, and Belen Franch. Preliminary analysis of the performance of the Landsat 8/OLI land surface reflectance product. Remote Sensing of Environment, 185:46–56, 2016. URL: http://dx.doi.org/10.1016/j.rse.2016.04.008, doi:10.1016/j.rse.2016.04.008.">21</a>]</span> and for CBERS-4/AWFI is executed by MS3 <span id="id3">[<a class="reference internal" href="../references.html#id19" title="Marco Aurélio Oliveira da Silva and Alexandre Curvelo de Andrade. Geração de imagens de reflectância de um ponto de vista geométrico. Revista Brasileira de Geomática, 1(1):23, 2013. doi:10.3895/rbgeo.v1n1.5434.">4</a>]</span>. Once this process is performed and the resulting data is cataloged, Surface Reflectance collection are available to be used to produce Data Cube Collections.</p>
+<p>The BDC Image Collection builder has the option to process data and generate Surface Reflectance Products. When BDC performs the atmospheric correction procedure, algorithms change according to the input data. Once this process is performed and the resulting data is cataloged, Surface Reflectance collection are available to be used to produce Data Cube Collections.</p>
+<p>CBERS-4 and CBERS-4A are already obtained processed as Surface Reflectance Products at INPE’s Image Catalog. Its Atmospheric Correction is performed through a software called MS3 <span id="id1">[<a class="reference internal" href="../references.html#id19" title="Marco Aurélio Oliveira da Silva and Alexandre Curvelo de Andrade. Geração de imagens de reflectância de um ponto de vista geométrico. Revista Brasileira de Geomática, 1(1):23, 2013. doi:10.3895/rbgeo.v1n1.5434.">4</a>]</span>.</p>
+<p>Landsat-8 and Landsat-9 Collection-2 images are already obtained processed as Surface Reflectance Products at USGS Earth Explorer Catalog. Its Atmospheric Correction is performed through LaSRC <span id="id2">[<a class="reference internal" href="../references.html#id26" title="Eric Vermote, Chris Justice, Martin Claverie, and Belen Franch. Preliminary analysis of the performance of the Landsat 8/OLI land surface reflectance product. Remote Sensing of Environment, 185:46–56, 2016. URL: http://dx.doi.org/10.1016/j.rse.2016.04.008, doi:10.1016/j.rse.2016.04.008.">21</a>]</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <a class="reference internal" href="../products/cube-collections/cube-collections-deprecated.html"><span class="doc">deprecated</span></a> Landsat-8 Data Cubes images were processed locally using LaSRC, and data from collection-1 was used. Recent products uses collection-2 and already processed to Surface Reflectance products. For detailed information check the (<a class="reference internal" href="../products/cube-collections.html"><span class="doc">Data Cube Products Page</span></a>).</p>
+</div>
+<p>For Sentinel-2 we are using images processed using the Sen2cor <span id="id3">[<a class="reference internal" href="../references.html#id10" title="Jérôme Louis, Vincent Debaecker, Bringfried Pflug, Magdalena Main-Knorn, Jakub Bieniarz, Uwe Mueller-Wilm, Enrico Cadau, and Ferran Gascon. Sentinel-2 SEN2COR: L2A processor for users. European Space Agency, (Special Publication) ESA SP, SP-740:9–13, 2016.">9</a>]</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <a class="reference internal" href="../products/cube-collections/cube-collections-deprecated.html"><span class="doc">deprecated</span></a> Sentinel-2 Data Cubes images were processed locally using LaSRC, which are no longer used in recent products. The images of Sentinel-2 Data Cubes are now all processed using Sen2cor. For detailed information check the (<a class="reference internal" href="../products/cube-collections.html"><span class="doc">Data Cube Products Page</span></a>).</p>
+</div>
 </div>
 <div class="section" id="cloud-masking">
 <h3>Cloud Masking<a class="headerlink" href="#cloud-masking" title="Permalink to this headline"></a></h3>
-<p>Cloud masking algorithms can be used to detect undesirable areas, such as cloud, cloud shadows or snow. However, cloud masking algorithm also depends on the characteristic of each sensor. Based on that, for Sentinel-2 we use the standard <a class="reference external" href="https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm">SCL</a> product provided by Sen2cor, for Landsat-8 the Fmask (version 4.2) is being used <span id="id4">[<a class="reference internal" href="../references.html#id17" title="Shi Qiu, Zhe Zhu, and Binbin He. Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4–8 and Sentinel-2 imagery. Remote Sensing of Environment, 231(May):111205, 2019. URL: https://doi.org/10.1016/j.rse.2019.05.024, doi:10.1016/j.rse.2019.05.024.">14</a>]</span> while for CBERS-4 this processing is performed using <a class="reference internal" href="bands/CMASK.html"><span class="doc">CMASK</span></a> due to it reduced number of spectral bands. Once this process is performed and the data is cataloged, the Surface Reflectance Image Collections becomes available.</p>
+<p>Cloud masking algorithms can be used to detect undesirable areas, such as cloud, cloud shadows or snow. However, cloud masking algorithm also depends on the characteristic of each sensor.</p>
+<p>CBERS-4 uses the <a class="reference internal" href="bands/CMASK.html"><span class="doc">CMASK</span></a> due to it reduced number of spectral bands. To Produce BDC Data Products, we adopt the “Clear Pixel” value (127) as valid regions to build the Data Cubes through Best pixel approach.</p>
+<p>For Landsat-8 and Landsat-9 Collection-2 data we use the cloud mask provided within <a class="reference internal" href="bands/QA.html"><span class="doc">QA_pixel</span></a>. To Produce BDC Data Products, we adopt bits 6 and 7 (“Clear” and “Water”, respectivelly) as valid regions to build the Data Cubes through Best pixel approach, as long as they are not marked as 0, 1, 2, 3, 4 or 5 (“Fill”, “Dilated Cloud”, “Cirrus”, “Cloud”, “Cloud Shadow” or “Snow”, respectivelly).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In deprecated Landsat Data Cubes (<a class="reference internal" href="../products/cube-collections/LC8_30_16D_STK-1.html"><span class="doc">LC8_30_16D_STK-1</span></a>) we have used the <a class="reference internal" href="bands/FMASK.html"><span class="doc">FMASK</span></a> cloud mask version 4.2 <span id="id4">[<a class="reference internal" href="../references.html#id17" title="Shi Qiu, Zhe Zhu, and Binbin He. Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4–8 and Sentinel-2 imagery. Remote Sensing of Environment, 231(May):111205, 2019. URL: https://doi.org/10.1016/j.rse.2019.05.024, doi:10.1016/j.rse.2019.05.024.">14</a>]</span> , which are no longer used in recent products. For detailed information check the (<a class="reference internal" href="../products/cube-collections.html"><span class="doc">Data Cube Products Page</span></a>).</p>
+</div>
+<p>For Sentinel-2 data we use the cloud mask provided within the <a class="reference internal" href="bands/SCL.html"><span class="doc">SCL</span></a> product that cames along with Sentinel-2 data. To Produce BDC Data Products, we adopt the values 4, 5 and 6 (“Vegetation”, “Not Vegetated” and “Water”, respectivelly) as valid regions to build the Data Cubes through Best pixel approach.</p>
 </div>
 </div>
 <div class="section" id="data-cube-builder">
 <h2>Data Cube Builder<a class="headerlink" href="#data-cube-builder" title="Permalink to this headline"></a></h2>
+<p>The Cube Builder is the software responsible for using ARD to generate Data Cubes.</p>
 <div class="section" id="warp-merge-reprojecting-resampling-and-griding">
 <h3>Warp (Merge, Reprojecting, Resampling and Griding)<a class="headerlink" href="#warp-merge-reprojecting-resampling-and-griding" title="Permalink to this headline"></a></h3>
-<p>In order to build the data cube collections, all input images must be at the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization and can be seen in <a class="reference internal" href="#products-cube-builder"><span class="std std-numref">Figure 17</span></a>. Warp consists in cropping and mosaicking all images that superimpose a target tile of the common grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a bilinear function, except for quality assessment band, which is resampled using nearest neighbor to avoid changes on the image values.</p>
+<p>In order to build the data cube collections, all input images must be at the same projection, using the same tile system and present the same spatial resolution. The Warp procedure perform this standardization and can be seen in <a class="reference internal" href="#products-cube-builder"><span class="std std-numref">Figure 18</span></a>. Warp consists in cropping and spatially mosaicking all images that superimpose a target tile of the grid, for a specific date. This spatial mosaic is reprojected to the target tile reference system and all bands are resampled to a determined spatial resolution through a Nearest Neighbor function to avoid changes on the image values.</p>
 <div class="align-center figure align-default" id="products-cube-builder">
 <a class="reference internal image-reference" href="../_images/cube-builder.png"><img alt="BDC Cube generation" src="../_images/cube-builder.png" style="width: 720px;" /></a>
-<p class="caption"><span class="caption-number">Figure 17 - </span><span class="caption-text">Data Cube generation.</span><a class="headerlink" href="#products-cube-builder" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">Data Cube generation.</span><a class="headerlink" href="#products-cube-builder" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="temporal-compositing">
 <h3>Temporal Compositing<a class="headerlink" href="#temporal-compositing" title="Permalink to this headline"></a></h3>
-<p>BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube nature consists in using all available images from its sensors original acquisitions. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.</p>
-<p>Three temporal compositing functions are being used in BDC: ( <em>i</em> ) Average (AVG), ( <em>ii</em> ) Median (MED), and ( <em>iii</em> ) Least Cloud Cover First (LCF). Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Table:</p>
+<p>BDC Data Cube Collections can be categorized in two types, identity and composed. An identity data cube consists in all available images on their original acquisition date reprojected and cropped to a common grid. Based on that, its temporal compositing function is identity. Temporal Compositing function can be used to generate regular series. This is performed by reducing the time dimension, which generates regularly spaced in time observations, here called composed data cubes.</p>
+<p>Several compositing functions were tested in BDC: ( <em>i</em> ) Average (AVG), ( <em>ii</em> ) Median (MED), and ( <em>iii</em> ) Least Cloud Cover First (LCF). Considering the time dimension and a time step, e. g. monthly or 16 days, these temporal composition functions are applied on the identity data cubes, ideally on observations that are not detected as cloud or cloud shadow by the quality assessment band as considered in the following Tables:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 28%" />
@@ -164,30 +194,49 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="bands/SCL.html"><span class="doc">SCL</span></a></p></td>
-<td><p>0</p></td>
-<td><p>4, 5, 6</p></td>
-<td><p>2, 3, 7, 8, 9, 10, 11</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="bands/FMASK.html"><span class="doc">FMASK</span></a></p></td>
-<td><p>255</p></td>
-<td><p>0, 1</p></td>
-<td><p>2, 3, 4</p></td>
-<td></td>
-</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="bands/CMASK.html"><span class="doc">CMASK</span></a></p></td>
 <td><p>0</p></td>
 <td><p>127</p></td>
 <td><p>255</p></td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="bands/SCL.html"><span class="doc">SCL</span></a></p></td>
+<td><p>0</p></td>
+<td><p>4, 5, 6</p></td>
+<td><p>2, 3, 7, 8, 9, 10, 11</p></td>
+<td><p>1</p></td>
+</tr>
 </tbody>
 </table>
-<p>The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The Least Cloud Cover First (LCF) temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in <a class="reference internal" href="#products-compositing-functions"><span class="std std-numref">Figure 18</span></a>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 11%" />
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cloud Mask</p></th>
+<th class="head"><p>Nodata Bit</p></th>
+<th class="head"><p>Clear Data Bits</p></th>
+<th class="head"><p>Not Clear Data Bits</p></th>
+<th class="head"><p>Saturated Data Bits</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="bands/QA.html"><span class="doc">QA_Pixel</span></a></p></td>
+<td><p>0</p></td>
+<td><p>6, 7</p></td>
+<td><p>1, 2, 3, 4, 5</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The Average temporal composing consists in the average of the observed values. The Median temporal compositing consists in the median value of the observations. The Least Cloud Cover First (LCF) temporal compositing consists in aggregating pixels from all images in the time interval according to each image quantity of valid pixels, e. g. a pixel from an image with efficacy of 95% (5% of cloud, cloud shadows or partial image) is more reliable of compositing the final image than a pixel from a 60% efficacy image. The mentioned compositing functions can be seen in <a class="reference internal" href="#products-compositing-functions"><span class="std std-numref">Figure 19</span></a>.</p>
 <div class="align-center figure align-default" id="products-compositing-functions">
 <a class="reference internal image-reference" href="../_images/compositing-function.png"><img alt="BDC Time Compositing Functions" src="../_images/compositing-function.png" style="width: 720px;" /></a>
-<p class="caption"><span class="caption-number">Figure 18 - </span><span class="caption-text">BDC Time Compositing Functions.</span><a class="headerlink" href="#products-compositing-functions" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Figure 19 - </span><span class="caption-text">BDC Time Compositing Functions.</span><a class="headerlink" href="#products-compositing-functions" title="Permalink to this image"></a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -198,6 +247,10 @@
 <p>On Previouse versions of BDC, LCF was named STK (Stack). We adopt the LCF nomenclature to specify how values are selected on the compositing function.</p>
 </div>
 <p>After the time compositing function is applied, the Brazil Data Cube Builder also calculates the NDVI and EVI spectral indices using the spectral bands of the time composed data cube. Besides that, for the time composed data cubes, three provenance bands are also generated for tracking characteristics of the composite period. The data product bands are <a class="reference internal" href="bands/CLEAROB.html"><span class="doc">CLEAROB</span></a>, <a class="reference internal" href="bands/TOTALOB.html"><span class="doc">TOTALOB</span></a> and <a class="reference internal" href="bands/PROVENANCE.html"><span class="doc">PROVENANCE</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Aditional bands and idices may be generated for specific products. For detailed information check the (<a class="reference internal" href="../products/cube-collections.html"><span class="doc">Data Cube Products Page</span></a>.</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -208,7 +261,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="Projection used by BDC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bdc-grid.html" class="btn btn-neutral float-left" title="BDC Grids" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="bands/CLEAROB.html" class="btn btn-neutral float-right" title="CLEAROB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

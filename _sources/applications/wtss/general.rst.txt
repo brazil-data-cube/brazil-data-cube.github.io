@@ -32,14 +32,7 @@ WTSS OpenAPI v3 Specification
 =============================
 
 
-For a detailed explanation of the WTSS service and its formal specification, please refer to: `WTSS OpenAPI 3 Specification <wtss/wtss-spec.html>`_.
-
-
-WTSS Server
-===========
-
-
-For a server implementation, refer to: `WTSS Server <https://github.com/brazil-data-cube/wtss>`_.
+For a detailed explanation of the WTSS service and its formal specification, please refer to: `WTSS Specification <https://github.com/brazil-data-cube/wtss-spec>`_.
 
 
 References

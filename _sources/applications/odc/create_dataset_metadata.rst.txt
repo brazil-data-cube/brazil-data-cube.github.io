@@ -31,7 +31,7 @@ To extract the metadata from the datasets, it is necessary to define the collect
                                -o ~/products/CB4_64_16D_STK_1/datasets/ \
                                --units m \
                                -p CBERS4 \
-                               --instrument AWFI \
+                               --instrument WFI \
                                -m 3 \
                                --download \
                                --download-out /data \

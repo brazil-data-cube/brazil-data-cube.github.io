@@ -14,24 +14,11 @@
     along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
-Projection used by BDC
-----------------------
+BDC Grids
+---------
 
-The Albers Equal-Area Conic is the reference map projection for the BDC tiling system, named BDC Grid. Like other normal conics, the Albers Equal-Area Conic projection has concentric arcs of circles for parallels and equally spaced radii as meridians. The parallels are not equally spaced, but they are farthest apart in the latitudes between the standard parallels and closer together to the north and south. The pole is not the center of the circles, but it is normally an arc itself. Scale along the parallels is too small between the standard parallels and too large beyond them. The scale along the meridians is just the opposite and, in fact, the scale factor along meridians is the reciprocal of the scale factor along the parallels to maintain equal area :cite:`snyder:1987`.
 
-The Albers Equal-Area Conic projection parameters follow the cartographic standards defined by Instituto Brasileiro de Geografia e Estatística (IBGE), which is the official civilian mapping agency of Brazil :cite:`franca:2015`. SIRGAS-2000, the official planimetric datum of Brazil, is the reference geodetic system. BDC Grid uses parallel 12° south and meridian 54° west as origin. To generate BDC Grid two standard parallels at latitudes 2° south and 22° south are used. Offsets of 5,000,000 meters and 10,000,000 meters are respectively applied to X and Y coordinates at the origin. In short, the WKT for the BDC Grid can be expressed by:
-
-.. code-block::
-
-    PROJCS["unknown",GEOGCS["unknown",DATUM["Unknown based on GRS80 ellipsoid",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",-12],PARAMETER["longitude_of_center",-54],PARAMETER["standard_parallel_1",-2],PARAMETER["standard_parallel_2",-22],PARAMETER["false_easting",5000000],PARAMETER["false_northing",10000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
-
-and the projstring:
-
-.. code-block::
-
-    +proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs
-
-The BDC Grid System includes three hierarchical Grids. The size of the grid tiles varies according to the grid version, see bellow more details. The rationale behind the BDC Grid tiling system follows the concept illustrated below in :numref:`Figure %s <products:bdc-grid-seed>`.
+The BDC Grid System includes three hierarchical Grids. Currently there are products using two versions of grids, but they are being reprocessed to use Grid Version 2 (V2). The size of the grid tiles varies according to the grid version, see bellow more details. The rationale behind the BDC Grid tiling system follows the concept illustrated below in :numref:`Figure %s <products:bdc-grid-seed>`.
 
 
 .. figure:: ../img/products/bdc-grid-seed.png
@@ -41,6 +28,13 @@ The BDC Grid System includes three hierarchical Grids. The size of the grid tile
     :name: products:bdc-grid-seed
 
     Tile seeds for BDC Grid.
+
+
+You can obtain BDC WMS thorugh:
+
+.. code-block::
+
+    https://brazildatacube.dpi.inpe.br/bdc/geoserver/bdc_catalog/wms
 
 
 BDC Grid System (V2)
@@ -57,6 +51,17 @@ The hierarchical relation between the different BDC Grids (V2) can be seen in :n
     :name: products:bdc-grid-v2
 
     BDC Grid V2.
+
+
+You can download the BDC Grid V2 on:
+
+- `BDC_SM (V2) <https://brazildatacube.dpi.inpe.br/bdc/geoserver/bdc_catalog/ows?service=WFS&request=GetFeature&outputFormat=shape-zip&typeName=bdc_catalog:BDC_SM_V2>`_
+
+
+- `BDC_MD (V2) <https://brazildatacube.dpi.inpe.br/bdc/geoserver/bdc_catalog/ows?service=WFS&request=GetFeature&outputFormat=shape-zip&typeName=bdc_catalog:BDC_MD_V2>`_
+
+
+- `BDC_LG (V2) <https://brazildatacube.dpi.inpe.br/bdc/geoserver/bdc_catalog/ows?service=WFS&request=GetFeature&outputFormat=shape-zip&typeName=bdc_catalog:BDC_LG_V2>`_
 
 
 Grid Generation

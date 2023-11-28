@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBERS4_AWFI_L4_SR-1 &mdash; Brazil Data Cube</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/table_styling.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/bdc.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CBERS4_MUX_L4_SR-1" href="CBERS4_MUX_L4_SR-1.html" />
+    <link rel="prev" title="CMASK" href="../../specifications/bands/CMASK.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+            <a href="../../index.html" class="icon icon-home"> Brazil Data Cube
+            <img src="../../_static/logo-bdc.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Brazil Data Cube Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../products.html">BDC Available Data Products</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../image-collections.html">Image Collections</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CBERS4A_WFI_L4_SR-1.html">CBERS4A_WFI_L4_SR-1</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CBERS4_AWFI_L4_SR-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CBERS4_MUX_L4_SR-1.html">CBERS4_MUX_L4_SR-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="S2_L2A-1.html">S2_L2A-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image-collections-deprecated.html">Deprecated Image Collections</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../cube-collections.html">Data Cube Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mosaics.html">Mosaics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classifications.html">Classifications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications.html">Services and Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../specifications.html">Specifications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../jornada-merc-2023.html">XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../worcap-2023.html">WORCAP 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../treinamento-2023.html">Treinamento PRODES 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sbsr-2023.html">SBSR 2023 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../treinamento-2022.html">Treinamento BDC 2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sbsr-2021.html">SBSR Interim 2021 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Brazil Data Cube</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../products.html">BDC Available Data Products</a> &raquo;</li>
+          <li><a href="../image-collections.html">Image Collections</a> &raquo;</li>
+      <li>CBERS4_AWFI_L4_SR-1</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../../specifications/bands/CMASK.html" class="btn btn-neutral float-left" title="CMASK" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="CBERS4_MUX_L4_SR-1.html" class="btn btn-neutral float-right" title="CBERS4_MUX_L4_SR-1" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="cbers4-awfi-l4-sr-1">
+<h1>CBERS4_AWFI_L4_SR-1<a class="headerlink" href="#cbers4-awfi-l4-sr-1" title="Permalink to this headline"></a></h1>
+<p>The CBERS4_AWFI_L4_SR-1 image collection product contains data from CBERS-4/WFI processed to Surface Reflectance data at its native spatial resolution through <em>MS3</em>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="8"><p>CBERS4_AWFI_L4_SR-1 Bands</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Band Name</p></th>
+<th class="head"><p>Common Name</p></th>
+<th class="head"><p>Data Type</p></th>
+<th class="head"><p>Min. Value</p></th>
+<th class="head"><p>Max. Value</p></th>
+<th class="head"><p>No Data</p></th>
+<th class="head"><p>Scale</p></th>
+<th class="head"><p>Spatial Resolution (m)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>BAND13</p></td>
+<td><p>blue</p></td>
+<td><p>Int16</p></td>
+<td><p>0</p></td>
+<td><p>10000</p></td>
+<td><p>-9999</p></td>
+<td><p>0.0001</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>BAND14</p></td>
+<td><p>green</p></td>
+<td><p>Int16</p></td>
+<td><p>0</p></td>
+<td><p>10000</p></td>
+<td><p>-9999</p></td>
+<td><p>0.0001</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>BAND15</p></td>
+<td><p>red</p></td>
+<td><p>Int16</p></td>
+<td><p>0</p></td>
+<td><p>10000</p></td>
+<td><p>-9999</p></td>
+<td><p>0.0001</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>BAND16</p></td>
+<td><p>nir08</p></td>
+<td><p>Int16</p></td>
+<td><p>0</p></td>
+<td><p>10000</p></td>
+<td><p>-9999</p></td>
+<td><p>0.0001</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../specifications/bands/CMASK.html"><span class="doc">CMASK</span></a></p></td>
+<td><p>quality</p></td>
+<td><p>UInt8</p></td>
+<td><p>127</p></td>
+<td><p>255</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>64</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 31%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="3"><p>CBERS4_AWFI_L4_SR-1 Files</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Asset Name</p></th>
+<th class="head"><p>Data Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>thumbnail</p></td>
+<td><p>image/png</p></td>
+<td><p>Quicklook</p></td>
+</tr>
+</tbody>
+</table>
+<p>Information Regarding Cloud Mask Band can be found on:</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../specifications/bands/CMASK.html" class="btn btn-neutral float-left" title="CMASK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="CBERS4_MUX_L4_SR-1.html" class="btn btn-neutral float-right" title="CBERS4_MUX_L4_SR-1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

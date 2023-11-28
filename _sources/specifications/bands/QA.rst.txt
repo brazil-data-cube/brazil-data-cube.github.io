@@ -21,3 +21,15 @@ QA
 
 
 Quality Assessment (QA) bands provide, for Landsat Collection 2, useful information to users regarding conditions of each pixel observation. A more detailed description of this band can be found on https://www.usgs.gov/landsat-missions/landsat-collection-2-quality-assessment-bands.
+
+
+Science Products which are used by BDC, use the following Cloud Mask:
+
+
+.. figure:: ../../img/products/qa_pixel.png
+    :alt: qa_pixel
+    :width: 720
+    :figclass: align-center
+    :name: products:qa_pixel
+
+    `Source (page 13) <https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-1619_Landsat8-9-Collection2-Level2-Science-Product-Guide-v5.pdf>`_

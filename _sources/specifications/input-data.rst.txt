@@ -18,23 +18,23 @@ BDC Input Data
 --------------
 
 
-INPE pioneered the free provision of medium resolution satellite data, releasing images at no cost from the second *China-Brazil Earth Resources Satellite* (CBERS-2) :cite:`banskota:2014`. The adoption of this policy encouraged the *United States Geological Survey* (USGS) to make Landsat data available in 2008 :cite:`woodcock:2008`, which resulted in a greater amount of access and use of orbital images :cite:`wulder:2012`. Nowadays, Landsat program provides the most faraway orbital image series, providing observations since 1972 and is freely available. Also the European Copernicus program made available the access to all users for Sentinel data, such as Sentinel-2A and Sentinel-2B :cite:`berger:2012`. The free data approach persists to recent days with free data availability from Landsat-8, Sentinel-2, CBERS-4, Terra, Aqua and more. Images from the Landsat-8/OLI, Sentinel-2A/MSI, Sentinel-2B/MSI, CBERS-4/AWFI, CBERS-4/MUX, CBERS-4A/WFI, Terra/MODIS and Aqua/MODIS are used as input data in the BDC products.
+INPE pioneered the free provision of medium resolution satellite data, releasing images at no cost from the second *China-Brazil Earth Resources Satellite* (CBERS-2) :cite:`banskota:2014`. The adoption of this policy encouraged the *United States Geological Survey* (USGS) to make Landsat data available in 2008 :cite:`woodcock:2008`, which resulted in a greater amount of access and use of orbital images :cite:`wulder:2012`. Nowadays, Landsat program provides the most faraway orbital image series, providing observations since 1972 and is freely available. Also the European Copernicus program made available the access to all users for Sentinel data, such as Sentinel-2A and Sentinel-2B :cite:`berger:2012`. The free data approach persists to recent days with free data availability from Landsat-8, Sentinel-2, CBERS-4, Terra, Aqua and more. Images from the Landsat-8/OLI, Sentinel-2A/MSI, Sentinel-2B/MSI, CBERS-4/WFI, CBERS-4/MUX, CBERS-4A/WFI, Terra/MODIS and Aqua/MODIS are used as input data in the BDC products.
 
 
 CBERS-4
 +++++++
 
 
-The CBERS (China-Brazil Earth Resources Satellites) program is a cooperation between Brazil and China, established in 1988, to supply both countries with multispectral remotely sensed imagery :cite:`ponzoni:2008`. Currently, CBERS-4 is in operation, since December 2014. CBERS-4 carries four cameras: (*i*) Panchromatic and Multispectral Camera, (*ii*) the Multispectral Camera (MUX), (*iii*) Infrared System (IRS), and ( *iv* ) the Wide-Field Imager (AWFI). The CBERS-4 satellite has a sun-synchronous orbit with an altitude of 778 km. AWFI has four spectral bands, blue, green, red and NIR. All AWFI bands present spatial resolution of 64 m (nadir). AWFI scenes have approximately 866 km of swath width, which enables a temporal resolution of 5 days.
+The CBERS (China-Brazil Earth Resources Satellites) program is a cooperation between Brazil and China, established in 1988, to supply both countries with multispectral remotely sensed imagery :cite:`ponzoni:2008`. Currently, CBERS-4 is in operation, since December 2014. CBERS-4 carries four cameras: (*i*) Panchromatic and Multispectral Camera, (*ii*) the Multispectral Camera (MUX), (*iii*) Infrared System (IRS), and ( *iv* ) the Wide-Field Imager (WFI). The CBERS-4 satellite has a sun-synchronous orbit with an altitude of 778 km. WFI has four spectral bands, blue, green, red and NIR. All WFI bands present spatial resolution of 64 m (nadir). WFI scenes have approximately 866 km of swath width, which enables a temporal resolution of 5 days.
 
 
-CBERS-4/AWFI (and other products) are freely distributed by INPE. Calibration coefficients for CBERS-4 can be found in :cite:`pinto:2016`. The scenes are provided in `INPE's catalog <http://www.dgi.inpe.br/catalogo/>`__ following CBERS WRS. CBERS-4 main characteristics are:
+CBERS-4/WFI (and other products) are freely distributed by INPE. Calibration coefficients for CBERS-4 can be found in :cite:`pinto:2016`. The scenes are provided in `INPE's catalog <http://www.dgi.inpe.br/catalogo/>`__ following CBERS WRS. CBERS-4 main characteristics are:
 
 
 +--------------------------------+-------------+--------------+-------------+
 |                                              | CBERS-4                    |
 +--------------------------------+-------------+--------------+-------------+
-|                                              | AWFI         | MUX         |
+|                                              | WFI          | MUX         |
 +================================+=============+==============+=============+
 | Launch Date                                  | Dez. 7, 2014               |
 +--------------------------------+-------------+--------------+-------------+

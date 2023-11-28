@@ -49,12 +49,13 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Available Data Products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../specifications.html">Specifications</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="input-data.html">BDC Input Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts.html">BDC Concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bdc-grid.html">Projection used by BDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bdc-projection.html">Projection used by BDC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bdc-grid.html">BDC Grids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="processing-flow.html">BDC Processing Flow</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">BDC Naming</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#data-cube-collection-naming">Data Cube Collection Naming</a></li>
@@ -120,9 +121,10 @@
 <div class="section" id="data-cube-collection-naming">
 <span id="dc-collection-naming"></span><h2>Data Cube Collection Naming<a class="headerlink" href="#data-cube-collection-naming" title="Permalink to this headline"></a></h2>
 <p>Each BDC Data Cube Collection is named following the convention:</p>
-<p>&lt;Satellite Sensor Alias&gt;_&lt;Time Step&gt;*-&lt;Version&gt;</p>
+<p>&lt;Satellite Sensor Alias&gt;-&lt;Time Step&gt;*-&lt;Version&gt;</p>
 <p><strong>Satellite Sensor Alias</strong> is an alias to an image collection satellite e. g. S2, LC8, C4, representing Sentinel-2, Landsat-8 and CBERS-4, respectively. Note that a full description of the product can be found on its documentation.</p>
 <p><strong>Time Step</strong> only is required when the data cube is time-composed. The Time Step is represented in naming by an integer followed by a capital letter, which can be <em>D</em>, <em>M</em> or <em>Y</em>, representing day, month and year, respectively;</p>
+<p><strong>Version</strong> indicates the product version.</p>
 <p>Examples of Data Cube names are: S2-16D-2 (Composed), S2-2 (Identity).</p>
 </div>
 <div class="section" id="data-cube-collection-file-naming">
@@ -136,7 +138,7 @@
 <li><p><strong>Band</strong> indicates the file band</p></li>
 </ul>
 <p>.tif indicate the file format, Cloud Optimized Geotiff (COG) in this case.</p>
-<p>The file name “S2-16D_V2_008013_20220101_B01.tif”, for instance, represents a cube composed by images from the S2-16D_V2 data cube collection, which is an alias to S2-16D-2. This name indicates that it is a Sentinel-2 data cube (S2), using a time compositing function each 16 days (16D), version 2, from a tile with code 008013, which indicates Path (008) and Row(013), starting in January 01, specifically the coastal band image (B01).</p>
+<p>The file name “S2-16D_V2_008013_20220101_B01.tif”, for instance, represents a cube composed by images from the S2-16D_V2 data cube collection, which is an alias to S2-16D-2. This name indicates that it is a Sentinel-2 data cube (S2), using a time compositing function each 16 days (16D), version 2, from a tile with code 008013, which indicates Path (008) and Row (013), starting in January 01, specifically the coastal band image (B01).</p>
 </div>
 </div>
 

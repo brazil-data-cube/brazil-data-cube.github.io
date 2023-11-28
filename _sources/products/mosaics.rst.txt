@@ -1,0 +1,38 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Mosaics
+-------
+
+
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| Image Collection                                           | Satellite      | Sensors  | Spatial        | Temporal    | Area       |
+|                                                            |                |          | Resolution (m) | Compositing |            |
++============================================================+================+==========+================+=============+============+
+| CB4-MOSAIC-BRAZIL_64_3M_STK-1                              | CBERS-4        | WFI      | 64             | 3 Months    | Brazil     |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| CB4A-MOSAIC-PARAIBA_55_3M_STK-1                            | CBERS-4A       | WFI      | 55             | 3 Months    | Paraíba    |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| LC8-MOSAIC-BRAZIL_30_6M_MEDSTK-1                           | Landsat-8      | OLI      | 30             | 6 Months    | Brazil     |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| MOSAIC-S2-AMAZONIA-3M-1                                    | Sentinel 2A/2B | MSI      | 10             | 3 Months    | Amazônia   |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| MOSAIC-S2-CERRADO-4M-1                                     | Sentinel 2A/2B | MSI      | 10             | 4 Months    | Cerrado    |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| MOSAIC-S2-YANOMAMI-6M-1                                    | Sentinel 2A/2B | MSI      | 10             | 6 Months    | Yanomami   |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| S2-MOSAIC-PARAIBA_10_3M_STK-1                              | Sentinel 2A/2B | MSI      | 10             | 3 Months    | Paraiba    |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+

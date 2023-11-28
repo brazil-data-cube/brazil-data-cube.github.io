@@ -36,4 +36,4 @@ BDC Concepts
 **TILE**: It is an element of a GRS, associated with a unique code, that represents a geographic region.
 
 
-**COMPOSITE FUNCTION**: Is a function that determines a pixel value, according to a heuristic, from a set of pixels contained within a time interval.
+**COMPOSITING FUNCTION**: Is a function that determines a pixel value, according to a heuristic, from a set of pixels contained within a time interval.

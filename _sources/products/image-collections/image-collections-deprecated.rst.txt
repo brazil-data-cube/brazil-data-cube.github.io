@@ -1,0 +1,47 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright (C) 2023 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Deprecated Image Collections
+----------------------------
+
+
+This is the list of previously available Image Collections that are not maintained anymore by Brazil Data Cube.
+
+
++------------------------------------------------------------------+----------------+----------+----------------+------------+
+| Deprecated Image Collection                                      | Satellite      | Sensors  | Spatial        | Radiometry |
+|                                                                  |                |          | Resolution (m) |            |
++==================================================================+================+==========+================+============+
+| :doc:`LC8_DN-1 <./image-collection-deprecated/LC8_DN-1>`         | Landsat-8      | OLI/TIRS | 30             | DN         |
++------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`LC8_SR-1 <./image-collection-deprecated/LC8_SR-1>`         | Landsat-8      | OLI      | 30             | SR         |
++------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`LANDSAT_SR-2 <./image-collection-deprecated/LANDSAT_SR-2>` | Landsat        | ---      | 30             | SR         |
++------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`S2_L1C-1 <./image-collection-deprecated/S2_L1C-1>`         | Sentinel 2A/2B | MSI      | 10             | ToA        |
++------------------------------------------------------------------+----------------+----------+----------------+------------+
+
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    ./image-collection-deprecated/LANDSAT_SR-2
+    ./image-collection-deprecated/LC8_DN-1
+    ./image-collection-deprecated/LC8_SR-1
+    ./image-collection-deprecated/S2_L1C-1
