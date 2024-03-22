@@ -166,6 +166,9 @@ The Average temporal composing consists in the average of the observed values. T
 .. note:: On Previouse versions of BDC, LCF was named STK (Stack). We adopt the LCF nomenclature to specify how values are selected on the compositing function.
 
 
+.. note:: On Previouse versions of BDC, we tested an approach that used the central date of an interval (Median) and performed the Least Cloud Cover approach based on the images closest in time to this central date image. This approach was calles Median Stack (MEDSTK) and was used as an experiment on few products.
+
+
 After the time compositing function is applied, the Brazil Data Cube Builder also calculates the NDVI and EVI spectral indices using the spectral bands of the time composed data cube. Besides that, for the time composed data cubes, three provenance bands are also generated for tracking characteristics of the composite period. The data product bands are :doc:`CLEAROB <./bands/CLEAROB>`, :doc:`TOTALOB <./bands/TOTALOB>` and :doc:`PROVENANCE <./bands/PROVENANCE>`.
 
 
