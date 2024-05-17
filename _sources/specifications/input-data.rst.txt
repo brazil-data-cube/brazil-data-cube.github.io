@@ -95,6 +95,40 @@ CBERS-4A/WFI (and other products) are freely distributed by INPE. The scenes are
 |                                | nir (B16)   | 0.770-0.890   |
 +--------------------------------+-------------+---------------+
 
+AMAZONIA-1
+++++++++++
+
+AMAZONIA-1 is in operation since February 2021. AMAZONIA-1 carries a Wide Field Imager (WFI) Camera. The AMAZONIA-1 satellite has a sun-synchronous orbit with an altitude of 752 km. WFI has four spectral bands, blue, green, red and NIR. All WFI bands present spatial resolution of 60 m (nadir). WFI scenes have approximately 740 km of swath width, which enables a temporal resolution of 5 days.
+
+
+AMAZONIA-1 (and other products) are freely distributed by INPE. The scenes are provided in `INPE's catalog <http://www.dgi.inpe.br/catalogo/>`__ . AMAZONIA-1 main characteristics are:
+
++--------------------------------+-------------+---------------+
+|                                              | AMAZONIA/WFI  |
++================================+=============+===============+
+| Launch Date                                  | Feb. 28, 2021 |
++--------------------------------+-------------+---------------+
+| Equatorial crossing time                     | 10:30         |
++--------------------------------+-------------+---------------+
+| Swath (km)                                   | 850           |
++--------------------------------+-------------+---------------+
+| Field of view (:math:`^{\circ}`)             | 28.63         |
++--------------------------------+-------------+---------------+
+| Spatial Resolution (m)                       | 64            |
++--------------------------------+-------------+---------------+
+| Orbit Height (km)                            | 752           |
++--------------------------------+-------------+---------------+
+| Temporal Resolution (days)                   | 5             |
++--------------------------------+-------------+---------------+
+|                                | blue (B13)  | 0.450-0.520   |
++                                +-------------+---------------+
+| Spectral Bands (:math:`\mu m`) | green (B14) | 0.520-0.590   |
++                                +-------------+---------------+
+|                                | red (B15)   | 0.630-0.690   |
++                                +-------------+---------------+
+|                                | nir (B16)   | 0.770-0.890   |
++--------------------------------+-------------+---------------+
+
 Landsat-8
 +++++++++
 

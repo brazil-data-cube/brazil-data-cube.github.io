@@ -41,6 +41,7 @@ Welcome to the **Brazil Data Cube** project!
     :maxdepth: 1
     :caption: Tutorials:
 
+    treinamento-2024
     jornada-merc-2023
     worcap-2023
     treinamento-2023

@@ -19,20 +19,24 @@ Mosaics
 
 
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| Image Collection                                           | Satellite      | Sensors  | Spatial        | Temporal    | Area       |
+| Image Collection                                           | Satellites     | Sensors  | Spatial        | Temporal    | Area       |
 |                                                            |                |          | Resolution (m) | Compositing |            |
 +============================================================+================+==========+================+=============+============+
-| CB4-MOSAIC-BRAZIL_64_3M_STK-1                              | CBERS-4        | WFI      | 64             | 3 Months    | Brazil     |
+| mosaic-cbers4-brazil-3m-1                                  | CBERS-4        | WFI      | 64             | 3 Months    | Brazil     |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| CB4A-MOSAIC-PARAIBA_55_3M_STK-1                            | CBERS-4A       | WFI      | 55             | 3 Months    | Paraíba    |
+| mosaic-cbers4a-paraiba-3m-1                                | CBERS-4A       | WFI      | 55             | 3 Months    | Paraíba    |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| LC8-MOSAIC-BRAZIL_30_6M_MEDSTK-1                           | Landsat-8      | OLI      | 30             | 6 Months    | Brazil     |
+| mosaic-landsat-brazil-6m-1                                 | Landsat-8      | OLI      | 30             | 6 Months    | Brazil     |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| MOSAIC-S2-AMAZONIA-3M-1                                    | Sentinel 2A/2B | MSI      | 10             | 3 Months    | Amazônia   |
+| mosaic-landsat-amazon-3m-1                                 | Landsat-8      | OLI      | 30             | 3 Months    | Amazônia   |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| MOSAIC-S2-CERRADO-4M-1                                     | Sentinel 2A/2B | MSI      | 10             | 4 Months    | Cerrado    |
+| mosaic-s2-amazon-3m-1                                      | Sentinel 2A/2B | MSI      | 10             | 3 Months    | Amazônia   |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| MOSAIC-S2-YANOMAMI-6M-1                                    | Sentinel 2A/2B | MSI      | 10             | 6 Months    | Yanomami   |
+| mosaic-s2-cerrado-2m-1                                     | Sentinel 2A/2B | MSI      | 10             | 2 Months    | Cerrado    |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
-| S2-MOSAIC-PARAIBA_10_3M_STK-1                              | Sentinel 2A/2B | MSI      | 10             | 3 Months    | Paraiba    |
+| mosaic-s2-cerrado-4m-1                                     | Sentinel 2A/2B | MSI      | 10             | 4 Months    | Cerrado    |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| mosaic-s2-yanomami_territory-6m-1                          | Sentinel 2A/2B | MSI      | 10             | 6 Months    | Yanomami   |
++------------------------------------------------------------+----------------+----------+----------------+-------------+------------+
+| mosaic-s2-paraiba-3m                                       | Sentinel 2A/2B | MSI      | 10             | 3 Months    | Paraiba    |
 +------------------------------------------------------------+----------------+----------+----------------+-------------+------------+

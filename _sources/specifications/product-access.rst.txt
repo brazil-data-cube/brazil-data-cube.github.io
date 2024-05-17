@@ -1,6 +1,6 @@
 ..
     This file is part of Brazil Data Cube Documentation.
-    Copyright 2020 INPE.
+    Copyright 2020-2024 INPE.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,5 +17,6 @@
 BDC Product Access
 ------------------
 
+You can access the collections provided by BDC on [INPE's STAC Browser](https://data.inpe.br/stac/browser/?.language=en), directly on [INPE's STAC](https://data.inpe.br/bdc/stac/v1/) or through BDC Explorer (http://brazildatacube.dpi.inpe.br/portal/explore).
 
-All Collections can be obtained through Brazil Data Cube website (http://brazildatacube.dpi.inpe.br/portal/explore) or consulting the BDC STAC (http://brazildatacube.dpi.inpe.br/stac/).
+    .. Note:: We are migrating all BDC collections to INPE's STAC. In the meantime, a few collections can be found on BDC STAC old URL (http://brazildatacube.dpi.inpe.br/stac/).

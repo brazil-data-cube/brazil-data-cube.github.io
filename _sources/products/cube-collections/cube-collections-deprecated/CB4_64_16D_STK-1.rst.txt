@@ -22,7 +22,7 @@ CB4_64_16D_STK-1
 
 .. warning::
 
-    This product is deprecated and not be available anymore. CB4_64_16D_STK-1 is being replaced by :doc:`CB4-16D-2 <./../CB4-16D-2>`. This new product will be generated using BDC GRID newest version (version 2).
+    This product is deprecated and not be available anymore. CB4_64_16D_STK-1 is being replaced by :doc:`CBERS4-WFI-16D-2 <./../CBERS4-WFI-16D-2>`. This new product will be generated using BDC GRID newest version (version 2).
     The CB4_64_16D_STK-1 will be available until May 31, 2023.
 
     Brazil Data Cube Team.

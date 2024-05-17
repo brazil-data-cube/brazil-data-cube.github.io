@@ -1,0 +1,89 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2024 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+Informações sobre o curso
+-------------------------
+
+    .. Note:: Início: 27 de Maio a 07 de Junho - às 09:00h ao 12:00h
+
+O treinamento 2024 apresenta os conceitos básicos de séries temporais e cubos de dados, bem como a forma de utilizá-los. Serão apresentados os serviços STAC, WTSS, WLTS e o pacote SITS, tecnologias e dados produzidos pelo time do projeto `Brazil Data Cube <http://brazildatacube.dpi.inpe.br/>`_.
+
+
+Dia 27/05/2024 - Segunda-feira
+
+- :ref:`course-treinamento-2024-day1`
+
+Dia 28/05/2024 - Terça-feira
+
+- :ref:`course-treinamento-2024-day2`
+
+Dia 29/05/2024 - Quarta-feira
+
+- :ref:`course-treinamento-2024-day3`
+
+Dia 03/06/2024 - Segunda-feira
+
+- :ref:`course-treinamento-2024-day4`
+
+Dia 04/06/2024 - Terça-feira
+
+- :ref:`course-treinamento-2024-day5`
+
+Dia 05/06/2024 - Quarta-feira
+
+- :ref:`course-treinamento-2024-day6`
+
+Dia 06/06/2024 - Quinta-feira
+
+- :ref:`course-treinamento-2024-day7`
+
+Dia 08/06/2024 - Sexta-feira
+
+- :ref:`course-treinamento-2024-day8`
+
+
+**Responsáveis:**
+
+
+- Gilberto Ribeiro de Queiroz
+
+
+- Karine Reis Ferreira
+
+
+**Equipe de Colaboradores do Minicurso:**
+
+- Abner Anjos
+
+
+- Baggio Silva
+
+
+- Fabiana Zioti
+
+
+- Felipe Souza
+
+
+- Gabriel Sansigolo
+
+
+- Jeferson Arcanjo
+
+
+- Raphael Costa
+
+
+- Rennan Marujo

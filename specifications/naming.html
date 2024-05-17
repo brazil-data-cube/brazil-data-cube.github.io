@@ -119,6 +119,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Tutorials:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../treinamento-2024.html">Treinamento PRODES 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jornada-merc-2023.html">XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../worcap-2023.html">WORCAP 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../treinamento-2023.html">Treinamento PRODES 2023</a></li>
@@ -220,14 +221,14 @@
 <span id="dc-collection-naming"></span><h2>Data Cube Collection Naming<a class="headerlink" href="#data-cube-collection-naming" title="Permalink to this headline">¶</a></h2>
 <p>Each BDC Data Cube Collection is named following the convention:</p>
 <p>&lt;Satellite Sensor Alias&gt;-&lt;Time Step&gt;*-&lt;Version&gt;</p>
-<p><strong>Satellite Sensor Alias</strong> is an alias to an image collection satellite e. g. S2, LC8, C4, representing Sentinel-2, Landsat-8 and CBERS-4, respectively. Note that a full description of the product can be found on its documentation.</p>
-<p><strong>Time Step</strong> only is required when the data cube is time-composed. The Time Step is represented in naming by an integer followed by a capital letter, which can be <em>D</em>, <em>M</em> or <em>Y</em>, representing day, month and year, respectively;</p>
+<p><strong>Satellite Sensor Alias</strong> is an alias to an image collection satellite e. g. S2, LANDSAT, CBERS4, representing Sentinel-2, Landsat-8 and CBERS-4, respectively. Note that a full description of the product can be found on its documentation.</p>
+<p><strong>Time Step</strong> is represented in naming by an integer followed by a capital letter, which can be <em>D</em>, <em>M</em> or <em>Y</em>, representing day, month and year, respectively;</p>
 <p><strong>Version</strong> indicates the product version.</p>
-<p>Examples of Data Cube names are: S2-16D-2 (Composed), S2-2 (Identity).</p>
+<p>Examples of Data Cube names are: S2-16D-2, CBERS4-WFI-16D.</p>
 </div>
 <div class="section" id="data-cube-collection-file-naming">
 <h2>Data Cube Collection File Naming<a class="headerlink" href="#data-cube-collection-file-naming" title="Permalink to this headline">¶</a></h2>
-<p>&lt;Data Cube Collection&gt;_&lt;Version&gt;_&lt;Tile&gt;_&lt;Start Period&gt;_&lt;Band&gt;.tif</p>
+<p>&lt;Data Cube Collection&gt;_V&lt;Version&gt;_&lt;Tile&gt;_&lt;Start Period&gt;_&lt;Band&gt;.tif</p>
 <ul class="simple">
 <li><p><strong>Data Cube Collection</strong> is an alias indicating a BDC data cube collection;</p></li>
 <li><p><strong>Version</strong> is the version of the Data Cube;</p></li>
