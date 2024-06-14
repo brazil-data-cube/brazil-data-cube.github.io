@@ -19,7 +19,5 @@
 BDCExplorer, TerraCollect e BDC-Lab
 -----------------------------------
 
-- `Plataforma BDC Explorer <https://brazildatacube.dpi.inpe.br/portal/explore>`_
-- `TerraCollect <https://brazildatacube.dpi.inpe.br/terracollect>`_
-- `Plataforma BDC-Lab <https://data.inpe.br/bdc/lab/>`_
-
+- Classificação com métodos não supervisionados de séries temporais de imagens usando SOM
+- Classificação com modelo linear de mistura espectral

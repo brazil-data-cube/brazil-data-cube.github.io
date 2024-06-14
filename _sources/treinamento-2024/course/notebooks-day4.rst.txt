@@ -14,12 +14,23 @@
     along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
-.. _course-treinamento-2024-day1:
+Materiais SITS
+--------------
 
-Introdução ao projeto Brazil Data Cube e Produtos de dados
-----------------------------------------------------------
+.. _course-treinamento-2024-day4-notebooks-treinamento1:
 
-- `Visão geral do projeto BDC <http://brazildatacube.org/en/home-page-2/>`_
-- `Geração das coleções e cubos de dados <https://brazil-data-cube.github.io/specifications/processing-flow.html>`_
-- `Conhecendo o BDC-LAB <https://data.inpe.br/bdc/lab/>`_
-- `Code Gallery <git clone https://github.com/brazil-data-cube/code-gallery.git>`_
+Introdução ao SITS
+++++++++++++++++++
+
+- link para notebook
+
+..
+    - https://www.kaggle.com/code/esensing/part-1-introduction-to-sits
+
+
+    .. _course-treinamento-2024-day4-notebooks-treinamento2:
+
+    Criação de cubos de dados no SITS
+    +++++++++++++++++++++++++++++++++
+
+  - https://www.kaggle.com/code/esensing/part-2-creating-data-cubes-in-sits

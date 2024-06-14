@@ -37,9 +37,6 @@ O Treinamento Brazil Data Cube (BDC) 2024 visa capacitar pessoas para uso das te
     ./treinamento-2024/day3
     ./treinamento-2024/day4
     ./treinamento-2024/day5
-    ./treinamento-2024/day6
-    ./treinamento-2024/day7
-    ./treinamento-2024/day8
 
 Links:
 

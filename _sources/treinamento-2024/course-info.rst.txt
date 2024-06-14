@@ -16,42 +16,30 @@
 Informações sobre o curso
 -------------------------
 
-    .. Note:: Início: 27 de Maio a 07 de Junho - às 09:00h ao 12:00h
+    .. Note:: Início: 17 de Junho - às 09:00h ao 12:00h
 
 O treinamento 2024 apresenta os conceitos básicos de séries temporais e cubos de dados, bem como a forma de utilizá-los. Serão apresentados os serviços STAC, WTSS, WLTS e o pacote SITS, tecnologias e dados produzidos pelo time do projeto `Brazil Data Cube <http://brazildatacube.dpi.inpe.br/>`_.
 
 
-Dia 27/05/2024 - Segunda-feira
+Dia 17/06/2024 - Segunda-feira
 
 - :ref:`course-treinamento-2024-day1`
 
-Dia 28/05/2024 - Terça-feira
+Dia 18/06/2024 - Terça-feira
 
 - :ref:`course-treinamento-2024-day2`
 
-Dia 29/05/2024 - Quarta-feira
+Dia 19/06/2024 - Quarta-feira
 
 - :ref:`course-treinamento-2024-day3`
 
-Dia 03/06/2024 - Segunda-feira
+Dia 20/06/2024 - Segunda-feira
 
 - :ref:`course-treinamento-2024-day4`
 
-Dia 04/06/2024 - Terça-feira
+Dia 21/06/2024 - Terça-feira
 
 - :ref:`course-treinamento-2024-day5`
-
-Dia 05/06/2024 - Quarta-feira
-
-- :ref:`course-treinamento-2024-day6`
-
-Dia 06/06/2024 - Quinta-feira
-
-- :ref:`course-treinamento-2024-day7`
-
-Dia 08/06/2024 - Sexta-feira
-
-- :ref:`course-treinamento-2024-day8`
 
 
 **Responsáveis:**

@@ -16,7 +16,21 @@
 
 .. _course-treinamento-2024-day4:
 
-Análise de séries temporais de imagens com métodos não supervisionados usando SOM
----------------------------------------------------------------------------------
+SITS R Package
+--------------
 
-- Preencher
+- Por que trabalhar com séries temporais de imagens de satélite?
+- Como o SITS funciona?
+- Cubos de dados de Observação da Terra
+
+- Leitura recomendada:
+
+    1. `Introduction <https://e-sensing.github.io/sitsbook/introduction.html>`_
+    2. `Earth Observation Data Cubes <https://e-sensing.github.io/sitsbook/earth-observation-data-cubes.html>`_
+    3. `Operations on data cubes <https://e-sensing.github.io/sitsbook/operations-on-data-cubes.html>`_
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./course/notebooks-day4

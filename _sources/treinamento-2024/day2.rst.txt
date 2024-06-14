@@ -19,9 +19,14 @@
 Serviços de descoberta, acesso e análise (STAC, WTSS, WLTS)
 -----------------------------------------------------------
 
-- :ref:`course-treinamento-2023-day2-notebooks-stac`
-- :ref:`course-treinamento-2023-day2-notebooks-wtss`
-- :ref:`course-treinamento-2023-day2-notebooks-wlts`
+- `Plataforma BDC-Lab <https://data.inpe.br/bdc/lab/>`_
+- `Code Gallery <git clone https://github.com/brazil-data-cube/code-gallery.git>`_
+- `Plataforma BDC Explorer <https://brazildatacube.dpi.inpe.br/portal/explore>`_
+- `TerraCollect <https://brazildatacube.dpi.inpe.br/terracollect>`_
+
+- :ref:`course-treinamento-2024-day2-notebooks-stac`
+- :ref:`course-treinamento-2024-day2-notebooks-wtss`
+- :ref:`course-treinamento-2024-day2-notebooks-wlts`
 
 
 .. toctree::

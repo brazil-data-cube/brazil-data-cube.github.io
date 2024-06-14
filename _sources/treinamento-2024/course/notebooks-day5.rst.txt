@@ -14,23 +14,20 @@
     along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
 
 
-Materiais Dia 5
----------------
+Materiais
+---------
 
-.. _course-treinamento-2024-day5-notebooks-treinamento1:
-
-Introdução ao SITS
-++++++++++++++++++
-
-- link para notebook
+.. _course-treinamento-2024-day5-sits-image-classification-in-data-cubes:
 
 ..
-    - https://www.kaggle.com/code/esensing/part-1-introduction-to-sits
+    Parte 4 - Classificação de imagens em cubos de dados com GPU
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    - https://www.kaggle.com/code/esensing/part-4-1-data-cube-classification-using-gpu
 
-    .. _course-treinamento-2024-day5-notebooks-treinamento2:
+    .. _course-treinamento-2024-day7-sits-machine-learning-for-data-cubes:
 
-    Criação de cubos de dados no SITS
-    +++++++++++++++++++++++++++++++++
+    Parte 5 - Aprendizado de máquina em cubos de dados
+    ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-  - https://www.kaggle.com/code/esensing/part-2-creating-data-cubes-in-sits
+    - https://www.kaggle.com/code/esensing/part-5-machine-learning-for-data-cubes
