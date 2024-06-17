@@ -16,8 +16,8 @@
 
 .. _course-treinamento-2024-day3:
 
-BDCExplorer, TerraCollect e BDC-Lab
------------------------------------
+Pesquisas em Andamento
+----------------------
 
 - Classificação com métodos não supervisionados de séries temporais de imagens usando SOM
 - Classificação com modelo linear de mistura espectral

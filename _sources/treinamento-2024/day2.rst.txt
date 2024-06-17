@@ -16,8 +16,8 @@
 
 .. _course-treinamento-2024-day2:
 
-Serviços de descoberta, acesso e análise (STAC, WTSS, WLTS)
------------------------------------------------------------
+Serviços de descoberta, acesso e análise (STAC, WTSS, WLTS), BDCExplorer, TerraCollect
+--------------------------------------------------------------------------------------
 
 - `Plataforma BDC-Lab <https://data.inpe.br/bdc/lab/>`_
 - `Code Gallery <git clone https://github.com/brazil-data-cube/code-gallery.git>`_
