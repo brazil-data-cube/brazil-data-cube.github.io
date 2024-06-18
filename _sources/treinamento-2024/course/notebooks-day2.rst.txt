@@ -22,20 +22,21 @@ Notebooks em Python dos serviços
 Uso do serviço STAC
 +++++++++++++++++++
 
-- link para notebook de introdução ao STAC
+- <https://github.com/brazil-data-cube/code-gallery/blob/master/bdc-lab/Python/stac/stac-introduction.ipynb>`_
+- <https://github.com/brazil-data-cube/code-gallery/blob/master/bdc-lab/Python/stac/stac-image-processing.ipynb>`_
 
 .. _course-treinamento-2024-day2-notebooks-wtss:
 
 Uso do serviço WTSS
 +++++++++++++++++++
 
-- link para notebook de introdução ao WTSS intro
-- link para notebook de introdução ao WTSS examples
-- link para notebook de introdução ao WTSS 2
+- <https://github.com/brazil-data-cube/code-gallery/blob/master/bdc-lab/Python/wtss/wtss-introduction.ipynb>`_
+- <https://github.com/brazil-data-cube/code-gallery/blob/master/bdc-lab/Python/wtss/wtss-examples.ipynb>`_
+- <https://github.com/brazil-data-cube/code-gallery/blob/master/bdc-lab/Python/wtss/wtss2.ipynb>`_
 
 .. _course-treinamento-2024-day2-notebooks-wlts:
 
 Uso do serviço WLTS
 +++++++++++++++++++
 
-- link para notebook de introdução ao WLTS
+- <https://github.com/brazil-data-cube/code-gallery/blob/master/bdc-lab/Python/wlts/wlts-introduction.ipynb>`_
