@@ -19,18 +19,18 @@
 SITS R Package
 --------------
 
-- Por que trabalhar com séries temporais de imagens de satélite?
-- Como o SITS funciona?
-- Cubos de dados de Observação da Terra
-
+- Metodologia usando o pacote R SITS e métodos supervisionados de deep learning.
+- Pacote R SITS:
+	- Por que trabalhar com séries temporais de imagens de satélite?
+	- Como o SITS funciona?
+	- Cubos de dados de Observação da Terra
+	- Trabalhando com Amostras
+	- Classificação de Séries Temporais
 - Leitura recomendada:
-
-    1. `Introduction <https://e-sensing.github.io/sitsbook/introduction.html>`_
-    2. `Earth Observation Data Cubes <https://e-sensing.github.io/sitsbook/earth-observation-data-cubes.html>`_
-    3. `Operations on data cubes <https://e-sensing.github.io/sitsbook/operations-on-data-cubes.html>`_
-
-.. toctree::
-    :maxdepth: 1
-    :titlesonly:
-
-    ./course/notebooks-day4
+	- [Introdução ao SITS](https://e-sensing.github.io/sitsbook/introduction.html)
+	- [Cubos de Dados de Observação da Terra](https://e-sensing.github.io/sitsbook/earth-observation-data-cubes.html)
+	- [Operações em Cubo de Dados](https://e-sensing.github.io/sitsbook/operations-on-data-cubes.html)
+- Ativades extras:
+	- Faça uma análise da representatividade das amostras coletadas.
+	- Use o SOM para avaliar a separabilidade das amostras.
+	- Gere um K-fold com 5 folds para avaliar a representatividade das amostras.

@@ -19,16 +19,15 @@
 SITS R Package
 --------------
 
-..
-    - Hands-on: Crie o seu cubo de dados:
-
-        1. Monte um cubo de dados Sentinel-2 do BDC para o ano de 2021 a partir do tile 20LMR.
-        2. Gere os índices NDWI e NBR.
-        3. Gere as frações Solo, Sombra e Vegetação a partir do modelo de mistura disponibilizado pelo SITS.
-
-
-.. toctree::
-    :maxdepth: 1
-    :titlesonly:
-
-    ./course/notebooks-day5
+- Pacote R SITS:
+	- Classificação de Imagens de Cubos de Dados.
+	- Suavização Bayesiana em Pós-processamento.
+	- Medidas de Acurácia, Validação e Incerteza.
+- Leitura recomendada:
+	- [Machine Learning em Cubos de Dados](https://e-sensing.github.io/sitsbook/machine-learning-for-data-cubes.html)
+	- [Classificação de Cubos de Dados](https://e-sensing.github.io/sitsbook/image-classification-in-data-cubes.html)
+	- [Validação e medidas de acurácia](https://e-sensing.github.io/sitsbook/validation-and-accuracy-measurements.html)
+- Ativades extras:
+	- Use as amostras para treinar um modelo de Random Forest e faça uma classificação das imagens do cubo de dados obtido.
+	- Gere a acurácia do mapa produzido a partir das melhores práticas de Oloffson.
+	- Gere o mapa de incerteza para avaliar as regiões onde o modelo possui incertezas.
