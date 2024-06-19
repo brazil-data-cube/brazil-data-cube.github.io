@@ -20,4 +20,5 @@ Pesquisas em Andamento
 ----------------------
 
 - Classificação com métodos não supervisionados de séries temporais de imagens usando SOM
+- `EOCubes <https://github.com/BaggioCastro/eocubes>`_
 - Classificação com modelo linear de mistura espectral
