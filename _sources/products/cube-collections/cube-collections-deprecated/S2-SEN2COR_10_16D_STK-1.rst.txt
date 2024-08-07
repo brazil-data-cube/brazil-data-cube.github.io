@@ -22,7 +22,7 @@ S2-SEN2COR_10_16D_STK-1
 
 .. warning::
 
-    This product is being deprecated and will not be available anymore. S2-SEN2COR_10_16D_STK-1 was replaced by :doc:`S2-16D-2 <./S2-16D-2>`. The new product was generated using BDC GRID newest version (version 2).
+    This product is being deprecated and will not be available anymore. S2-SEN2COR_10_16D_STK-1 was replaced by :doc:`S2-16D-2 <./../S2-16D-2>`. The new product was generated using BDC GRID newest version (version 2).
 
     Brazil Data Cube Team.
 

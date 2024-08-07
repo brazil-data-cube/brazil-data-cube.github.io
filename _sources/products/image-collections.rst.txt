@@ -18,18 +18,20 @@ Image Collections
 -----------------
 
 
-+----------------------------------------------------------------------+----------------+----------+----------------+------------+
-| Image Collection                                                     | Satellite      | Sensors  | Spatial        | Radiometry |
-|                                                                      |                |          | Resolution (m) |            |
-+======================================================================+================+==========+================+============+
-| :doc:`CBERS4A_WFI_L4_SR-1 <./image-collections/CBERS4A_WFI_L4_SR-1>` | CBERS-4A       | WFI      | 55             | SR         |
-+----------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`CBERS4_AWFI_L4_SR-1 <./image-collections/CBERS4_AWFI_L4_SR-1>` | CBERS-4        | WFI      | 64             | SR         |
-+----------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`CBERS4_MUX_L4_SR-1 <./image-collections/CBERS4_MUX_L4_SR-1>`   | CBERS-4        | WFI      | 20             | SR         |
-+----------------------------------------------------------------------+----------------+----------+----------------+------------+
-| :doc:`S2_L2A-1 <./image-collections/S2_L2A-1>`                       | Sentinel 2A/2B | MSI      | 10             | SR         |
-+----------------------------------------------------------------------+----------------+----------+----------------+------------+
++-------------------------------------------------------------------+----------------+----------+----------------+------------+
+| Image Collection                                                  | Satellite      | Sensors  | Spatial        | Radiometry |
+|                                                                   |                |          | Resolution (m) |            |
++===================================================================+================+==========+================+============+
+| :doc:`CBERS4A_WFI_L4_SR-1 <./image-collections/CB4A_WFI_L4_SR-1>` | CBERS-4A       | WFI      | 55             | SR         |
++-------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`CBERS4_AWFI_L4_SR-1 <./image-collections/CB4_WFI_L4_SR-1>`  | CBERS-4        | WFI      | 64             | SR         |
++-------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`CBERS4_MUX_L4_SR-1 <./image-collections/CB4_MUX_L4_SR-1>`   | CBERS-4        | WFI      | 20             | SR         |
++-------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`landsat-2 <./image-collections/landsat-2>`                  | Landsat 8, 9   | OLI/OLI2 | 30             | SR         |
++-------------------------------------------------------------------+----------------+----------+----------------+------------+
+| :doc:`S2_L2A-1 <./image-collections/S2_L2A-1>`                    | Sentinel 2A/2B | MSI      | 10             | SR         |
++-------------------------------------------------------------------+----------------+----------+----------------+------------+
 
 
 A few Image Collections were deprecated. To check the products of the past please see: :doc:`Deprecated <./image-collections/image-collections-deprecated>`.
@@ -39,8 +41,9 @@ A few Image Collections were deprecated. To check the products of the past pleas
     :maxdepth: 1
     :hidden:
 
-    ./image-collections/CBERS4A_WFI_L4_SR-1
-    ./image-collections/CBERS4_AWFI_L4_SR-1
-    ./image-collections/CBERS4_MUX_L4_SR-1
+    ./image-collections/CB4A_WFI_L4_SR-1
+    ./image-collections/CB4_WFI_L4_SR-1
+    ./image-collections/CB4_MUX_L4_SR-1
+    ./image-collections/landsat-2
     ./image-collections/S2_L2A-1
     ./image-collections/image-collections-deprecated

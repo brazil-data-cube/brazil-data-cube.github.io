@@ -19,7 +19,7 @@ LC8_SR-1
 
 .. warning::
 
-    This product is deprecated and not available anymore in BDC. LC8_SR-1 is being replaced by :doc:`LANDSAT_SR-2 <./LANDSAT_SR-2>`, which consists in Landsat Collection-2 instead of Collection 1 and will also contain Landsat-9 images.
+    This product is deprecated and not available anymore in BDC. LC8_SR-1 is being replaced by :doc:`landsat-2 <./../landsat-2>`, which consists in Landsat Collection-2 instead of Collection 1 and will also contain Landsat-9 images.
 
     Brazil Data Cube Team.
 

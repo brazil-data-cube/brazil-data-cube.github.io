@@ -95,7 +95,7 @@ CBERS-4 uses the :doc:`CMASK <./bands/CMASK>` due to it reduced number of spectr
 For Landsat-8 and Landsat-9 Collection-2 data we use the cloud mask provided within :doc:`QA_pixel <./bands/QA>`. To Produce BDC Data Products, we adopt bits 6 and 7 ("Clear" and "Water", respectivelly) as valid regions to build the Data Cubes through Best pixel approach, as long as they are not marked as 0, 1, 2, 3, 4 or 5 ("Fill", "Dilated Cloud", "Cirrus", "Cloud", "Cloud Shadow" or "Snow", respectivelly).
 
 
-.. note:: In deprecated Landsat Data Cubes (:doc:`LC8_30_16D_STK-1 <../products/cube-collections/LC8_30_16D_STK-1>`) we have used the :doc:`FMASK <./bands/FMASK>` cloud mask version 4.2 :cite:`qiu:2019` , which are no longer used in recent products. For detailed information check the (:doc:`Data Cube Products Page <../products/cube-collections>`).
+.. note:: In deprecated Landsat Data Cubes (:doc:`LC8_30_16D_STK-1 <../products/cube-collections/cube-collections-deprecated/LC8_30_16D_STK-1>`) we have used the :doc:`FMASK <./bands/FMASK>` cloud mask version 4.2 :cite:`qiu:2019` , which are no longer used in recent products. For detailed information check the (:doc:`Data Cube Products Page <../products/cube-collections>`).
 
 
 For Sentinel-2 data we use the cloud mask provided within the :doc:`SCL <./bands/SCL>` product that cames along with Sentinel-2 data. To Produce BDC Data Products, we adopt the values 4, 5 and 6 ("Vegetation", "Not Vegetated" and "Water", respectivelly) as valid regions to build the Data Cubes through Best pixel approach.

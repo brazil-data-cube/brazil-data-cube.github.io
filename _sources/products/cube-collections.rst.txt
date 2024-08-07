@@ -29,15 +29,13 @@ Data Cube Collections
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
 | :doc:`CBERS4-MUX-2M-1 <./cube-collections/CBERS4-MUX-2M-1>`                 | CBERS-4               | MUX      | 20                     | 2 month LCF          | BDC_MD (V2) |
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
-| :doc:`LANDSAT-2M-1 <./cube-collections/LANDSAT-2M-1>`                       | Landsat-8             | OLI      | 30                     | 2 month LCF          | BDC_MD (V2) |
-+-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
 | :doc:`LANDSAT-16D-1 <./cube-collections/LANDSAT-16D-1>`                     | Landsat-8 & Landsat-9 | OLI/OLI2 | 30                     | 16 days LCF          | BDC_MD (V2) |
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
 | :doc:`LANDSAT-MOZ_30_1M_STK-1 <./cube-collections/LANDSAT-MOZ_30_1M_STK-1>` | Landsat               | ---      | 30                     | 2 month LCF          | BDC_MOZ_MD  |
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
-| :doc:`mod13q1-6.0 <./cube-collections/mod13q1-6.0>`                         | TERRA                 | MODIS    | 250                    | 16 days Best Pixel   | STG (MODIS) |
+| :doc:`mod13q1-6.1 <./cube-collections/mod13q1-6.1>`                         | TERRA                 | MODIS    | 250                    | 16 days Best Pixel   | STG (MODIS) |
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
-| :doc:`myd13q1-6.0 <./cube-collections/myd13q1-6.0>`                         | AQUA                  | MODIS    | 250                    | 16 days Best Pixel   | STG (MODIS) |
+| :doc:`myd13q1-6.1 <./cube-collections/myd13q1-6.1>`                         | AQUA                  | MODIS    | 250                    | 16 days Best Pixel   | STG (MODIS) |
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
 | :doc:`S2-16D-2 <./cube-collections/S2-16D-2>`                               | Sentinel 2A/2B        | MSI      | 10                     | 16 days LCF          | BDC_SM (V2) |
 +-----------------------------------------------------------------------------+-----------------------+----------+------------------------+----------------------+-------------+
@@ -53,11 +51,8 @@ A few Data Cube Collections were deprecated and replaced by a newer product. To 
     ./cube-collections/CBERS-WFI-8D-1
     ./cube-collections/CBERS4-MUX-2M-1
     ./cube-collections/LANDSAT-16D-1
-    ./cube-collections/LANDSAT-2M-1
     ./cube-collections/LANDSAT-MOZ_30_1M_STK-1
-    ./cube-collections/mod13q1-6.0
-    ./cube-collections/myd13q1-6.0
+    ./cube-collections/mod13q1-6.1
+    ./cube-collections/myd13q1-6.1
     ./cube-collections/S2-16D-2
-    ./cube-collections/LC8_30_16D_STK-1
-    ./cube-collections/S2-SEN2COR_10_16D_STK-1
     ./cube-collections/cube-collections-deprecated
