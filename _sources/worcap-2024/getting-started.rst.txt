@@ -1,0 +1,49 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2024 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Jupyter Notebooks
+-----------------
+
+O *BDC: Cubos de dados de observações da Terra e análise de séries temporais de imagens de satélite* será feito utilizando Jupyter Notebooks.
+
+Abaixo uma lista dos notebooks que iremos utilizar. Todos eles se encontram no repositório de exemplos do Brazil Data Cube https://github.com/brazil-data-cube/code-gallery.
+
+Os Notebooks podem ser executados no ambiente pessoal de cada usuário (necessitando instalar os pacotes), assim como podem também ser utilizados em plataformas de processamento, como o Google Collab (https://colab.research.google.com/) e Kaggle (https://www.kaggle.com/).
+
+
+STAC
+++++
+
+.. code-block:: python
+
+    https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/stac/stac-introduction.ipynb
+
+WTSS
+++++
+.. code-block:: python
+
+    https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss-introduction.ipynb
+
+.. code-block:: python
+
+    https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss2.ipynb
+
+WLTS
+++++
+
+.. code-block:: python
+
+    https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wlts/wlts-introduction.ipynb
