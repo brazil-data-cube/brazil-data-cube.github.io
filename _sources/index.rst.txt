@@ -41,6 +41,7 @@ Welcome to the **Brazil Data Cube** project!
     :maxdepth: 1
     :caption: Tutorials:
 
+    isprs-2024
     worcap-2024
     treinamento-2024
     jornada-merc-2023
