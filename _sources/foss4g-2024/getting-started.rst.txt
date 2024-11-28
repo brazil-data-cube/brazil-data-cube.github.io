@@ -1,0 +1,62 @@
+..
+    This file is part of Brazil Data Cube Documentation.
+    Copyright 2020-2024 INPE.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0.html>.
+
+
+Jupyter Notebooks
+-----------------
+
+The *Brazil Data Cube Platform: Earth observation data cubes and satellite image time series analysis* will be conducted using Jupyter Notebooks.
+
+For information about the SpatioTemporal Asset Catalog (*STAC*) please see:
+
+- `STAC Spec <https://stacspec.org/en>`_.
+
+- `STAC Python client <https://pystac-client.readthedocs.io/en/latest/>`_.
+
+- `Notebook: Introduction to STAC using Python <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/stac/stac-introduction.ipynb>`_.
+
+For information about the Web Time Series Service (*WTSS*) please see:
+
+- `WTSS Documentation <https://wtss.readthedocs.io/en/latest/index.html>`_.
+
+- `WTSS Python client <https://github.com/brazil-data-cube/wtss.py>`_.
+
+- `Notebook: Introduction to WTSS using Python <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss-introduction.ipynb>`_.
+
+- `Notebook: Introduction to WTSS2 using Python <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss2.ipynb>`_.
+
+- `WTSS QGIS Plugin: <https://github.com/brazil-data-cube/wtss-qgis>`_.
+
+For information about the Web Land Trajectory Service (*WLTS*) please see:
+
+- `WLTS Documentation <https://wlts.readthedocs.io/en/latest/index.html>`_.
+
+- `WLTS Python Client <https://github.com/brazil-data-cube/wlts.py>`_.
+
+- `Notebook: Introduction to WLTS using Python <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wlts/wlts-introduction.ipynb>`_.
+
+For information about the Introduction to the Web Crop Phenology Metrics Service (*WCPMS*) please see:
+
+- `WCPMS Documentation <https://wcpms.readthedocs.io/en/latest/>`_.
+
+- `Notebook: Introduction to WCPMS using Python <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wcpms/wcpms-introduction.ipynb>`_.
+
+Also see the following Notebook:
+
+- `Notebook: Integrated Application (STAC, WTSS, WLTS) <https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/events/2024-isprs/2024_ISPRS.ipynb>`_.
+
+Note that this repository contains several other notebooks that can be used for study and demonstration of technologies adopted on the Brazil Data Cube platform.
+
+The notebooks can be executed in each user's personal environment (requiring package installation) or on processing platforms such as `Google Collab <https://colab.research.google.com/>`_ and `Kaggle <https://www.kaggle.com/>`_.

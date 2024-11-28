@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jupyter Notebooks &mdash; Brazil Data Cube</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/table_styling.css?v=a1a2a898" />
+      <link rel="stylesheet" type="text/css" href="../_static/bdc.css?v=ece44255" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=59930b6f"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ISPRS 2024" href="../isprs-2024.html" />
+    <link rel="prev" title="Course Information" href="course-info.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Brazil Data Cube
+              <img src="../_static/logo-bdc.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Brazil Data Cube Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../products.html">BDC Available Data Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Services and Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specifications.html">Specifications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../foss4g-2024.html">FOSS4G 2024</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="course-info.html">Course Information</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Jupyter Notebooks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../isprs-2024.html">ISPRS 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worcap-2024.html">WORCAP 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../treinamento-2024.html">Treinamento PRODES 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jornada-merc-2023.html">XIII Jornada de Educação em Sensoriamento Remoto no Âmbito do Mercosul</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worcap-2023.html">WORCAP 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../treinamento-2023.html">Treinamento PRODES 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sbsr-2023.html">SBSR 2023 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../treinamento-2022.html">Treinamento BDC 2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worcap-2021.html">WorCAP 2021 - Introdução ao STAC e WTSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ibge-2021.html">IBGE 2021 - Workshop Brazil Data Cube com IBGE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sbsr-2021.html">SBSR Interim 2021 - Simpósio Brasileiro de Sensoriamento Remoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worcap-2020.html">WorCAP 2020 - Geoinformática com Aplicações de Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datascience-2020.html">CAP-394 - Introdução a Data Science (2020)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">General Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Brazil Data Cube</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../foss4g-2024.html">FOSS4G 2024</a></li>
+      <li class="breadcrumb-item active">Jupyter Notebooks</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="course-info.html" class="btn btn-neutral float-left" title="Course Information" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../isprs-2024.html" class="btn btn-neutral float-right" title="ISPRS 2024" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jupyter-notebooks">
+<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading"></a></h1>
+<p>The <em>Brazil Data Cube Platform: Earth observation data cubes and satellite image time series analysis</em> will be conducted using Jupyter Notebooks.</p>
+<p>For information about the SpatioTemporal Asset Catalog (<em>STAC</em>) please see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stacspec.org/en">STAC Spec</a>.</p></li>
+<li><p><a class="reference external" href="https://pystac-client.readthedocs.io/en/latest/">STAC Python client</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/stac/stac-introduction.ipynb">Notebook: Introduction to STAC using Python</a>.</p></li>
+</ul>
+<p>For information about the Web Time Series Service (<em>WTSS</em>) please see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wtss.readthedocs.io/en/latest/index.html">WTSS Documentation</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/wtss.py">WTSS Python client</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss-introduction.ipynb">Notebook: Introduction to WTSS using Python</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wtss/wtss2.ipynb">Notebook: Introduction to WTSS2 using Python</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/wtss-qgis">WTSS QGIS Plugin:</a>.</p></li>
+</ul>
+<p>For information about the Web Land Trajectory Service (<em>WLTS</em>) please see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wlts.readthedocs.io/en/latest/index.html">WLTS Documentation</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/wlts.py">WLTS Python Client</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wlts/wlts-introduction.ipynb">Notebook: Introduction to WLTS using Python</a>.</p></li>
+</ul>
+<p>For information about the Introduction to the Web Crop Phenology Metrics Service (<em>WCPMS</em>) please see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wcpms.readthedocs.io/en/latest/">WCPMS Documentation</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/Python/wcpms/wcpms-introduction.ipynb">Notebook: Introduction to WCPMS using Python</a>.</p></li>
+</ul>
+<p>Also see the following Notebook:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/brazil-data-cube/code-gallery/blob/master/jupyter/events/2024-isprs/2024_ISPRS.ipynb">Notebook: Integrated Application (STAC, WTSS, WLTS)</a>.</p></li>
+</ul>
+<p>Note that this repository contains several other notebooks that can be used for study and demonstration of technologies adopted on the Brazil Data Cube platform.</p>
+<p>The notebooks can be executed in each user’s personal environment (requiring package installation) or on processing platforms such as <a class="reference external" href="https://colab.research.google.com/">Google Collab</a> and <a class="reference external" href="https://www.kaggle.com/">Kaggle</a>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="course-info.html" class="btn btn-neutral float-left" title="Course Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../isprs-2024.html" class="btn btn-neutral float-right" title="ISPRS 2024" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, INPE.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178140681-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178140681-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -41,6 +41,7 @@ Welcome to the **Brazil Data Cube** project!
     :maxdepth: 1
     :caption: Tutorials:
 
+    foss4g-2024
     isprs-2024
     worcap-2024
     treinamento-2024
