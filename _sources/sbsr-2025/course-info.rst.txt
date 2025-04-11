@@ -36,7 +36,7 @@ O conteúdo será ministrado no dia 13 de Abril de 2025 com a seguinte programa�
 
 .. figure:: ../img/sbsr-2025/fluxo-atividades-notebook.png
     :alt: Fluxo atividades SBSR 2025
-    :width: 480
+    :width: 100%
     :figclass: align-center
 
 **Tarde**:

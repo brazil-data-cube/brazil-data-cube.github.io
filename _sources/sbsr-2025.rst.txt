@@ -20,7 +20,7 @@ SBSR 2025 - Simpósio Brasileiro de Sensoriamento Remoto
 
 .. figure:: ./img/sbsr-2025/sbsr2025.png
     :alt: Banner Simpósio Brasileiro de Sensoriamento Remoto 2025 (SBSR)
-    :width: 480
+    :width: 100%
     :figclass: align-center
 
 
