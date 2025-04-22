@@ -25,7 +25,9 @@ Os códigos para acompanhamento do curso estão disponíveis na plataforma no re
 Slides
 ++++++
 
-- `Produtos de Dados, Aplicações e Serviços do Brazil Data Cube <./pdf/2025-04-13-SBSR-01.pdf>`_
+- .. figure:: ./pdf/2025-04-13-SBSR-01.pdf
+    :alt: Produtos de Dados, Aplicações e Serviços do Brazil Data Cube
+    :width: 720
 
 Jupyter Notebook
 ++++++++++++++++

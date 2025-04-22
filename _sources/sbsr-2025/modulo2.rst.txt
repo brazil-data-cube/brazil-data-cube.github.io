@@ -17,11 +17,13 @@
 Tarde
 -----
 
-Nesse módulo os dados do projeto Brazil Data Cube (BDC) serão utilizando, por meio da linguagem R, no pacote de classificação e análise de séries temporais `SITS (Satellite Image Time Series Analysis for Earth Observation Data Cubes) <https://github.com/e-sensing/sits>`_.
+Nesse módulo os dados do projeto Brazil Data Cube (BDC) serão utilizando, por meio da linguagem R, no pacote de classificação e análise de séries temporais `SITS (Satellite Image Time Series Analysis for Earth Observation Data Cubes) <https://raw.githubusercontent.com/brazil-data-cube/docs-brazil-data-cube/master/docs/sbsr-2025/pdf/sits_presentation_sbsr_2025.pdf>`_.
 
 - Livro SITS: https://e-sensing.github.io/sitsbook/
 
 Slides
 ++++++
 
-- `SITS apresentação SBSR 2025 <./pdf/sits_presentation_sbsr_2025.pdf>`_
+- .. figure:: ./pdf/sits_presentation_sbsr_2025.pdf
+    :alt: SITS apresentação SBSR 2025
+    :width: 720
