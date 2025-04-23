@@ -25,6 +25,10 @@ Os códigos para acompanhamento do curso estão disponíveis na plataforma no re
 Slides
 ++++++
 
+- .. figure:: ./pdf/2025_04_BDC_SBSR_v2.pdf
+    :alt: Big data, satellite image data cubes and time series analysis
+    :width: 720
+
 - .. figure:: ./pdf/2025-04-13-SBSR-01.pdf
     :alt: Produtos de Dados, Aplicações e Serviços do Brazil Data Cube
     :width: 720
